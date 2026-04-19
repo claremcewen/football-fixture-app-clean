@@ -15,6 +15,21 @@ st.set_page_config(
 )
 
 
+def simplify_competition_label(label: str) -> str:
+    label = str(label).strip()
+
+    if "UEFA Women's Champions League" in label:
+        return "UWCL"
+    if label.startswith("England Women"):
+        return "England Women"
+    if "WSL2" in label:
+        return "WSL2"
+    if "WSL" in label:
+        return "WSL"
+
+    return label
+
+
 @st.cache_data
 def load_data() -> pd.DataFrame:
     if not DATA_FILE.exists():
@@ -48,24 +63,10 @@ def load_data() -> pd.DataFrame:
         + " "
         + df["kickoff"].dt.strftime("%B %Y")
     )
-
-    def simplify_competition_label(label: str) -> str:
-        label = str(label).strip()
-
-        if "UEFA Women's Champions League" in label:
-            return "UWCL"
-        if label.startswith("England Women"):
-            return "England Women"
-        if "WSL2" in label:
-            return "WSL2"
-        if "WSL" in label:
-            return "WSL"
-
-        return label
-
     df["competition_group"] = df["competition"].apply(simplify_competition_label)
 
     return df.sort_values("kickoff").reset_index(drop=True)
+
 
 def filter_data(
     df: pd.DataFrame,
@@ -86,6 +87,8 @@ def filter_data(
         filtered = filtered[
             (filtered["date"] >= start_date) & (filtered["date"] <= end_date)
         ]
+    elif view_mode == "all":
+        pass
 
     if competition != "All":
         filtered = filtered[filtered["competition_group"] == competition]
@@ -110,19 +113,6 @@ def filter_data(
         ]
 
     return filtered.sort_values("kickoff")
-
-
-def get_next_available_date(target_date, available_dates):
-    future_dates = [d for d in available_dates if d >= target_date]
-    if future_dates:
-        return min(future_dates)
-    return available_dates[-1]
-
-
-def get_next_weekend_date(today, available_dates):
-    days_until_next_saturday = ((5 - today.weekday()) % 7) or 7
-    next_saturday = today + pd.Timedelta(days=days_until_next_saturday)
-    return get_next_available_date(next_saturday, available_dates)
 
 
 def match_card(row: pd.Series) -> None:
@@ -182,22 +172,6 @@ def format_pretty_date(date_value) -> str:
     ts = pd.Timestamp(date_value)
     return f"{ts.strftime('%A')} {ts.day} {ts.strftime('%B %Y')}"
 
-def simplify_competition_label(label: str) -> str:
-    label = str(label).strip()
-
-    if "UEFA Women's Champions League" in label:
-        return "UWCL"
-
-    if label.startswith("England Women"):
-        return "England Women"
-
-    if "WSL2" in label:
-        return "WSL2"
-
-    if "WSL" in label:
-        return "WSL"
-
-    return label
 
 def main() -> None:
     df = load_data()
@@ -218,6 +192,8 @@ def main() -> None:
     if getattr(now, "tzinfo", None) is not None:
         now = now.tz_localize(None)
 
+    today_date = pd.Timestamp.today().date()
+
     upcoming = df[df["kickoff"] >= now]
     next_match = upcoming.iloc[0] if not upcoming.empty else df.iloc[0]
 
@@ -232,6 +208,9 @@ def main() -> None:
     st.divider()
 
     unique_dates = sorted(df["date"].unique())
+    min_fixture_date = min(unique_dates)
+    max_fixture_date = max(unique_dates)
+
     competitions = ["All"] + sorted(df["competition_group"].dropna().unique().tolist())
     clubs = ["All"] + sorted(pd.unique(pd.concat([df["home_team"], df["away_team"]])).tolist())
     platforms = ["All"] + sorted(
@@ -243,30 +222,38 @@ def main() -> None:
         }
     )
 
+    # Allow today to be selected even if fixtures start later
+    widget_min_date = min(today_date, min_fixture_date)
+
     # Session state defaults
     if "selected_date_state" not in st.session_state:
-        st.session_state["selected_date_state"] = unique_dates[0]
-
+        st.session_state["selected_date_state"] = today_date
     if "view_mode_state" not in st.session_state:
         st.session_state["view_mode_state"] = "single"
-
     if "range_start_state" not in st.session_state:
-        st.session_state["range_start_state"] = unique_dates[0]
-
+        st.session_state["range_start_state"] = today_date
     if "range_end_state" not in st.session_state:
-        st.session_state["range_end_state"] = unique_dates[0]
-
+        st.session_state["range_end_state"] = today_date + pd.Timedelta(days=6)
     if "competition_main" not in st.session_state:
         st.session_state["competition_main"] = "All"
-
     if "platform_main" not in st.session_state:
         st.session_state["platform_main"] = "All"
-
     if "club_main" not in st.session_state:
         st.session_state["club_main"] = "All"
-
     if "free_only_filter" not in st.session_state:
         st.session_state["free_only_filter"] = False
+
+    # Keep stored dates within sensible bounds
+    if st.session_state["selected_date_state"] > max_fixture_date:
+        st.session_state["selected_date_state"] = max_fixture_date
+
+    if st.session_state["range_start_state"] > max_fixture_date:
+        st.session_state["range_start_state"] = today_date
+
+    if st.session_state["range_end_state"] > max_fixture_date:
+        st.session_state["range_end_state"] = min(
+            today_date + pd.Timedelta(days=6), max_fixture_date
+        )
 
     # Reset button
     if st.button("Reset filters", key="reset_filters"):
@@ -275,23 +262,23 @@ def main() -> None:
         st.session_state["club_main"] = "All"
         st.session_state["free_only_filter"] = False
         st.session_state["view_mode_state"] = "single"
-        st.session_state["selected_date_state"] = unique_dates[0]
-        st.session_state["range_start_state"] = unique_dates[0]
-        st.session_state["range_end_state"] = unique_dates[0]
+        st.session_state["selected_date_state"] = today_date
+        st.session_state["range_start_state"] = today_date
+        st.session_state["range_end_state"] = today_date + pd.Timedelta(days=6)
         st.rerun()
 
+    # Main filters
     c1, c2, c3, c4 = st.columns(4)
 
     with c1:
         selected_date = st.date_input(
             "Date",
             value=st.session_state["selected_date_state"],
-            min_value=min(unique_dates),
-            max_value=max(unique_dates),
+            min_value=widget_min_date,
+            max_value=max_fixture_date,
             key="date_input_main",
         )
 
-        # Only switch to single mode if user manually changes the date picker
         if selected_date != st.session_state["selected_date_state"]:
             st.session_state["view_mode_state"] = "single"
 
@@ -311,44 +298,32 @@ def main() -> None:
         key="free_only_filter",
     )
 
+    # Quick buttons
     quick1, quick2, quick3, quick4 = st.columns(4)
 
     with quick1:
         if st.button("Today", key="quick_today"):
-            today_date = pd.Timestamp.today().date()
             st.session_state["view_mode_state"] = "single"
-            st.session_state["selected_date_state"] = get_next_available_date(
-                today_date, unique_dates
-            )
+            st.session_state["selected_date_state"] = today_date
             st.rerun()
 
     with quick2:
         if st.button("Tomorrow", key="quick_tomorrow"):
-            tomorrow_date = (pd.Timestamp.today() + pd.Timedelta(days=1)).date()
+            tomorrow_date = today_date + pd.Timedelta(days=1)
             st.session_state["view_mode_state"] = "single"
-            st.session_state["selected_date_state"] = get_next_available_date(
-                tomorrow_date, unique_dates
-            )
+            st.session_state["selected_date_state"] = tomorrow_date
             st.rerun()
 
     with quick3:
-        if st.button("Next 7 days", key="quick_next_7_days"):
-            today_date = pd.Timestamp.today().date()
-            end_date = today_date + pd.Timedelta(days=6)
+        if st.button("Next 7 Days", key="quick_next_7_days"):
             st.session_state["view_mode_state"] = "range"
             st.session_state["range_start_state"] = today_date
-            st.session_state["range_end_state"] = end_date
+            st.session_state["range_end_state"] = today_date + pd.Timedelta(days=6)
             st.rerun()
 
     with quick4:
-        if st.button("Next weekend", key="quick_next_weekend"):
-            today_date = pd.Timestamp.today().date()
-            days_until_next_saturday = ((5 - today_date.weekday()) % 7) or 7
-            next_saturday = today_date + pd.Timedelta(days=days_until_next_saturday)
-            next_sunday = next_saturday + pd.Timedelta(days=1)
-            st.session_state["view_mode_state"] = "range"
-            st.session_state["range_start_state"] = next_saturday
-            st.session_state["range_end_state"] = next_sunday
+        if st.button("Full Fixture List", key="quick_full_fixture_list"):
+            st.session_state["view_mode_state"] = "all"
             st.rerun()
 
     view_mode = st.session_state["view_mode_state"]
@@ -371,24 +346,67 @@ def main() -> None:
     if view_mode == "single":
         pretty_date = format_pretty_date(selected_date)
         st.info(f"Showing fixtures for {pretty_date}.")
-    else:
+    elif view_mode == "range":
         pretty_start = format_pretty_date(range_start)
         pretty_end = format_pretty_date(range_end)
         st.info(f"Showing fixtures from {pretty_start} to {pretty_end}.")
+    else:
+        st.info("Showing full fixture list.")
 
-    today = pd.Timestamp.today().date()
-    if view_mode == "single" and selected_date == today:
+    if view_mode == "single" and selected_date == today_date:
         st.success("Today's matches ⚽")
 
     st.divider()
 
-    if filtered.empty:
+    # Special case: no games today -> say so, show next fixture date, then next 7 days below
+    if view_mode == "single" and selected_date == today_date and filtered.empty:
+        st.warning(f"No fixtures today ({format_pretty_date(today_date)}).")
+
+        next_fixtures_all = df[df["date"] > today_date].sort_values("kickoff")
+        if not next_fixtures_all.empty:
+            next_fixture_date = next_fixtures_all.iloc[0]["date"]
+            st.info(f"Next fixture date: {format_pretty_date(next_fixture_date)}")
+        else:
+            st.info("There are no upcoming fixtures in the current dataset.")
+
+        next_7_days = filter_data(
+            df,
+            competition,
+            platform,
+            club,
+            free_only,
+            view_mode="range",
+            start_date=today_date,
+            end_date=today_date + pd.Timedelta(days=6),
+        )
+
+        if next_7_days.empty:
+            st.info("No fixtures in the next 7 days.")
+        else:
+            st.write("### Fixtures in the next 7 days")
+
+            current_group_date = None
+            for _, row in next_7_days.iterrows():
+                row_date = row["date"]
+
+                if row_date != current_group_date:
+                    st.markdown(f"## {format_pretty_date(row_date)}")
+                    current_group_date = row_date
+
+                match_card(row)
+
+            make_download(next_7_days)
+
+    elif filtered.empty:
         st.warning("No matches found for those filters.")
+
     else:
         if view_mode == "single":
             st.write(f"### {len(filtered)} match(es) on {pretty_date}")
-        else:
+        elif view_mode == "range":
             st.write(f"### {len(filtered)} match(es) in this date range")
+        else:
+            st.write(f"### {len(filtered)} match(es) in the full fixture list")
 
         current_group_date = None
 
