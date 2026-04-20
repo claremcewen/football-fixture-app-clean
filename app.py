@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from datetime import timedelta
 from pathlib import Path
 
 import pandas as pd
@@ -30,6 +31,23 @@ def simplify_competition_label(label: str) -> str:
     return label
 
 
+def get_weekend_range(today_date):
+    weekday = today_date.weekday()  # Monday=0, Sunday=6
+
+    if weekday < 5:  # Mon-Fri
+        days_until_sat = 5 - weekday
+        start_date = today_date + timedelta(days=days_until_sat)
+        end_date = start_date + timedelta(days=1)
+    elif weekday == 5:  # Saturday
+        start_date = today_date
+        end_date = today_date + timedelta(days=1)
+    else:  # Sunday
+        start_date = today_date
+        end_date = today_date
+
+    return start_date, end_date
+
+
 @st.cache_data
 def load_data() -> pd.DataFrame:
     if not DATA_FILE.exists():
@@ -51,6 +69,11 @@ def load_data() -> pd.DataFrame:
 
     if df.empty:
         return df
+
+    # Clean fields so 'nan' doesn't show in the UI
+    for col in ["venue", "watch_platforms", "watch_notes", "official_source"]:
+        if col in df.columns:
+            df[col] = df[col].fillna("").astype(str).replace("nan", "").replace("NaT", "")
 
     df["kickoff"] = pd.to_datetime(df["kickoff_uk"], errors="coerce")
     df = df.dropna(subset=["kickoff"]).copy()
@@ -133,9 +156,8 @@ def match_card(row: pd.Series) -> None:
 
         with col2:
             watch_platforms = row.get("watch_platforms", "")
-            st.write(
-                f"**Watch:** {watch_platforms if str(watch_platforms).strip() else 'TBC'}"
-            )
+            watch_platforms = str(watch_platforms).strip()
+            st.write(f"**Watch:** {watch_platforms if watch_platforms else 'TBC'}")
 
             notes = row.get("watch_notes", "")
             if pd.notna(notes) and str(notes).strip():
@@ -264,7 +286,9 @@ def main() -> None:
         st.session_state["view_mode_state"] = "single"
         st.session_state["selected_date_state"] = today_date
         st.session_state["range_start_state"] = today_date
-        st.session_state["range_end_state"] = today_date + pd.Timedelta(days=6)
+        st.session_state["range_end_state"] = min(
+            today_date + pd.Timedelta(days=6), max_fixture_date
+        )
         st.rerun()
 
     # Main filters
@@ -308,17 +332,20 @@ def main() -> None:
             st.rerun()
 
     with quick2:
-        if st.button("Tomorrow", key="quick_tomorrow"):
-            tomorrow_date = today_date + pd.Timedelta(days=1)
-            st.session_state["view_mode_state"] = "single"
-            st.session_state["selected_date_state"] = tomorrow_date
+        if st.button("Weekend", key="quick_weekend"):
+            weekend_start, weekend_end = get_weekend_range(today_date)
+            st.session_state["view_mode_state"] = "range"
+            st.session_state["range_start_state"] = weekend_start
+            st.session_state["range_end_state"] = min(weekend_end, max_fixture_date)
             st.rerun()
 
     with quick3:
         if st.button("Next 7 Days", key="quick_next_7_days"):
             st.session_state["view_mode_state"] = "range"
             st.session_state["range_start_state"] = today_date
-            st.session_state["range_end_state"] = today_date + pd.Timedelta(days=6)
+            st.session_state["range_end_state"] = min(
+                today_date + pd.Timedelta(days=6), max_fixture_date
+            )
             st.rerun()
 
     with quick4:
@@ -377,7 +404,7 @@ def main() -> None:
             free_only,
             view_mode="range",
             start_date=today_date,
-            end_date=today_date + pd.Timedelta(days=6),
+            end_date=min(today_date + pd.Timedelta(days=6), max_fixture_date),
         )
 
         if next_7_days.empty:
