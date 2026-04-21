@@ -1,8 +1,7 @@
 from __future__ import annotations
 
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
-import os
 import subprocess
 
 import pandas as pd
@@ -10,7 +9,6 @@ import streamlit as st
 
 APP_DIR = Path(__file__).parent
 DATA_FILE = APP_DIR / "data" / "fixtures_all.csv"
-
 UPDATE_SCRIPT = APP_DIR / "scripts" / "update_fixtures.py"
 STAMP_FILE = APP_DIR / "data" / "last_update.txt"
 
@@ -36,27 +34,38 @@ def simplify_competition_label(label: str) -> str:
     return label
 
 
-def get_weekend_range(today_date):
-    weekday = today_date.weekday()
-
-    if weekday < 5:
-        start = today_date + timedelta(days=(5 - weekday))
-        end = start + timedelta(days=1)
-    elif weekday == 5:
-        start = today_date
-        end = today_date + timedelta(days=1)
-    else:
-        start = today_date
-        end = today_date
-
-    return start, end
+def get_last_updated_text() -> str:
+    if STAMP_FILE.exists():
+        stamp = STAMP_FILE.read_text(encoding="utf-8").strip()
+        if stamp:
+            return stamp
+    return "Unknown"
 
 
-def get_last_updated_text():
-    if not DATA_FILE.exists():
-        return "No fixture file yet"
-    dt = datetime.fromtimestamp(os.path.getmtime(DATA_FILE))
-    return dt.strftime("%A %d %B %Y, %H:%M")
+def run_fixture_update(show_messages: bool = False) -> bool:
+    APP_DIR.joinpath("data").mkdir(parents=True, exist_ok=True)
+
+    result = subprocess.run(
+        ["python", str(UPDATE_SCRIPT)],
+        cwd=str(APP_DIR),
+        capture_output=True,
+        text=True,
+    )
+
+    if result.returncode != 0:
+        st.error("Fixture update failed.")
+        st.code(result.stderr if result.stderr else result.stdout)
+        return False
+
+    today_str = datetime.today().strftime("%Y-%m-%d")
+    STAMP_FILE.write_text(today_str, encoding="utf-8")
+    st.cache_data.clear()
+
+    if show_messages:
+        st.success("Fixtures updated.")
+
+    return True
+
 
 def ensure_fixtures_are_current() -> None:
     APP_DIR.joinpath("data").mkdir(parents=True, exist_ok=True)
@@ -74,60 +83,68 @@ def ensure_fixtures_are_current() -> None:
             needs_update = True
 
     if needs_update:
-        result = subprocess.run(
-            ["python", str(UPDATE_SCRIPT)],
-            cwd=str(APP_DIR),
-            capture_output=True,
-            text=True,
-        )
-
-        if result.returncode != 0:
-            st.error("Automatic fixture update failed.")
-            st.code(result.stderr if result.stderr else result.stdout)
-            return
-
-        STAMP_FILE.write_text(today_str, encoding="utf-8")
-        st.cache_data.clear()
+        run_fixture_update(show_messages=False)
 
 
-@st.cache_data(ttl="30m")
-def load_data():
+@st.cache_data
+def load_data() -> pd.DataFrame:
     if not DATA_FILE.exists():
-        return pd.DataFrame()
+        return pd.DataFrame(
+            columns=[
+                "competition",
+                "competition_group",
+                "home_team",
+                "away_team",
+                "kickoff_uk",
+                "venue",
+                "watch_platforms",
+                "watch_notes",
+                "official_source",
+            ]
+        )
 
     df = pd.read_csv(DATA_FILE)
 
     if df.empty:
         return df
 
-    for col in ["venue", "watch_platforms", "watch_notes", "official_source"]:
-        if col in df.columns:
-            df[col] = df[col].fillna("").astype(str).replace("nan", "")
-
     df["kickoff"] = pd.to_datetime(df["kickoff_uk"], errors="coerce")
     df = df.dropna(subset=["kickoff"]).copy()
-
-    df = df.drop_duplicates(subset=["home_team", "away_team", "kickoff_uk"])
-
     df["date"] = df["kickoff"].dt.date
+    df["time"] = df["kickoff"].dt.strftime("%H:%M")
+    df["display_date"] = (
+        df["kickoff"].dt.strftime("%A")
+        + " "
+        + df["kickoff"].dt.day.astype(str)
+        + " "
+        + df["kickoff"].dt.strftime("%B %Y")
+    )
     df["competition_group"] = df["competition"].apply(simplify_competition_label)
 
     return df.sort_values("kickoff").reset_index(drop=True)
 
 
-def filter_data(df, competition, platform, club, free_only, view_mode,
-                selected_date=None, start_date=None, end_date=None):
-
+def filter_data(
+    df: pd.DataFrame,
+    competition: str,
+    platform: str,
+    club: str,
+    free_only: bool,
+    view_mode: str,
+    selected_date=None,
+    start_date=None,
+    end_date=None,
+) -> pd.DataFrame:
     filtered = df.copy()
 
-    if view_mode == "single":
+    if view_mode == "single" and selected_date is not None:
         filtered = filtered[filtered["date"] == selected_date]
-
-    elif view_mode == "range":
+    elif view_mode == "range" and start_date is not None and end_date is not None:
         filtered = filtered[
-            (filtered["date"] >= start_date) &
-            (filtered["date"] <= end_date)
+            (filtered["date"] >= start_date) & (filtered["date"] <= end_date)
         ]
+    elif view_mode == "all":
+        pass
 
     if competition != "All":
         filtered = filtered[filtered["competition_group"] == competition]
@@ -139,50 +156,76 @@ def filter_data(df, competition, platform, club, free_only, view_mode,
 
     if club != "All":
         filtered = filtered[
-            (filtered["home_team"] == club) |
-            (filtered["away_team"] == club)
+            (filtered["home_team"] == club) | (filtered["away_team"] == club)
         ]
 
     if free_only:
         filtered = filtered[
             filtered["watch_platforms"].str.contains(
-                "BBC|YouTube|ITV", case=False, na=False
+                "BBC|YouTube|ITV|BBC iPlayer|BBC Sport Website",
+                case=False,
+                na=False,
             )
         ]
 
     return filtered.sort_values("kickoff")
 
 
-def match_card(row):
-    with st.container():
+def match_card(row: pd.Series) -> None:
+    with st.container(border=True):
         col1, col2 = st.columns([3, 2])
 
         with col1:
             st.subheader(f"{row['home_team']} vs {row['away_team']}")
-            st.caption(row["competition"])
+            st.write(f"**Competition:** {row['competition']}")
 
             kickoff = row["kickoff"]
-            st.write(
+            pretty_kickoff = (
                 f"{kickoff.strftime('%A')} {kickoff.day} "
                 f"{kickoff.strftime('%B')}, {kickoff.strftime('%H:%M')}"
             )
-
-            st.write(f"Venue: {row.get('venue') or 'TBC'}")
+            st.write(f"**Kick-off (UK):** {pretty_kickoff}")
+            st.write(f"**Venue:** {row.get('venue', 'TBC') or 'TBC'}")
 
         with col2:
-            watch = str(row.get("watch_platforms", "")).strip()
-            watch_lower = watch.lower()
+            watch_platforms = row.get("watch_platforms", "")
+            st.write(
+                f"**Watch:** {watch_platforms if str(watch_platforms).strip() else 'TBC'}"
+            )
 
-            if any(x in watch_lower for x in ["bbc", "youtube", "itv"]):
-                st.markdown("🟢 **Free to watch**")
+            notes = row.get("watch_notes", "")
+            if pd.notna(notes) and str(notes).strip():
+                st.write(f"**Notes:** {notes}")
 
-            st.write(f"Watch: {watch if watch else 'TBC'}")
+            source = row.get("official_source", "")
+            if pd.notna(source) and str(source).strip():
+                st.link_button("Official fixture source", source)
 
-        st.divider()
+
+def make_download(df: pd.DataFrame) -> None:
+    download_df = df[
+        [
+            "competition",
+            "home_team",
+            "away_team",
+            "kickoff_uk",
+            "venue",
+            "watch_platforms",
+            "watch_notes",
+            "official_source",
+        ]
+    ].copy()
+
+    st.download_button(
+        label="Download filtered fixtures as CSV",
+        data=download_df.to_csv(index=False).encode("utf-8"),
+        file_name="womens-football-watch-guide.csv",
+        mime="text/csv",
+    )
 
 
-def format_date(d):
-    ts = pd.Timestamp(d)
+def format_pretty_date(date_value) -> str:
+    ts = pd.Timestamp(date_value)
     return f"{ts.strftime('%A')} {ts.day} {ts.strftime('%B %Y')}"
 
 
@@ -190,126 +233,263 @@ def main():
     ensure_fixtures_are_current()
     df = load_data()
 
-    # HEADER
-    left, right = st.columns([3, 1])
-
-    with left:
-        st.title("⚽ Women's Football Watch Guide")
-        st.markdown("Find upcoming women's football matches and where to watch them.")
-        st.caption(f"Last updated: {get_last_updated_text()}")
-
-    with right:
-        if st.button("🔄 Update Fixtures"):
-            with st.spinner("Updating..."):
-                subprocess.run(
-                    ["python", str(APP_DIR / "scripts" / "update_fixtures.py")]
-                )
-            load_data.clear()
-            st.rerun()
+    st.title("⚽ Women's Football Watch Guide")
+    st.caption("WSL, WSL2, England Women and UWCL from generated combined data.")
 
     if df.empty:
-        st.warning("No fixture data found.")
+        st.warning(
+            "No fixture data found yet. Run `python scripts/update_fixtures.py` first, "
+            "then refresh this app."
+        )
         return
 
-    today = pd.Timestamp.today().date()
+    now = pd.Timestamp.now()
+    if getattr(now, "tzinfo", None) is not None:
+        now = now.tz_localize(None)
 
-    # DEFAULT VIEW = NEXT 7 DAYS
-    if "view_mode" not in st.session_state:
-        st.session_state.view_mode = "range"
-        st.session_state.start = today
-        st.session_state.end = today + timedelta(days=6)
+    today_date = pd.Timestamp.today().date()
 
-    # METRICS
-    m1, m2 = st.columns(2)
+    upcoming = df[df["kickoff"] >= now]
+    next_match = upcoming.iloc[0] if not upcoming.empty else df.iloc[0]
 
-    with m1:
-        st.metric("Matches loaded", len(df))
-
-    with m2:
-        st.metric("Competitions", df["competition"].nunique())
-
-    # NEXT FIXTURE (smaller)
-    next_match = df[df["kickoff"] >= pd.Timestamp.now()]
-    if not next_match.empty:
-        nm = next_match.iloc[0]
-        st.markdown(
-            f"**Next fixture:** {nm['home_team']} vs {nm['away_team']}"
-        )
-
-    st.divider()
-
-    # FILTERS
-    competitions = ["All"] + sorted(df["competition_group"].unique())
-    clubs = ["All"] + sorted(
-        pd.unique(pd.concat([df["home_team"], df["away_team"]]))
+    unique_dates = sorted(df["date"].unique())
+    competitions = ["All"] + sorted(df["competition_group"].dropna().unique().tolist())
+    clubs = ["All"] + sorted(pd.unique(pd.concat([df["home_team"], df["away_team"]])).tolist())
+    platforms = ["All"] + sorted(
+        {
+            p.strip()
+            for cell in df["watch_platforms"].dropna()
+            for p in str(cell).split(",")
+            if p.strip()
+        }
     )
 
-    c1, c2, c3 = st.columns(3)
+    default_date = min(unique_dates)
+    future_dates = [d for d in unique_dates if d >= today_date]
+    if future_dates:
+        default_date = future_dates[0]
 
-    with c1:
-        competition = st.selectbox("Competition", competitions)
+    if "selected_date_state" not in st.session_state:
+        st.session_state["selected_date_state"] = default_date
+    if "view_mode_state" not in st.session_state:
+        st.session_state["view_mode_state"] = "single"
+    if "range_start_state" not in st.session_state:
+        st.session_state["range_start_state"] = default_date
+    if "range_end_state" not in st.session_state:
+        st.session_state["range_end_state"] = default_date + pd.Timedelta(days=6)
+    if "competition_main" not in st.session_state:
+        st.session_state["competition_main"] = "All"
+    if "platform_main" not in st.session_state:
+        st.session_state["platform_main"] = "All"
+    if "club_main" not in st.session_state:
+        st.session_state["club_main"] = "All"
+    if "free_only_filter" not in st.session_state:
+        st.session_state["free_only_filter"] = False
 
-    with c2:
-        club = st.selectbox("Club", clubs)
+    # Top info row
+    info1, info2, info3, info4 = st.columns([1, 1, 2, 1.2])
 
-    with c3:
-        free_only = st.checkbox("Free to watch only")
+    with info1:
+        st.metric("Matches loaded", len(df))
 
-    # RESET BUTTON (now correctly placed)
-    if st.button("Reset filters"):
-        st.rerun()
+    with info2:
+        st.metric("Competitions", df["competition"].nunique())
+
+    with info3:
+        st.markdown("**Next match**")
+        st.markdown(
+            f"{next_match['home_team']} vs {next_match['away_team']}  \n"
+            f"{format_pretty_date(next_match['date'])} · {next_match['time']}"
+        )
+
+    with info4:
+        st.markdown(f"**Last updated:** {get_last_updated_text()}")
+        if st.button("Update Fixtures", key="manual_update_button"):
+            if run_fixture_update(show_messages=True):
+                st.rerun()
 
     st.divider()
 
-    # QUICK BUTTONS
-    b1, b2, b3, b4 = st.columns(4)
+    # Main action buttons
+    a1, a2, a3, a4 = st.columns(4)
 
-    with b1:
-        if st.button("Today"):
-            st.session_state.view_mode = "single"
-            st.session_state.selected = today
+    with a1:
+        if st.button("Today", key="quick_today"):
+            st.session_state["view_mode_state"] = "single"
+            st.session_state["selected_date_state"] = today_date
+            st.rerun()
 
-    with b2:
-        if st.button("Weekend"):
-            s, e = get_weekend_range(today)
-            st.session_state.view_mode = "range"
-            st.session_state.start = s
-            st.session_state.end = e
+    with a2:
+        if st.button("Next 7 Days", key="quick_next_7_days"):
+            st.session_state["view_mode_state"] = "range"
+            st.session_state["range_start_state"] = today_date
+            st.session_state["range_end_state"] = today_date + pd.Timedelta(days=6)
+            st.rerun()
 
-    with b3:
-        if st.button("Next 7 Days"):
-            st.session_state.view_mode = "range"
-            st.session_state.start = today
-            st.session_state.end = today + timedelta(days=6)
+    with a3:
+        if st.button("All Upcoming", key="quick_all_upcoming"):
+            st.session_state["view_mode_state"] = "all"
+            st.rerun()
 
-    with b4:
-        if st.button("Full List"):
-            st.session_state.view_mode = "all"
+    with a4:
+        if st.button("Reset Filters", key="reset_filters"):
+            st.session_state["competition_main"] = "All"
+            st.session_state["platform_main"] = "All"
+            st.session_state["club_main"] = "All"
+            st.session_state["free_only_filter"] = False
+            st.session_state["view_mode_state"] = "single"
+            st.session_state["selected_date_state"] = default_date
+            st.session_state["range_start_state"] = default_date
+            st.session_state["range_end_state"] = default_date + pd.Timedelta(days=6)
+            st.rerun()
 
-    # FILTER DATA
-    view = st.session_state.view_mode
+    # Filters row
+    c1, c2, c3, c4 = st.columns(4)
 
-    if view == "single":
-        filtered = filter_data(df, competition, "", club, free_only,
-                               "single", selected_date=st.session_state.selected)
-    elif view == "range":
-        filtered = filter_data(df, competition, "", club, free_only,
-                               "range", start_date=st.session_state.start,
-                               end_date=st.session_state.end)
+    with c1:
+        current_picker_date = st.session_state["selected_date_state"]
+        min_date = min(unique_dates)
+        max_date = max(unique_dates)
+
+        if current_picker_date < min_date:
+            current_picker_date = min_date
+        elif current_picker_date > max_date:
+            current_picker_date = max_date
+
+        selected_date = st.date_input(
+            "Date",
+            value=current_picker_date,
+            min_value=min_date,
+            max_value=max_date,
+            key="date_input_main",
+        )
+        if selected_date != st.session_state["selected_date_state"]:
+            st.session_state["view_mode_state"] = "single"
+        st.session_state["selected_date_state"] = selected_date
+
+    with c2:
+        competition = st.selectbox("Competition", competitions, key="competition_main")
+
+    with c3:
+        platform = st.selectbox("Watch platform", platforms, key="platform_main")
+
+    with c4:
+        club = st.selectbox("Club", clubs, key="club_main")
+
+    free_only = st.checkbox(
+        "Show free-to-watch matches only (BBC / YouTube / ITV)",
+        key="free_only_filter",
+    )
+
+    view_mode = st.session_state["view_mode_state"]
+    selected_date = st.session_state["selected_date_state"]
+    range_start = st.session_state["range_start_state"]
+    range_end = st.session_state["range_end_state"]
+
+    filtered = filter_data(
+        df,
+        competition,
+        platform,
+        club,
+        free_only,
+        view_mode=view_mode,
+        selected_date=selected_date,
+        start_date=range_start,
+        end_date=range_end,
+    )
+
+    if view_mode == "single":
+        pretty_date = format_pretty_date(selected_date)
+        st.info(f"Showing fixtures for {pretty_date}.")
+    elif view_mode == "range":
+        pretty_start = format_pretty_date(range_start)
+        pretty_end = format_pretty_date(range_end)
+        st.info(f"Showing fixtures from {pretty_start} to {pretty_end}.")
     else:
-        filtered = df
+        st.info("Showing all upcoming fixtures.")
 
-    # DISPLAY
-    if filtered.empty:
-        st.warning("No fixtures match your filters.")
+    if view_mode == "single" and selected_date == today_date:
+        st.success("Today's matches ⚽")
+
+    st.divider()
+
+    if view_mode == "single" and selected_date == today_date and filtered.empty:
+        st.warning("No Games Today")
+
+        next_7_days = filter_data(
+            df,
+            competition,
+            platform,
+            club,
+            free_only,
+            view_mode="range",
+            start_date=today_date,
+            end_date=today_date + pd.Timedelta(days=6),
+        )
+
+        if next_7_days.empty:
+            st.info("No fixtures in the next 7 days.")
+        else:
+            st.write("### Fixtures in the next 7 days")
+
+            current_group_date = None
+            for _, row in next_7_days.iterrows():
+                row_date = row["date"]
+
+                if row_date != current_group_date:
+                    st.markdown(f"## {format_pretty_date(row_date)}")
+                    current_group_date = row_date
+
+                match_card(row)
+
+            make_download(next_7_days)
+
+    elif filtered.empty:
+        st.warning("No matches found for those filters.")
+
     else:
-        current = None
+        if view_mode == "single":
+            st.write(f"### {len(filtered)} match(es) on {pretty_date}")
+        elif view_mode == "range":
+            st.write(f"### {len(filtered)} match(es) in this date range")
+        else:
+            st.write(f"### {len(filtered)} match(es) in all upcoming fixtures")
+
+        current_group_date = None
         for _, row in filtered.iterrows():
-            if row["date"] != current:
-                st.markdown(f"### 📅 {format_date(row['date'])}")
-                current = row["date"]
+            row_date = row["date"]
+
+            if row_date != current_group_date:
+                st.markdown(f"## {format_pretty_date(row_date)}")
+                current_group_date = row_date
 
             match_card(row)
+
+        make_download(filtered)
+
+    st.divider()
+
+    with st.expander("All loaded fixtures"):
+        table_df = df[
+            [
+                "competition",
+                "home_team",
+                "away_team",
+                "kickoff_uk",
+                "venue",
+                "watch_platforms",
+            ]
+        ].copy()
+        st.dataframe(table_df, width="stretch", hide_index=True)
+
+    with st.expander("How to update this app"):
+        st.markdown(
+            """
+- The app auto-checks for fresh fixtures when it loads.
+- You can also use the **Update Fixtures** button above.
+- Current sources: WSL, WSL2, England Women, UWCL.
+"""
+        )
 
 
 if __name__ == "__main__":
