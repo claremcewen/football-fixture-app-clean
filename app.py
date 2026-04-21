@@ -11,6 +11,9 @@ import streamlit as st
 APP_DIR = Path(__file__).parent
 DATA_FILE = APP_DIR / "data" / "fixtures_all.csv"
 
+UPDATE_SCRIPT = APP_DIR / "scripts" / "update_fixtures.py"
+STAMP_FILE = APP_DIR / "data" / "last_update.txt"
+
 st.set_page_config(
     page_title="Women's Football Watch Guide",
     page_icon="⚽",
@@ -54,6 +57,37 @@ def get_last_updated_text():
         return "No fixture file yet"
     dt = datetime.fromtimestamp(os.path.getmtime(DATA_FILE))
     return dt.strftime("%A %d %B %Y, %H:%M")
+
+def ensure_fixtures_are_current() -> None:
+    APP_DIR.joinpath("data").mkdir(parents=True, exist_ok=True)
+
+    today_str = datetime.today().strftime("%Y-%m-%d")
+    needs_update = False
+
+    if not DATA_FILE.exists():
+        needs_update = True
+    elif not STAMP_FILE.exists():
+        needs_update = True
+    else:
+        last_update = STAMP_FILE.read_text(encoding="utf-8").strip()
+        if last_update != today_str:
+            needs_update = True
+
+    if needs_update:
+        result = subprocess.run(
+            ["python", str(UPDATE_SCRIPT)],
+            cwd=str(APP_DIR),
+            capture_output=True,
+            text=True,
+        )
+
+        if result.returncode != 0:
+            st.error("Automatic fixture update failed.")
+            st.code(result.stderr if result.stderr else result.stdout)
+            return
+
+        STAMP_FILE.write_text(today_str, encoding="utf-8")
+        st.cache_data.clear()
 
 
 @st.cache_data(ttl="30m")
@@ -153,6 +187,7 @@ def format_date(d):
 
 
 def main():
+    ensure_fixtures_are_current()
     df = load_data()
 
     # HEADER
@@ -164,7 +199,7 @@ def main():
         st.caption(f"Last updated: {get_last_updated_text()}")
 
     with right:
-        if st.button("🔄 Update"):
+        if st.button("🔄 Update Fixtures"):
             with st.spinner("Updating..."):
                 subprocess.run(
                     ["python", str(APP_DIR / "scripts" / "update_fixtures.py")]

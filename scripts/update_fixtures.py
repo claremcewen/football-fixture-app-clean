@@ -68,9 +68,9 @@ def main() -> None:
         try:
             df = func()
             frames.append(df)
-            print(f"✓ {label}: {len(df)} fixtures")
+            print(f"[OK] {label}: {len(df)} fixtures")
         except Exception as exc:
-            print(f"✗ {label}: {exc}")
+            print(f"[ERROR] {label}: {exc}")
 
     combined = combine_frames(frames)
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
