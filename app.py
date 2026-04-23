@@ -2,16 +2,12 @@ from __future__ import annotations
 
 from datetime import datetime
 from pathlib import Path
-import subprocess
-import sys 
 
 import pandas as pd
 import streamlit as st
 
 APP_DIR = Path(__file__).parent
 DATA_FILE = APP_DIR / "data" / "fixtures_all.csv"
-UPDATE_SCRIPT = APP_DIR / "scripts" / "update_fixtures.py"
-STAMP_FILE = APP_DIR / "data" / "last_update.txt"
 
 st.set_page_config(
     page_title="Women's Football Watch Guide",
@@ -36,55 +32,10 @@ def simplify_competition_label(label: str) -> str:
 
 
 def get_last_updated_text() -> str:
-    if STAMP_FILE.exists():
-        stamp = STAMP_FILE.read_text(encoding="utf-8").strip()
-        if stamp:
-            return stamp
+    if DATA_FILE.exists():
+        updated = datetime.fromtimestamp(DATA_FILE.stat().st_mtime)
+        return updated.strftime("%Y-%m-%d %H:%M")
     return "Unknown"
-
-
-def run_fixture_update(show_messages: bool = False) -> bool:
-    APP_DIR.joinpath("data").mkdir(parents=True, exist_ok=True)
-
-    result = subprocess.run(
-        [sys.executable, str(UPDATE_SCRIPT)],
-        cwd=str(APP_DIR),
-        capture_output=True,
-        text=True,
-    )
-
-    if result.returncode != 0:
-        st.error("Fixture update failed.")
-        st.code(result.stderr if result.stderr else result.stdout)
-        return False
-
-    today_str = datetime.today().strftime("%Y-%m-%d")
-    STAMP_FILE.write_text(today_str, encoding="utf-8")
-    st.cache_data.clear()
-
-    if show_messages:
-        st.success("Fixtures updated.")
-
-    return True
-
-
-def ensure_fixtures_are_current() -> None:
-    APP_DIR.joinpath("data").mkdir(parents=True, exist_ok=True)
-
-    today_str = datetime.today().strftime("%Y-%m-%d")
-    needs_update = False
-
-    if not DATA_FILE.exists():
-        needs_update = True
-    elif not STAMP_FILE.exists():
-        needs_update = True
-    else:
-        last_update = STAMP_FILE.read_text(encoding="utf-8").strip()
-        if last_update != today_str:
-            needs_update = True
-
-    if needs_update:
-        run_fixture_update(show_messages=False)
 
 
 @st.cache_data
@@ -231,7 +182,6 @@ def format_pretty_date(date_value) -> str:
 
 
 def main():
-    ensure_fixtures_are_current()
     df = load_data()
 
     st.title("⚽ Women's Football Watch Guide")
@@ -239,8 +189,7 @@ def main():
 
     if df.empty:
         st.warning(
-            "No fixture data found yet. Run `python scripts/update_fixtures.py` first, "
-            "then refresh this app."
+            "No fixture data found yet. The fixture CSV has not been generated yet."
         )
         return
 
@@ -255,7 +204,9 @@ def main():
 
     unique_dates = sorted(df["date"].unique())
     competitions = ["All"] + sorted(df["competition_group"].dropna().unique().tolist())
-    clubs = ["All"] + sorted(pd.unique(pd.concat([df["home_team"], df["away_team"]])).tolist())
+    clubs = ["All"] + sorted(
+        pd.unique(pd.concat([df["home_team"], df["away_team"]])).tolist()
+    )
     platforms = ["All"] + sorted(
         {
             p.strip()
@@ -305,9 +256,7 @@ def main():
 
     with info4:
         st.markdown(f"**Last updated:** {get_last_updated_text()}")
-        if st.button("Update Fixtures", key="manual_update_button"):
-            if run_fixture_update(show_messages=True):
-                st.rerun()
+        st.caption("Updated automatically via GitHub Actions")
 
     st.divider()
 
@@ -486,8 +435,8 @@ def main():
     with st.expander("How to update this app"):
         st.markdown(
             """
-- The app auto-checks for fresh fixtures when it loads.
-- You can also use the **Update Fixtures** button above.
+- Fixture updates now happen outside the app via GitHub Actions.
+- This app simply reads the latest `data/fixtures_all.csv`.
 - Current sources: WSL, WSL2, England Women, UWCL.
 """
         )
