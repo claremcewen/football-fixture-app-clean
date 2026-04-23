@@ -2,16 +2,14 @@ name: Update fixtures
 
 on:
   schedule:
-    # 05:15 UTC every day
     - cron: "15 5 * * *"
   workflow_dispatch:
 
 env:
-    FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 permissions:
   contents: write
-
 
 jobs:
   update-fixtures:
@@ -20,6 +18,8 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
