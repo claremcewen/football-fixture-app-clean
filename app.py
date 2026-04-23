@@ -3,6 +3,7 @@ from __future__ import annotations
 from datetime import datetime
 from pathlib import Path
 import subprocess
+import sys 
 
 import pandas as pd
 import streamlit as st
@@ -46,7 +47,7 @@ def run_fixture_update(show_messages: bool = False) -> bool:
     APP_DIR.joinpath("data").mkdir(parents=True, exist_ok=True)
 
     result = subprocess.run(
-        ["python", str(UPDATE_SCRIPT)],
+        [sys.executable, str(UPDATE_SCRIPT)],
         cwd=str(APP_DIR),
         capture_output=True,
         text=True,
