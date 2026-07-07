@@ -19,9 +19,11 @@ MONTH_YEAR_RE = re.compile(r"^(January|February|March|April|May|June|July|August
 
 
 def scrape_england_women() -> "pd.DataFrame":
-
-
     lines = fetch_lines(ENGLAND_URL)
+    return parse_england_lines(lines)
+
+
+def parse_england_lines(lines) -> "pd.DataFrame":
     rows = []
 
     current_year = None

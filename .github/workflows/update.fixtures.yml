@@ -10,6 +10,7 @@ env:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   update-fixtures:
@@ -35,12 +36,40 @@ jobs:
         run: |
           python scripts/update_fixtures.py
 
+      - name: Report scraper failures
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          FAILURES=$(python -c "
+          import json
+          status = json.load(open('data/last_update_status.json'))
+          failed = {k: v for k, v in status.items() if not v.get('ok')}
+          for k, v in failed.items():
+              print(f\"- **{k}**: {v.get('note', 'unknown issue')} (rows kept: {v.get('rows', 0)})\")
+          ")
+
+          if [ -z "$FAILURES" ]; then
+            echo "All sources OK, nothing to report."
+            exit 0
+          fi
+
+          TITLE="Fixture scraper failures"
+          BODY=$(printf "One or more fixture sources failed on the latest scheduled update:\n\n%s\n\nCheck data/last_update_status.json and the workflow run logs for details. This may be expected (e.g. off-season, no fixtures published yet) - verify before treating it as a bug.\n" "$FAILURES")
+
+          EXISTING=$(gh issue list --search "in:title \"$TITLE\"" --state open --json number --jq '.[0].number')
+
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$BODY"
+          else
+            gh issue create --title "$TITLE" --body "$BODY"
+          fi
+
       - name: Commit updated fixtures
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data/fixtures_all.csv
+          git add data/fixtures_all.csv data/last_update_status.json
 
           if git diff --cached --quiet; then
             echo "No fixture changes to commit."

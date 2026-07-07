@@ -59,6 +59,10 @@ def normalise_watch_line(line: str) -> str:
 
 def scrape_uwcl():
     lines = fetch_lines(UWCL_URL)
+    return parse_uwcl_lines(lines)
+
+
+def parse_uwcl_lines(lines):
     rows = []
 
     current_date = None

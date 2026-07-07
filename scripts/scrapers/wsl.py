@@ -23,6 +23,10 @@ def _is_watch_line(line: str) -> bool:
 
 def scrape_wsl():
     lines = fetch_lines(WSL_URL)
+    return parse_wsl_lines(lines)
+
+
+def parse_wsl_lines(lines):
     rows = []
 
     current_date = None

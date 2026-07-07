@@ -79,6 +79,9 @@ def to_uk_iso(date_obj, time_text: str) -> str:
 def build_df(rows: Iterable[dict]) -> pd.DataFrame:
     columns = [
         "competition",
+        "sport",
+        "competition_group",
+        "region",
         "home_team",
         "away_team",
         "kickoff_uk",

@@ -16,21 +16,6 @@ st.set_page_config(
 )
 
 
-def simplify_competition_label(label: str) -> str:
-    label = str(label).strip()
-
-    if "UEFA Women's Champions League" in label:
-        return "UWCL"
-    if label.startswith("England Women"):
-        return "England Women"
-    if "WSL2" in label:
-        return "WSL2"
-    if "WSL" in label:
-        return "WSL"
-
-    return label
-
-
 def get_last_updated_text() -> str:
     if DATA_FILE.exists():
         updated = datetime.fromtimestamp(DATA_FILE.stat().st_mtime)
@@ -44,7 +29,9 @@ def load_data() -> pd.DataFrame:
         return pd.DataFrame(
             columns=[
                 "competition",
+                "sport",
                 "competition_group",
+                "region",
                 "home_team",
                 "away_team",
                 "kickoff_uk",
@@ -71,7 +58,6 @@ def load_data() -> pd.DataFrame:
         + " "
         + df["kickoff"].dt.strftime("%B %Y")
     )
-    df["competition_group"] = df["competition"].apply(simplify_competition_label)
 
     return df.sort_values("kickoff").reset_index(drop=True)
 

@@ -1,32 +1,50 @@
 
-# Women's Football Watch Guide — Phase 2 remake
+# Women's Football Watch Guide
 
-This remake keeps the same basic Streamlit app, but restructures the project around a generated combined fixtures file.
+A Streamlit app that reads a generated combined fixtures file (`data/fixtures_all.csv`),
+refreshed daily by scraping WSL, WSL2, England Women and UWCL fixtures.
 
-## What changed
+## Architecture
 
-- `app.py` now reads from `data/fixtures_all.csv`
-- `scripts/update_fixtures.py` rebuilds that file automatically
-- starter scrapers are included for:
-  - Barclays WSL
-  - Barclays WSL2
-  - England Women senior fixtures
+- `app.py` reads from `data/fixtures_all.csv` - no scraping or classification logic lives here.
+- `scripts/update_fixtures.py` runs the 4 scrapers, classifies each row via `scripts/registry.py`,
+  and rebuilds `data/fixtures_all.csv`. If a scraper errors or returns 0 rows while the previous
+  file had fixtures for that competition, that competition's previous rows are kept rather than
+  silently dropped - see `data/last_update_status.json` for the last run's per-source status.
+- `scripts/registry.py` is the single place that maps a raw scraped `competition` label to
+  `sport` / `competition_group` / `region`. Adding a new league later is one line here, not
+  scattered string-matching across files.
+- `scripts/scrapers/` - each scraper splits `fetch_*` (network call) from `parse_*_lines`
+  (pure text parsing), so parsing can be unit tested without hitting the network.
+- `scripts/scrapers/tests/` - pytest suite. Each source has a small hand-built "populated"
+  fixture (`*_sample.txt`) that exercises the row-extraction logic deterministically, plus a
+  real captured snapshot (`*_live.txt`) checked for parse-without-crashing. Run with:
+  ```bash
+  pytest scripts/scrapers/tests/
+  ```
+  Refresh the live snapshots with `python -m scripts.scrapers.tests.capture_fixtures`.
+- `.github/workflows/update.fixtures.yml` runs the updater daily, and if any source failed or
+  fell back to stale data, opens/updates a single GitHub issue titled "Fixture scraper failures"
+  summarizing what happened (reused across runs, not one issue per day).
 
 ## Folder structure
 
 ```text
-wfw_phase2_remade/
 ├─ app.py
 ├─ requirements.txt
 ├─ data/
-│  └─ fixtures_all.csv
+│  ├─ fixtures_all.csv
+│  └─ last_update_status.json
 └─ scripts/
+   ├─ registry.py
    ├─ update_fixtures.py
    └─ scrapers/
       ├─ common.py
       ├─ wsl.py
       ├─ wsl2.py
-      └─ internationals.py
+      ├─ uwcl.py
+      ├─ internationals.py
+      └─ tests/
 ```
 
 ## First run
@@ -53,7 +71,9 @@ streamlit run app.py
 
 - The app should run immediately because a tiny sample `data/fixtures_all.csv` is included.
 - Running `update_fixtures.py` should overwrite that file with fresh data from the official source pages.
-- If one scraper fails, the updater will still save whatever data it successfully collected.
+- If one scraper fails or returns 0 rows, the updater keeps that competition's previous
+  fixtures instead of dropping them, and records what happened in
+  `data/last_update_status.json`.
 
 ## Notes
 
@@ -63,6 +83,8 @@ streamlit run app.py
 
 ## Good next steps
 
-1. Add more international teams or tournaments.
-2. Add a GitHub Actions workflow to run `update_fixtures.py` every day.
-3. Deploy to Streamlit Community Cloud so you can use it on Android without local Python.
+1. Add more leagues (NWSL, other European domestic leagues) - each is one scraper plus one
+   line in `scripts/registry.py`.
+2. Add more sports - the schema already has a `sport` column, so this is additive rather than
+   a schema change.
+3. Deploy to Streamlit Community Cloud (or another host) so you can use it without local Python.

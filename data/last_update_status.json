@@ -1,0 +1,21 @@
+{
+  "WSL": {
+    "ok": false,
+    "rows": 10,
+    "note": "scraper returned 0 rows; fell back to previous data"
+  },
+  "WSL2": {
+    "ok": false,
+    "rows": 10,
+    "note": "scraper returned 0 rows; fell back to previous data"
+  },
+  "England Women": {
+    "ok": true,
+    "rows": 2
+  },
+  "UWCL": {
+    "ok": false,
+    "rows": 4,
+    "note": "scraper returned 0 rows; fell back to previous data"
+  }
+}
