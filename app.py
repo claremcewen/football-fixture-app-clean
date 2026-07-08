@@ -15,6 +15,30 @@ st.set_page_config(
     layout="wide",
 )
 
+# Default view applied when a competition is selected from the dropdown.
+# "all" - show every upcoming fixture. Used for sparse/international
+#         competitions where there's rarely more than a handful at once.
+# "next_round" - auto-detect the next cluster of fixture dates (see
+#         next_round_window below) rather than a fixed day count, since
+#         leagues don't all play on the same weekdays every week.
+COMPETITION_DEFAULT_VIEW: dict[str, str] = {
+    "England Women": "all",
+    "UWCL": "all",
+    "WSL": "next_round",
+    "WSL2": "next_round",
+    "NWSL": "next_round",
+}
+DEFAULT_VIEW_FALLBACK = "next_round"
+
+# Fixtures within this many days of each other count as the same round.
+# Tuned against NWSL's actual schedule, which clusters into blocks like
+# Thu/Sat/Sun/Mon separated by ~3+ day gaps between rounds.
+ROUND_CLUSTER_GAP_DAYS = 2
+
+# Used only if a "next_round" competition has no upcoming fixtures at all
+# (nothing to cluster) - falls back to a plain N-day window.
+EMPTY_ROUND_FALLBACK_DAYS = 10
+
 
 def get_last_updated_text() -> str:
     if DATA_FILE.exists():
@@ -167,6 +191,56 @@ def format_pretty_date(date_value) -> str:
     return f"{ts.strftime('%A')} {ts.day} {ts.strftime('%B %Y')}"
 
 
+def next_round_window(df: pd.DataFrame, competition: str, today) -> tuple:
+    """Find the next 'round' of fixtures for a competition by clustering
+    consecutive fixture dates, breaking wherever a gap larger than
+    ROUND_CLUSTER_GAP_DAYS appears. This adapts to each league's actual
+    schedule instead of assuming fixed weekdays or a fixed day count."""
+    comp_dates = sorted(
+        df[(df["competition_group"] == competition) & (df["date"] >= today)][
+            "date"
+        ].unique()
+    )
+
+    if not comp_dates:
+        return today, today + pd.Timedelta(days=EMPTY_ROUND_FALLBACK_DAYS)
+
+    start = comp_dates[0]
+    end = comp_dates[0]
+    for d in comp_dates[1:]:
+        gap = (d - end).days
+        if gap > ROUND_CLUSTER_GAP_DAYS:
+            break
+        end = d
+
+    return start, end
+
+
+def apply_competition_default_view() -> None:
+    """Reset the date view to a sensible default whenever the Competition
+    dropdown changes, since a fixed 'next 7 days' makes sense for a weekly
+    league but would often show nothing for a sparse international one."""
+    competition = st.session_state["competition_main"]
+    today = pd.Timestamp.today().date()
+
+    if competition == "All":
+        st.session_state["view_mode_state"] = "range"
+        st.session_state["range_start_state"] = today
+        st.session_state["range_end_state"] = today + pd.Timedelta(days=6)
+        return
+
+    mode = COMPETITION_DEFAULT_VIEW.get(competition, DEFAULT_VIEW_FALLBACK)
+
+    if mode == "all":
+        st.session_state["view_mode_state"] = "all"
+        return
+
+    start, end = next_round_window(load_data(), competition, today)
+    st.session_state["view_mode_state"] = "range"
+    st.session_state["range_start_state"] = start
+    st.session_state["range_end_state"] = end
+
+
 def main():
     df = load_data()
 
@@ -304,7 +378,12 @@ def main():
         st.session_state["selected_date_state"] = selected_date
 
     with c2:
-        competition = st.selectbox("Competition", competitions, key="competition_main")
+        competition = st.selectbox(
+            "Competition",
+            competitions,
+            key="competition_main",
+            on_change=apply_competition_default_view,
+        )
 
     with c3:
         platform = st.selectbox("Watch platform", platforms, key="platform_main")
