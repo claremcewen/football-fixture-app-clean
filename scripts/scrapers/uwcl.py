@@ -114,7 +114,7 @@ def parse_uwcl_lines(lines):
                     "home_team": home_team.strip(),
                     "away_team": away_team.strip(),
                     "kickoff_uk": f"{current_date.isoformat()} {kickoff_time}",
-                    "venue": "TBC",
+                    "venue": "-",
                     "watch_platforms": watch_platforms,
                     "watch_notes": watch_notes,
                     "official_source": UWCL_URL,

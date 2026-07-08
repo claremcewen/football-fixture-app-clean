@@ -21,6 +21,29 @@ MONTHS = {
     "September": 9, "October": 10, "November": 11, "December": 12,
 }
 
+# NWSL is a single round-robin, so every fixture is at the home team's own
+# ground - no need to scrape venue separately. Boston and Seattle currently
+# split home games across two grounds each (World Cup stadium prep); this
+# lists their primary venue, so those two may occasionally be wrong.
+NWSL_TEAM_VENUES = {
+    "Angel City": "BMO Stadium",
+    "Bay FC": "PayPal Park",
+    "Boston Legacy": "Gillette Stadium",
+    "Chicago Stars": "Northwestern Medicine Field",
+    "Denver Summit": "Empower Field at Mile High",
+    "Gotham FC": "Sports Illustrated Stadium",
+    "Houston Dash": "Shell Energy Stadium",
+    "Kansas City Current": "CPKC Stadium",
+    "North Carolina Courage": "First Horizon Stadium",
+    "Orlando Pride": "Inter&Co Stadium",
+    "Portland Thorns": "Providence Park",
+    "Racing Louisville": "Lynn Family Stadium",
+    "San Diego Wave": "Snapdragon Stadium",
+    "Seattle Reign": "Lumen Field",
+    "Utah Royals": "America First Field",
+    "Washington Spirit": "Audi Field",
+}
+
 
 def parse_listing_date(line: str):
     m = DATE_RE.match(line.strip())
@@ -77,13 +100,14 @@ def parse_nwsl_lines(lines):
             and current_date >= today
         ):
             home_team, away_team = match_match.groups()
+            home_team = home_team.strip()
             rows.append(
                 {
                     "competition": COMPETITION,
-                    "home_team": home_team.strip(),
+                    "home_team": home_team,
                     "away_team": away_team.strip(),
                     "kickoff_uk": f"{current_date.isoformat()} {kickoff_time}",
-                    "venue": "TBC",
+                    "venue": NWSL_TEAM_VENUES.get(home_team, "-"),
                     "watch_platforms": ", ".join(watch_platforms),
                     "watch_notes": "",
                     "official_source": NWSL_URL,
