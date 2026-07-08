@@ -2,7 +2,7 @@
 # Women's Football Watch Guide
 
 A Streamlit app that reads a generated combined fixtures file (`data/fixtures_all.csv`),
-refreshed daily by scraping WSL, WSL2, England Women and UWCL fixtures.
+refreshed daily by scraping WSL, WSL2, England Women, UWCL and NWSL fixtures.
 
 ## Architecture
 
@@ -83,8 +83,8 @@ streamlit run app.py
 
 ## Good next steps
 
-1. Add more leagues (NWSL, other European domestic leagues) - each is one scraper plus one
-   line in `scripts/registry.py`.
+1. Add more leagues (other European domestic leagues: Frauen-Bundesliga, Liga F, Serie A
+   Femminile, D1 Arkema) - each is one scraper plus one line in `scripts/registry.py`.
 2. Add more sports - the schema already has a `sport` column, so this is additive rather than
    a schema change.
 3. Deploy to Streamlit Community Cloud (or another host) so you can use it without local Python.

@@ -9,6 +9,7 @@ COMPETITION_REGISTRY: list[tuple[str, str, str, str]] = [
     ("Barclays WSL", "Football", "WSL", "England"),
     ("England Women", "Football", "England Women", "England"),
     ("UEFA Women's Champions League", "Football", "UWCL", "Europe"),
+    ("NWSL", "Football", "NWSL", "USA"),
 ]
 
 

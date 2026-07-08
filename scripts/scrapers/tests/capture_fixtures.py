@@ -14,6 +14,7 @@ from pathlib import Path
 
 from scripts.scrapers.common import fetch_lines
 from scripts.scrapers.internationals import ENGLAND_URL
+from scripts.scrapers.nwsl import NWSL_URL
 from scripts.scrapers.uwcl import UWCL_URL
 from scripts.scrapers.wsl import WSL_URL
 from scripts.scrapers.wsl2 import WSL2_URL
@@ -25,6 +26,7 @@ SOURCES = {
     "wsl2_live.txt": WSL2_URL,
     "england_live.txt": ENGLAND_URL,
     "uwcl_live.txt": UWCL_URL,
+    "nwsl_live.txt": NWSL_URL,
 }
 
 

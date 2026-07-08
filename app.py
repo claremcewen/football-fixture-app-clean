@@ -171,7 +171,7 @@ def main():
     df = load_data()
 
     st.title("⚽ Women's Football Watch Guide")
-    st.caption("WSL, WSL2, England Women and UWCL from generated combined data.")
+    st.caption("WSL, WSL2, England Women, UWCL and NWSL from generated combined data.")
 
     if df.empty:
         st.warning(
@@ -423,7 +423,7 @@ def main():
             """
 - Fixture updates now happen outside the app via GitHub Actions.
 - This app simply reads the latest `data/fixtures_all.csv`.
-- Current sources: WSL, WSL2, England Women, UWCL.
+- Current sources: WSL, WSL2, England Women, UWCL, NWSL.
 """
         )
 

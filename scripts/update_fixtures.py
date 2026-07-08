@@ -12,6 +12,7 @@ if str(ROOT_DIR) not in sys.path:
 
 from scripts.registry import classify
 from scripts.scrapers.internationals import scrape_england_women
+from scripts.scrapers.nwsl import scrape_nwsl
 from scripts.scrapers.uwcl import scrape_uwcl
 from scripts.scrapers.wsl import scrape_wsl
 from scripts.scrapers.wsl2 import scrape_wsl2
@@ -109,6 +110,7 @@ def main() -> None:
         ("WSL2", scrape_wsl2),
         ("England Women", scrape_england_women),
         ("UWCL", scrape_uwcl),
+        ("NWSL", scrape_nwsl),
     ]
 
     frames: list[pd.DataFrame] = []
