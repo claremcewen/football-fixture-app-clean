@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import html
 from datetime import datetime
 from pathlib import Path
 
@@ -64,6 +65,90 @@ ALL_FULL_LIST = "All Fixtures"
 # Excluded from Club filtering entirely, and from the Club list even when
 # ALL_FULL_LIST pulls teams from every competition at once.
 NATIONAL_TEAM_COMPETITIONS: set[str] = {"England Women"}
+
+# Small color-coded dot per competition on each match card, purely for
+# visual grouping - an original palette, not official league/team colors
+# or logos, to stay clear of any branding/trademark concerns.
+COMPETITION_COLOR: dict[str, str] = {
+    "WSL": "#0F6E56",
+    "WSL2": "#185FA5",
+    "England Women": "#534AB7",
+    "UWCL": "#854F0B",
+    "NWSL": "#993C1D",
+}
+DEFAULT_COMPETITION_COLOR = "#5F5E5A"
+
+APP_CSS = """
+<style>
+.wfg-status {
+    border: 0.5px solid rgba(120, 120, 120, 0.35);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: inherit;
+    margin-bottom: 0.5rem;
+}
+.wfg-section-heading {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(120, 120, 120, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 1.25rem 0 0.5rem;
+}
+.wfg-date-heading {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 1.25rem 0 0.5rem;
+}
+.wfg-card {
+    border: 0.5px solid rgba(120, 120, 120, 0.3);
+    border-radius: 12px;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 10px;
+}
+.wfg-card-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+.wfg-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.wfg-competition {
+    font-size: 11px;
+    color: rgba(120, 120, 120, 0.9);
+}
+.wfg-card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+.wfg-teams {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+.wfg-meta {
+    font-size: 12px;
+    color: rgba(120, 120, 120, 0.9);
+    margin: 2px 0 0;
+}
+.wfg-venue {
+    font-size: 12px;
+    color: rgba(120, 120, 120, 0.9);
+    margin: 0;
+    white-space: nowrap;
+    text-align: right;
+}
+</style>
+"""
 
 
 def get_last_updated_text() -> str:
@@ -164,34 +249,47 @@ def filter_data(
 
 
 def match_card(row: pd.Series) -> None:
-    with st.container(border=True):
-        col1, col2 = st.columns([3, 2])
+    color = COMPETITION_COLOR.get(row.get("competition_group"), DEFAULT_COMPETITION_COLOR)
 
-        with col1:
-            st.subheader(f"{row['home_team']} vs {row['away_team']}")
-            st.write(f"**Competition:** {row['competition']}")
+    kickoff = row["kickoff"]
+    pretty_kickoff = f"{kickoff.strftime('%a')} {kickoff.day} {kickoff.strftime('%b')} · {kickoff.strftime('%H:%M')}"
 
-            kickoff = row["kickoff"]
-            pretty_kickoff = (
-                f"{kickoff.strftime('%A')} {kickoff.day} "
-                f"{kickoff.strftime('%B')}, {kickoff.strftime('%H:%M')}"
-            )
-            st.write(f"**Kick-off (UK):** {pretty_kickoff}")
-            st.write(f"**Venue:** {row.get('venue', '-') or '-'}")
+    watch_platforms = row.get("watch_platforms", "")
+    watch_text = (
+        str(watch_platforms)
+        if pd.notna(watch_platforms) and str(watch_platforms).strip()
+        else "TBC"
+    )
+    venue = row.get("venue", "-")
+    venue = str(venue) if pd.notna(venue) and str(venue).strip() else "-"
 
-        with col2:
-            watch_platforms = row.get("watch_platforms", "")
-            st.write(
-                f"**Watch:** {watch_platforms if str(watch_platforms).strip() else 'TBC'}"
-            )
+    meta_parts = [pretty_kickoff, watch_text]
+    notes = row.get("watch_notes", "")
+    if pd.notna(notes) and str(notes).strip():
+        meta_parts.append(str(notes))
 
-            notes = row.get("watch_notes", "")
-            if pd.notna(notes) and str(notes).strip():
-                st.write(f"**Notes:** {notes}")
+    st.markdown(
+        f"""
+        <div class="wfg-card">
+            <div class="wfg-card-top">
+                <span class="wfg-dot" style="background: {html.escape(color)};"></span>
+                <span class="wfg-competition">{html.escape(str(row['competition']))}</span>
+            </div>
+            <div class="wfg-card-body">
+                <div>
+                    <p class="wfg-teams">{html.escape(str(row['home_team']))} vs {html.escape(str(row['away_team']))}</p>
+                    <p class="wfg-meta">{html.escape(" · ".join(meta_parts))}</p>
+                </div>
+                <p class="wfg-venue">{html.escape(str(venue))}</p>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
-            source = row.get("official_source", "")
-            if pd.notna(source) and str(source).strip():
-                st.link_button("Official fixture source", source)
+    source = row.get("official_source", "")
+    if pd.notna(source) and str(source).strip():
+        st.link_button("Official fixture source", source)
 
 
 def make_download(df: pd.DataFrame) -> None:
@@ -219,6 +317,18 @@ def make_download(df: pd.DataFrame) -> None:
 def format_pretty_date(date_value) -> str:
     ts = pd.Timestamp(date_value)
     return f"{ts.strftime('%A')} {ts.day} {ts.strftime('%B %Y')}"
+
+
+def render_status(text: str) -> None:
+    st.markdown(f'<div class="wfg-status">{html.escape(text)}</div>', unsafe_allow_html=True)
+
+
+def render_date_heading(text: str) -> None:
+    st.markdown(f'<p class="wfg-date-heading">{html.escape(text)}</p>', unsafe_allow_html=True)
+
+
+def render_section_heading(text: str) -> None:
+    st.markdown(f'<p class="wfg-section-heading">{html.escape(text)}</p>', unsafe_allow_html=True)
 
 
 def competition_display(competition: str) -> str:
@@ -310,9 +420,14 @@ def apply_date_lookup() -> None:
 
 
 def main():
+    st.markdown(APP_CSS, unsafe_allow_html=True)
     df = load_data()
 
-    st.title("⚽ Women's Football Watch Guide")
+    st.markdown(
+        '<p style="font-size:17px; font-weight:500; margin:0 0 2px;">'
+        "Women's football watch guide</p>",
+        unsafe_allow_html=True,
+    )
     st.caption("WSL, WSL2, England Women, UWCL and NWSL from generated combined data.")
 
     if df.empty:
@@ -372,16 +487,16 @@ def main():
     with status_col:
         if view_mode == "single":
             pretty_date = format_pretty_date(selected_date)
-            st.info(f"Showing {comp_label} fixtures for {pretty_date}.")
+            render_status(f"Showing {comp_label} fixtures for {pretty_date}.")
         elif view_mode == "range":
             pretty_start = format_pretty_date(range_start)
             pretty_end = format_pretty_date(range_end)
-            st.info(f"Showing {comp_label} fixtures from {pretty_start} to {pretty_end}.")
+            render_status(f"Showing {comp_label} fixtures from {pretty_start} to {pretty_end}.")
         else:
             if comp_label == "all":
-                st.info("Showing all upcoming fixtures.")
+                render_status("Showing all upcoming fixtures.")
             else:
-                st.info(f"Showing all upcoming {comp_label} fixtures.")
+                render_status(f"Showing all upcoming {comp_label} fixtures.")
 
     with action_col:
         # Hidden once already showing "all", and for the unscoped
@@ -534,14 +649,14 @@ def main():
         if next_7_days.empty:
             st.info("No fixtures in the next 7 days.")
         else:
-            st.write("### Fixtures in the next 7 days")
+            render_section_heading("Fixtures in the next 7 days")
 
             current_group_date = None
             for _, row in next_7_days.iterrows():
                 row_date = row["date"]
 
                 if row_date != current_group_date:
-                    st.markdown(f"## {format_pretty_date(row_date)}")
+                    render_date_heading(format_pretty_date(row_date))
                     current_group_date = row_date
 
                 match_card(row)
@@ -554,18 +669,18 @@ def main():
     else:
         if view_mode == "single":
             pretty_date = format_pretty_date(selected_date)
-            st.write(f"### {len(filtered)} match(es) on {pretty_date}")
+            render_section_heading(f"{len(filtered)} match(es) on {pretty_date}")
         elif view_mode == "range":
-            st.write(f"### {len(filtered)} match(es) in this date range")
+            render_section_heading(f"{len(filtered)} match(es) in this date range")
         else:
-            st.write(f"### {len(filtered)} match(es) in all upcoming fixtures")
+            render_section_heading(f"{len(filtered)} match(es) in all upcoming fixtures")
 
         current_group_date = None
         for _, row in filtered.iterrows():
             row_date = row["date"]
 
             if row_date != current_group_date:
-                st.markdown(f"## {format_pretty_date(row_date)}")
+                render_date_heading(format_pretty_date(row_date))
                 current_group_date = row_date
 
             match_card(row)

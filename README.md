@@ -122,6 +122,24 @@ filters" section, then the fixture list.
   hidden behind an extra click.
 - **Reset** clears every filter back to the "today, all competitions" default.
 
+## Visual design
+
+Match cards show a small colored dot per competition (`COMPETITION_COLOR` in `app.py`) purely
+for at-a-glance grouping. This is an **original palette, not official league/team branding or
+logos** - deliberately, to stay clear of any trademark/copyright concerns. Add a new hex value
+there when a new competition is added; unlisted ones fall back to a neutral gray
+(`DEFAULT_COMPETITION_COLOR`).
+
+Styling is done via a single injected `<style>` block (`APP_CSS` in `app.py`) plus small render
+helper functions (`render_status`, `render_date_heading`, `render_section_heading`) rather than
+Streamlit's built-in `st.info`/`st.markdown("##...")`, to get a more compact, muted look than
+Streamlit's defaults. Borders/muted text use semi-transparent gray (`rgba(120,120,120,...)`)
+specifically so they adapt to both light and dark mode without separate theme-specific CSS.
+
+Any user-facing card content built from scraped data goes through `html.escape()` before being
+interpolated into raw HTML (`match_card` uses `st.markdown(..., unsafe_allow_html=True)`) -
+necessary since this content comes from third-party sites, not just internal data.
+
 ## Notes
 
 - England fixtures often have incomplete watch information, so those rows may be blank or marked TBC.
