@@ -36,3 +36,25 @@ def test_unmapped_home_team_falls_back_to_dash():
 def test_live_snapshot_parses_without_crashing():
     df = parse_nwsl_lines(load_fixture("nwsl_live.txt"))
     assert "home_team" in df.columns
+
+
+def test_last_match_does_not_swallow_page_footer():
+    # Regression: the last match in the scraped list is immediately
+    # followed by footer/nav content, not another time/date line - without
+    # a stop marker, all of that junk used to end up in its watch_platforms.
+    lines = [
+        "Saturday 12th September 2026",
+        "22:00",
+        "Washington Spirit v Chicago Stars",
+        "NWSL",
+        "NWSL+",
+        "View Our Women's Football TV Schedule by Team",
+        "Arsenal Women",
+        "Back to Top",
+        "About Us",
+        "Privacy Policy",
+    ]
+    df = parse_nwsl_lines(lines)
+
+    assert len(df) == 1
+    assert df.iloc[0]["watch_platforms"] == "NWSL+"

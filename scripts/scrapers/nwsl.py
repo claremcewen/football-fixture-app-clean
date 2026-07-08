@@ -21,6 +21,27 @@ MONTHS = {
     "September": 9, "October": 10, "November": 11, "December": 12,
 }
 
+# The last match in the scraped list is followed immediately by page
+# footer/nav content, not another time/date line - without a stop marker,
+# that whole footer gets slurped into the last match's watch_platforms.
+STOP_MARKERS = {
+    "View Our Women's Football TV Schedule by Team",
+    "Back to Top",
+    "Live Football On TV",
+    "View All Matches",
+    "View by Competition",
+    "View by Team",
+    "View by Channel",
+    "About",
+    "About Us",
+    "My Guide",
+    "Privacy Policy",
+    "Privacy Options",
+    "Contact Us",
+    "Twitter",
+    "Site Map",
+}
+
 # NWSL is a single round-robin, so every fixture is at the home team's own
 # ground - no need to scrape venue separately. Boston and Seattle currently
 # split home games across two grounds each (World Cup stadium prep); this
@@ -87,7 +108,11 @@ def parse_nwsl_lines(lines):
         watch_platforms = []
         while j < len(lines):
             next_line = lines[j].strip()
-            if TIME_RE.match(next_line) or parse_listing_date(next_line):
+            if (
+                TIME_RE.match(next_line)
+                or parse_listing_date(next_line)
+                or next_line in STOP_MARKERS
+            ):
                 break
             if next_line:
                 watch_platforms.append(next_line)

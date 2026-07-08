@@ -483,25 +483,25 @@ def main():
             st.session_state["range_end_state"] = today_date + pd.Timedelta(days=6)
             st.rerun()
 
-    with st.expander("More filters"):
-        f1, f2 = st.columns(2)
+    st.markdown("**More filters**")
+    f1, f2 = st.columns(2)
 
-        with f1:
-            platform = st.selectbox("Watch platform", platforms, key="platform_main")
+    with f1:
+        platform = st.selectbox("Watch platform", platforms, key="platform_main")
 
-        with f2:
-            min_date = min(unique_dates)
-            max_date = max(unique_dates)
-            default_lookup_date = min(max(today_date, min_date), max_date)
+    with f2:
+        min_date = min(unique_dates)
+        max_date = max(unique_dates)
+        default_lookup_date = min(max(today_date, min_date), max_date)
 
-            st.date_input(
-                "Look up a specific date",
-                value=default_lookup_date,
-                min_value=min_date,
-                max_value=max_date,
-                key="date_input_main",
-                on_change=apply_date_lookup,
-            )
+        st.date_input(
+            "Look up a specific date",
+            value=default_lookup_date,
+            min_value=min_date,
+            max_value=max_date,
+            key="date_input_main",
+            on_change=apply_date_lookup,
+        )
 
     st.divider()
 

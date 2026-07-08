@@ -29,6 +29,10 @@ refreshed daily by scraping WSL, WSL2, England Women, UWCL and NWSL fixtures.
 - `scripts/scrapers/nwsl.py` has a static `NWSL_TEAM_VENUES` lookup (team -> home stadium),
   since NWSL is a single round-robin and the scraped source doesn't list venue. Update this if a
   team relocates or a new team joins; unmapped teams fall back to `"-"`.
+- `scripts/scrapers/nwsl.py` has a `STOP_MARKERS` set, same pattern as `wsl.py`/`wsl2.py` - the
+  last match in the scraped list is immediately followed by page footer/nav content rather than
+  another time/date line, so without a stop marker that footer gets read as the last match's
+  watch platforms.
 
 ## Folder structure
 
@@ -82,8 +86,8 @@ streamlit run app.py
 ## Using the app
 
 Page layout, top to bottom: last-updated timestamp, a status line showing what's currently in
-view, the Competition / Club / Free-to-air controls, quick date-shortcut buttons, "More filters",
-then the fixture list.
+view, the Competition / Club / Free-to-air controls, quick date-shortcut buttons, a "More
+filters" section, then the fixture list.
 
 - The app opens on **today, across all competitions** - if nothing's on today, it falls back to
   showing the next 7 days instead of a blank screen.
@@ -113,8 +117,9 @@ then the fixture list.
 - A small **"Show all upcoming"** button appears next to the status line whenever a specific
   competition is selected (not for "All (this week)") - it shows that one league's entire
   remaining schedule rather than just its next round.
-- **Watch platform** and **look up a specific date** are tucked into "More filters" since they're
-  used less often than the controls above.
+- **Watch platform** and **look up a specific date** sit under a "More filters" heading, always
+  visible (not a click-to-expand section) - platform filtering is valuable enough to not want it
+  hidden behind an extra click.
 - **Reset** clears every filter back to the "today, all competitions" default.
 
 ## Notes
