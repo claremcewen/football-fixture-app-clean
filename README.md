@@ -124,17 +124,31 @@ filters" section, then the fixture list.
 
 ## Visual design
 
-Match cards show a small colored dot per competition (`COMPETITION_COLOR` in `app.py`) purely
-for at-a-glance grouping. This is an **original palette, not official league/team branding or
-logos** - deliberately, to stay clear of any trademark/copyright concerns. Add a new hex value
-there when a new competition is added; unlisted ones fall back to a neutral gray
+The app is branded as **She Can Kick It** (`shecankickit.com`, linked in the footer). Brand
+colors and fonts live as constants near the top of `app.py`:
+- `BRAND_GREEN` `#7ED957`, `BRAND_DARK_BLUE` `#145B8E`, `BRAND_MID_BLUE` `#0597B2`,
+  `BRAND_CREAM` `#FAF2E9`.
+- Fonts: **Anton** for headings/brand title, **Montserrat** for body text - loaded via Google
+  Fonts in `APP_CSS`.
+- `.streamlit/config.toml` sets the base Streamlit theme (page background, primary accent,
+  text color) to match; `APP_CSS` handles everything Streamlit's theme system doesn't reach
+  (card styling, status banner, headings, footer link).
+- The logo lives at `assets/logo.png`, used as both the browser tab favicon (`page_icon` in
+  `st.set_page_config`) and the header image. It already has "She Can Kick It" lettering baked
+  into the graphic, so the header shows the logo image only, not a duplicate text title.
+
+Match cards separately show a small colored dot per competition (`COMPETITION_COLOR` in
+`app.py`) purely for at-a-glance grouping. This is a **different, original palette - not
+official league/team branding or logos** - deliberately, to stay clear of any trademark
+concerns, and deliberately kept distinct from the She Can Kick It brand colors above so the two
+color systems (brand identity vs. competition grouping) don't get confused with each other. Add
+a new hex value there when a new competition is added; unlisted ones fall back to a neutral gray
 (`DEFAULT_COMPETITION_COLOR`).
 
 Styling is done via a single injected `<style>` block (`APP_CSS` in `app.py`) plus small render
 helper functions (`render_status`, `render_date_heading`, `render_section_heading`) rather than
-Streamlit's built-in `st.info`/`st.markdown("##...")`, to get a more compact, muted look than
-Streamlit's defaults. Borders/muted text use semi-transparent gray (`rgba(120,120,120,...)`)
-specifically so they adapt to both light and dark mode without separate theme-specific CSS.
+Streamlit's built-in `st.info`/`st.markdown("##...")`, to get a more compact, on-brand look than
+Streamlit's defaults.
 
 Any user-facing card content built from scraped data goes through `html.escape()` before being
 interpolated into raw HTML (`match_card` uses `st.markdown(..., unsafe_allow_html=True)`) -

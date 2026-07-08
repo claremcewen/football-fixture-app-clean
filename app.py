@@ -9,10 +9,11 @@ import streamlit as st
 
 APP_DIR = Path(__file__).parent
 DATA_FILE = APP_DIR / "data" / "fixtures_all.csv"
+LOGO_FILE = APP_DIR / "assets" / "logo.png"
 
 st.set_page_config(
-    page_title="Women's Football Watch Guide",
-    page_icon="⚽",
+    page_title="She Can Kick It",
+    page_icon=str(LOGO_FILE) if LOGO_FILE.exists() else "⚽",
     layout="wide",
 )
 
@@ -78,75 +79,118 @@ COMPETITION_COLOR: dict[str, str] = {
 }
 DEFAULT_COMPETITION_COLOR = "#5F5E5A"
 
-APP_CSS = """
+# She Can Kick It brand identity.
+BRAND_GREEN = "#7ED957"
+BRAND_DARK_BLUE = "#145B8E"
+BRAND_MID_BLUE = "#0597B2"
+BRAND_CREAM = "#FAF2E9"
+BRAND_SITE_URL = "https://shecankickit.com"
+BRAND_SITE_LABEL = "shecankickit.com"
+
+APP_CSS = f"""
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-.wfg-status {
-    border: 0.5px solid rgba(120, 120, 120, 0.35);
+html, body, [class*="css"] {{
+    font-family: 'Montserrat', sans-serif;
+}}
+h1, h2, h3, .wfg-brand-title {{
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.02em;
+}}
+.wfg-brand-title {{
+    font-size: 32px;
+    color: {BRAND_DARK_BLUE};
+    margin: 0 0 2px;
+    line-height: 1.1;
+}}
+.wfg-status {{
+    border: 1px solid {BRAND_MID_BLUE}55;
+    background: {BRAND_MID_BLUE}14;
     border-radius: 8px;
     padding: 10px 14px;
     font-size: 14px;
-    color: inherit;
+    color: {BRAND_DARK_BLUE};
     margin-bottom: 0.5rem;
-}
-.wfg-section-heading {
-    font-size: 13px;
-    font-weight: 500;
-    color: rgba(120, 120, 120, 0.9);
+}}
+.wfg-section-heading {{
+    font-family: 'Anton', sans-serif;
+    font-size: 15px;
+    color: {BRAND_DARK_BLUE};
     text-transform: uppercase;
     letter-spacing: 0.04em;
     margin: 1.25rem 0 0.5rem;
-}
-.wfg-date-heading {
-    font-size: 15px;
-    font-weight: 500;
+}}
+.wfg-date-heading {{
+    font-family: 'Anton', sans-serif;
+    font-size: 17px;
+    color: {BRAND_DARK_BLUE};
     margin: 1.25rem 0 0.5rem;
-}
-.wfg-card {
-    border: 0.5px solid rgba(120, 120, 120, 0.3);
+}}
+.wfg-card {{
+    border: 1px solid {BRAND_MID_BLUE}40;
     border-radius: 12px;
     padding: 0.9rem 1.1rem;
     margin-bottom: 10px;
-}
-.wfg-card-top {
+    background: #FFFFFF;
+}}
+.wfg-card-top {{
     display: flex;
     align-items: center;
     gap: 8px;
     margin-bottom: 4px;
-}
-.wfg-dot {
-    width: 6px;
-    height: 6px;
+}}
+.wfg-dot {{
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     display: inline-block;
     flex-shrink: 0;
-}
-.wfg-competition {
+}}
+.wfg-competition {{
     font-size: 11px;
-    color: rgba(120, 120, 120, 0.9);
-}
-.wfg-card-body {
+    font-weight: 600;
+    color: {BRAND_MID_BLUE};
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}}
+.wfg-card-body {{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 12px;
-}
-.wfg-teams {
-    font-size: 14px;
-    font-weight: 600;
+}}
+.wfg-teams {{
+    font-size: 15px;
+    font-weight: 700;
     margin: 0;
-}
-.wfg-meta {
+    color: {BRAND_DARK_BLUE};
+}}
+.wfg-meta {{
     font-size: 12px;
-    color: rgba(120, 120, 120, 0.9);
+    color: #5F5E5A;
     margin: 2px 0 0;
-}
-.wfg-venue {
+}}
+.wfg-venue {{
     font-size: 12px;
-    color: rgba(120, 120, 120, 0.9);
+    color: #5F5E5A;
     margin: 0;
     white-space: nowrap;
     text-align: right;
-}
+}}
+.wfg-footer {{
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid {BRAND_MID_BLUE}30;
+}}
+.wfg-footer a {{
+    font-size: 13px;
+    font-weight: 600;
+    color: {BRAND_MID_BLUE};
+    text-decoration: none;
+}}
 </style>
 """
 
@@ -423,12 +467,17 @@ def main():
     st.markdown(APP_CSS, unsafe_allow_html=True)
     df = load_data()
 
-    st.markdown(
-        '<p style="font-size:17px; font-weight:500; margin:0 0 2px;">'
-        "Women's football watch guide</p>",
-        unsafe_allow_html=True,
+    if LOGO_FILE.exists():
+        st.image(str(LOGO_FILE), width=90)
+    else:
+        st.markdown(
+            '<p class="wfg-brand-title">She Can Kick It</p>',
+            unsafe_allow_html=True,
+        )
+    st.caption(
+        "Women's football watch guide - WSL, WSL2, England Women, UWCL and NWSL from "
+        "generated combined data."
     )
-    st.caption("WSL, WSL2, England Women, UWCL and NWSL from generated combined data.")
 
     if df.empty:
         st.warning(
@@ -701,6 +750,12 @@ def main():
             ]
         ].copy()
         st.dataframe(table_df, width="stretch", hide_index=True)
+
+    st.markdown(
+        f'<div class="wfg-footer"><a href="{BRAND_SITE_URL}" target="_blank">'
+        f"{BRAND_SITE_LABEL}</a></div>",
+        unsafe_allow_html=True,
+    )
 
 
 if __name__ == "__main__":
