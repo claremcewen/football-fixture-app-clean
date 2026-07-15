@@ -82,6 +82,7 @@ def build_df(rows: Iterable[dict]) -> pd.DataFrame:
         "sport",
         "competition_group",
         "region",
+        "tier",
         "home_team",
         "away_team",
         "kickoff_uk",

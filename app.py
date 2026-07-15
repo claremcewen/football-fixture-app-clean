@@ -29,6 +29,13 @@ COMPETITION_DEFAULT_VIEW: dict[str, str] = {
     "WSL": "next_round",
     "WSL2": "next_round",
     "NWSL": "next_round",
+    "Northern Premier Division": "next_round",
+    "Southern Premier Division": "next_round",
+    "Division 1 North": "next_round",
+    "Division 1 Midlands": "next_round",
+    "Division 1 South East": "next_round",
+    "Division 1 South West": "next_round",
+    "FAWNL Cup": "next_round",
 }
 DEFAULT_VIEW_FALLBACK = "next_round"
 
@@ -47,9 +54,16 @@ EMPTY_ROUND_FALLBACK_DAYS = 10
 COMPETITION_PRIORITY: dict[str, int] = {
     "WSL": 1,
     "WSL2": 2,
-    "England Women": 3,
-    "UWCL": 4,
-    "NWSL": 5,
+    "Northern Premier Division": 3,
+    "Southern Premier Division": 3,
+    "Division 1 North": 4,
+    "Division 1 Midlands": 4,
+    "Division 1 South East": 4,
+    "Division 1 South West": 4,
+    "FAWNL Cup": 5,
+    "England Women": 6,
+    "UWCL": 7,
+    "NWSL": 8,
 }
 DEFAULT_PRIORITY_FALLBACK = 99
 
@@ -76,8 +90,34 @@ COMPETITION_COLOR: dict[str, str] = {
     "England Women": "#534AB7",
     "UWCL": "#854F0B",
     "NWSL": "#993C1D",
+    "Northern Premier Division": "#3B6D11",
+    "Southern Premier Division": "#993556",
+    "Division 1 North": "#A32D2D",
+    "Division 1 Midlands": "#3C3489",
+    "Division 1 South East": "#085041",
+    "Division 1 South West": "#712B13",
+    "FAWNL Cup": "#633806",
 }
 DEFAULT_COMPETITION_COLOR = "#5F5E5A"
+
+# Competition dropdown order - grouped by English pyramid tier rather than
+# alphabetical, so e.g. the four Division 1 regions sit together instead of
+# being scattered by name. Anything not listed here falls back to
+# alphabetical, appended after these.
+COMPETITION_DISPLAY_ORDER = [
+    "WSL",
+    "WSL2",
+    "Northern Premier Division",
+    "Southern Premier Division",
+    "Division 1 North",
+    "Division 1 Midlands",
+    "Division 1 South East",
+    "Division 1 South West",
+    "FAWNL Cup",
+    "England Women",
+    "UWCL",
+    "NWSL",
+]
 
 # She Can Kick It brand identity.
 BRAND_GREEN = "#7ED957"
@@ -211,6 +251,7 @@ def load_data() -> pd.DataFrame:
                 "sport",
                 "competition_group",
                 "region",
+                "tier",
                 "home_team",
                 "away_team",
                 "kickoff_uk",
@@ -488,11 +529,27 @@ def main():
     today_date = pd.Timestamp.today().date()
 
     unique_dates = sorted(df["date"].unique())
-    competitions = (
-        [ALL_THIS_WEEK]
-        + sorted(df["competition_group"].dropna().unique().tolist())
-        + [ALL_FULL_LIST]
+
+    known_competitions = df["competition_group"].dropna().unique().tolist()
+    ordered_competitions = [c for c in COMPETITION_DISPLAY_ORDER if c in known_competitions]
+    remaining_competitions = sorted(set(known_competitions) - set(ordered_competitions))
+    competitions = [ALL_THIS_WEEK] + ordered_competitions + remaining_competitions + [ALL_FULL_LIST]
+
+    # competition_group -> tier (e.g. "Tier 3"), read from the data itself
+    # (already computed by registry.py) rather than duplicated here, so the
+    # dropdown labels can't drift out of sync with the actual classification.
+    competition_tier_lookup = (
+        df.dropna(subset=["tier"])
+        .drop_duplicates("competition_group")
+        .set_index("competition_group")["tier"]
+        .to_dict()
     )
+
+    def format_competition_option(value: str) -> str:
+        if value in (ALL_THIS_WEEK, ALL_FULL_LIST):
+            return value
+        tier = competition_tier_lookup.get(value)
+        return f"{tier} — {value}" if tier else value
     platforms = ["All"] + sorted(
         {
             p.strip()
@@ -567,6 +624,7 @@ def main():
             competitions,
             key="competition_main",
             on_change=apply_competition_default_view,
+            format_func=format_competition_option,
         )
 
     is_national_team_competition = competition in NATIONAL_TEAM_COMPETITIONS

@@ -1,0 +1,1746 @@
+{
+  "pagination": {
+    "totalItems": 792,
+    "totalPages": 1,
+    "hasNextPage": false
+  },
+  "items": [
+    {
+      "_id": "6a575702ce9ef452b61f2fbd",
+      "externalId": "9331be72-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "torquay-united",
+          "fullName": "Torquay United",
+          "shortName": "Torquay United",
+          "logo": "teams/torquay_united_fc_crest-11ad416d-ad62-465b-aa01-73536b907789.svg",
+          "stadiumName": "",
+          "id": "6a209e55481804d28a015391"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Torquay United",
+        "shortName": "Torquay United",
+        "gender": "female",
+        "id": "6a209e55481804d28a0153a5",
+        "logo": "teams/torquay_united_fc_crest-11ad416d-ad62-465b-aa01-73536b907789.svg",
+        "threeLetterName": "Torquay United",
+        "nickName": "Torquay United"
+      },
+      "awayTeamName": "Torquay United",
+      "competition": {
+        "id": "6a1fd7e94a65cd341c5db8f6",
+        "name": "Division 1 South West",
+        "shortName": "Division 1 South West",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "wycombe-wanderers",
+          "fullName": "Wycombe Wanderers",
+          "shortName": "Wycombe Wanderers",
+          "logo": "teams/wycombe_wanderers_fc_logo-9d46d404-9b5c-4485-89ec-2b5ea7b59496.svg",
+          "stadiumName": "",
+          "id": "6a209e55481804d28a015392"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Wycombe Wanderers",
+        "shortName": "Wycombe Wanderers",
+        "gender": "female",
+        "id": "6a209e55481804d28a0153a6",
+        "logo": "teams/wycombe_wanderers_fc_logo-9d46d404-9b5c-4485-89ec-2b5ea7b59496.svg",
+        "threeLetterName": "Wycombe Wanderers",
+        "nickName": "Wycombe Wanderers"
+      },
+      "homeTeamName": "Wycombe Wanderers",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a575702ce9ef452b61f2fbd",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a575700ce9ef452b61f2f38",
+      "externalId": "916a9305-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "northampton-town",
+          "fullName": "Northampton Town",
+          "shortName": "Northampton Town",
+          "logo": "teams/northampton_town_f.c._logo-d26cff78-9ef7-4781-adab-65176db2c088.svg",
+          "stadiumName": "",
+          "id": "6a209aa79f83cbcfc8d95a7e"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Northampton Town",
+        "shortName": "Northampton Town",
+        "gender": "female",
+        "id": "6a209aa79f83cbcfc8d95a8a",
+        "logo": "teams/northampton_town_f.c._logo-d26cff78-9ef7-4781-adab-65176db2c088.svg",
+        "threeLetterName": "Northampton Town",
+        "nickName": "Northampton Town"
+      },
+      "awayTeamName": "Northampton Town",
+      "competition": {
+        "id": "6a1fd7a94a65cd341c5db8f4",
+        "name": "Division 1 Midlands",
+        "shortName": "Division 1 Midlands",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "wythenshawe-w",
+          "fullName": "Wythenshawe",
+          "shortName": "Wythenshawe",
+          "logo": "teams/wythenshawe_amateurs-3736647e-0018-4f26-9cb5-d5f730b1684a.png",
+          "id": "6a3d75227bdcc0f01b215146"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Wythenshawe",
+        "shortName": "Wythenshawe",
+        "gender": "female",
+        "id": "6a3d75227bdcc0f01b215168",
+        "logo": "teams/wythenshawe_amateurs-3736647e-0018-4f26-9cb5-d5f730b1684a.png",
+        "threeLetterName": "Wythenshawe",
+        "nickName": "Wythenshawe"
+      },
+      "homeTeamName": "Wythenshawe",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a575700ce9ef452b61f2f38",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a575706ce9ef452b61f3063",
+      "externalId": "69ff1a34-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "west-bromwich-albion",
+          "fullName": "West Bromwich Albion",
+          "shortName": "West Bromwich Albion",
+          "logo": "teams/west_bromwich_albion-52a1eadf-b80c-436d-9e0b-7799626c1cfb.svg",
+          "stadiumName": "",
+          "id": "6a2097409f83cbcfc8d959a7"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "West Bromwich Albion",
+        "shortName": "West Bromwich Albion",
+        "gender": "female",
+        "id": "6a2097409f83cbcfc8d959b9",
+        "logo": "teams/west_bromwich_albion-52a1eadf-b80c-436d-9e0b-7799626c1cfb.svg",
+        "threeLetterName": "West Bromwich Albion",
+        "nickName": "West Bromwich Albion"
+      },
+      "awayTeamName": "West Bromwich Albion",
+      "competition": {
+        "id": "6a1fd7394a65cd341c5db8f1",
+        "name": "Northern Premier Division",
+        "shortName": "Northern Premier Division",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "stoke-city",
+          "fullName": "Stoke City",
+          "shortName": "Stoke City",
+          "logo": "teams/scfc_crest_rgb_full-colour-3e02af95-3aa7-4e55-ad17-a0d2d6c67cdb.png",
+          "stadiumName": "",
+          "id": "6a2097409f83cbcfc8d959a6"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Stoke City",
+        "shortName": "Stoke City",
+        "gender": "female",
+        "id": "6a2097409f83cbcfc8d959b8",
+        "logo": "teams/scfc_crest_rgb_full-colour-3e02af95-3aa7-4e55-ad17-a0d2d6c67cdb.png",
+        "threeLetterName": "Stoke City",
+        "nickName": "Stoke City"
+      },
+      "homeTeamName": "Stoke City",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a575706ce9ef452b61f3063",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a575702ce9ef452b61f2fb2",
+      "externalId": "93065964-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "moneyfields-w",
+          "fullName": "Moneyfields",
+          "shortName": "Moneyfields",
+          "logo": "teams/moneyfields-fc-women-crest-1-33fb971b-87ef-44d9-be29-ffd562ca4199.jpg",
+          "stadiumName": "",
+          "id": "6a3d75227bdcc0f01b215150"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Moneyfields",
+        "shortName": "Moneyfields",
+        "gender": "female",
+        "id": "6a3d75227bdcc0f01b215172",
+        "logo": "teams/moneyfields-fc-women-crest-1-33fb971b-87ef-44d9-be29-ffd562ca4199.jpg",
+        "threeLetterName": "Moneyfields",
+        "nickName": "Moneyfields"
+      },
+      "awayTeamName": "Moneyfields",
+      "competition": {
+        "id": "6a1fd7e94a65cd341c5db8f6",
+        "name": "Division 1 South West",
+        "shortName": "Division 1 South West",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "maidenhead-united",
+          "fullName": "Maidenhead United",
+          "shortName": "Maidenhead United",
+          "logo": "teams/maidenhead_united_fc_crest-2ad3b711-67e6-4486-8181-329b1ec22321.svg",
+          "stadiumName": "",
+          "id": "6a209e55481804d28a01538f"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Maidenhead United",
+        "shortName": "Maidenhead United",
+        "gender": "female",
+        "id": "6a209e55481804d28a0153a3",
+        "logo": "teams/maidenhead_united_fc_crest-2ad3b711-67e6-4486-8181-329b1ec22321.svg",
+        "threeLetterName": "Maidenhead United",
+        "nickName": "Maidenhead United"
+      },
+      "homeTeamName": "Maidenhead United",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a575702ce9ef452b61f2fb2",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a575700ce9ef452b61f2f2d",
+      "externalId": "9148ab74-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "lye-town-w",
+          "fullName": "Lye Town",
+          "shortName": "Lye Town",
+          "logo": "teams/image-2026-06-15-21-02-22-2992e197-75c0-4db3-88c1-6202e51961d3.jpeg",
+          "stadiumName": "",
+          "id": "6a3d75227bdcc0f01b215147"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Lye Town",
+        "shortName": "Lye Town",
+        "gender": "female",
+        "id": "6a3d75227bdcc0f01b215169",
+        "logo": "teams/image-2026-06-15-21-02-22-2992e197-75c0-4db3-88c1-6202e51961d3.jpeg",
+        "threeLetterName": "Lye Town",
+        "nickName": "Lye Town"
+      },
+      "awayTeamName": "Lye Town",
+      "competition": {
+        "id": "6a1fd7a94a65cd341c5db8f4",
+        "name": "Division 1 Midlands",
+        "shortName": "Division 1 Midlands",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "sutton-coldfield-town-w",
+          "fullName": "Sutton Coldfield Town",
+          "shortName": "Sutton Coldfield Town",
+          "logo": "teams/sutton_coldfield_town_fc_crest-74842d46-ac62-4b18-b9ac-62db8dda11f4.svg",
+          "id": "6a3d75227bdcc0f01b21514a"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Sutton Coldfield Town",
+        "shortName": "Sutton Coldfield Town",
+        "gender": "female",
+        "id": "6a3d75227bdcc0f01b21516c",
+        "logo": "teams/sutton_coldfield_town_fc_crest-74842d46-ac62-4b18-b9ac-62db8dda11f4.svg",
+        "threeLetterName": "Sutton Coldfield Town",
+        "nickName": "Sutton Coldfield Town"
+      },
+      "homeTeamName": "Sutton Coldfield Town",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a575700ce9ef452b61f2f2d",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a575702ce9ef452b61f2ff4",
+      "externalId": "69d62af6-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "peterborough-united",
+          "fullName": "Peterborough United",
+          "shortName": "Peterborough United",
+          "logo": "teams/peterborough-united-fc-women-blue-dd0b230b-6017-468f-a9b4-15b2b784513c.png",
+          "stadiumName": "",
+          "id": "6a2097409f83cbcfc8d959a5"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Peterborough United",
+        "shortName": "Peterborough United",
+        "gender": "female",
+        "id": "6a2097409f83cbcfc8d959b7",
+        "logo": "teams/peterborough-united-fc-women-blue-dd0b230b-6017-468f-a9b4-15b2b784513c.png",
+        "threeLetterName": "Peterborough United",
+        "nickName": "Peterborough United"
+      },
+      "awayTeamName": "Peterborough United",
+      "competition": {
+        "id": "6a1fd7394a65cd341c5db8f1",
+        "name": "Northern Premier Division",
+        "shortName": "Northern Premier Division",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "rugby-borough-w",
+          "fullName": "Rugby Borough",
+          "shortName": "Rugby Borough",
+          "logo": "teams/rbwfc_transparent_4000px-344fbe93-17dc-4e08-819f-1dd4b602755e.png",
+          "stadiumName": "",
+          "id": "6a3d75227bdcc0f01b215142"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Rugby Borough",
+        "shortName": "Rugby Borough",
+        "gender": "female",
+        "id": "6a3d75227bdcc0f01b215164",
+        "logo": "teams/rbwfc_transparent_4000px-344fbe93-17dc-4e08-819f-1dd4b602755e.png",
+        "threeLetterName": "Rugby Borough",
+        "nickName": "Rugby Borough"
+      },
+      "homeTeamName": "Rugby Borough",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a575702ce9ef452b61f2ff4",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a575701ce9ef452b61f2fa7",
+      "externalId": "92e425d2-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "bridgwater-united",
+          "fullName": "Bridgwater United",
+          "shortName": "Bridgwater United",
+          "logo": "teams/bridgwater-united-primary-logo-black-white-e7bb4482-941f-4fb0-a5e4-e0c3a0ed07a0.png",
+          "stadiumName": "",
+          "id": "6a209e55481804d28a01538b"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Bridgwater United",
+        "shortName": "Bridgwater United",
+        "gender": "female",
+        "id": "6a209e55481804d28a01539f",
+        "logo": "teams/bridgwater-united-primary-logo-black-white-e7bb4482-941f-4fb0-a5e4-e0c3a0ed07a0.png",
+        "threeLetterName": "Bridgwater United",
+        "nickName": "Bridgwater United"
+      },
+      "awayTeamName": "Bridgwater United",
+      "competition": {
+        "id": "6a1fd7e94a65cd341c5db8f6",
+        "name": "Division 1 South West",
+        "shortName": "Division 1 South West",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "bristol-rovers",
+          "fullName": "Bristol Rovers",
+          "shortName": "Bristol Rovers",
+          "logo": "teams/bristol_rovers_f.c._logo-2d9624e8-01ba-4dcb-b0ea-23a0d45c0934.svg",
+          "stadiumName": "",
+          "id": "6a209e55481804d28a01538c"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Bristol Rovers",
+        "shortName": "Bristol Rovers",
+        "gender": "female",
+        "id": "6a209e55481804d28a0153a0",
+        "logo": "teams/bristol_rovers_f.c._logo-2d9624e8-01ba-4dcb-b0ea-23a0d45c0934.svg",
+        "threeLetterName": "Bristol Rovers",
+        "nickName": "Bristol Rovers"
+      },
+      "homeTeamName": "Bristol Rovers",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a575701ce9ef452b61f2fa7",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a575700ce9ef452b61f2f22",
+      "externalId": "911e7ffd-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "notts-county",
+          "fullName": "Notts County",
+          "shortName": "Notts County",
+          "logo": "teams/notts_county_logo-5367da70-77e8-4391-93b0-42cde4cf371e.svg",
+          "stadiumName": "",
+          "id": "6a209aa79f83cbcfc8d95a7f"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Notts County",
+        "shortName": "Notts County",
+        "gender": "female",
+        "id": "6a209aa79f83cbcfc8d95a8b",
+        "logo": "teams/notts_county_logo-5367da70-77e8-4391-93b0-42cde4cf371e.svg",
+        "threeLetterName": "Notts County",
+        "nickName": "Notts County"
+      },
+      "awayTeamName": "Notts County",
+      "competition": {
+        "id": "6a1fd7a94a65cd341c5db8f4",
+        "name": "Division 1 Midlands",
+        "shortName": "Division 1 Midlands",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "sporting-khalsa-w",
+          "fullName": "Sporting Khalsa",
+          "shortName": "Sporting Khalsa",
+          "logo": "teams/skfc_2026_crest-3436112f-d08f-4b7e-89b1-0d5a7b46f2c6.png",
+          "stadiumName": "",
+          "id": "6a3d75227bdcc0f01b215149"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Sporting Khalsa",
+        "shortName": "Sporting Khalsa",
+        "gender": "female",
+        "id": "6a3d75227bdcc0f01b21516b",
+        "logo": "teams/skfc_2026_crest-3436112f-d08f-4b7e-89b1-0d5a7b46f2c6.png",
+        "threeLetterName": "Sporting Khalsa",
+        "nickName": "Sporting Khalsa"
+      },
+      "homeTeamName": "Sporting Khalsa",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a575700ce9ef452b61f2f22",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a575701ce9ef452b61f2f85",
+      "externalId": "69b66305-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "huddersfield-town",
+          "fullName": "Huddersfield Town",
+          "shortName": "Huddersfield Town",
+          "logo": "teams/huddersfield_town_afc_crest-40540a38-453e-49e8-a3f3-64786618eae1.svg",
+          "stadiumName": "",
+          "id": "6a2097409f83cbcfc8d959a1"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Huddersfield Town",
+        "shortName": "Huddersfield Town",
+        "gender": "female",
+        "id": "6a2097409f83cbcfc8d959b3",
+        "logo": "teams/huddersfield_town_afc_crest-40540a38-453e-49e8-a3f3-64786618eae1.svg",
+        "threeLetterName": "Huddersfield Town",
+        "nickName": "Huddersfield Town"
+      },
+      "awayTeamName": "Huddersfield Town",
+      "competition": {
+        "id": "6a1fd7394a65cd341c5db8f1",
+        "name": "Northern Premier Division",
+        "shortName": "Northern Premier Division",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "norwich-city",
+          "fullName": "Norwich City",
+          "shortName": "Norwich City",
+          "logo": "teams/norwich_city_fc_logo-b13c0216-6b4d-4573-8173-82520d9ba834.svg",
+          "stadiumName": "",
+          "id": "6a2097409f83cbcfc8d959a4"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Norwich City",
+        "shortName": "Norwich City",
+        "gender": "female",
+        "id": "6a2097409f83cbcfc8d959b6",
+        "logo": "teams/norwich_city_fc_logo-b13c0216-6b4d-4573-8173-82520d9ba834.svg",
+        "threeLetterName": "Norwich City",
+        "nickName": "Norwich City"
+      },
+      "homeTeamName": "Norwich City",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a575701ce9ef452b61f2f85",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a575701ce9ef452b61f2f9c",
+      "externalId": "92b7fb6c-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "keynsham-town",
+          "fullName": "Keynsham Town",
+          "shortName": "Keynsham Town",
+          "logo": "teams/ktlfc-club-logo-fb91b68f-2a38-4082-b008-80bd01fd67b7.jpg",
+          "stadiumName": "",
+          "id": "6a209e55481804d28a01538e"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Keynsham Town",
+        "shortName": "Keynsham Town",
+        "gender": "female",
+        "id": "6a209e55481804d28a0153a2",
+        "logo": "teams/ktlfc-club-logo-fb91b68f-2a38-4082-b008-80bd01fd67b7.jpg",
+        "threeLetterName": "Keynsham Town",
+        "nickName": "Keynsham Town"
+      },
+      "awayTeamName": "Keynsham Town",
+      "competition": {
+        "id": "6a1fd7e94a65cd341c5db8f6",
+        "name": "Division 1 South West",
+        "shortName": "Division 1 South West",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "bournemouth-sports",
+          "fullName": "Bournemouth Sports",
+          "shortName": "Bournemouth Sports",
+          "logo": "teams/bsfc-logo-17df1510-9db4-423b-9c9e-deb772e2f4fd.jpg",
+          "stadiumName": "",
+          "id": "6a209e55481804d28a01538a"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Bournemouth Sports",
+        "shortName": "Bournemouth Sports",
+        "gender": "female",
+        "id": "6a209e55481804d28a01539e",
+        "logo": "teams/bsfc-logo-17df1510-9db4-423b-9c9e-deb772e2f4fd.jpg",
+        "threeLetterName": "Bournemouth Sports",
+        "nickName": "Bournemouth Sports"
+      },
+      "homeTeamName": "Bournemouth Sports",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a575701ce9ef452b61f2f9c",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a575700ce9ef452b61f2f17",
+      "externalId": "90fd2854-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "worcester-city-w",
+          "fullName": "Worcester City Women",
+          "shortName": "Worcester City Women",
+          "logo": "teams/wcwfc-badge-blue-cropped-large-403bbad7-4162-46bf-9027-67f10c112f39.png",
+          "stadiumName": "",
+          "id": "6a3d75227bdcc0f01b21514b"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Worcester City Women",
+        "shortName": "Worcester City Women",
+        "gender": "female",
+        "id": "6a3d75227bdcc0f01b21516d",
+        "logo": "teams/wcwfc-badge-blue-cropped-large-403bbad7-4162-46bf-9027-67f10c112f39.png",
+        "threeLetterName": "Worcester City Women",
+        "nickName": "Worcester City Women"
+      },
+      "awayTeamName": "Worcester City Women",
+      "competition": {
+        "id": "6a1fd7a94a65cd341c5db8f4",
+        "name": "Division 1 Midlands",
+        "shortName": "Division 1 Midlands",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "leafield-athletic",
+          "fullName": "Leafield Athletic",
+          "shortName": "Leafield Athletic",
+          "logo": "teams/leafield_athletic_f.c-067b42fc-34ab-4e0b-9a1a-b1551a06af82.png",
+          "stadiumName": "",
+          "id": "6a209aa79f83cbcfc8d95a7d"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Leafield Athletic",
+        "shortName": "Leafield Athletic",
+        "gender": "female",
+        "id": "6a209aa79f83cbcfc8d95a89",
+        "logo": "teams/leafield_athletic_f.c-067b42fc-34ab-4e0b-9a1a-b1551a06af82.png",
+        "threeLetterName": "Leafield Athletic",
+        "nickName": "Leafield Athletic"
+      },
+      "homeTeamName": "Leafield Athletic",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a575700ce9ef452b61f2f17",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a575700ce9ef452b61f2f16",
+      "externalId": "69977e44-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "hull-city",
+          "fullName": "Hull City",
+          "shortName": "Hull City",
+          "logo": "teams/hcl-width_255-1-ca0ef2d0-82a9-48f5-bfc6-57f8ab8c9c58.png",
+          "stadiumName": "",
+          "id": "6a2097409f83cbcfc8d959a2"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Hull City",
+        "shortName": "Hull City",
+        "gender": "female",
+        "id": "6a2097409f83cbcfc8d959b4",
+        "logo": "teams/hcl-width_255-1-ca0ef2d0-82a9-48f5-bfc6-57f8ab8c9c58.png",
+        "threeLetterName": "Hull City",
+        "nickName": "Hull City"
+      },
+      "awayTeamName": "Hull City",
+      "competition": {
+        "id": "6a1fd7394a65cd341c5db8f1",
+        "name": "Northern Premier Division",
+        "shortName": "Northern Premier Division",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "loughborough-lightning",
+          "fullName": "Loughborough Lightning",
+          "shortName": "Loughborough Lightning",
+          "logo": "teams/llfc-logo-00b59aa3-7f0c-4b19-b077-4d00eb3eb72f.png",
+          "stadiumName": "",
+          "id": "6a3d32c96a408533f65c6865"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Loughborough Lightning",
+        "shortName": "Loughborough Lightning",
+        "gender": "female",
+        "id": "6a3d32c96a408533f65c6867",
+        "logo": "teams/llfc-logo-00b59aa3-7f0c-4b19-b077-4d00eb3eb72f.png",
+        "threeLetterName": "Loughborough Lightning",
+        "nickName": "Loughborough Lightning"
+      },
+      "homeTeamName": "Loughborough Lightning",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a575700ce9ef452b61f2f16",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a575701ce9ef452b61f2f91",
+      "externalId": "92964a7b-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "gwalia-united",
+          "fullName": "Gwalia United",
+          "shortName": "Gwalia United",
+          "logo": "teams/gwalia-united_stacked-full-mark_04-01ff04c8-0bdb-4986-9ba4-66a1a4a34297.png",
+          "stadiumName": "",
+          "id": "6a209e55481804d28a01538d"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Gwalia United",
+        "shortName": "Gwalia United",
+        "gender": "female",
+        "id": "6a209e55481804d28a0153a1",
+        "logo": "teams/gwalia-united_stacked-full-mark_04-01ff04c8-0bdb-4986-9ba4-66a1a4a34297.png",
+        "threeLetterName": "Gwalia United",
+        "nickName": "Gwalia United"
+      },
+      "awayTeamName": "Gwalia United",
+      "competition": {
+        "id": "6a1fd7e94a65cd341c5db8f6",
+        "name": "Division 1 South West",
+        "shortName": "Division 1 South West",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "ascot-united-w",
+          "fullName": "Ascot United",
+          "shortName": "Ascot United",
+          "logo": "teams/ascot_united_fc_crest-698fef88-30fd-4338-a084-1741dce36c36.svg",
+          "id": "6a3d75227bdcc0f01b21514f"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Ascot United",
+        "shortName": "Ascot United",
+        "gender": "female",
+        "id": "6a3d75227bdcc0f01b215171",
+        "logo": "teams/ascot_united_fc_crest-698fef88-30fd-4338-a084-1741dce36c36.svg",
+        "threeLetterName": "Ascot United",
+        "nickName": "Ascot United"
+      },
+      "homeTeamName": "Ascot United",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a575701ce9ef452b61f2f91",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a575700ce9ef452b61f2f0b",
+      "externalId": "90d323d4-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "sheffield-fc-w",
+          "fullName": "Sheffield FC",
+          "shortName": "Sheffield FC",
+          "logo": "teams/52886e73-bb78-4158-a45a-aefe11c18293-4198563b-ab3e-4983-b7fd-b9f6d658d920.jpg",
+          "stadiumName": "",
+          "id": "6a3d75227bdcc0f01b215148"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Sheffield FC",
+        "shortName": "Sheffield FC",
+        "gender": "female",
+        "id": "6a3d75227bdcc0f01b21516a",
+        "logo": "teams/52886e73-bb78-4158-a45a-aefe11c18293-4198563b-ab3e-4983-b7fd-b9f6d658d920.jpg",
+        "threeLetterName": "Sheffield",
+        "nickName": "Sheffield"
+      },
+      "awayTeamName": "Sheffield",
+      "competition": {
+        "id": "6a1fd7a94a65cd341c5db8f4",
+        "name": "Division 1 Midlands",
+        "shortName": "Division 1 Midlands",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "kidderminster-harriers",
+          "fullName": "Kidderminster Harriers",
+          "shortName": "Kidderminster Harriers",
+          "logo": "teams/kidderminster_harriers_fc_crest-30fb9fdb-72a1-4e71-a71c-ecbab15a1ffc.svg",
+          "stadiumName": "",
+          "id": "6a209aa79f83cbcfc8d95a7c"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Kidderminster Harriers",
+        "shortName": "Kidderminster Harriers",
+        "gender": "female",
+        "id": "6a209aa79f83cbcfc8d95a88",
+        "logo": "teams/kidderminster_harriers_fc_crest-30fb9fdb-72a1-4e71-a71c-ecbab15a1ffc.svg",
+        "threeLetterName": "Kidderminster Harriers",
+        "nickName": "Kidderminster Harriers"
+      },
+      "homeTeamName": "Kidderminster Harriers",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a575700ce9ef452b61f2f0b",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a5756fece9ef452b61f2ea7",
+      "externalId": "696e020a-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "derby-county",
+          "fullName": "Derby County",
+          "shortName": "Derby County",
+          "logo": "teams/derby_county_crest-aa897a5d-92f3-43a2-b112-b4d2a2467da2.svg",
+          "stadiumName": "",
+          "id": "6a2097409f83cbcfc8d959a0"
+        },
+        "isDefault": true,
+        "slug": "derby-county-first-team",
+        "fullName": "Derby County",
+        "shortName": "Derby County",
+        "gender": "female",
+        "id": "6a2097409f83cbcfc8d959b2",
+        "logo": "teams/derby_county_crest-aa897a5d-92f3-43a2-b112-b4d2a2467da2.svg",
+        "threeLetterName": "Derby County",
+        "nickName": "Derby County"
+      },
+      "awayTeamName": "Derby County",
+      "competition": {
+        "id": "6a1fd7394a65cd341c5db8f1",
+        "name": "Northern Premier Division",
+        "shortName": "Northern Premier Division",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "liverpool-feds",
+          "fullName": "Liverpool Feds",
+          "shortName": "Liverpool Feds",
+          "logo": "teams/lfwfc_blue-pantone-2768-c-d4a71bb9-b85c-425a-8e0a-c7f70d9edbba.png",
+          "stadiumName": "",
+          "id": "6a2097409f83cbcfc8d959a3"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Liverpool Feds",
+        "shortName": "Liverpool Feds",
+        "gender": "female",
+        "id": "6a2097409f83cbcfc8d959b5",
+        "logo": "teams/lfwfc_blue-pantone-2768-c-d4a71bb9-b85c-425a-8e0a-c7f70d9edbba.png",
+        "threeLetterName": "Liverpool Feds",
+        "nickName": "Liverpool Feds"
+      },
+      "homeTeamName": "Liverpool Feds",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a5756fece9ef452b61f2ea7",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a575701ce9ef452b61f2f86",
+      "externalId": "926caf5b-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "marine-academy-plymouth",
+          "fullName": "Marine Academy Plymouth",
+          "shortName": "Marine Academy Plymouth",
+          "logo": "teams/maplfc-badge-3ba03371-8b4c-4138-b4ae-166409e64e58.png",
+          "stadiumName": "",
+          "id": "6a209e55481804d28a015390"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Marine Academy Plymouth",
+        "shortName": "Marine Academy Plymouth",
+        "gender": "female",
+        "id": "6a209e55481804d28a0153a4",
+        "logo": "teams/maplfc-badge-3ba03371-8b4c-4138-b4ae-166409e64e58.png",
+        "threeLetterName": "Marine Academy Plymouth",
+        "nickName": "Marine Academy Plymouth"
+      },
+      "awayTeamName": "Marine Academy Plymouth",
+      "competition": {
+        "id": "6a1fd7e94a65cd341c5db8f6",
+        "name": "Division 1 South West",
+        "shortName": "Division 1 South West",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "abingdon-united",
+          "fullName": "Abingdon United",
+          "shortName": "Abingdon United",
+          "logo": "teams/abingdon_united_fc-f906fa04-3451-49b7-bbbe-8bfb09445c2f.png",
+          "stadiumName": "",
+          "id": "6a209e55481804d28a015389"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Abingdon United",
+        "shortName": "Abingdon United",
+        "gender": "female",
+        "id": "6a209e55481804d28a01539d",
+        "logo": "teams/abingdon_united_fc-f906fa04-3451-49b7-bbbe-8bfb09445c2f.png",
+        "threeLetterName": "Abingdon United",
+        "nickName": "Abingdon United"
+      },
+      "homeTeamName": "Abingdon United",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a575701ce9ef452b61f2f86",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a5756ffce9ef452b61f2f00",
+      "externalId": "90b17cfc-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "chesterfield",
+          "fullName": "Chesterfield",
+          "shortName": "Chesterfield",
+          "logo": "teams/chesterfield_fc_crest-8718bdb8-0221-483c-b126-191fbf6abd84.svg",
+          "stadiumName": "",
+          "id": "6a209aa79f83cbcfc8d95a7b"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Chesterfield",
+        "shortName": "Chesterfield",
+        "gender": "female",
+        "id": "6a209aa79f83cbcfc8d95a87",
+        "logo": "teams/chesterfield_fc_crest-8718bdb8-0221-483c-b126-191fbf6abd84.svg",
+        "threeLetterName": "Chesterfield",
+        "nickName": "Chesterfield"
+      },
+      "awayTeamName": "Chesterfield",
+      "competition": {
+        "id": "6a1fd7a94a65cd341c5db8f4",
+        "name": "Division 1 Midlands",
+        "shortName": "Division 1 Midlands",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "barnsley-women",
+          "fullName": "Barnsley Women",
+          "shortName": "Barnsley Women",
+          "logo": "teams/bwfc-main-image-rally-up-4c60398a-b063-4b43-97d2-b6aadfbf34a3.png",
+          "stadiumName": "",
+          "id": "6a209aa79f83cbcfc8d95a7a"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Barnsley Women",
+        "shortName": "Barnsley Women",
+        "gender": "female",
+        "id": "6a209aa79f83cbcfc8d95a86",
+        "logo": "teams/bwfc-main-image-rally-up-4c60398a-b063-4b43-97d2-b6aadfbf34a3.png",
+        "threeLetterName": "Barnsley Women",
+        "nickName": "Barnsley Women"
+      },
+      "homeTeamName": "Barnsley Women",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a5756ffce9ef452b61f2f00",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a5756fece9ef452b61f2ea6",
+      "externalId": "692ffeea-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "middlesbrough",
+          "fullName": "Middlesbrough",
+          "shortName": "Middlesbrough",
+          "logo": "teams/mfc_master_rgb-0e005c8f-9b56-4187-8122-234efc319bd4.png",
+          "stadiumName": "",
+          "id": "6a2097409f83cbcfc8d959a8"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Middlesbrough",
+        "shortName": "Middlesbrough",
+        "gender": "female",
+        "id": "6a2097409f83cbcfc8d959ba",
+        "logo": "teams/mfc_master_rgb-0e005c8f-9b56-4187-8122-234efc319bd4.png",
+        "threeLetterName": "Middlesbrough",
+        "nickName": "Middlesbrough"
+      },
+      "awayTeamName": "Middlesbrough",
+      "competition": {
+        "id": "6a1fd7394a65cd341c5db8f1",
+        "name": "Northern Premier Division",
+        "shortName": "Northern Premier Division",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "boldmere-st-michaels-w",
+          "fullName": "Boldmere St Michaels",
+          "shortName": "Boldmere St Michaels",
+          "logo": "teams/boldmere_st._michaels_women_fc_logo-c6192d48-3865-41fa-b6b5-4b090ce51660.png",
+          "stadiumName": "",
+          "id": "6a3d75227bdcc0f01b215141"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Boldmere St Michaels",
+        "shortName": "Boldmere St Michaels",
+        "gender": "female",
+        "id": "6a3d75227bdcc0f01b215163",
+        "logo": "teams/boldmere_st._michaels_women_fc_logo-c6192d48-3865-41fa-b6b5-4b090ce51660.png",
+        "threeLetterName": "Boldmere St Michaels",
+        "nickName": "Boldmere St Michaels"
+      },
+      "homeTeamName": "Boldmere St Michaels",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a5756fece9ef452b61f2ea6",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a575701ce9ef452b61f2f7a",
+      "externalId": "924d8745-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "milton-keynes-dons",
+          "fullName": "Milton Keynes Dons",
+          "shortName": "Milton Keynes Dons",
+          "logo": "teams/milton_keynes_dons_fc_2025_crest-b9acf023-945b-442a-bb81-0d6b3eea3647.svg",
+          "stadiumName": "",
+          "id": "6a209d13481804d28a01532e"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Milton Keynes Dons",
+        "shortName": "Milton Keynes Dons",
+        "gender": "female",
+        "id": "6a209d13481804d28a01533e",
+        "logo": "teams/milton_keynes_dons_fc_2025_crest-b9acf023-945b-442a-bb81-0d6b3eea3647.svg",
+        "threeLetterName": "MK Dons",
+        "nickName": "MK Dons"
+      },
+      "awayTeamName": "MK Dons",
+      "competition": {
+        "id": "6a1fd7c94a65cd341c5db8f5",
+        "name": "Division 1 South East",
+        "shortName": "Division 1 South East",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "saltdean-united",
+          "fullName": "Saltdean United",
+          "shortName": "Saltdean United",
+          "logo": "teams/saltdean_united_f.c._logo-1d5cd762-4dd6-4a13-821b-77c885acb743.png",
+          "stadiumName": "",
+          "id": "6a209d13481804d28a015330"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Saltdean United",
+        "shortName": "Saltdean United",
+        "gender": "female",
+        "id": "6a209d13481804d28a015340",
+        "logo": "teams/saltdean_united_f.c._logo-1d5cd762-4dd6-4a13-821b-77c885acb743.png",
+        "threeLetterName": "Saltdean United",
+        "nickName": "Saltdean United"
+      },
+      "homeTeamName": "Saltdean United",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a575701ce9ef452b61f2f7a",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    },
+    {
+      "_id": "6a575710ce9ef452b61f321f",
+      "externalId": "6a9521cb-8029-11f1-886a-0204f6006b57",
+      "__v": 0,
+      "attendance": null,
+      "awayCards": [],
+      "awayGoals": [],
+      "awayLineup": [],
+      "awaySubs": [],
+      "awayTeam": {
+        "club": {
+          "slug": "portsmouth",
+          "fullName": "Portsmouth",
+          "shortName": "Portsmouth",
+          "logo": "teams/portsmouth_fc_logo-d57460ad-0fae-47ae-9861-28927ab425d3.svg",
+          "stadiumName": "",
+          "id": "6a20983b9f83cbcfc8d959e1"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Portsmouth",
+        "shortName": "Portsmouth",
+        "gender": "female",
+        "id": "6a20983c9f83cbcfc8d959f3",
+        "logo": "teams/portsmouth_fc_logo-d57460ad-0fae-47ae-9861-28927ab425d3.svg",
+        "threeLetterName": "Portsmouth",
+        "nickName": "Portsmouth"
+      },
+      "awayTeamName": "Portsmouth",
+      "competition": {
+        "id": "6a1fd7694a65cd341c5db8f2",
+        "name": "Southern Premier Division",
+        "shortName": "Southern Premier Division",
+        "type": "league"
+      },
+      "currentMinute": null,
+      "dateTime": "2026-08-16T14:00:00.000Z",
+      "homeCards": [],
+      "homeGoals": [],
+      "homeLineup": [],
+      "homeSubs": [],
+      "homeTeam": {
+        "club": {
+          "slug": "fulham",
+          "fullName": "Fulham",
+          "shortName": "Fulham",
+          "logo": "teams/fulham_fc_shield-90d35788-b014-4779-a951-fd312f69ed9c.svg",
+          "stadiumName": "",
+          "id": "6a20983b9f83cbcfc8d959df"
+        },
+        "isDefault": true,
+        "slug": null,
+        "fullName": "Fulham",
+        "shortName": "Fulham",
+        "gender": "female",
+        "id": "6a20983c9f83cbcfc8d959f1",
+        "logo": "teams/fulham_fc_shield-90d35788-b014-4779-a951-fd312f69ed9c.svg",
+        "threeLetterName": "Fulham",
+        "nickName": "Fulham"
+      },
+      "homeTeamName": "Fulham",
+      "round": {
+        "id": "Match 1",
+        "name": "Match 1"
+      },
+      "score": {
+        "current": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": null
+      },
+      "status": "NotKickedOff",
+      "id": "6a575710ce9ef452b61f321f",
+      "isInternal": true,
+      "stadium": "N/A",
+      "time": "14:00",
+      "date": "2026-08-16",
+      "lineups": {
+        "home": [],
+        "away": []
+      },
+      "subs": {
+        "home": [],
+        "away": []
+      }
+    }
+  ]
+}

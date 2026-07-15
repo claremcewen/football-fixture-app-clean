@@ -1,0 +1,31 @@
+{
+  "pagination": {"totalItems": 2, "totalPages": 1, "hasNextPage": false},
+  "items": [
+    {
+      "_id": "sample1",
+      "homeTeam": {"fullName": "Wycombe Wanderers", "club": {"stadiumName": ""}},
+      "homeTeamName": "Wycombe Wanderers",
+      "awayTeam": {"fullName": "Torquay United", "club": {"stadiumName": ""}},
+      "awayTeamName": "Torquay United",
+      "competition": {"id": "6a1fd7e94a65cd341c5db8f6", "name": "Division 1 South West", "type": "league"},
+      "dateTime": "2026-09-06T14:00:00.000Z",
+      "date": "2026-09-06",
+      "time": "14:00",
+      "stadium": "N/A",
+      "status": "NotKickedOff"
+    },
+    {
+      "_id": "sample2",
+      "homeTeam": {"fullName": "Boldmere St Michaels", "club": {"stadiumName": ""}},
+      "homeTeamName": "Boldmere St Michaels",
+      "awayTeam": {"fullName": "Middlesbrough", "club": {"stadiumName": ""}},
+      "awayTeamName": "Middlesbrough",
+      "competition": {"id": "6a1fd7394a65cd341c5db8f1", "name": "Northern Premier Division", "type": "league"},
+      "dateTime": "2026-09-06T14:00:00.000Z",
+      "date": "2026-09-06",
+      "time": "14:00",
+      "stadium": "N/A",
+      "status": "NotKickedOff"
+    }
+  ]
+}

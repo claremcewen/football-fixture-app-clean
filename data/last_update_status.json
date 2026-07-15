@@ -18,5 +18,9 @@
   "NWSL": {
     "ok": true,
     "rows": 131
+  },
+  "FAWNL": {
+    "ok": true,
+    "rows": 924
   }
 }

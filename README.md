@@ -2,7 +2,7 @@
 # Women's Football Watch Guide
 
 A Streamlit app that reads a generated combined fixtures file (`data/fixtures_all.csv`),
-refreshed daily by scraping WSL, WSL2, England Women, UWCL and NWSL fixtures.
+refreshed daily by scraping WSL, WSL2, England Women, UWCL, NWSL and FAWNL (tiers 3-4) fixtures.
 
 ## Architecture
 
@@ -12,8 +12,13 @@ refreshed daily by scraping WSL, WSL2, England Women, UWCL and NWSL fixtures.
   file had fixtures for that competition, that competition's previous rows are kept rather than
   silently dropped - see `data/last_update_status.json` for the last run's per-source status.
 - `scripts/registry.py` is the single place that maps a raw scraped `competition` label to
-  `sport` / `competition_group` / `region`. Adding a new league later is one line here, not
-  scattered string-matching across files.
+  `sport` / `competition_group` / `region` / `tier`. Adding a new league later is one line here,
+  not scattered string-matching across files. `tier` is the English women's football pyramid
+  level ("Tier 1".."Tier 4"); `None` for competitions outside that pyramid (internationals,
+  European club competitions, other countries' leagues).
+- `scripts/update_fixtures.py`'s `TASKS` list normally maps one scraper to one competition_group,
+  but a task can cover several (see FAWNL below) - each entry lists which competition_group
+  values it's responsible for, used for per-source fallback matching when a scraper fails.
 - `scripts/scrapers/` - each scraper splits `fetch_*` (network call) from `parse_*_lines`
   (pure text parsing), so parsing can be unit tested without hitting the network.
 - `scripts/scrapers/tests/` - pytest suite. Each source has a small hand-built "populated"
@@ -33,6 +38,22 @@ refreshed daily by scraping WSL, WSL2, England Women, UWCL and NWSL fixtures.
   last match in the scraped list is immediately followed by page footer/nav content rather than
   another time/date line, so without a stop marker that footer gets read as the last match's
   watch platforms.
+- `scripts/scrapers/fawnl.py` covers all six FAWNL tier 3/4 divisions (Northern Premier, Southern
+  Premier, Division 1 North/Midlands/South East/South West) plus the FAWNL Cup in one scraper,
+  since one API call returns all of them at once (the FAWNL Plate is not currently included - no
+  fixtures exist for it yet; Plates typically only populate once Cup early-round results are
+  known). Unlike the other sources, this isn't HTML text-scraping - the official site
+  (`wnl.thefa.com`) renders fixtures via JavaScript, but there's a clean public JSON API behind
+  it (`api.wnl.thefa.com/matches`, needs an `X-TENANT-ID: wnl` header, no authentication). This
+  is more reliable than any of the text-based scrapers - structured data straight from the FA's
+  system rather than parsed page text - but it's an internal/undocumented API, so it could
+  change without notice; if it ever breaks, that's the first thing to check.
+- Venue isn't available anywhere in the FAWNL API for any of the ~88 clubs (checked directly),
+  so unlike NWSL there's nothing to derive automatically. Instead of a hardcoded Python dict,
+  home grounds live in `data/fawnl_venues.csv` (`team,venue` columns, one row per club, blank
+  until confirmed) - `fawnl.py`'s `load_venue_lookup()` reads it at scrape time. Don't guess
+  entries from general knowledge; many of these clubs share a name with an unrelated men's club
+  playing at a completely different ground - fill this in only with confirmed grounds.
 
 ## Folder structure
 
@@ -41,7 +62,8 @@ refreshed daily by scraping WSL, WSL2, England Women, UWCL and NWSL fixtures.
 ├─ requirements.txt
 ├─ data/
 │  ├─ fixtures_all.csv
-│  └─ last_update_status.json
+│  ├─ last_update_status.json
+│  └─ fawnl_venues.csv
 └─ scripts/
    ├─ registry.py
    ├─ update_fixtures.py
@@ -51,6 +73,7 @@ refreshed daily by scraping WSL, WSL2, England Women, UWCL and NWSL fixtures.
       ├─ wsl2.py
       ├─ uwcl.py
       ├─ nwsl.py
+      ├─ fawnl.py
       ├─ internationals.py
       └─ tests/
 ```
@@ -95,21 +118,27 @@ filters" section, then the fixture list.
   currently set to - it sits above them since it's really a summary of their combined effect.
 - Picking a **Competition** auto-selects a sensible view for that league: sparse/international
   competitions (England Women, UWCL) default to showing everything upcoming; weekly leagues
-  (WSL, WSL2, NWSL) default to just the next round, detected from actual fixture-date clustering
-  rather than a fixed day count or fixed weekdays (see `next_round_window` in `app.py`) - this
-  matters because leagues don't all play on the same days each week. There are two deliberately
-  distinct "no specific league" entries so neither reads as the more complete option by default:
-  **All (this week)** is the landing default (7-day rolling window); **All Fixtures**, at the
-  bottom of the list, shows every fixture, every league, no date limit at all.
+  (WSL, WSL2, NWSL, all six FAWNL divisions) default to just the next round, detected from actual
+  fixture-date clustering rather than a fixed day count or fixed weekdays (see
+  `next_round_window` in `app.py`) - this matters because leagues don't all play on the same days
+  each week. There are two deliberately distinct "no specific league" entries so neither reads as
+  the more complete option by default: **All (this week)** is the landing default (7-day rolling
+  window); **All Fixtures**, at the bottom of the list, shows every fixture, every league, no
+  date limit at all.
+- FAWNL divisions are labeled with their English pyramid tier in the dropdown (e.g.
+  "Tier 3 — Northern Premier Division") - `COMPETITION_DISPLAY_ORDER` in `app.py` groups the
+  list by tier instead of alphabetically, and the tier label itself is read from the data's own
+  `tier` column (via `format_func` on the selectbox) rather than a separate hardcoded mapping, so
+  it can't drift out of sync with `registry.py`.
 - **Club** is scoped to whichever competition is currently selected, not one long cross-league
   list - disabled for "All (this week)" (pick a league first) and for any competition in
   `NATIONAL_TEAM_COMPETITIONS` (currently just England Women - a single national team playing a
   different opponent each fixture isn't a fixed set of clubs to filter by). Enabled for
   **All Fixtures**, pulling clubs from every competition at once except the national-team ones.
 - When multiple competitions have fixtures on the same day, they're ordered by
-  `COMPETITION_PRIORITY` in `app.py` (defaults to WSL > WSL2 > England Women > UWCL > NWSL) so
-  your most-followed league surfaces first instead of strict kickoff-time order. Adjust that
-  dict directly if the priority order should change.
+  `COMPETITION_PRIORITY` in `app.py` (defaults to WSL > WSL2 > FAWNL tier 3 > FAWNL tier 4 >
+  England Women > UWCL > NWSL) so your most-followed league surfaces first instead of strict
+  kickoff-time order. Adjust that dict directly if the priority order should change.
 - **Free-to-air only (UK)** filters to BBC, ITV and YouTube.
 - **Today** / **This weekend** are quick date shortcuts, underneath the Competition/Club row.
   "This weekend" is the upcoming Friday-through-Monday block (clamped so it never shows a match
@@ -157,6 +186,16 @@ necessary since this content comes from third-party sites, not just internal dat
 ## Notes
 
 - England fixtures often have incomplete watch information, so those rows may be blank or marked TBC.
+- FAWNL fixtures (league divisions and Cup) never have watch platform info (not televised) and
+  show `-` for venue until `data/fawnl_venues.csv` is filled in.
+- The FAWNL Plate isn't included yet - no fixtures exist for it in the API as of 2026-07,
+  probably because Plate competitions typically only populate once Cup early-round results are
+  known. Check back once the Cup's first round or two has been played.
+- The Adobe Women's FA Cup (the main all-tiers FA Cup, not FAWNL's internal Cup) is tracked
+  separately on `thefa.com` directly, a different platform from `wnl.thefa.com` - not
+  investigated yet. 2026/27 rounds run Sunday 23 August 2026 (Preliminary Round) through the
+  Final on 15 May 2027; worth checking `thefa.com/competitions/the-womens-fa-cup/fixtures` once
+  fixtures for FAWNL-tier clubs are actually posted.
 
 ## Good next steps
 
@@ -165,3 +204,6 @@ necessary since this content comes from third-party sites, not just internal dat
 2. Add more sports - the schema already has a `sport` column, so this is additive rather than
    a schema change.
 3. Deploy to Streamlit Community Cloud (or another host) so you can use it without local Python.
+4. Fill in `data/fawnl_venues.csv` as home grounds are confirmed.
+5. Add the Adobe Women's FA Cup once its fixtures are live (see Notes above).
+6. Add the FAWNL Plate once it has fixtures.

@@ -11,6 +11,7 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 from scripts.registry import classify
+from scripts.scrapers.fawnl import scrape_fawnl
 from scripts.scrapers.internationals import scrape_england_women
 from scripts.scrapers.nwsl import scrape_nwsl
 from scripts.scrapers.uwcl import scrape_uwcl
@@ -25,6 +26,7 @@ COLUMNS = [
     "sport",
     "competition_group",
     "region",
+    "tier",
     "home_team",
     "away_team",
     "kickoff_uk",
@@ -34,9 +36,32 @@ COLUMNS = [
     "official_source",
 ]
 
+FAWNL_DIVISIONS = [
+    "Northern Premier Division",
+    "Southern Premier Division",
+    "Division 1 North",
+    "Division 1 Midlands",
+    "Division 1 South East",
+    "Division 1 South West",
+    "FAWNL Cup",
+]
+
+# (task label, scraper function, competition_group values it can produce).
+# Most scrapers cover exactly one competition_group; FAWNL's single API call
+# covers six divisions at once, so it needs the full list for fallback
+# matching below.
+TASKS = [
+    ("WSL", scrape_wsl, ["WSL"]),
+    ("WSL2", scrape_wsl2, ["WSL2"]),
+    ("England Women", scrape_england_women, ["England Women"]),
+    ("UWCL", scrape_uwcl, ["UWCL"]),
+    ("NWSL", scrape_nwsl, ["NWSL"]),
+    ("FAWNL", scrape_fawnl, FAWNL_DIVISIONS),
+]
+
 
 def classify_frame(df: pd.DataFrame) -> pd.DataFrame:
-    """Populate sport/competition_group/region from the raw competition label.
+    """Populate sport/competition_group/region/tier from the raw competition label.
 
     Always recomputed (not just filled if missing) so this stays valid for
     frames loaded from an older CSV that predates these columns.
@@ -49,6 +74,7 @@ def classify_frame(df: pd.DataFrame) -> pd.DataFrame:
     df["sport"] = classified.apply(lambda c: c[0])
     df["competition_group"] = classified.apply(lambda c: c[1])
     df["region"] = classified.apply(lambda c: c[2])
+    df["tier"] = classified.apply(lambda c: c[3])
     return df
 
 
@@ -80,10 +106,10 @@ def load_previous() -> pd.DataFrame:
     return classify_frame(df)
 
 
-def previous_rows_for(group_label: str, previous_df: pd.DataFrame) -> pd.DataFrame:
+def previous_rows_for(group_labels: list[str], previous_df: pd.DataFrame) -> pd.DataFrame:
     if previous_df.empty or "competition_group" not in previous_df.columns:
         return pd.DataFrame(columns=COLUMNS)
-    return previous_df[previous_df["competition_group"] == group_label].copy()
+    return previous_df[previous_df["competition_group"].isin(group_labels)].copy()
 
 
 def finalize(frames: list[pd.DataFrame]) -> pd.DataFrame:
@@ -105,19 +131,11 @@ def main() -> None:
 
     previous_df = load_previous()
 
-    tasks = [
-        ("WSL", scrape_wsl),
-        ("WSL2", scrape_wsl2),
-        ("England Women", scrape_england_women),
-        ("UWCL", scrape_uwcl),
-        ("NWSL", scrape_nwsl),
-    ]
-
     frames: list[pd.DataFrame] = []
     status: dict[str, dict] = {}
 
-    for label, func in tasks:
-        fallback = previous_rows_for(label, previous_df)
+    for label, func, group_labels in TASKS:
+        fallback = previous_rows_for(group_labels, previous_df)
 
         try:
             df = clean_frame(classify_frame(func()))
