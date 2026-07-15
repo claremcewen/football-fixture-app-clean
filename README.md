@@ -140,9 +140,10 @@ filters" section, then the fixture list.
   England Women > UWCL > NWSL) so your most-followed league surfaces first instead of strict
   kickoff-time order. Adjust that dict directly if the priority order should change.
 - **Free-to-air only (UK)** filters to BBC, ITV and YouTube.
-- **Today** / **This weekend** are quick date shortcuts, underneath the Competition/Club row.
-  "This weekend" is the upcoming Friday-through-Monday block (clamped so it never shows a match
-  that's already passed).
+- **Today** / **This weekend** / **Next 7 Days** are quick date shortcuts, underneath the
+  Competition/Club row. "This weekend" is the upcoming Friday-through-Monday block (clamped so
+  it never shows a match that's already passed); "Next 7 Days" is a plain rolling 7-day window
+  from today, independent of whatever Competition is currently selected.
 - A small **"Show all upcoming"** button appears next to the status line whenever a specific
   competition is selected (not for "All (this week)") - it shows that one league's entire
   remaining schedule rather than just its next round.

@@ -691,7 +691,7 @@ def main():
         )
 
     # Quick actions
-    a1, a2, spacer, a4 = st.columns([1, 1, 3, 1])
+    a1, a2, a3, spacer, a5 = st.columns([1, 1, 1, 2, 1])
 
     with a1:
         if st.button("Today", key="quick_today"):
@@ -707,7 +707,14 @@ def main():
             st.session_state["range_end_state"] = end
             st.rerun()
 
-    with a4:
+    with a3:
+        if st.button("Next 7 Days", key="quick_next_7_days"):
+            st.session_state["view_mode_state"] = "range"
+            st.session_state["range_start_state"] = today_date
+            st.session_state["range_end_state"] = today_date + pd.Timedelta(days=6)
+            st.rerun()
+
+    with a5:
         if st.button("Reset", key="reset_filters"):
             st.session_state["_pending_reset"] = True
             st.rerun()
