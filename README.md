@@ -149,7 +149,9 @@ filters" section, then the fixture list.
 - **Watch platform** and **look up a specific date** sit under a "More filters" heading, always
   visible (not a click-to-expand section) - platform filtering is valuable enough to not want it
   hidden behind an extra click.
-- **Reset** clears every filter back to the "today, all competitions" default.
+- **Reset** clears Competition, Club, Watch platform and Free-to-air back to their defaults, but
+  deliberately leaves whatever date/view you're currently on alone (e.g. "This weekend" stays
+  selected) - it's a filters reset, not a full return to the landing state.
 
 ## Visual design
 

@@ -576,6 +576,20 @@ def main():
     if "free_only_filter" not in st.session_state:
         st.session_state["free_only_filter"] = False
 
+    # Reset is applied here, before any widget below is instantiated -
+    # Streamlit forbids writing to a widget's session_state key once that
+    # widget has already been created in the same script run, so the actual
+    # button click just sets this flag and reruns; the write happens on the
+    # next run, before Competition/Club/Free-to-air/Watch platform exist yet.
+    # Filters only - deliberately does NOT touch view_mode_state/date state,
+    # so clearing filters doesn't also throw away whatever date/view (e.g.
+    # "This weekend") you were looking at.
+    if st.session_state.pop("_pending_reset", False):
+        st.session_state["competition_main"] = ALL_THIS_WEEK
+        st.session_state["platform_main"] = "All"
+        st.session_state["club_main"] = "All"
+        st.session_state["free_only_filter"] = False
+
     st.caption(f"Last updated: {get_last_updated_text()}")
 
     # Read current state up front so the status banner can sit above the
@@ -695,14 +709,7 @@ def main():
 
     with a4:
         if st.button("Reset", key="reset_filters"):
-            st.session_state["competition_main"] = ALL_THIS_WEEK
-            st.session_state["platform_main"] = "All"
-            st.session_state["club_main"] = "All"
-            st.session_state["free_only_filter"] = False
-            st.session_state["view_mode_state"] = "single"
-            st.session_state["selected_date_state"] = today_date
-            st.session_state["range_start_state"] = today_date
-            st.session_state["range_end_state"] = today_date + pd.Timedelta(days=6)
+            st.session_state["_pending_reset"] = True
             st.rerun()
 
     st.markdown("**More filters**")
