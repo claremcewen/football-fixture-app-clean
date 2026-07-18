@@ -137,7 +137,6 @@ The FA Women's National League Cup,Football,FAWNL Cup,England,,Real Bedford,Nort
 The FA Women's National League Cup,Football,FAWNL Cup,England,,Blackburn Rovers,Manchester City U21,2026-08-26 19:45,-,,,https://wnl.thefa.com/fixtures
 The FA Women's National League Cup,Football,FAWNL Cup,England,,West Bromwich Albion,Birmingham City U21,2026-08-26 19:45,-,,,https://wnl.thefa.com/fixtures
 The FA Women's National League Cup,Football,FAWNL Cup,England,,Sporting Khalsa,Lye Town,2026-08-26 19:45,-,,,https://wnl.thefa.com/fixtures
-The FA Women's National League Cup,Football,FAWNL Cup,England,,Leafield Athletic,Aston Villa U21,2026-08-26 19:45,-,,,https://wnl.thefa.com/fixtures
 The FA Women's National League Cup,Football,FAWNL Cup,England,,Rugby Borough,Leicester City U21,2026-08-26 19:45,-,,,https://wnl.thefa.com/fixtures
 The FA Women's National League Cup,Football,FAWNL Cup,England,,Milton Keynes Dons,Arsenal U21,2026-08-26 19:45,-,,,https://wnl.thefa.com/fixtures
 The FA Women's National League Cup,Football,FAWNL Cup,England,,Dartford,Crystal Palace U21,2026-08-26 19:45,-,,,https://wnl.thefa.com/fixtures
@@ -170,6 +169,7 @@ The FA Women's National League Cup,Football,FAWNL Cup,England,,Lewes,Saltdean Un
 The FA Women's National League Cup,Football,FAWNL Cup,England,,Moneyfields,AFC Bournemouth,2026-08-27 19:45,-,,,https://wnl.thefa.com/fixtures
 The FA Women's National League Cup,Football,FAWNL Cup,England,,Wycombe Wanderers,Chelsea U21,2026-08-27 19:45,-,,,https://wnl.thefa.com/fixtures
 The FA Women's National League Cup,Football,FAWNL Cup,England,,Cheltenham Town,Gwalia United,2026-08-27 19:45,-,,,https://wnl.thefa.com/fixtures
+The FA Women's National League Cup,Football,FAWNL Cup,England,,Leafield Athletic,Aston Villa U21,2026-08-27 19:45,-,,,https://wnl.thefa.com/fixtures
 NWSL,Football,NWSL,USA,,Gotham FC,Portland Thorns,2026-08-29 01:00,Sports Illustrated Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,San Diego Wave,Racing Louisville,2026-08-29 03:00,Snapdragon Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Kansas City Current,North Carolina Courage,2026-08-29 23:30,CPKC Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
@@ -498,15 +498,15 @@ Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Lye Town,Northam
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Hull City,Peterborough United,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Leafield Athletic,Kidderminster Harriers,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Huddersfield Town,Middlesbrough,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Wythenshawe,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Boldmere St Michaels,Derby County,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Barnsley Women,Sporting Khalsa,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Boldmere St Michaels,Derby County,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Swindon Town,Lewes,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Real Bedford,Exeter City,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Portsmouth,Cheltenham Town,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Plymouth Argyle,AFC Bournemouth,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Fulham,Hashtag United,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Wimbledon,Oxford United,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Wythenshawe,2026-10-18 15:00,-,,,https://wnl.thefa.com/fixtures
 NWSL,Football,NWSL,USA,,Houston Dash,Orlando Pride,2026-10-18 18:00,Shell Energy Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Bay FC,Portland Thorns,2026-10-18 22:00,PayPal Park,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Chicago Stars,Seattle Reign,2026-10-19 00:00,Northwestern Medicine Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
@@ -518,42 +518,42 @@ NWSL,Football,NWSL,USA,,Angel City,Bay FC,2026-10-25 01:45,BMO Stadium,NWSL+,,ht
 NWSL,Football,NWSL,USA,,Orlando Pride,Gotham FC,2026-10-25 19:00,Inter&Co Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Kansas City Current,Washington Spirit,2026-10-25 21:00,CPKC Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,San Diego Wave,Boston Legacy,2026-10-25 23:00,Snapdragon Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Torquay United,Marine Academy Plymouth,2026-10-27 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Kidderminster Harriers,Worcester City Women,2026-10-27 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Maidenhead United,2026-10-27 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Dulwich Hamlet,2026-10-27 19:45,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,Real Bedford,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Bristol Rovers,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,London Bees,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,Fulham,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Moneyfields,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Milton Keynes Dons,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,AFC Wimbledon,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,Saltdean United,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Exeter City,Plymouth Argyle,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Billericay Town,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Bournemouth,Portsmouth,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Stockport County,Blackburn Rovers,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sporting Khalsa,Lye Town,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Leeds United,York City,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Northampton Town,Leafield Athletic,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Bradford City,Halifax,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Kidderminster Harriers,Worcester City Women,2026-10-27 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Torquay United,Marine Academy Plymouth,2026-10-27 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Maidenhead United,2026-10-27 19:45,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,West Bromwich Albion,Boldmere St Michaels,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sporting Khalsa,Lye Town,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Bristol Rovers,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Rugby Borough,Loughborough Lightning,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Northampton Town,Leafield Athletic,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Moneyfields,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Middlesbrough,Hull City,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Stockport County,Blackburn Rovers,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Derby County,Stoke City,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Leeds United,York City,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,London Bees,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Bradford City,Halifax,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Milton Keynes Dons,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,Real Bedford,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,Saltdean United,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,Fulham,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Billericay Town,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,AFC Wimbledon,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Exeter City,Plymouth Argyle,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Bournemouth,Portsmouth,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Wythenshawe,Barnsley Women,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,Cambridge United,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Cheltenham Town,Swindon Town,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sheffield FC,Chesterfield,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Wycombe Wanderers,Abingdon United,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Notts County,Sutton Coldfield Town,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Bridgwater United,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Thornaby,Norton & Stockton Ancients,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Peterborough United,Norwich City,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Bridgwater United,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Chorley,AFC Fylde,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Liverpool Feds,Huddersfield Town,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Chester Le Street Town,Durham Cestria,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,Cambridge United,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Wythenshawe,Barnsley Women,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Cheltenham Town,Swindon Town,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sheffield FC,Chesterfield,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Notts County,Sutton Coldfield Town,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
 NWSL,Football,NWSL,USA,,Angel City,Boston Legacy,2026-11-01 22:00,BMO Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Bay FC,San Diego Wave,2026-11-01 22:00,PayPal Park,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Gotham FC,Utah Royals,2026-11-01 22:00,Sports Illustrated Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
@@ -562,90 +562,78 @@ NWSL,Football,NWSL,USA,,North Carolina Courage,Denver Summit,2026-11-01 22:00,Fi
 NWSL,Football,NWSL,USA,,Racing Louisville,Kansas City Current,2026-11-01 22:00,Lynn Family Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Seattle Reign,Orlando Pride,2026-11-01 22:00,Lumen Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Washington Spirit,Chicago Stars,2026-11-01 22:00,Audi Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Moneyfields,Keynsham Town,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Swindon Town,Exeter City,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Worcester City Women,Sheffield FC,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Marine Academy Plymouth,Gwalia United,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Real Bedford,AFC Bournemouth,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sutton Coldfield Town,Northampton Town,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Maidenhead United,Bournemouth Sports,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Portsmouth,Oxford United,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Lye Town,Wythenshawe,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bristol Rovers,Ascot United,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Plymouth Argyle,Hashtag United,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Leafield Athletic,Notts County,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bridgwater United,Wycombe Wanderers,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Fulham,Cheltenham Town,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Sporting Khalsa,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Abingdon United,Torquay United,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Wimbledon,Lewes,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Barnsley Women,Kidderminster Harriers,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Stoke City,Middlesbrough,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Saltdean United,Actonians,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Norwich City,Liverpool Feds,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Milton Keynes Dons,Dartford,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Loughborough Lightning,Derby County,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,London Bees,Luton Town,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Hull City,Rugby Borough,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Dulwich Hamlet,Chatham Town,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Huddersfield Town,West Bromwich Albion,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Cambridge United,Queens Park Rangers,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Boldmere St Michaels,Peterborough United,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Billericay Town,Stevenage,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Stoke City,Middlesbrough,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,York City,Stockport County,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Milton Keynes Dons,Dartford,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Norwich City,Liverpool Feds,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Norton & Stockton Ancients,Chorley,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,London Bees,Luton Town,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Loughborough Lightning,Derby County,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Halifax,Chester Le Street Town,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Dulwich Hamlet,Chatham Town,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Hull City,Rugby Borough,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Durham Cestria,Leeds United,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Cambridge United,Queens Park Rangers,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Huddersfield Town,West Bromwich Albion,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Blackburn Rovers,Thornaby,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Billericay Town,Stevenage,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Boldmere St Michaels,Peterborough United,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,AFC Fylde,Bradford City,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Wycombe Wanderers,Moneyfields,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Swindon Town,Exeter City,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Moneyfields,Keynsham Town,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Real Bedford,AFC Bournemouth,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Marine Academy Plymouth,Gwalia United,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Portsmouth,Oxford United,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Maidenhead United,Bournemouth Sports,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Plymouth Argyle,Hashtag United,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bristol Rovers,Ascot United,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Fulham,Cheltenham Town,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bridgwater United,Wycombe Wanderers,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Wimbledon,Lewes,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Abingdon United,Torquay United,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Worcester City Women,Sheffield FC,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sutton Coldfield Town,Northampton Town,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Lye Town,Wythenshawe,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Leafield Athletic,Notts County,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Sporting Khalsa,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Barnsley Women,Kidderminster Harriers,2026-11-08 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,Dulwich Hamlet,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Thornaby,AFC Fylde,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Torquay United,Bridgwater United,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,Saltdean United,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Stockport County,Durham Cestria,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Maidenhead United,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Billericay Town,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Leeds United,Halifax,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Abingdon United,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,London Bees,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Chorley,Blackburn Rovers,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Bristol Rovers,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Milton Keynes Dons,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Chester Le Street Town,York City,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Marine Academy Plymouth,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Cambridge United,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Bradford City,Norton & Stockton Ancients,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,Fulham,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,West Bromwich Albion,Hull City,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,Plymouth Argyle,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Rugby Borough,Huddersfield Town,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,Real Bedford,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Peterborough United,Stoke City,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Exeter City,Portsmouth,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Middlesbrough,Loughborough Lightning,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Cheltenham Town,AFC Wimbledon,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Liverpool Feds,Boldmere St Michaels,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Bournemouth,Swindon Town,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Derby County,Norwich City,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Wycombe Wanderers,Moneyfields,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Wythenshawe,Sutton Coldfield Town,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,Saltdean United,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Torquay United,Bridgwater United,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sporting Khalsa,Worcester City Women,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Billericay Town,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Maidenhead United,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sheffield FC,Leafield Athletic,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,London Bees,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Abingdon United,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Notts County,Chesterfield,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Milton Keynes Dons,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Bristol Rovers,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Northampton Town,Barnsley Women,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Cambridge United,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Marine Academy Plymouth,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Kidderminster Harriers,Lye Town,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Moneyfields,Ascot United,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Worcester City Women,Wythenshawe,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Marine Academy Plymouth,Keynsham Town,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sutton Coldfield Town,Kidderminster Harriers,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Maidenhead United,Wycombe Wanderers,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Lye Town,Notts County,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bristol Rovers,Torquay United,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Leafield Athletic,Sporting Khalsa,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bridgwater United,Gwalia United,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Northampton Town,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Abingdon United,Bournemouth Sports,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Barnsley Women,Sheffield FC,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,West Bromwich Albion,Hull City,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,Fulham,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Rugby Borough,Huddersfield Town,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,Plymouth Argyle,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Peterborough United,Stoke City,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,Real Bedford,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Middlesbrough,Loughborough Lightning,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Exeter City,Portsmouth,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Liverpool Feds,Boldmere St Michaels,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Cheltenham Town,AFC Wimbledon,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Derby County,Norwich City,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Bournemouth,Swindon Town,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Thornaby,AFC Fylde,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Stockport County,Durham Cestria,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Leeds United,Halifax,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Chorley,Blackburn Rovers,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Chester Le Street Town,York City,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Bradford City,Norton & Stockton Ancients,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Saltdean United,Chatham Town,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,York City,Bradford City,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Milton Keynes Dons,Stevenage,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
@@ -658,353 +646,365 @@ Division 1 South East,Football,Division 1 South East,England,Tier 4,Cambridge Un
 Division 1 North,Football,Division 1 North,England,Tier 4,Blackburn Rovers,Leeds United,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Billericay Town,Dartford,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,AFC Fylde,Stockport County,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,West Bromwich Albion,Stoke City,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,London Bees,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,York City,Blackburn Rovers,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Peterborough United,Rugby Borough,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Milton Keynes Dons,Saltdean United,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Thornaby,Leeds United,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Middlesbrough,Boldmere St Michaels,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Queens Park Rangers,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Halifax,AFC Fylde,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Hull City,Loughborough Lightning,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Dulwich Hamlet,Dartford,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Durham Cestria,Norton & Stockton Ancients,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Huddersfield Town,Norwich City,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Cambridge United,Billericay Town,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Chester Le Street Town,Stockport County,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Derby County,Liverpool Feds,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Chatham Town,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Bradford City,Chorley,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Moneyfields,Ascot United,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Worcester City Women,Wythenshawe,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Marine Academy Plymouth,Keynsham Town,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sutton Coldfield Town,Kidderminster Harriers,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Maidenhead United,Wycombe Wanderers,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Lye Town,Notts County,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bristol Rovers,Torquay United,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Leafield Athletic,Sporting Khalsa,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bridgwater United,Gwalia United,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Northampton Town,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Abingdon United,Bournemouth Sports,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Barnsley Women,Sheffield FC,2026-11-29 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Swindon Town,Real Bedford,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Wycombe Wanderers,Keynsham Town,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Worcester City Women,Leafield Athletic,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Plymouth Argyle,Fulham,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Maidenhead United,Bridgwater United,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sheffield FC,Kidderminster Harriers,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,Exeter City,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bristol Rovers,Marine Academy Plymouth,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Notts County,Sporting Khalsa,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,AFC Bournemouth,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Gwalia United,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Northampton Town,Wythenshawe,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Cheltenham Town,Oxford United,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Torquay United,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Lye Town,Sutton Coldfield Town,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Wimbledon,Portsmouth,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Barnsley Women,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Wycombe Wanderers,Keynsham Town,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Maidenhead United,Bridgwater United,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bristol Rovers,Marine Academy Plymouth,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Gwalia United,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Torquay United,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Abingdon United,Moneyfields,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Saltdean United,Dulwich Hamlet,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Wythenshawe,Sheffield FC,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Barnsley Women,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,West Bromwich Albion,Stoke City,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,York City,Blackburn Rovers,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Peterborough United,Rugby Borough,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Thornaby,Leeds United,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Middlesbrough,Boldmere St Michaels,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Halifax,AFC Fylde,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Hull City,Loughborough Lightning,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Durham Cestria,Norton & Stockton Ancients,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Huddersfield Town,Norwich City,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Chester Le Street Town,Stockport County,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Derby County,Liverpool Feds,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Bradford City,Chorley,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,London Bees,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Milton Keynes Dons,Saltdean United,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Queens Park Rangers,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Dulwich Hamlet,Dartford,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Cambridge United,Billericay Town,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Chatham Town,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Torquay United,Wycombe Wanderers,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,Actonians,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sutton Coldfield Town,Chesterfield,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Moneyfields,Maidenhead United,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,London Bees,Cambridge United,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sporting Khalsa,Northampton Town,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Marine Academy Plymouth,Abingdon United,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,Stevenage,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Leafield Athletic,Lye Town,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Bournemouth Sports,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Luton Town,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Kidderminster Harriers,Notts County,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Ascot United,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Billericay Town,Milton Keynes Dons,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Barnsley Women,Worcester City Women,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bridgwater United,Bristol Rovers,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Stockport County,Bradford City,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Saltdean United,Dulwich Hamlet,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Moneyfields,Maidenhead United,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Norton & Stockton Ancients,Halifax,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,Actonians,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Marine Academy Plymouth,Abingdon United,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Leeds United,Chester Le Street Town,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,London Bees,Cambridge United,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Bournemouth Sports,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Chorley,Thornaby,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,Stevenage,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Ascot United,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Blackburn Rovers,Durham Cestria,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Luton Town,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bridgwater United,Bristol Rovers,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,AFC Fylde,York City,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,Actonians,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Billericay Town,Milton Keynes Dons,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Wythenshawe,Sheffield FC,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sutton Coldfield Town,Chesterfield,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sporting Khalsa,Northampton Town,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Leafield Athletic,Lye Town,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Kidderminster Harriers,Notts County,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Barnsley Women,Worcester City Women,2026-12-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Wycombe Wanderers,Bournemouth Sports,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,York City,Durham Cestria,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Saltdean United,Luton Town,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Marine Academy Plymouth,Moneyfields,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Thornaby,Bradford City,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Milton Keynes Dons,London Bees,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Maidenhead United,Bristol Rovers,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Stockport County,Leeds United,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,Queens Park Rangers,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Abingdon United,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Chorley,Chester Le Street Town,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Cambridge United,Chatham Town,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Torquay United,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Blackburn Rovers,Halifax,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Billericay Town,Dulwich Hamlet,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Bridgwater United,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,AFC Fylde,Norton & Stockton Ancients,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,West Bromwich Albion,Middlesbrough,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,Actonians,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Worcester City Women,Lye Town,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Rugby Borough,Derby County,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Marine Academy Plymouth,Moneyfields,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Saltdean United,Luton Town,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sporting Khalsa,Wythenshawe,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Norwich City,Hull City,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Maidenhead United,Bristol Rovers,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Milton Keynes Dons,London Bees,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Northampton Town,Sheffield FC,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Loughborough Lightning,Huddersfield Town,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Abingdon United,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,Queens Park Rangers,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Leafield Athletic,Sutton Coldfield Town,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Liverpool Feds,Peterborough United,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Torquay United,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Cambridge United,Chatham Town,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Kidderminster Harriers,Chesterfield,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Boldmere St Michaels,Stoke City,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Bridgwater United,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Billericay Town,Dulwich Hamlet,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Barnsley Women,Notts County,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Real Bedford,AFC Wimbledon,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,York City,Durham Cestria,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Portsmouth,Plymouth Argyle,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Thornaby,Bradford City,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,Hashtag United,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Stockport County,Leeds United,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Fulham,Swindon Town,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Chorley,Chester Le Street Town,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Exeter City,Cheltenham Town,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Blackburn Rovers,Halifax,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Bournemouth,Lewes,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,Milton Keynes Dons,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Wythenshawe,Kidderminster Harriers,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Real Bedford,Plymouth Argyle,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Dartford,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sutton Coldfield Town,Worcester City Women,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,AFC Bournemouth,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,London Bees,Saltdean United,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sheffield FC,Sporting Khalsa,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,Portsmouth,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Dulwich Hamlet,Cambridge United,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Notts County,Northampton Town,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,Cheltenham Town,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Stevenage,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Lye Town,Barnsley Women,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Exeter City,Fulham,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Billericay Town,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Leafield Athletic,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Wimbledon,Swindon Town,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,AFC Fylde,Norton & Stockton Ancients,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,West Bromwich Albion,Middlesbrough,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Rugby Borough,Derby County,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Norwich City,Hull City,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Loughborough Lightning,Huddersfield Town,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Liverpool Feds,Peterborough United,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Boldmere St Michaels,Stoke City,2027-01-10 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Torquay United,Keynsham Town,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Norton & Stockton Ancients,York City,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Stoke City,Loughborough Lightning,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Moneyfields,Gwalia United,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Leeds United,Chorley,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Peterborough United,West Bromwich Albion,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Bristol Rovers,Wycombe Wanderers,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Halifax,Stockport County,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Norwich City,Rugby Borough,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Bridgwater United,Marine Academy Plymouth,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Durham Cestria,AFC Fylde,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Middlesbrough,Derby County,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Ascot United,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Chester Le Street Town,Thornaby,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Liverpool Feds,Hull City,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Abingdon United,Maidenhead United,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Huddersfield Town,Boldmere St Michaels,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Norton & Stockton Ancients,York City,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Leeds United,Chorley,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Halifax,Stockport County,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Durham Cestria,AFC Fylde,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Chester Le Street Town,Thornaby,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Bradford City,Blackburn Rovers,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,Saltdean United,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,West Bromwich Albion,Liverpool Feds,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Thornaby,Halifax,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,Billericay Town,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Rugby Borough,Middlesbrough,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Stockport County,Norton & Stockton Ancients,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Dulwich Hamlet,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Loughborough Lightning,Peterborough United,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Leeds United,AFC Fylde,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,Cambridge United,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Hull City,Stoke City,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Chorley,York City,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,London Bees,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Derby County,Huddersfield Town,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Chester Le Street Town,Blackburn Rovers,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Milton Keynes Dons,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Boldmere St Michaels,Norwich City,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Bradford City,Durham Cestria,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Wythenshawe,Chesterfield,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Huddersfield Town,Boldmere St Michaels,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,Milton Keynes Dons,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Real Bedford,Plymouth Argyle,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Dartford,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,AFC Bournemouth,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,London Bees,Saltdean United,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,Portsmouth,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Dulwich Hamlet,Cambridge United,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,Cheltenham Town,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Stevenage,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Exeter City,Fulham,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Billericay Town,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Wimbledon,Swindon Town,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Wythenshawe,Kidderminster Harriers,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sutton Coldfield Town,Worcester City Women,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sheffield FC,Sporting Khalsa,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Notts County,Northampton Town,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Lye Town,Barnsley Women,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Leafield Athletic,2027-01-24 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Wycombe Wanderers,Marine Academy Plymouth,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sporting Khalsa,Barnsley Women,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Torquay United,Moneyfields,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sheffield FC,Sutton Coldfield Town,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Bristol Rovers,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Notts County,Worcester City Women,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Maidenhead United,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Northampton Town,Lye Town,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Bridgwater United,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Kidderminster Harriers,Leafield Athletic,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Abingdon United,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Swindon Town,Hashtag United,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Wythenshawe,Chesterfield,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Torquay United,Moneyfields,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Portsmouth,Real Bedford,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sporting Khalsa,Barnsley Women,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Bristol Rovers,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Plymouth Argyle,Oxford United,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sheffield FC,Sutton Coldfield Town,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Maidenhead United,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Fulham,AFC Wimbledon,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Notts County,Worcester City Women,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Bridgwater United,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Cheltenham Town,Lewes,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Northampton Town,Lye Town,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Abingdon United,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Bournemouth,Exeter City,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Norwich City,Peterborough United,2027-02-09 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Kidderminster Harriers,Leafield Athletic,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Thornaby,Halifax,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,Saltdean United,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Stockport County,Norton & Stockton Ancients,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,Billericay Town,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Leeds United,AFC Fylde,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Dulwich Hamlet,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Chorley,York City,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,Cambridge United,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Chester Le Street Town,Blackburn Rovers,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,London Bees,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Bradford City,Durham Cestria,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Milton Keynes Dons,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,West Bromwich Albion,Liverpool Feds,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Rugby Borough,Middlesbrough,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Loughborough Lightning,Peterborough United,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Hull City,Stoke City,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Derby County,Huddersfield Town,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Boldmere St Michaels,Norwich City,2027-02-07 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sutton Coldfield Town,Notts County,2027-02-09 19:45,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Norwich City,Peterborough United,2027-02-09 19:45,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Hull City,Middlesbrough,2027-02-09 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Maidenhead United,Ascot United,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Milton Keynes Dons,Luton Town,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Worcester City Women,Kidderminster Harriers,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Stoke City,Derby County,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bristol Rovers,Gwalia United,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Leafield Athletic,Northampton Town,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Huddersfield Town,Liverpool Feds,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Abingdon United,Wycombe Wanderers,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Milton Keynes Dons,Luton Town,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Swindon Town,Cheltenham Town,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Dulwich Hamlet,Actonians,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Real Bedford,Oxford United,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Huddersfield Town,Liverpool Feds,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Billericay Town,Chatham Town,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Portsmouth,AFC Bournemouth,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Swindon Town,Cheltenham Town,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,York City,Leeds United,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Plymouth Argyle,Exeter City,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Real Bedford,Oxford United,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Blackburn Rovers,Stockport County,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Portsmouth,AFC Bournemouth,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Maidenhead United,Ascot United,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Plymouth Argyle,Exeter City,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bristol Rovers,Gwalia United,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Fulham,Lewes,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Abingdon United,Wycombe Wanderers,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Wimbledon,Hashtag United,2027-02-10 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Lye Town,Sporting Khalsa,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Norton & Stockton Ancients,Thornaby,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Sheffield FC,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Halifax,Bradford City,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Barnsley Women,Wythenshawe,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Durham Cestria,Chester Le Street Town,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Loughborough Lightning,Rugby Borough,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,AFC Fylde,Chorley,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Boldmere St Michaels,West Bromwich Albion,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Saltdean United,Dartford,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Saltdean United,Dartford,2027-02-11 19:30,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Moneyfields,Bournemouth Sports,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,London Bees,Queens Park Rangers,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Marine Academy Plymouth,Torquay United,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Cambridge United,Stevenage,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Bridgwater United,Keynsham Town,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Loughborough Lightning,Rugby Borough,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Norton & Stockton Ancients,Thornaby,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Boldmere St Michaels,West Bromwich Albion,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Halifax,Bradford City,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Lye Town,Sporting Khalsa,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Durham Cestria,Chester Le Street Town,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Sheffield FC,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,AFC Fylde,Chorley,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Barnsley Women,Wythenshawe,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Leafield Athletic,Northampton Town,2027-02-11 19:45,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,Portsmouth,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,Billericay Town,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Wycombe Wanderers,Bridgwater United,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,AFC Wimbledon,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,Cambridge United,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Torquay United,Abingdon United,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,Plymouth Argyle,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,London Bees,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Moneyfields,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Exeter City,Swindon Town,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,Milton Keynes Dons,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Marine Academy Plymouth,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Cheltenham Town,Fulham,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Dulwich Hamlet,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Maidenhead United,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Bournemouth,Real Bedford,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Saltdean United,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Bristol Rovers,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Wythenshawe,Lye Town,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,West Bromwich Albion,Huddersfield Town,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sporting Khalsa,Chesterfield,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Rugby Borough,Hull City,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sheffield FC,Worcester City Women,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Peterborough United,Boldmere St Michaels,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Notts County,Leafield Athletic,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Middlesbrough,Stoke City,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Northampton Town,Sutton Coldfield Town,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Liverpool Feds,Norwich City,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Kidderminster Harriers,Barnsley Women,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Derby County,Loughborough Lightning,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Thornaby,Blackburn Rovers,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Wythenshawe,Lye Town,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,AFC Wimbledon,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Stockport County,York City,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sporting Khalsa,Chesterfield,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,Plymouth Argyle,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Leeds United,Durham Cestria,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sheffield FC,Worcester City Women,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Exeter City,Swindon Town,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Chorley,Norton & Stockton Ancients,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Notts County,Leafield Athletic,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Cheltenham Town,Fulham,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Chester Le Street Town,Halifax,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Northampton Town,Sutton Coldfield Town,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Bournemouth,Real Bedford,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Bradford City,AFC Fylde,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Kidderminster Harriers,Barnsley Women,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,Billericay Town,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,West Bromwich Albion,Huddersfield Town,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,Cambridge United,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Rugby Borough,Hull City,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,London Bees,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Peterborough United,Boldmere St Michaels,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,Milton Keynes Dons,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Middlesbrough,Stoke City,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Dulwich Hamlet,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Liverpool Feds,Norwich City,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Saltdean United,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Derby County,Loughborough Lightning,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Wycombe Wanderers,Bridgwater United,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Torquay United,Abingdon United,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Moneyfields,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Marine Academy Plymouth,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Maidenhead United,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Bristol Rovers,2027-02-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Swindon Town,Portsmouth,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Stoke City,Norwich City,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,York City,Chester Le Street Town,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Moneyfields,Wycombe Wanderers,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,Oxford United,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Rugby Borough,West Bromwich Albion,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Norton & Stockton Ancients,Bradford City,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Marine Academy Plymouth,Ascot United,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Fulham,Real Bedford,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Middlesbrough,Liverpool Feds,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Halifax,Leeds United,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Maidenhead United,Keynsham Town,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Exeter City,Hashtag United,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Loughborough Lightning,Boldmere St Michaels,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Durham Cestria,Stockport County,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bristol Rovers,Bournemouth Sports,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Cheltenham Town,AFC Bournemouth,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Hull City,Huddersfield Town,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Blackburn Rovers,Chorley,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bridgwater United,Torquay United,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Wimbledon,Plymouth Argyle,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Derby County,Peterborough United,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,AFC Fylde,Thornaby,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Saltdean United,Queens Park Rangers,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Worcester City Women,Sporting Khalsa,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Milton Keynes Dons,Chatham Town,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sutton Coldfield Town,Wythenshawe,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,London Bees,Dartford,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Lye Town,Kidderminster Harriers,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Dulwich Hamlet,Stevenage,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Leafield Athletic,Sheffield FC,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Cambridge United,Actonians,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Notts County,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Billericay Town,Luton Town,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Barnsley Women,Northampton Town,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Moneyfields,Wycombe Wanderers,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Marine Academy Plymouth,Ascot United,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Maidenhead United,Keynsham Town,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bristol Rovers,Bournemouth Sports,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bridgwater United,Torquay United,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Abingdon United,Gwalia United,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,York City,Chester Le Street Town,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Saltdean United,Queens Park Rangers,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Norton & Stockton Ancients,Bradford City,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Milton Keynes Dons,Chatham Town,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Halifax,Leeds United,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,London Bees,Dartford,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Durham Cestria,Stockport County,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Dulwich Hamlet,Stevenage,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Blackburn Rovers,Chorley,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Cambridge United,Actonians,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,AFC Fylde,Thornaby,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Billericay Town,Luton Town,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Worcester City Women,Sporting Khalsa,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sutton Coldfield Town,Wythenshawe,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Lye Town,Kidderminster Harriers,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Leafield Athletic,Sheffield FC,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Notts County,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Barnsley Women,Northampton Town,2027-03-14 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Real Bedford,Cheltenham Town,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,Milton Keynes Dons,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Wythenshawe,Worcester City Women,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Wycombe Wanderers,Maidenhead United,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Portsmouth,Fulham,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,Dulwich Hamlet,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sporting Khalsa,Leafield Athletic,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Bridgwater United,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Plymouth Argyle,Swindon Town,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Cambridge United,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sheffield FC,Barnsley Women,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Abingdon United,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,Exeter City,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,Billericay Town,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Notts County,Lye Town,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Moneyfields,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,Lewes,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Saltdean United,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Kidderminster Harriers,Sutton Coldfield Town,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Bournemouth,AFC Wimbledon,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,West Bromwich Albion,Derby County,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,Milton Keynes Dons,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Peterborough United,Middlesbrough,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,Dulwich Hamlet,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Norwich City,Loughborough Lightning,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Cambridge United,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Liverpool Feds,Rugby Borough,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,Billericay Town,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Huddersfield Town,Stoke City,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Saltdean United,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Boldmere St Michaels,Hull City,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Stockport County,AFC Fylde,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Peterborough United,Middlesbrough,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Leeds United,Blackburn Rovers,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Norwich City,Loughborough Lightning,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Chorley,Halifax,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Liverpool Feds,Rugby Borough,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Chester Le Street Town,Norton & Stockton Ancients,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Torquay United,Bristol Rovers,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Huddersfield Town,Stoke City,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Wycombe Wanderers,Maidenhead United,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Boldmere St Michaels,Hull City,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Bridgwater United,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Abingdon United,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Moneyfields,2027-03-28 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,London Bees,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Stoke City,Liverpool Feds,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Thornaby,Durham Cestria,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Marine Academy Plymouth,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Torquay United,Bristol Rovers,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Norwich City,Middlesbrough,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Bradford City,York City,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Marine Academy Plymouth,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Loughborough Lightning,West Bromwich Albion,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Northampton Town,Chesterfield,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Hull City,Derby County,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,London Bees,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Thornaby,Durham Cestria,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Huddersfield Town,Peterborough United,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Swindon Town,Oxford United,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Bradford City,York City,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Boldmere St Michaels,Rugby Borough,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Swindon Town,Oxford United,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Real Bedford,Lewes,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Portsmouth,Hashtag United,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Plymouth Argyle,Cheltenham Town,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Fulham,AFC Bournemouth,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Wimbledon,Exeter City,2027-04-04 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Moneyfields,Bristol Rovers,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Thornaby,York City,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Maidenhead United,Torquay United,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Leeds United,Bradford City,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Wycombe Wanderers,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Halifax,Durham Cestria,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Marine Academy Plymouth,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Chorley,Stockport County,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Keynsham Town,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Chester Le Street Town,AFC Fylde,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Abingdon United,Bridgwater United,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Blackburn Rovers,Norton & Stockton Ancients,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Saltdean United,Billericay Town,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Worcester City Women,Northampton Town,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Moneyfields,Bristol Rovers,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,Chatham Town,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sutton Coldfield Town,Barnsley Women,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Maidenhead United,Torquay United,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Milton Keynes Dons,Cambridge United,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Notts County,Sheffield FC,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Wycombe Wanderers,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Stevenage,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Lye Town,Chesterfield,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Marine Academy Plymouth,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,London Bees,Dulwich Hamlet,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Leafield Athletic,Wythenshawe,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Keynsham Town,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,Actonians,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Abingdon United,Bridgwater United,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Thornaby,York City,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Worcester City Women,Northampton Town,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Leeds United,Bradford City,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sutton Coldfield Town,Barnsley Women,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Halifax,Durham Cestria,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Notts County,Sheffield FC,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Chorley,Stockport County,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Lye Town,Chesterfield,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Chester Le Street Town,AFC Fylde,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Leafield Athletic,Wythenshawe,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Blackburn Rovers,Norton & Stockton Ancients,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Kidderminster Harriers,Sporting Khalsa,2027-04-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,West Bromwich Albion,Norwich City,2027-04-18 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,AFC Wimbledon,2027-04-18 14:00,-,,,https://wnl.thefa.com/fixtures
@@ -1018,30 +1018,30 @@ Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Live
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Cheltenham Town,Portsmouth,2027-04-18 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Derby County,Boldmere St Michaels,2027-04-18 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Bournemouth,Plymouth Argyle,2027-04-18 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,Queens Park Rangers,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,York City,Halifax,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Dulwich Hamlet,Milton Keynes Dons,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Stockport County,Thornaby,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Dartford,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Norton & Stockton Ancients,Leeds United,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Cambridge United,Saltdean United,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Durham Cestria,Chorley,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Billericay Town,London Bees,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Bradford City,Chester Le Street Town,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Luton Town,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,AFC Fylde,Blackburn Rovers,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Wythenshawe,Notts County,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Wycombe Wanderers,Ascot United,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sporting Khalsa,Sutton Coldfield Town,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Stockport County,Thornaby,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Torquay United,Bournemouth Sports,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sheffield FC,Lye Town,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Norton & Stockton Ancients,Leeds United,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Marine Academy Plymouth,Maidenhead United,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Northampton Town,Kidderminster Harriers,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Durham Cestria,Chorley,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Gwalia United,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Worcester City Women,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Bradford City,Chester Le Street Town,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Bristol Rovers,Abingdon United,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Barnsley Women,Leafield Athletic,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,AFC Fylde,Blackburn Rovers,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Bridgwater United,Moneyfields,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Wythenshawe,Notts County,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,Queens Park Rangers,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sporting Khalsa,Sutton Coldfield Town,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Dulwich Hamlet,Milton Keynes Dons,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sheffield FC,Lye Town,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Dartford,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Northampton Town,Kidderminster Harriers,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Cambridge United,Saltdean United,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Worcester City Women,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Billericay Town,London Bees,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Barnsley Women,Leafield Athletic,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Luton Town,2027-04-25 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Swindon Town,AFC Bournemouth,2027-05-02 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Stoke City,Peterborough United,2027-05-02 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Real Bedford,Hashtag United,2027-05-02 14:00,-,,,https://wnl.thefa.com/fixtures
