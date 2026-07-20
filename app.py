@@ -26,6 +26,7 @@ st.set_page_config(
 COMPETITION_DEFAULT_VIEW: dict[str, str] = {
     "England Women": "all",
     "UWCL": "all",
+    "WAFCON": "all",
     "WSL": "next_round",
     "WSL2": "next_round",
     "NWSL": "next_round",
@@ -79,7 +80,7 @@ ALL_FULL_LIST = "All Fixtures"
 # playing a different opponent each fixture, not a fixed set of clubs.
 # Excluded from Club filtering entirely, and from the Club list even when
 # ALL_FULL_LIST pulls teams from every competition at once.
-NATIONAL_TEAM_COMPETITIONS: set[str] = {"England Women"}
+NATIONAL_TEAM_COMPETITIONS: set[str] = {"England Women", "WAFCON"}
 
 # Small color-coded dot per competition on each match card, purely for
 # visual grouping - an original palette, not official league/team colors
@@ -97,6 +98,7 @@ COMPETITION_COLOR: dict[str, str] = {
     "Division 1 South East": "#085041",
     "Division 1 South West": "#265C7A",
     "FAWNL Cup": "#4C9A2A",
+    "WAFCON": "#0E7C7B",
 }
 DEFAULT_COMPETITION_COLOR = "#5F5E5A"
 
@@ -737,6 +739,12 @@ def main():
             if st.button("Show all upcoming", key="show_all_upcoming"):
                 st.session_state["view_mode_state"] = "all"
                 st.rerun()
+
+    # All kickoff times are UK local time (BST/GMT) - worth stating plainly
+    # now that non-UK-sourced competitions (WAFCON, hosted in Morocco) are
+    # in the mix, since their source publishes times in the host country's
+    # own local time before conversion.
+    st.caption("All times shown in UK time (BST/GMT).")
 
     # Quick actions - Today/This weekend/Next 7 Days/Reset are kept in their
     # own row (see the ".st-key-quick_today" CSS rule in APP_CSS) so they

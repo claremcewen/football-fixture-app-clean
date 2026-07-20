@@ -22,5 +22,9 @@
   "FAWNL": {
     "ok": true,
     "rows": 924
+  },
+  "WAFCON": {
+    "ok": true,
+    "rows": 34
   }
 }

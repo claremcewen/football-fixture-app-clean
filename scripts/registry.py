@@ -22,6 +22,8 @@ COMPETITION_REGISTRY: list[tuple[str, str, str, str, str | None]] = [
     # Cross-divisional cup - open to both tier 3 and tier 4 clubs, so it
     # doesn't belong to a single tier the way the six league divisions do.
     ("The FA Women's National League Cup", "Football", "FAWNL Cup", "England", None),
+    # Competition label includes the round/group, e.g. "WAFCON 2026 - Group A".
+    ("WAFCON", "Football", "WAFCON", "Africa", None),
 ]
 
 

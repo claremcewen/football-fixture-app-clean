@@ -4,6 +4,7 @@ from __future__ import annotations
 import re
 from datetime import datetime
 from typing import Iterable
+from zoneinfo import ZoneInfo
 
 import pandas as pd
 import requests
@@ -52,8 +53,37 @@ def fetch_lines(url: str) -> list[str]:
 
     raise last_error
 
+def fetch_html(url: str) -> str:
+    last_error = None
+
+    for attempt in range(3):
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=60)
+            response.raise_for_status()
+            return response.text
+        except requests.RequestException as exc:
+            last_error = exc
+            print(f"Attempt {attempt + 1} failed for {url}: {exc}")
+
+    raise last_error
+
+
 def clean_line(line: str) -> str:
     return re.sub(r"\s+", " ", line).strip()
+
+
+def to_uk_iso_from_tz(date_obj, time_text: str, source_tz: str) -> str:
+    """Combine a date + 24h time in the given source timezone and return the
+    equivalent UK local time as a 'YYYY-MM-DD HH:MM' string. Needed for
+    sources (e.g. WAFCON's Wikipedia page) that publish kickoff times in the
+    host country's own local time rather than already-converted UK time."""
+    hour, minute = (int(part) for part in time_text.split(":"))
+    local_dt = datetime(
+        date_obj.year, date_obj.month, date_obj.day, hour, minute,
+        tzinfo=ZoneInfo(source_tz),
+    )
+    uk_dt = local_dt.astimezone(ZoneInfo("Europe/London"))
+    return uk_dt.strftime("%Y-%m-%d %H:%M")
 
 
 def month_number(name: str) -> int:
