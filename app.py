@@ -136,11 +136,11 @@ html, body, [class*="css"] {{
     font-family: 'Montserrat', sans-serif;
 }}
 /* Streamlit's default top padding leaves a lot of dead space above the
-   fold on a phone before any fixtures are visible - trimmed down, but not
-   below the fixed header toolbar's own height (else content renders
-   underneath it). */
+   fold on a phone before any fixtures are visible - trimmed down, but kept
+   just past the fixed header toolbar's own height (60px) so content isn't
+   rendered underneath it. */
 .block-container {{
-    padding-top: 2rem !important;
+    padding-top: 4.5rem !important;
 }}
 h1, h2, h3, .wfg-brand-title {{
     font-family: 'Anton', sans-serif;
@@ -503,15 +503,15 @@ def next_round_window(df: pd.DataFrame, competition: str, today) -> tuple:
 def this_weekend_range(today) -> tuple:
     """Return the (start, end) of the current/upcoming Fri-Mon block,
     clamped so it never starts before today (a match that already
-    happened this past Friday shouldn't reappear)."""
+    happened this past Friday shouldn't reappear). Once the weekend itself
+    is over (i.e. today is Monday), this points to the *next* weekend
+    rather than lingering on the one that just finished."""
     weekday = today.weekday()  # Mon=0 ... Sun=6
 
-    if weekday == 0:  # Monday - tail end of the weekend that started last Friday
-        friday = today - pd.Timedelta(days=3)
-    elif weekday in (4, 5, 6):  # Fri/Sat/Sun - this weekend has already started
+    if weekday in (4, 5, 6):  # Fri/Sat/Sun - this weekend has already started
         friday = today - pd.Timedelta(days=(weekday - 4))
-    else:  # Tue/Wed/Thu - upcoming Friday
-        friday = today + pd.Timedelta(days=(4 - weekday))
+    else:  # Mon/Tue/Wed/Thu - the upcoming Friday
+        friday = today + pd.Timedelta(days=((4 - weekday) % 7))
 
     monday = friday + pd.Timedelta(days=3)
     return max(friday, today), monday
@@ -582,10 +582,7 @@ def main():
                 )
 
     with header_text_col:
-        st.caption(
-            "Women's football watch guide - WSL, WSL2, England Women, UWCL and NWSL from "
-            "generated combined data."
-        )
+        st.caption("Women's football fixtures - and where to watch them.")
 
     if df.empty:
         st.warning(
