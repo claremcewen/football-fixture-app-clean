@@ -135,6 +135,13 @@ APP_CSS = f"""
 html, body, [class*="css"] {{
     font-family: 'Montserrat', sans-serif;
 }}
+/* Streamlit's default top padding leaves a lot of dead space above the
+   fold on a phone before any fixtures are visible - trimmed down, but not
+   below the fixed header toolbar's own height (else content renders
+   underneath it). */
+.block-container {{
+    padding-top: 2rem !important;
+}}
 h1, h2, h3, .wfg-brand-title {{
     font-family: 'Anton', sans-serif;
     letter-spacing: 0.02em;
@@ -650,8 +657,6 @@ def main():
         st.session_state["club_main"] = "All"
         st.session_state["free_only_filter"] = False
 
-    st.caption(f"Last updated: {get_last_updated_text()}")
-
     # Read current state up front so the status banner can sit above the
     # controls that drive it (Streamlit reruns top-to-bottom on every
     # interaction, so this reflects whatever was last selected/clicked).
@@ -688,73 +693,13 @@ def main():
                 st.session_state["view_mode_state"] = "all"
                 st.rerun()
 
-    # Primary controls: competition drives its own sensible default view,
-    # club is scoped to whichever competition is currently selected.
-    c1, c2, c3 = st.columns([1.4, 1.4, 1])
-
-    with c1:
-        competition = st.selectbox(
-            "Competition",
-            competitions,
-            key="competition_main",
-            on_change=apply_competition_default_view,
-            format_func=format_competition_option,
-        )
-
-    is_national_team_competition = competition in NATIONAL_TEAM_COMPETITIONS
-    club_disabled = competition == ALL_THIS_WEEK or is_national_team_competition
-
-    if club_disabled:
-        competition_scope = df.iloc[0:0]
-    elif competition == ALL_FULL_LIST:
-        # Every club competition at once - national teams excluded, since
-        # "England"/"Greece" etc aren't a fixed set of clubs to filter by.
-        competition_scope = df[~df["competition_group"].isin(NATIONAL_TEAM_COMPETITIONS)]
-    else:
-        competition_scope = df[df["competition_group"] == competition]
-
-    clubs = ["All"] + sorted(
-        pd.unique(
-            pd.concat([competition_scope["home_team"], competition_scope["away_team"]])
-        ).tolist()
-    )
-    if st.session_state["club_main"] not in clubs:
-        st.session_state["club_main"] = "All"
-
-    with c2:
-        if is_national_team_competition:
-            club_label = "Club"
-            club_help = "Not applicable for international fixtures."
-        elif competition == ALL_THIS_WEEK:
-            club_label = "Club"
-            club_help = "Pick a competition first to filter by club."
-        elif competition == ALL_FULL_LIST:
-            club_label = "Club (all leagues)"
-            club_help = None
-        else:
-            club_label = f"Club ({competition})"
-            club_help = None
-
-        club = st.selectbox(
-            club_label,
-            clubs,
-            key="club_main",
-            disabled=club_disabled,
-            help=club_help,
-        )
-
-    with c3:
-        free_only = st.toggle(
-            "Free-to-air only (UK)",
-            key="free_only_filter",
-            help="BBC, ITV or YouTube",
-        )
-
-    # Quick actions - Today/This weekend/Next 7 Days are kept in their own
-    # row (see the ".st-key-quick_today" CSS rule in APP_CSS) so they stay
-    # side by side even on a narrow phone screen, where Streamlit's default
-    # column behaviour would otherwise stack each one on its own line.
-    a1, a2, a3 = st.columns(3)
+    # Quick actions - Today/This weekend/Next 7 Days/Reset are kept in their
+    # own row (see the ".st-key-quick_today" CSS rule in APP_CSS) so they
+    # stay side by side even on a narrow phone screen, where Streamlit's
+    # default column behaviour would otherwise stack each one on its own
+    # line. Placed right after the status line, before the fixture list,
+    # so they're reachable without opening the Filters expander below.
+    a1, a2, a3, a4 = st.columns(4)
 
     with a1:
         if st.button("Today", key="quick_today"):
@@ -777,29 +722,97 @@ def main():
             st.session_state["range_end_state"] = today_date + pd.Timedelta(days=6)
             st.rerun()
 
-    if st.button("Reset", key="reset_filters"):
-        st.session_state["_pending_reset"] = True
-        st.rerun()
+    with a4:
+        if st.button("Reset", key="reset_filters"):
+            st.session_state["_pending_reset"] = True
+            st.rerun()
 
-    st.markdown("**More filters**")
-    f1, f2 = st.columns(2)
+    # Filters collapsed by default - Competition/Club/Free-to-air/Watch
+    # platform/date lookup all live here so fixtures are visible right away
+    # on a phone without scrolling past a wall of controls first; still one
+    # tap away when actually needed.
+    with st.expander("Filters"):
+        # Primary controls: competition drives its own sensible default view,
+        # club is scoped to whichever competition is currently selected.
+        c1, c2, c3 = st.columns([1.4, 1.4, 1])
 
-    with f1:
-        platform = st.selectbox("Watch platform", platforms, key="platform_main")
+        with c1:
+            competition = st.selectbox(
+                "Competition",
+                competitions,
+                key="competition_main",
+                on_change=apply_competition_default_view,
+                format_func=format_competition_option,
+            )
 
-    with f2:
-        min_date = min(unique_dates)
-        max_date = max(unique_dates)
-        default_lookup_date = min(max(today_date, min_date), max_date)
+        is_national_team_competition = competition in NATIONAL_TEAM_COMPETITIONS
+        club_disabled = competition == ALL_THIS_WEEK or is_national_team_competition
 
-        st.date_input(
-            "Look up a specific date",
-            value=default_lookup_date,
-            min_value=min_date,
-            max_value=max_date,
-            key="date_input_main",
-            on_change=apply_date_lookup,
+        if club_disabled:
+            competition_scope = df.iloc[0:0]
+        elif competition == ALL_FULL_LIST:
+            # Every club competition at once - national teams excluded, since
+            # "England"/"Greece" etc aren't a fixed set of clubs to filter by.
+            competition_scope = df[~df["competition_group"].isin(NATIONAL_TEAM_COMPETITIONS)]
+        else:
+            competition_scope = df[df["competition_group"] == competition]
+
+        clubs = ["All"] + sorted(
+            pd.unique(
+                pd.concat([competition_scope["home_team"], competition_scope["away_team"]])
+            ).tolist()
         )
+        if st.session_state["club_main"] not in clubs:
+            st.session_state["club_main"] = "All"
+
+        with c2:
+            if is_national_team_competition:
+                club_label = "Club"
+                club_help = "Not applicable for international fixtures."
+            elif competition == ALL_THIS_WEEK:
+                club_label = "Club"
+                club_help = "Pick a competition first to filter by club."
+            elif competition == ALL_FULL_LIST:
+                club_label = "Club (all leagues)"
+                club_help = None
+            else:
+                club_label = f"Club ({competition})"
+                club_help = None
+
+            club = st.selectbox(
+                club_label,
+                clubs,
+                key="club_main",
+                disabled=club_disabled,
+                help=club_help,
+            )
+
+        with c3:
+            free_only = st.toggle(
+                "Free-to-air only (UK)",
+                key="free_only_filter",
+                help="BBC, ITV or YouTube",
+            )
+
+        st.markdown("**More filters**")
+        f1, f2 = st.columns(2)
+
+        with f1:
+            platform = st.selectbox("Watch platform", platforms, key="platform_main")
+
+        with f2:
+            min_date = min(unique_dates)
+            max_date = max(unique_dates)
+            default_lookup_date = min(max(today_date, min_date), max_date)
+
+            st.date_input(
+                "Look up a specific date",
+                value=default_lookup_date,
+                min_value=min_date,
+                max_value=max_date,
+                key="date_input_main",
+                on_change=apply_date_lookup,
+            )
 
     st.divider()
 
@@ -884,6 +897,8 @@ def main():
             ]
         ].copy()
         st.dataframe(table_df, width="stretch", hide_index=True)
+
+    st.caption(f"Last updated: {get_last_updated_text()}")
 
     st.markdown(
         f'<div class="wfg-footer"><a href="{BRAND_SITE_URL}" target="_blank">'
