@@ -231,6 +231,52 @@ h1, h2, h3, .wfg-brand-title {{
     color: {BRAND_MID_BLUE};
     text-decoration: none;
 }}
+/* Keep specific rows side by side even on narrow (mobile) screens, where
+   Streamlit's default column behaviour forces every column to nearly full
+   width - stacking each one on its own line. Scoped with :has() to just
+   the rows that need it (logo+caption, the three quick-date buttons);
+   Competition/Club/Free-to-air etc still stack normally, since those need
+   the full width to stay usable on a small screen. */
+div[data-testid="stHorizontalBlock"]:has(.st-key-header_logo),
+div[data-testid="stHorizontalBlock"]:has(.st-key-quick_today) {{
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 8px !important;
+}}
+
+/* Header: logo column stays a fixed, content-sized width; the caption
+   column grows to fill whatever's left. Without this split, both columns
+   grow equally (see below) and the logo ends up floating in a much wider
+   box than its image on a large screen. */
+div[data-testid="stHorizontalBlock"]:has(.st-key-header_logo) > div[data-testid="stColumn"] {{
+    min-width: 0 !important;
+    width: auto !important;
+}}
+div[data-testid="stHorizontalBlock"]:has(.st-key-header_logo) > div[data-testid="stColumn"]:first-child {{
+    flex: 0 0 auto !important;
+}}
+div[data-testid="stHorizontalBlock"]:has(.st-key-header_logo) > div[data-testid="stColumn"]:last-child {{
+    flex: 1 1 auto !important;
+}}
+
+/* Quick-date buttons: sized to their own content, not stretched to fill
+   the row - "flex: 1 1 0" (equal grow) looked fine on a narrow phone
+   (little space to grow into) but spread the buttons out with large gaps
+   on a wide laptop screen, since each column grew to a full third of a
+   much wider row. */
+div[data-testid="stHorizontalBlock"]:has(.st-key-quick_today) {{
+    justify-content: flex-start !important;
+}}
+div[data-testid="stHorizontalBlock"]:has(.st-key-quick_today) > div[data-testid="stColumn"] {{
+    min-width: 0 !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+}}
+div[data-testid="stHorizontalBlock"]:has(.st-key-quick_today) button {{
+    padding: 0.4rem 0.5rem !important;
+    font-size: 13px !important;
+    white-space: nowrap;
+}}
 </style>
 """
 
@@ -505,20 +551,34 @@ def apply_date_lookup() -> None:
 
 
 def main():
-    st.markdown(APP_CSS, unsafe_allow_html=True)
+    # st.html (not st.markdown) - st.markdown runs content through Streamlit's
+    # markdown-to-HTML converter even with unsafe_allow_html=True, which was
+    # silently mangling/truncating this long CSS block partway through.
+    # st.html() injects raw HTML/CSS with no markdown pre-processing.
+    st.html(APP_CSS)
     df = load_data()
 
-    if LOGO_FILE.exists():
-        st.image(str(LOGO_FILE), width=90)
-    else:
-        st.markdown(
-            '<p class="wfg-brand-title">She Can Kick It</p>',
-            unsafe_allow_html=True,
+    # Logo and caption side by side - kept in one row even on a narrow phone
+    # screen via the ".st-key-header_logo" CSS rule in APP_CSS, rather than
+    # letting Streamlit stack them (which used to push the caption, and
+    # everything below it, further down the page on mobile).
+    header_logo_col, header_text_col = st.columns([1, 4])
+
+    with header_logo_col:
+        with st.container(key="header_logo"):
+            if LOGO_FILE.exists():
+                st.image(str(LOGO_FILE), width=70)
+            else:
+                st.markdown(
+                    '<p class="wfg-brand-title">She Can Kick It</p>',
+                    unsafe_allow_html=True,
+                )
+
+    with header_text_col:
+        st.caption(
+            "Women's football watch guide - WSL, WSL2, England Women, UWCL and NWSL from "
+            "generated combined data."
         )
-    st.caption(
-        "Women's football watch guide - WSL, WSL2, England Women, UWCL and NWSL from "
-        "generated combined data."
-    )
 
     if df.empty:
         st.warning(
@@ -690,8 +750,11 @@ def main():
             help="BBC, ITV or YouTube",
         )
 
-    # Quick actions
-    a1, a2, a3, spacer, a5 = st.columns([1, 1, 1, 2, 1])
+    # Quick actions - Today/This weekend/Next 7 Days are kept in their own
+    # row (see the ".st-key-quick_today" CSS rule in APP_CSS) so they stay
+    # side by side even on a narrow phone screen, where Streamlit's default
+    # column behaviour would otherwise stack each one on its own line.
+    a1, a2, a3 = st.columns(3)
 
     with a1:
         if st.button("Today", key="quick_today"):
@@ -714,10 +777,9 @@ def main():
             st.session_state["range_end_state"] = today_date + pd.Timedelta(days=6)
             st.rerun()
 
-    with a5:
-        if st.button("Reset", key="reset_filters"):
-            st.session_state["_pending_reset"] = True
-            st.rerun()
+    if st.button("Reset", key="reset_filters"):
+        st.session_state["_pending_reset"] = True
+        st.rerun()
 
     st.markdown("**More filters**")
     f1, f2 = st.columns(2)

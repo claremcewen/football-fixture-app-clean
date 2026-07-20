@@ -182,6 +182,35 @@ helper functions (`render_status`, `render_date_heading`, `render_section_headin
 Streamlit's built-in `st.info`/`st.markdown("##...")`, to get a more compact, on-brand look than
 Streamlit's defaults.
 
+### Mobile layout
+
+Below a certain viewport width, Streamlit forces every `st.columns()` column to
+`min-width: calc(100% - 24px)`, which stacks them one per line - fine for the
+Competition/Club/Free-to-air row (those need full width on a small screen anyway), but it made
+the logo+caption header and the three quick-date buttons stack awkwardly, pushing the actual
+fixture list far down the page. Fixed with a scoped CSS override in `APP_CSS`, not a global
+change: `div[data-testid="stHorizontalBlock"]:has(.st-key-header_logo)` and the equivalent
+`.st-key-quick_today` selector force just those two rows to stay side by side
+(`flex-wrap: nowrap`, `min-width: 0`). The `.st-key-{key}` class is one Streamlit already puts on
+any element (or `st.container(key=...)`) you give a `key=` to - a stable hook to target with
+`:has()`, instead of Streamlit's own auto-generated `st-emotion-cache-*` classes, which aren't
+guaranteed stable across versions. If a future row needs the same "stay in one row on mobile"
+treatment, give one of its widgets a `key=`, wrap it in `st.container(key=...)` if it doesn't take
+one directly, and add its selector to that same CSS block.
+
+Within those two rows, the columns are also pinned to `flex: 0 0 auto` (content-sized, no
+stretching) rather than `flex: 1 1 0` (equal-grow) - equal-grow looks fine on a narrow phone,
+where there's little space to grow into, but spreads the buttons out with large gaps on a wide
+laptop screen. The one exception is the header's caption column, which uses `flex: 1 1 auto` so
+it alone fills the space the fixed-width logo column doesn't need.
+
+CSS is injected with `st.html(APP_CSS)`, not `st.markdown(APP_CSS, unsafe_allow_html=True)`.
+`st.markdown()` still runs its content through Streamlit's markdown-to-HTML converter even with
+`unsafe_allow_html=True`, and that converter was silently truncating this CSS block partway
+through once it grew past a certain length - rules would vanish from the rendered page with no
+error anywhere. `st.html()` injects raw HTML/CSS with no markdown pre-processing, so use it (not
+`st.markdown()`) for any future raw CSS/HTML injection.
+
 Any user-facing card content built from scraped data goes through `html.escape()` before being
 interpolated into raw HTML (`match_card` uses `st.markdown(..., unsafe_allow_html=True)`) -
 necessary since this content comes from third-party sites, not just internal data.
