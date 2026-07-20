@@ -87,16 +87,16 @@ NATIONAL_TEAM_COMPETITIONS: set[str] = {"England Women"}
 COMPETITION_COLOR: dict[str, str] = {
     "WSL": "#0F6E56",
     "WSL2": "#185FA5",
-    "England Women": "#534AB7",
-    "UWCL": "#854F0B",
-    "NWSL": "#993C1D",
+    "England Women": "#2E8B57",
+    "UWCL": "#2C7DA0",
+    "NWSL": "#1B998B",
     "Northern Premier Division": "#3B6D11",
-    "Southern Premier Division": "#993556",
-    "Division 1 North": "#A32D2D",
-    "Division 1 Midlands": "#3C3489",
+    "Southern Premier Division": "#3A6B8A",
+    "Division 1 North": "#2E6F40",
+    "Division 1 Midlands": "#0B5563",
     "Division 1 South East": "#085041",
-    "Division 1 South West": "#712B13",
-    "FAWNL Cup": "#633806",
+    "Division 1 South West": "#265C7A",
+    "FAWNL Cup": "#4C9A2A",
 }
 DEFAULT_COMPETITION_COLOR = "#5F5E5A"
 
@@ -297,20 +297,29 @@ div[data-testid="stHorizontalBlock"]:has(.st-key-quick_today) button {{
     border-radius: 20px !important;
 }}
 /* Today/This weekend/Next 7 Days are the primary navigation actions -
-   filled green pills. Reset is a lower-emphasis clearing action, styled
-   as an outline pill instead so it doesn't compete visually. */
+   filled pills, alternating green/dark blue so they read as distinct
+   actions rather than one undifferentiated block. Reset is a
+   lower-emphasis clearing action, styled as an outline pill instead so
+   it doesn't compete visually. */
 .st-key-quick_today button,
-.st-key-quick_weekend button,
 .st-key-quick_next_7_days button {{
     background: {BRAND_GREEN} !important;
     color: #0B3D0B !important;
     border: none !important;
 }}
 .st-key-quick_today button:hover,
-.st-key-quick_weekend button:hover,
 .st-key-quick_next_7_days button:hover {{
     background: {BRAND_GREEN}CC !important;
     color: #0B3D0B !important;
+}}
+.st-key-quick_weekend button {{
+    background: {BRAND_DARK_BLUE} !important;
+    color: {BRAND_CREAM} !important;
+    border: none !important;
+}}
+.st-key-quick_weekend button:hover {{
+    background: {BRAND_DARK_BLUE}CC !important;
+    color: {BRAND_CREAM} !important;
 }}
 .st-key-reset_filters button {{
     background: transparent !important;
