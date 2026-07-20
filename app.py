@@ -153,13 +153,24 @@ h1, h2, h3, .wfg-brand-title {{
     line-height: 1.1;
 }}
 .wfg-status {{
-    border: 1px solid {BRAND_MID_BLUE}55;
-    background: {BRAND_MID_BLUE}14;
-    border-radius: 8px;
-    padding: 10px 14px;
+    border: none;
+    background: {BRAND_GREEN};
+    border-radius: 20px;
+    padding: 8px 16px;
     font-size: 14px;
-    color: {BRAND_DARK_BLUE};
+    font-weight: 500;
+    color: #0B3D0B;
     margin-bottom: 0.5rem;
+    display: inline-block;
+}}
+.st-key-header_band {{
+    background: {BRAND_DARK_BLUE};
+    border-radius: 12px;
+    padding: 1rem 1rem 0.5rem;
+    margin-bottom: 1rem;
+}}
+.st-key-header_band [data-testid="stCaptionContainer"] {{
+    color: {BRAND_CREAM} !important;
 }}
 .wfg-section-heading {{
     font-family: 'Anton', sans-serif;
@@ -280,9 +291,35 @@ div[data-testid="stHorizontalBlock"]:has(.st-key-quick_today) > div[data-testid=
     flex: 0 0 auto !important;
 }}
 div[data-testid="stHorizontalBlock"]:has(.st-key-quick_today) button {{
-    padding: 0.4rem 0.5rem !important;
-    font-size: 13px !important;
+    padding: 0.4rem 0.55rem !important;
+    font-size: 12px !important;
     white-space: nowrap;
+    border-radius: 20px !important;
+}}
+/* Today/This weekend/Next 7 Days are the primary navigation actions -
+   filled green pills. Reset is a lower-emphasis clearing action, styled
+   as an outline pill instead so it doesn't compete visually. */
+.st-key-quick_today button,
+.st-key-quick_weekend button,
+.st-key-quick_next_7_days button {{
+    background: {BRAND_GREEN} !important;
+    color: #0B3D0B !important;
+    border: none !important;
+}}
+.st-key-quick_today button:hover,
+.st-key-quick_weekend button:hover,
+.st-key-quick_next_7_days button:hover {{
+    background: {BRAND_GREEN}CC !important;
+    color: #0B3D0B !important;
+}}
+.st-key-reset_filters button {{
+    background: transparent !important;
+    color: {BRAND_DARK_BLUE} !important;
+    border: 1px solid {BRAND_DARK_BLUE} !important;
+}}
+.st-key-reset_filters button:hover {{
+    background: {BRAND_DARK_BLUE}14 !important;
+    color: {BRAND_DARK_BLUE} !important;
 }}
 </style>
 """
@@ -565,24 +602,26 @@ def main():
     st.html(APP_CSS)
     df = load_data()
 
-    # Logo and caption side by side - kept in one row even on a narrow phone
-    # screen via the ".st-key-header_logo" CSS rule in APP_CSS, rather than
-    # letting Streamlit stack them (which used to push the caption, and
-    # everything below it, further down the page on mobile).
-    header_logo_col, header_text_col = st.columns([1, 4])
+    # Logo and caption side by side on a dark blue band (".st-key-header_band"
+    # in APP_CSS) - kept in one row even on a narrow phone screen via the
+    # ".st-key-header_logo" CSS rule, rather than letting Streamlit stack
+    # them (which used to push the caption, and everything below it,
+    # further down the page on mobile).
+    with st.container(key="header_band"):
+        header_logo_col, header_text_col = st.columns([1, 4])
 
-    with header_logo_col:
-        with st.container(key="header_logo"):
-            if LOGO_FILE.exists():
-                st.image(str(LOGO_FILE), width=70)
-            else:
-                st.markdown(
-                    '<p class="wfg-brand-title">She Can Kick It</p>',
-                    unsafe_allow_html=True,
-                )
+        with header_logo_col:
+            with st.container(key="header_logo"):
+                if LOGO_FILE.exists():
+                    st.image(str(LOGO_FILE), width=70)
+                else:
+                    st.markdown(
+                        '<p class="wfg-brand-title">She Can Kick It</p>',
+                        unsafe_allow_html=True,
+                    )
 
-    with header_text_col:
-        st.caption("Women's football fixtures - and where to watch them.")
+        with header_text_col:
+            st.caption("Women's football fixtures - and where to watch them.")
 
     if df.empty:
         st.warning(
