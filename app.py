@@ -82,6 +82,19 @@ ALL_FULL_LIST = "All Fixtures"
 # ALL_FULL_LIST pulls teams from every competition at once.
 NATIONAL_TEAM_COMPETITIONS: set[str] = {"England Women", "WAFCON"}
 
+# The FA Women's National League (tiers 3-4) - shown in the Competition
+# dropdown as "FAWNL Tier 3/4" rather than bare "Tier 3/4", since the tier
+# number alone means nothing to anyone who isn't already familiar with the
+# English women's pyramid.
+FAWNL_DIVISION_GROUPS: set[str] = {
+    "Northern Premier Division",
+    "Southern Premier Division",
+    "Division 1 North",
+    "Division 1 Midlands",
+    "Division 1 South East",
+    "Division 1 South West",
+}
+
 # Small color-coded dot per competition on each match card, purely for
 # visual grouping - an original palette, not official league/team colors
 # or logos, to stay clear of any branding/trademark concerns.
@@ -663,7 +676,10 @@ def main():
         if value in (ALL_THIS_WEEK, ALL_FULL_LIST):
             return value
         tier = competition_tier_lookup.get(value)
-        return f"{tier} — {value}" if tier else value
+        if not tier:
+            return value
+        prefix = f"FAWNL {tier}" if value in FAWNL_DIVISION_GROUPS else tier
+        return f"{prefix} — {value}"
     platforms = ["All"] + sorted(
         {
             p.strip()
