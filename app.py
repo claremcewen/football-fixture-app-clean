@@ -434,7 +434,7 @@ def filter_data(
     if free_only:
         filtered = filtered[
             filtered["watch_platforms"].str.contains(
-                "BBC|YouTube|ITV|BBC iPlayer|BBC Sport Website",
+                "BBC|YouTube|ITV|BBC iPlayer|BBC Sport Website|Channel 4|All4|All 4",
                 case=False,
                 na=False,
             )
@@ -860,7 +860,7 @@ def main():
             free_only = st.toggle(
                 "Free-to-air only (UK)",
                 key="free_only_filter",
-                help="BBC, ITV or YouTube",
+                help="BBC, ITV, Channel 4 or YouTube",
             )
 
         st.markdown("**More filters**")

@@ -8,7 +8,12 @@ from .common import build_df, fetch_html, to_uk_iso_from_tz
 
 WAFCON_URL = "https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations"
 COMPETITION_LABEL = "WAFCON 2026"
-WATCH_PLATFORMS = "CAF TV (YouTube)"
+# Channel 4 confirmed as the UK broadcaster (CAF's own announcement,
+# 2026-07 - the tournament's first-ever UK broadcast deal). No published
+# match-by-match schedule yet distinguishing linear TV from All4 streaming,
+# so this is applied uniformly for now - revisit if Channel 4 publishes a
+# more specific breakdown closer to kickoff.
+WATCH_PLATFORMS = "Channel 4"
 
 # Morocco runs permanent Western European Summer Time (UTC+1) through the
 # whole tournament window (it only reverts to standard GMT after the
