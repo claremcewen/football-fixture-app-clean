@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": "215219",
+      "match_id": "3n6i8msygn62pkjztu8006pec",
+      "tmcl": "a55oqz5coo9mgb1u6lv9lgb9w",
+      "season_id": "2026/2027",
+      "match_date": "2027-02-21 14:00:00",
+      "round_name": "Regular Season",
+      "status": "fixture",
+      "home_team_id": "fixfz8m7cgk7csh7f38rd0gn",
+      "home_team_names": "{\"name\":\"Spartans\",\"shortName\":\"Spartans\",\"officialName\":\"The Spartans FC Women\",\"code\":\"SPA\"}",
+      "away_team_id": "550y896sa4zzsnoveuaep1uh9",
+      "away_team_names": "{\"name\":\"Rangers\",\"shortName\":\"Rangers\",\"officialName\":\"Rangers WFC\",\"code\":\"RAN\"}",
+      "home_score": "0",
+      "away_score": "0",
+      "data": "{\"matchInfo\":{\"id\":\"3n6i8msygn62pkjztu8006pec\",\"coverageLevel\":\"11\",\"date\":\"2027-02-21Z\",\"time\":\"14:00:00Z\",\"localDate\":\"2027-02-21\",\"localTime\":\"14:00:00\",\"week\":\"18\",\"numberOfPeriods\":2,\"periodLength\":45,\"lastUpdated\":\"2026-07-26T11:26:16Z\",\"description\":\"Spartans vs Rangers\",\"sport\":{\"id\":\"289u5typ3vp4ifwh5thalohmq\",\"name\":\"Soccer\"},\"ruleset\":{\"id\":\"9ffd12azthtms8r1d1bpnb7wa\",\"name\":\"Women\"},\"competition\":{\"id\":\"cydr5rltozch9qnzjurt1r7d9\",\"name\":\"SWPL 1\",\"knownName\":\"Scottish SWPL 1\",\"competitionCode\":\"SW1\",\"competitionFormat\":\"Domestic league\",\"country\":{\"id\":\"1xf68d0a8lnnq30hnnn8kr6ut\",\"name\":\"Scotland\"}},\"tournamentCalendar\":{\"id\":\"a55oqz5coo9mgb1u6lv9lgb9w\",\"startDate\":\"2026-08-16Z\",\"endDate\":\"2027-05-23Z\",\"name\":\"2026\\/2027\"},\"stage\":{\"id\":\"a60dpvlsb8qwyf9vlohvciot0\",\"formatId\":\"e2q01r9o9jwiq1fls93d1sslx\",\"startDate\":\"2026-08-16Z\",\"endDate\":\"2027-02-21Z\",\"name\":\"Regular Season\"},\"contestant\":[{\"id\":\"fixfz8m7cgk7csh7f38rd0gn\",\"name\":\"Spartans\",\"shortName\":\"Spartans\",\"officialName\":\"The Spartans FC Women\",\"code\":\"SPA\",\"position\":\"home\",\"country\":{\"id\":\"1xf68d0a8lnnq30hnnn8kr6ut\",\"name\":\"Scotland\"}},{\"id\":\"550y896sa4zzsnoveuaep1uh9\",\"name\":\"Rangers\",\"shortName\":\"Rangers\",\"officialName\":\"Rangers WFC\",\"code\":\"RAN\",\"position\":\"away\",\"country\":{\"id\":\"1xf68d0a8lnnq30hnnn8kr6ut\",\"name\":\"Scotland\"}}],\"venue\":{\"id\":\"4gzm2mnur2iwzvkrdgiftwhgo\",\"neutral\":\"no\",\"longName\":\"The Vanloq Community Stadium\",\"shortName\":\"The Vanloq Community Stadium\",\"latitude\":\"55.971600841\",\"longitude\":\"-3.233209848\"}},\"liveData\":{\"matchDetails\":{\"periodId\":16,\"matchStatus\":\"Fixture\"}}}",
+      "created_at": "2026-06-26 12:11:36",
+      "updated_at": "2026-07-30 12:04:57",
+      "competition_name": "Scottish SWPL 1",
+      "competition_type": "Domestic league"
+    },
+    {
+      "id": "215218",
+      "match_id": "3mv01kitzqglp84u23u8r026s",
+      "tmcl": "a55oqz5coo9mgb1u6lv9lgb9w",
+      "season_id": "2026/2027",
+      "match_date": "2027-02-21 14:00:00",
+      "round_name": "Regular Season",
+      "status": "fixture",
+      "home_team_id": "bbzgnrvwoqlci63k0lkrf4uzt",
+      "home_team_names": "{\"name\":\"Motherwell\",\"shortName\":\"Motherwell\",\"officialName\":\"Motherwell FC Women\",\"code\":\"MOT\"}",
+      "away_team_id": "evnw6tqeufv9un137xbgtftnt",
+      "away_team_names": "{\"name\":\"Montrose\",\"shortName\":\"Montrose\",\"officialName\":\"Montrose WFC\",\"code\":\"MON\"}",
+      "home_score": "0",
+      "away_score": "0",
+      "data": "{\"matchInfo\":{\"id\":\"3mv01kitzqglp84u23u8r026s\",\"coverageLevel\":\"11\",\"date\":\"2027-02-21Z\",\"time\":\"14:00:00Z\",\"localDate\":\"2027-02-21\",\"localTime\":\"14:00:00\",\"week\":\"18\",\"numberOfPeriods\":2,\"periodLength\":45,\"lastUpdated\":\"2026-07-28T11:26:57Z\",\"description\":\"Motherwell vs Montrose\",\"sport\":{\"id\":\"289u5typ3vp4ifwh5thalohmq\",\"name\":\"Soccer\"},\"ruleset\":{\"id\":\"9ffd12azthtms8r1d1bpnb7wa\",\"name\":\"Women\"},\"competition\":{\"id\":\"cydr5rltozch9qnzjurt1r7d9\",\"name\":\"SWPL 1\",\"knownName\":\"Scottish SWPL 1\",\"competitionCode\":\"SW1\",\"competitionFormat\":\"Domestic league\",\"country\":{\"id\":\"1xf68d0a8lnnq30hnnn8kr6ut\",\"name\":\"Scotland\"}},\"tournamentCalendar\":{\"id\":\"a55oqz5coo9mgb1u6lv9lgb9w\",\"startDate\":\"2026-08-16Z\",\"endDate\":\"2027-05-23Z\",\"name\":\"2026\\/2027\"},\"stage\":{\"id\":\"a60dpvlsb8qwyf9vlohvciot0\",\"formatId\":\"e2q01r9o9jwiq1fls93d1sslx\",\"startDate\":\"2026-08-16Z\",\"endDate\":\"2027-02-21Z\",\"name\":\"Regular Season\"},\"contestant\":[{\"id\":\"bbzgnrvwoqlci63k0lkrf4uzt\",\"name\":\"Motherwell\",\"shortName\":\"Motherwell\",\"officialName\":\"Motherwell FC Women\",\"code\":\"MOT\",\"position\":\"home\",\"country\":{\"id\":\"1xf68d0a8lnnq30hnnn8kr6ut\",\"name\":\"Scotland\"}},{\"id\":\"evnw6tqeufv9un137xbgtftnt\",\"name\":\"Montrose\",\"shortName\":\"Montrose\",\"officialName\":\"Montrose WFC\",\"code\":\"MON\",\"position\":\"away\",\"country\":{\"id\":\"1xf68d0a8lnnq30hnnn8kr6ut\",\"name\":\"Scotland\"}}],\"venue\":{\"id\":\"biyyhk4cnaude57dq6u36jmrv\",\"neutral\":\"no\",\"longName\":\"The Bumblebee Stadium\",\"shortName\":\"The Bumblebee Stadium\",\"latitude\":\"55.748631029\",\"longitude\":\"-4.149988890\"}},\"liveData\":{\"matchDetails\":{\"periodId\":16,\"matchStatus\":\"Fixture\"}}}",
+      "created_at": "2026-06-26 12:11:36",
+      "updated_at": "2026-07-30 12:04:57",
+      "competition_name": "Scottish SWPL 1",
+      "competition_type": "Domestic league"
+    }
+  ]
+}

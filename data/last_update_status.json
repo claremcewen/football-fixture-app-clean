@@ -26,5 +26,9 @@
   "WAFCON": {
     "ok": true,
     "rows": 26
+  },
+  "SWPL 1": {
+    "ok": true,
+    "rows": 90
   }
 }

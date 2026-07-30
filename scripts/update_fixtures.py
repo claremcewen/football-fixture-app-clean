@@ -14,6 +14,7 @@ from scripts.registry import classify
 from scripts.scrapers.fawnl import scrape_fawnl
 from scripts.scrapers.internationals import scrape_england_women
 from scripts.scrapers.nwsl import scrape_nwsl
+from scripts.scrapers.swpl import scrape_swpl
 from scripts.scrapers.uwcl import scrape_uwcl
 from scripts.scrapers.wafcon import scrape_wafcon
 from scripts.scrapers.wsl import scrape_wsl
@@ -59,6 +60,7 @@ TASKS = [
     ("NWSL", scrape_nwsl, ["NWSL"]),
     ("FAWNL", scrape_fawnl, FAWNL_DIVISIONS),
     ("WAFCON", scrape_wafcon, ["WAFCON"]),
+    ("SWPL 1", scrape_swpl, ["SWPL 1"]),
 ]
 
 

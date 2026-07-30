@@ -24,6 +24,9 @@ COMPETITION_REGISTRY: list[tuple[str, str, str, str, str | None]] = [
     ("The FA Women's National League Cup", "Football", "FAWNL Cup", "England", None),
     # Competition label includes the round/group, e.g. "WAFCON 2026 - Group A".
     ("WAFCON", "Football", "WAFCON", "Africa", None),
+    # Scotland's top flight - tier is England-pyramid-only, so None here even
+    # though SWPL 1 is itself a country's top division.
+    ("SWPL 1", "Football", "SWPL 1", "Scotland", None),
 ]
 
 
