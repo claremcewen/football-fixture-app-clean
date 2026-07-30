@@ -17,7 +17,7 @@
   },
   "NWSL": {
     "ok": true,
-    "rows": 113
+    "rows": 110
   },
   "FAWNL": {
     "ok": true,
@@ -25,6 +25,6 @@
   },
   "WAFCON": {
     "ok": true,
-    "rows": 28
+    "rows": 26
   }
 }
