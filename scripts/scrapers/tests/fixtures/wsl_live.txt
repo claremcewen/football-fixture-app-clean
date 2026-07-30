@@ -7,6 +7,7 @@ Players
 Stats
 Latest News
 Latest Video
+Subway Players Cup
 About Us
 2026 Hall of Fame
 Scores
@@ -21,155 +22,1942 @@ Sign in
 Tickets
 Stay Nearby
 Sign in
-Fixtures & Results
+Fixtures 2026-27
 All
 Barclays WSL
 Barclays WSL2
 Subway Women's League Cup
-fixtures
-results
-Calendar
-clubs
-Add To Calendar
-Calendar
-clubs
-results
-Saturday, May 16, 2026
-sport-match-details-for
-West Ham United
-VS
-Manchester City
-FT
-Chigwell Construction Stadium
-West Ham United
-WHU
-1
-Manchester City
-MCI
-4
-Sky Sports
-sport-match-details-for
-London City Lionesses
-VS
-Aston Villa
-FT
-Copperjax Community Stadium
-London City Lionesses
-LCL
-2
-Aston Villa
-AST
-1
-Sky Sports
-sport-match-details-for
-Liverpool
-VS
+Club
+All clubs
 Arsenal
-FT
-Anfield
-Liverpool
-LFC
-1
-Arsenal
-ARS
-3
-Sky Sports
-sport-match-details-for
-Everton
-VS
-Leicester City
-FT
-Goodison Park
-Everton
-EVE
-1
-Leicester City
-LEI
-0
-Sky Sports
-sport-match-details-for
+Aston Villa
+Birmingham City
+Brighton & Hove Albion
+Charlton Athletic
 Chelsea
-VS
+Crystal Palace
+Everton
+Liverpool
+London City Lionesses
+Manchester City
 Manchester United
-FT
-Stamford Bridge
+Tottenham Hotspur
+West Ham United
+Matchweek
+All matchweeks
+Matchweek 1
+Matchweek 2
+Matchweek 3
+Matchweek 4
+Matchweek 5
+Matchweek 6
+Matchweek 7
+Matchweek 8
+Matchweek 9
+Matchweek 10
+Matchweek 11
+Matchweek 12
+Matchweek 13
+Matchweek 14
+Matchweek 15
+Matchweek 16
+Matchweek 17
+Matchweek 18
+Matchweek 19
+Matchweek 20
+Matchweek 21
+Matchweek 22
+Matchweek 23
+Matchweek 24
+Matchweek 25
+Matchweek 26
+No fixtures match those filters. Choose another club or matchweek.
+Matchweek 1
+4–6 September 2026
+Fri 4 Sep
+London City Lionesses
+London City
+LCL
+19:00
+Manchester United
+Man Utd
+MUN
+CopperJax Community Stadium
+Sky Sports
+Tickets
+Sat 5 Sep
+Chelsea
 Chelsea
 CHE
-1
-Manchester United
-MNU
-0
-Sky Sports
-sport-match-details-for
+12:30
+Aston Villa
+Aston Villa
+AVL
+Stamford Bridge
+BBC One
+Tickets
+Sun 6 Sep
 Brighton & Hove Albion
-VS
-Tottenham Hotspur
-FT
-American Express Stadium
-Brighton & Hove Albion
+Brighton
 BHA
-1
-Tottenham Hotspur
-TOT
-2
-Sky Sports
-Wednesday, May 13, 2026
-sport-match-details-for
+12:00
 Arsenal
-VS
-Everton
-FT
-Emirates Stadium
 Arsenal
 ARS
-1
+Broadfield Stadium
+Sky Sports
+Tickets
+Sun 6 Sep
+Tottenham Hotspur
+Spurs
+TOT
+12:00
+West Ham United
+West Ham
+WHU
+Brisbane Road
+Sky Sports+
+Tickets
+Sun 6 Sep
+Charlton Athletic
+Charlton
+CHA
+14:00
+Liverpool
+Liverpool
+LIV
+The Valley
+Sky Sports+
+Tickets
+Sun 6 Sep
+Crystal Palace
+Palace
+CRY
+14:00
+Everton
 Everton
 EVE
-0
-Sky Sports
-Saturday, May 9, 2026
-sport-match-details-for
-Aston Villa
-VS
-Arsenal
-FT
-Villa Park
-Aston Villa
-AST
-0
-Arsenal
-ARS
-3
-Sky Sports
-Wednesday, May 6, 2026
-sport-match-details-for
-Brighton & Hove Albion
-VS
-Arsenal
-FT
-Broadfield Stadium
-Brighton & Hove Albion
-BHA
-1
-Arsenal
-ARS
-1
-BBC
-Monday, May 4, 2026
-sport-match-details-for
-Aston Villa
-VS
+Sutton United
+Sky Sports+
+Tickets
+Sun 6 Sep
+Manchester City
+Man City
+MCI
+14:30
+Birmingham City
+Birmingham
+BIR
+Joie Stadium
+Sky Sports+
+Tickets
+Matchweek 2
+12–13 September 2026
+Sat 12 Sep
 West Ham United
-FT
-Villa Park
-Aston Villa
-AST
-0
-West Ham United
+West Ham
 WHU
-2
+12:45
+London City Lionesses
+London City
+LCL
+Chigwell Construction Stadium
+Sky Sports+
+Tickets
+Sun 13 Sep
+Manchester United
+Man Utd
+MUN
+12:00
+Chelsea
+Chelsea
+CHE
+Progress With Unity Stadium
 Sky Sports
-YouTube
+Tickets
+Sun 13 Sep
+Birmingham City
+Birmingham
+BIR
+14:00
+Brighton & Hove Albion
+Brighton
+BHA
+St. Andrew's @ Knightshead Park
+Sky Sports+
+Tickets
+Sun 13 Sep
+Liverpool
+Liverpool
+LIV
+14:00
+Tottenham Hotspur
+Spurs
+TOT
+St Helens Stadium
+Sky Sports+
+Tickets
+Sun 13 Sep
+Everton
+Everton
+EVE
+14:00
+Charlton Athletic
+Charlton
+CHA
+Goodison Park
+Sky Sports+
+Tickets
+Sun 13 Sep
+Arsenal
+Arsenal
+ARS
+14:45
+Crystal Palace
+Palace
+CRY
+Emirates Stadium
+BBC Two
+Tickets
+Sun 13 Sep
+Aston Villa
+Aston Villa
+AVL
+18:30
+Manchester City
+Man City
+MCI
+Villa Park
+Sky Sports
+Tickets
+Matchweek 3
+18–20 September 2026
+Fri 18 Sep
+Manchester City
+Man City
+MCI
+19:00
+Liverpool
+Liverpool
+LIV
+Joie Stadium
+Sky Sports
+Tickets
+Sat 19 Sep
+Charlton Athletic
+Charlton
+CHA
+12:30
+London City Lionesses
+London City
+LCL
+The Valley
+BBC One
+Tickets
+Sat 19 Sep
+Chelsea
+Chelsea
+CHE
+12:45
+Birmingham City
+Birmingham
+BIR
+Stamford Bridge
+Sky Sports
+Tickets
+Sat 19 Sep
+Arsenal
+Arsenal
+ARS
+17:30
+Manchester United
+Man Utd
+MUN
+Emirates Stadium
+Sky Sports
+Tickets
+Sun 20 Sep
+Brighton & Hove Albion
+Brighton
+BHA
+14:00
+Aston Villa
+Aston Villa
+AVL
+Amex Stadium
+Sky Sports+
+Tickets
+Sun 20 Sep
+Crystal Palace
+Palace
+CRY
+14:00
+Tottenham Hotspur
+Spurs
+TOT
+Selhurst Park
+Sky Sports+
+Tickets
+Sun 20 Sep
+West Ham United
+West Ham
+WHU
+14:00
+Everton
+Everton
+EVE
+Chigwell Construction Stadium
+Sky Sports+
+Tickets
+Matchweek 4
+26–27 September 2026
+Sat 26 Sep
+Charlton Athletic
+Charlton
+CHA
+13:30
+Manchester City
+Man City
+MCI
+The Valley
+Sky Sports
+Tickets
+Sat 26 Sep
+London City Lionesses
+London City
+LCL
+17:00
+Brighton & Hove Albion
+Brighton
+BHA
+CopperJax Community Stadium
+Sky Sports
+Tickets
+Sun 27 Sep
+Manchester United
+Man Utd
+MUN
+13:00
+West Ham United
+West Ham
+WHU
+Progress With Unity Stadium
+Sky Sports+
+Tickets
+Sun 27 Sep
+Liverpool
+Liverpool
+LIV
+14:00
+Everton
+Everton
+EVE
+Anfield
+Sky Sports
+Tickets
+Sun 27 Sep
+Birmingham City
+Birmingham
+BIR
+14:00
+Crystal Palace
+Palace
+CRY
+St. Andrew's @ Knightshead Park
+Sky Sports+
+Tickets
+Sun 27 Sep
+Tottenham Hotspur
+Spurs
+TOT
+14:00
+Aston Villa
+Aston Villa
+AVL
+Brisbane Road
+Sky Sports+
+Tickets
+Sun 27 Sep
+Chelsea
+Chelsea
+CHE
+16:30
+Arsenal
+Arsenal
+ARS
+Stamford Bridge
+Sky Sports
+Tickets
+Matchweek 5
+Sun 4 October 2026
+Sun 4 Oct
+Tottenham Hotspur
+Spurs
+TOT
+12:00
+London City Lionesses
+London City
+LCL
+Brisbane Road
+Tickets
+Sun 4 Oct
+Manchester United
+Man Utd
+MUN
+13:00
+Liverpool
+Liverpool
+LIV
+Progress With Unity Stadium
+Tickets
+Sun 4 Oct
+Aston Villa
+Aston Villa
+AVL
+14:00
+Crystal Palace
+Palace
+CRY
+Villa Park
+Tickets
+Sun 4 Oct
+Brighton & Hove Albion
+Brighton
+BHA
+14:00
+Charlton Athletic
+Charlton
+CHA
+Amex Stadium
+Tickets
+Sun 4 Oct
+Everton
+Everton
+EVE
+14:00
+Birmingham City
+Birmingham
+BIR
+Goodison Park
+Tickets
+Sun 4 Oct
+West Ham United
+West Ham
+WHU
+14:00
+Chelsea
+Chelsea
+CHE
+Chigwell Construction Stadium
+Tickets
+Sun 4 Oct
+Manchester City
+Man City
+MCI
+14:30
+Arsenal
+Arsenal
+ARS
+Etihad Stadium
+Tickets
+Matchweek 6
+17–18 October 2026
+Sat 17 Oct
+Aston Villa
+Aston Villa
+AVL
+12:00
+Liverpool
+Liverpool
+LIV
+Villa Park
+Tickets
+Sun 18 Oct
+Arsenal
+Arsenal
+ARS
+12:30
+Birmingham City
+Birmingham
+BIR
+Emirates Stadium
+Tickets
+Sun 18 Oct
+Charlton Athletic
+Charlton
+CHA
+14:00
+Manchester United
+Man Utd
+MUN
+The Valley
+Tickets
+Sun 18 Oct
+Chelsea
+Chelsea
+CHE
+14:00
+Tottenham Hotspur
+Spurs
+TOT
+Stamford Bridge
+Tickets
+Sun 18 Oct
+Crystal Palace
+Palace
+CRY
+14:00
+West Ham United
+West Ham
+WHU
+Sutton United
+Tickets
+Sun 18 Oct
+London City Lionesses
+London City
+LCL
+14:00
+Everton
+Everton
+EVE
+CopperJax Community Stadium
+Tickets
+Sun 18 Oct
+Manchester City
+Man City
+MCI
+14:00
+Brighton & Hove Albion
+Brighton
+BHA
+Joie Stadium
+Tickets
+Matchweek 7
+Sun 25 October 2026
+Sun 25 Oct
+Manchester United
+Man Utd
+MUN
+13:00
+Manchester City
+Man City
+MCI
+Progress With Unity Stadium
+Tickets
+Sun 25 Oct
+Birmingham City
+Birmingham
+BIR
+14:00
+Charlton Athletic
+Charlton
+CHA
+St. Andrew's @ Knighthead Park
+Tickets
+Sun 25 Oct
+Brighton & Hove Albion
+Brighton
+BHA
+14:00
+West Ham United
+West Ham
+WHU
+Amex Stadium
+Tickets
+Sun 25 Oct
+Crystal Palace
+Palace
+CRY
+14:00
+Chelsea
+Chelsea
+CHE
+Sutton United
+Tickets
+Sun 25 Oct
+Everton
+Everton
+EVE
+14:00
+Aston Villa
+Aston Villa
+AVL
+Goodison Park
+Tickets
+Sun 25 Oct
+Liverpool
+Liverpool
+LIV
+14:00
+London City Lionesses
+London City
+LCL
+St Helens Stadium
+Tickets
+Sun 25 Oct
+Tottenham Hotspur
+Spurs
+TOT
+14:00
+Arsenal
+Arsenal
+ARS
+Tottenham Hotspur Stadium
+Tickets
+Matchweek 8
+31 Oct–1 Nov 2026
+Sat 31 Oct
+Everton
+Everton
+EVE
+12:30
+Manchester United
+Man Utd
+MUN
+Goodison Park
+Tickets
+Sun 1 Nov
+Arsenal
+Arsenal
+ARS
+12:30
+Aston Villa
+Aston Villa
+AVL
+Emirates Stadium
+Tickets
+Sun 1 Nov
+Birmingham City
+Birmingham
+BIR
+14:00
+Tottenham Hotspur
+Spurs
+TOT
+St. Andrew's @ Knightshead Park
+Tickets
+Sun 1 Nov
+Brighton & Hove Albion
+Brighton
+BHA
+14:00
+Crystal Palace
+Palace
+CRY
+Broadfield Stadium, Crawley
+Tickets
+Sun 1 Nov
+Charlton Athletic
+Charlton
+CHA
+14:00
+Chelsea
+Chelsea
+CHE
+The Valley
+Tickets
+Sun 1 Nov
+London City Lionesses
+London City
+LCL
+14:00
+Manchester City
+Man City
+MCI
+CopperJax Community Stadium
+Tickets
+Sun 1 Nov
+West Ham United
+West Ham
+WHU
+14:00
+Liverpool
+Liverpool
+LIV
+Chigwell Construction Stadium
+Tickets
+Matchweek 9
+7–8 November 2026
+Sat 7 Nov
+London City Lionesses
+London City
+LCL
+12:00
+Birmingham City
+Birmingham
+BIR
+CopperJax Community Stadium
+Tickets
+Sat 7 Nov
+Liverpool
+Liverpool
+LIV
+12:00
+Arsenal
+Arsenal
+ARS
+Anfield
+Tickets
+Sat 7 Nov
+Aston Villa
+Aston Villa
+AVL
+12:30
+Manchester United
+Man Utd
+MUN
+Villa Park
+Tickets
+Sat 7 Nov
+Chelsea
+Chelsea
+CHE
+12:30
+Everton
+Everton
+EVE
+Stamford Bridge
+Tickets
+Sat 7 Nov
+Manchester City
+Man City
+MCI
+12:30
+West Ham United
+West Ham
+WHU
+Joie Stadium
+Tickets
+Sun 8 Nov
+Crystal Palace
+Palace
+CRY
+14:00
+Charlton Athletic
+Charlton
+CHA
+Sutton United
+Tickets
+Sun 8 Nov
+Tottenham Hotspur
+Spurs
+TOT
+14:00
+Brighton & Hove Albion
+Brighton
+BHA
+Brisbane Road
+Tickets
+Matchweek 10
+14–15 November 2026
+Sat 14 Nov
+Chelsea
+Chelsea
+CHE
+14:00
+Manchester City
+Man City
+MCI
+Stamford Bridge
+Tickets
+Sat 14 Nov
+Arsenal
+Arsenal
+ARS
+17:30
+London City Lionesses
+London City
+LCL
+Emirates Stadium
+Tickets
+Sun 15 Nov
+Manchester United
+Man Utd
+MUN
+13:00
+Crystal Palace
+Palace
+CRY
+Progress With Unity Stadium
+Tickets
+Sun 15 Nov
+Brighton & Hove Albion
+Brighton
+BHA
+14:00
+Liverpool
+Liverpool
+LIV
+Amex Stadium
+Tickets
+Sun 15 Nov
+Tottenham Hotspur
+Spurs
+TOT
+14:00
+Everton
+Everton
+EVE
+Brisbane Road
+Tickets
+Sun 15 Nov
+West Ham United
+West Ham
+WHU
+14:00
+Charlton Athletic
+Charlton
+CHA
+Chigwell Construction Stadium
+Tickets
+Sun 15 Nov
+Aston Villa
+Aston Villa
+AVL
+14:30
+Birmingham City
+Birmingham
+BIR
+Villa Park
+Tickets
+Matchweek 11
+Sun 22 November 2026
+Sun 22 Nov
+Arsenal
+Arsenal
+ARS
+12:30
+West Ham United
+West Ham
+WHU
+Emirates Stadium
+Tickets
+Sun 22 Nov
+Birmingham City
+Birmingham
+BIR
+14:00
+Manchester United
+Man Utd
+MUN
+St. Andrew's @ Knightshead Park
+Tickets
+Sun 22 Nov
+Charlton Athletic
+Charlton
+CHA
+14:00
+Aston Villa
+Aston Villa
+AVL
+The Valley
+Tickets
+Sun 22 Nov
+Everton
+Everton
+EVE
+14:00
+Brighton & Hove Albion
+Brighton
+BHA
+Goodison Park
+Tickets
+Sun 22 Nov
+London City Lionesses
+London City
+LCL
+14:00
+Crystal Palace
+Palace
+CRY
+CopperJax Community Stadium
+Tickets
+Sun 22 Nov
+Liverpool
+Liverpool
+LIV
+14:00
+Chelsea
+Chelsea
+CHE
+St Helens
+Tickets
+Sun 22 Nov
+Manchester City
+Man City
+MCI
+14:00
+Tottenham Hotspur
+Spurs
+TOT
+Joie Stadium
+Tickets
+Matchweek 12
+12–13 December 2026
+Sat 12 Dec
+Everton
+Everton
+EVE
+12:30
+Arsenal
+Arsenal
+ARS
+Goodison Park
+Tickets
+Sun 13 Dec
+Manchester United
+Man Utd
+MUN
+13:00
+Brighton & Hove Albion
+Brighton
+BHA
+Progress With Unity Stadium
+Tickets
+Sun 13 Dec
+Birmingham City
+Birmingham
+BIR
+14:00
+Liverpool
+Liverpool
+LIV
+St. Andrew's @ Knightshead Park
+Tickets
+Sun 13 Dec
+Chelsea
+Chelsea
+CHE
+14:00
+London City Lionesses
+London City
+LCL
+Stamford Bridge
+Tickets
+Sun 13 Dec
+Crystal Palace
+Palace
+CRY
+14:00
+Manchester City
+Man City
+MCI
+Sutton United
+Tickets
+Sun 13 Dec
+Tottenham Hotspur
+Spurs
+TOT
+14:00
+Charlton Athletic
+Charlton
+CHA
+Brisbane Road
+Tickets
+Sun 13 Dec
+West Ham United
+West Ham
+WHU
+14:00
+Aston Villa
+Aston Villa
+AVL
+Chigwell Construction Stadium
+Tickets
+Matchweek 13
+19–20 December 2026
+Sat 19 Dec
+Brighton & Hove Albion
+Brighton
+BHA
+12:30
+Chelsea
+Chelsea
+CHE
+Broadfield Stadium
+Tickets
+Sun 20 Dec
+Charlton Athletic
+Charlton
+CHA
+12:30
+Arsenal
+Arsenal
+ARS
+The Valley
+Tickets
+Sun 20 Dec
+Manchester United
+Man Utd
+MUN
+13:00
+Tottenham Hotspur
+Spurs
+TOT
+Progress With Unity Stadium
+Tickets
+Sun 20 Dec
+Aston Villa
+Aston Villa
+AVL
+14:00
+London City Lionesses
+London City
+LCL
+Villa Park
+Tickets
+Sun 20 Dec
+Liverpool
+Liverpool
+LIV
+14:00
+Crystal Palace
+Palace
+CRY
+St Helens Stadium
+Tickets
+Sun 20 Dec
+Manchester City
+Man City
+MCI
+14:00
+Everton
+Everton
+EVE
+Joie Stadium
+Tickets
+Sun 20 Dec
+West Ham United
+West Ham
+WHU
+14:00
+Birmingham City
+Birmingham
+BIR
+Chigwell Construction Stadium
+Tickets
+Matchweek 14
+Sun 10 January 2027
+Sun 10 Jan
+Arsenal
+Arsenal
+ARS
+12:30
+Brighton & Hove Albion
+Brighton
+BHA
+Emirates Stadium
+Tickets
+Sun 10 Jan
+Aston Villa
+Aston Villa
+AVL
+14:00
+Everton
+Everton
+EVE
+Villa Park
+Tickets
+Sun 10 Jan
+Charlton Athletic
+Charlton
+CHA
+14:00
+Birmingham City
+Birmingham
+BIR
+The Valley
+Tickets
+Sun 10 Jan
+Crystal Palace
+Palace
+CRY
+14:00
+Manchester United
+Man Utd
+MUN
+Sutton United
+Tickets
+Sun 10 Jan
+London City Lionesses
+London City
+LCL
+14:00
+West Ham United
+West Ham
+WHU
+CopperJax Community Stadium
+Tickets
+Sun 10 Jan
+Manchester City
+Man City
+MCI
+14:00
+Chelsea
+Chelsea
+CHE
+Joie Stadium
+Tickets
+Sun 10 Jan
+Tottenham Hotspur
+Spurs
+TOT
+14:00
+Liverpool
+Liverpool
+LIV
+Brisbane Road
+Tickets
+Matchweek 15
+20–21 January 2027
+Wed 20 Jan
+Chelsea
+Chelsea
+CHE
+19:00
+Charlton Athletic
+Charlton
+CHA
+Stamford Bridge
+Tickets
+Wed 20 Jan
+Everton
+Everton
+EVE
+19:00
+London City Lionesses
+London City
+LCL
+Goodison Park
+Tickets
+Wed 20 Jan
+Crystal Palace
+Palace
+CRY
+19:00
+Aston Villa
+Aston Villa
+AVL
+Sutton United
+Tickets
+Wed 20 Jan
+West Ham United
+West Ham
+WHU
+19:00
+Manchester United
+Man Utd
+MUN
+Chigwell Construction Stadium
+Tickets
+Wed 20 Jan
+Birmingham City
+Birmingham
+BIR
+19:30
+Manchester City
+Man City
+MCI
+St. Andrew's @ Knightshead Park
+Tickets
+Wed 20 Jan
+Brighton & Hove Albion
+Brighton
+BHA
+19:45
+Tottenham Hotspur
+Spurs
+TOT
+Broadfield Stadium, Crawley
+Tickets
+Thu 21 Jan
+Arsenal
+Arsenal
+ARS
+19:00
+Liverpool
+Liverpool
+LIV
+Emirates Stadium
+Tickets
+Matchweek 16
+Sun 24 January 2027
+Sun 24 Jan
+Manchester United
+Man Utd
+MUN
+13:00
+Everton
+Everton
+EVE
+Progress With Unity Stadium
+Tickets
+Sun 24 Jan
+Aston Villa
+Aston Villa
+AVL
+14:00
+Tottenham Hotspur
+Spurs
+TOT
+Villa Park
+Tickets
+Sun 24 Jan
+Brighton & Hove Albion
+Brighton
+BHA
+14:00
+Birmingham City
+Birmingham
+BIR
+Broadfield Stadium
+Tickets
+Sun 24 Jan
+Chelsea
+Chelsea
+CHE
+14:00
+Crystal Palace
+Palace
+CRY
+Stamford Bridge
+Tickets
+Sun 24 Jan
+London City Lionesses
+London City
+LCL
+14:00
+Arsenal
+Arsenal
+ARS
+CopperJax Community Stadium
+Tickets
+Sun 24 Jan
+Liverpool
+Liverpool
+LIV
+14:00
+West Ham United
+West Ham
+WHU
+St Helens Stadium
+Tickets
+Sun 24 Jan
+Manchester City
+Man City
+MCI
+14:00
+Charlton Athletic
+Charlton
+CHA
+Joie Stadium
+Tickets
+Matchweek 17
+30–31 January 2027
+Sat 30 Jan
+Arsenal
+Arsenal
+ARS
+17:30
+Manchester City
+Man City
+MCI
+Emirates Stadium
+Tickets
+Sun 31 Jan
+Manchester United
+Man Utd
+MUN
+13:00
+London City Lionesses
+London City
+LCL
+Progress With Unity Stadium
+Tickets
+Sun 31 Jan
+Birmingham City
+Birmingham
+BIR
+14:00
+Aston Villa
+Aston Villa
+AVL
+St. Andrew's @ Knightshead Park
+Tickets
+Sun 31 Jan
+Charlton Athletic
+Charlton
+CHA
+14:00
+Crystal Palace
+Palace
+CRY
+The Valley
+Tickets
+Sun 31 Jan
+Everton
+Everton
+EVE
+14:00
+West Ham United
+West Ham
+WHU
+Goodison Park
+Tickets
+Sun 31 Jan
+Liverpool
+Liverpool
+LIV
+14:00
+Brighton & Hove Albion
+Brighton
+BHA
+St Helens Stadium
+Tickets
+Sun 31 Jan
+Tottenham Hotspur
+Spurs
+TOT
+14:00
+Chelsea
+Chelsea
+CHE
+Brisbane Road
+Tickets
+Matchweek 18
+Sun 7 February 2027
+Sun 7 Feb
+Aston Villa
+Aston Villa
+AVL
+14:00
+Charlton Athletic
+Charlton
+CHA
+Villa Park
+Tickets
+Sun 7 Feb
+Birmingham City
+Birmingham
+BIR
+14:00
+Arsenal
+Arsenal
+ARS
+St. Andrew's @ Knightshead Park
+Tickets
+Sun 7 Feb
+Brighton & Hove Albion
+Brighton
+BHA
+14:00
+Everton
+Everton
+EVE
+Broadfield Stadium
+Tickets
+Sun 7 Feb
+Chelsea
+Chelsea
+CHE
+14:00
+Liverpool
+Liverpool
+LIV
+Stamford Bridge
+Tickets
+Sun 7 Feb
+Crystal Palace
+Palace
+CRY
+14:00
+London City Lionesses
+London City
+LCL
+Sutton United
+Tickets
+Sun 7 Feb
+Tottenham Hotspur
+Spurs
+TOT
+14:00
+Manchester United
+Man Utd
+MUN
+Tottenham Hotspur Stadium
+Tickets
+Sun 7 Feb
+West Ham United
+West Ham
+WHU
+14:00
+Manchester City
+Man City
+MCI
+Chigwell Construction Stadium
+Tickets
+Matchweek 19
+Sun 14 February 2027
+Sun 14 Feb
+Aston Villa
+Aston Villa
+AVL
+14:00
+Brighton & Hove Albion
+Brighton
+BHA
+Villa Park
+Tickets
+Sun 14 Feb
+Charlton Athletic
+Charlton
+CHA
+14:00
+West Ham United
+West Ham
+WHU
+The Valley
+Tickets
+Sun 14 Feb
+Crystal Palace
+Palace
+CRY
+14:00
+Arsenal
+Arsenal
+ARS
+Sutton United
+Tickets
+Sun 14 Feb
+Everton
+Everton
+EVE
+14:00
+Tottenham Hotspur
+Spurs
+TOT
+Goodison Park
+Tickets
+Sun 14 Feb
+London City Lionesses
+London City
+LCL
+14:00
+Chelsea
+Chelsea
+CHE
+CopperJax Community Stadium
+Tickets
+Sun 14 Feb
+Liverpool
+Liverpool
+LIV
+14:00
+Birmingham City
+Birmingham
+BIR
+St Helens Stadium
+Tickets
+Sun 14 Feb
+Manchester City
+Man City
+MCI
+14:30
+Manchester United
+Man Utd
+MUN
+Etihad Stadium
+Tickets
+Matchweek 20
+13–14 March 2027
+Sat 13 Mar
+Birmingham City
+Birmingham
+BIR
+12:30
+Chelsea
+Chelsea
+CHE
+St. Andrew's @ Knightshead Park
+Tickets
+Sat 13 Mar
+Arsenal
+Arsenal
+ARS
+17:30
+Tottenham Hotspur
+Spurs
+TOT
+Emirates Stadium
+Tickets
+Sun 14 Mar
+Manchester United
+Man Utd
+MUN
+13:00
+Charlton Athletic
+Charlton
+CHA
+Progress With Unity Stadium
+Tickets
+Sun 14 Mar
+Everton
+Everton
+EVE
+14:00
+Crystal Palace
+Palace
+CRY
+Goodison Park
+Tickets
+Sun 14 Mar
+London City Lionesses
+London City
+LCL
+14:00
+Liverpool
+Liverpool
+LIV
+CopperJax Community Stadium
+Tickets
+Sun 14 Mar
+Manchester City
+Man City
+MCI
+14:00
+Aston Villa
+Aston Villa
+AVL
+Joie Stadium
+Tickets
+Sun 14 Mar
+West Ham United
+West Ham
+WHU
+14:00
+Brighton & Hove Albion
+Brighton
+BHA
+Chigwell Construction Stadium
+Tickets
+Matchweek 21
+Wed 17 March 2027
+Wed 17 Mar
+Charlton Athletic
+Charlton
+CHA
+19:00
+Everton
+Everton
+EVE
+The Valley
+Tickets
+Wed 17 Mar
+Chelsea
+Chelsea
+CHE
+19:00
+West Ham United
+West Ham
+WHU
+Stamford Bridge
+Tickets
+Wed 17 Mar
+Liverpool
+Liverpool
+LIV
+19:00
+Manchester United
+Man Utd
+MUN
+St Helens Stadium
+Tickets
+Wed 17 Mar
+Aston Villa
+Aston Villa
+AVL
+19:30
+Arsenal
+Arsenal
+ARS
+Villa Park
+Tickets
+Wed 17 Mar
+Tottenham Hotspur
+Spurs
+TOT
+19:30
+Manchester City
+Man City
+MCI
+Brisbane Road
+Tickets
+Wed 17 Mar
+Brighton & Hove Albion
+Brighton
+BHA
+19:45
+London City Lionesses
+London City
+LCL
+Broadfield Stadium
+Tickets
+Wed 17 Mar
+Crystal Palace
+Palace
+CRY
+20:00
+Birmingham City
+Birmingham
+BIR
+Sutton United
+Tickets
+Matchweek 22
+27–28 March 2027
+Sat 27 Mar
+Manchester City
+Man City
+MCI
+14:00
+Crystal Palace
+Palace
+CRY
+Joie Stadium
+Tickets
+Sun 28 Mar
+Manchester United
+Man Utd
+MUN
+13:00
+Aston Villa
+Aston Villa
+AVL
+Progress With Unity Stadium
+Tickets
+Sun 28 Mar
+Arsenal
+Arsenal
+ARS
+14:00
+Chelsea
+Chelsea
+CHE
+Emirates Stadium
+Tickets
+Sun 28 Mar
+Birmingham City
+Birmingham
+BIR
+14:00
+London City Lionesses
+London City
+LCL
+St. Andrew's @ Knightshead Park
+Tickets
+Sun 28 Mar
+Charlton Athletic
+Charlton
+CHA
+14:00
+Brighton & Hove Albion
+Brighton
+BHA
+The Valley
+Tickets
+Sun 28 Mar
+Everton
+Everton
+EVE
+14:00
+Liverpool
+Liverpool
+LIV
+Goodison Park
+Tickets
+Sun 28 Mar
+West Ham United
+West Ham
+WHU
+14:00
+Tottenham Hotspur
+Spurs
+TOT
+Chigwell Construction Stadium
+Tickets
+Matchweek 23
+Sun 4 April 2027
+Sun 4 Apr
+Arsenal
+Arsenal
+ARS
+14:00
+Everton
+Everton
+EVE
+Emirates Stadium
+Tickets
+Sun 4 Apr
+Birmingham City
+Birmingham
+BIR
+14:00
+West Ham United
+West Ham
+WHU
+St. Andrew's @ Knightshead Park
+Tickets
+Sun 4 Apr
+Brighton & Hove Albion
+Brighton
+BHA
+14:00
+Manchester City
+Man City
+MCI
+Broadfield Stadium, Crawley
+Tickets
+Sun 4 Apr
+Chelsea
+Chelsea
+CHE
+14:00
+Manchester United
+Man Utd
+MUN
+Stamford Bridge
+Tickets
+Sun 4 Apr
+London City Lionesses
+London City
+LCL
+14:00
+Charlton Athletic
+Charlton
+CHA
+CopperJax Community Stadium
+Tickets
+Sun 4 Apr
+Liverpool
+Liverpool
+LIV
+14:00
+Aston Villa
+Aston Villa
+AVL
+Anfield
+Tickets
+Sun 4 Apr
+Tottenham Hotspur
+Spurs
+TOT
+14:00
+Crystal Palace
+Palace
+CRY
+Tottenham Hotspur Stadium
+Tickets
+Matchweek 24
+30 Apr–2 May 2027
+Fri 30 Apr
+Everton
+Everton
+EVE
+19:00
+Manchester City
+Man City
+MCI
+Goodison Park
+Tickets
+Sun 2 May
+Manchester United
+Man Utd
+MUN
+13:00
+Birmingham City
+Birmingham
+BIR
+Progress With Unity Stadium
+Tickets
+Sun 2 May
+Crystal Palace
+Palace
+CRY
+14:00
+Brighton & Hove Albion
+Brighton
+BHA
+Sutton United
+Tickets
+Sun 2 May
+London City Lionesses
+London City
+LCL
+14:00
+Tottenham Hotspur
+Spurs
+TOT
+CopperJax Community Stadium
+Tickets
+Sun 2 May
+Liverpool
+Liverpool
+LIV
+14:00
+Charlton Athletic
+Charlton
+CHA
+St Helens Stadium
+Tickets
+Sun 2 May
+West Ham United
+West Ham
+WHU
+14:00
+Arsenal
+Arsenal
+ARS
+Chigwell Construction Stadium
+Tickets
+Sun 2 May
+Aston Villa
+Aston Villa
+AVL
+18:00
+Chelsea
+Chelsea
+CHE
+Villa Park
+Tickets
+Matchweek 25
+Sun 9 May 2027
+Sun 9 May
+Manchester United
+Man Utd
+MUN
+13:00
+Arsenal
+Arsenal
+ARS
+Old Trafford
+Tickets
+Sun 9 May
+Aston Villa
+Aston Villa
+AVL
+14:00
+West Ham United
+West Ham
+WHU
+Villa Park
+Tickets
+Sun 9 May
+Birmingham City
+Birmingham
+BIR
+14:00
+Everton
+Everton
+EVE
+St. Andrew's @ Knightshead Park
+Tickets
+Sun 9 May
+Charlton Athletic
+Charlton
+CHA
+14:00
+Tottenham Hotspur
+Spurs
+TOT
+The Valley
+Tickets
+Sun 9 May
+Chelsea
+Chelsea
+CHE
+14:00
+Brighton & Hove Albion
+Brighton
+BHA
+Stamford Bridge
+Tickets
+Sun 9 May
+Crystal Palace
+Palace
+CRY
+14:00
+Liverpool
+Liverpool
+LIV
+Sutton United
+Tickets
+Sun 9 May
+Manchester City
+Man City
+MCI
+14:00
+London City Lionesses
+London City
+LCL
+Joie Stadium
+Tickets
+Matchweek 26
+Date to be confirmed
+Arsenal
+Arsenal
+ARS
+TBC
+Charlton Athletic
+Charlton
+CHA
+Emirates Stadium
+Brighton & Hove Albion
+Brighton
+BHA
+TBC
+Manchester United
+Man Utd
+MUN
+Broadfield Stadium
+Everton
+Everton
+EVE
+TBC
+Chelsea
+Chelsea
+CHE
+Goodison Park
+London City Lionesses
+London City
+LCL
+TBC
+Aston Villa
+Aston Villa
+AVL
+CopperJax Community Stadium
+Liverpool
+Liverpool
+LIV
+TBC
+Manchester City
+Man City
+MCI
+St Helens Stadium
+Tottenham Hotspur
+Spurs
+TOT
+TBC
+Birmingham City
+Birmingham
+BIR
+Brisbane Road
+West Ham United
+West Ham
+WHU
+TBC
+Crystal Palace
+Palace
+CRY
+Chigwell Construction Stadium
 Clubs
 Players
 Hall of Fame

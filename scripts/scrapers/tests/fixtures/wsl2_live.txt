@@ -7,6 +7,7 @@ Players
 Stats
 Latest News
 Latest Video
+Subway Players Cup
 About Us
 2026 Hall of Fame
 Scores
@@ -21,150 +22,1533 @@ Sign in
 Tickets
 Stay Nearby
 Sign in
-Fixtures & Results
+Fixtures 2026-27
 All
 Barclays WSL
 Barclays WSL2
 Subway Women's League Cup
-fixtures
-results
-Calendar
-clubs
-Add To Calendar
-Calendar
-clubs
-results
-Saturday, May 2, 2026
-sport-match-details-for
-Sheffield United
-VS
+Club
+All clubs
 Bristol City
-FT
-Bramall Lane
-Sheffield United
-SFU
-0
-Bristol City
-BRI
-4
-YouTube
-sport-match-details-for
-Newcastle United
-VS
+Burnley
 Durham
-FT
-Gateshead International Stadium
+Ipswich Town
+Leicester City
 Newcastle United
-NEW
-0
+Nottingham Forest
+Sheffield United
+Southampton
+Sunderland
+Watford
+Wolverhampton Wanderers
+Matchweek
+All matchweeks
+Matchweek 1
+Matchweek 2
+Matchweek 3
+Matchweek 4
+Matchweek 5
+Matchweek 6
+Matchweek 7
+Matchweek 8
+Matchweek 9
+Matchweek 10
+Matchweek 11
+Matchweek 12
+Matchweek 13
+Matchweek 14
+Matchweek 15
+Matchweek 16
+Matchweek 17
+Matchweek 18
+Matchweek 19
+Matchweek 20
+Matchweek 21
+Matchweek 22
+No fixtures match those filters. Choose another club or matchweek.
+Matchweek 1
+4–6 September 2026
+Fri 4 Sep
+Watford
+Watford
+WAT
+19:30
+Burnley
+Burnley
+BUR
+Vicarage Road
+YouTube
+Tickets
+Sun 6 Sep
+Durham
 Durham
 DUR
-1
+12:00
+Southampton
+Southampton
+SOU
+Maiden Castle
 YouTube
-sport-match-details-for
+Tickets
+Sun 6 Sep
 Ipswich Town
-VS
-Sunderland
-FT
-JobServe Community Stadium
-Ipswich Town
+Ipswich
 IPS
-2
-Sunderland
-SUN
-1
-YouTube
-sport-match-details-for
-Crystal Palace
-VS
-Portsmouth
-FT
-VBS Community Stadium
-Crystal Palace
-CRY
-6
-Portsmouth
-POR
-1
-YouTube
-sport-match-details-for
-Charlton Athletic
-VS
-Birmingham City
-FT
-The Valley
-Charlton Athletic
-CHA
-0
-Birmingham City
-BIR
-2
-YouTube
-sport-match-details-for
+14:00
 Nottingham Forest
-VS
-Southampton
-FT
-The City Ground
-Nottingham Forest
+Forest
 NFO
-0
-Southampton
-SOT
-3
+JobServe Community Stadium
 YouTube
-Sunday, April 26, 2026
-sport-match-details-for
-Southampton
-VS
-Charlton Athletic
-FT
-Silverlake Stadium
-Southampton
-SOT
-2
-Charlton Athletic
-CHA
-2
-YouTube
-sport-match-details-for
-Sunderland
-VS
-Crystal Palace
-FT
-Stadium of Light
-Sunderland
-SUN
-1
-Crystal Palace
-CRY
-2
-YouTube
-sport-match-details-for
-Portsmouth
-VS
-Nottingham Forest
-FT
-Fratton Park
-Portsmouth
-POR
-0
-Nottingham Forest
-NFO
-1
-YouTube
-sport-match-details-for
-Bristol City
-VS
+Tickets
+Sun 6 Sep
 Newcastle United
-FT
-Ashton Gate Stadium
+Newcastle
+NEW
+14:00
+Wolverhampton Wanderers
+Wolves
+WOL
+Gateshead International Stadium
+YouTube
+Tickets
+Sun 6 Sep
+Sheffield United
+Sheffield Utd
+SHU
+14:00
+Leicester City
+Leicester
+LEI
+Bramall Lane
+YouTube
+Tickets
+Sun 6 Sep
+Sunderland
+Sunderland
+SUN
+14:00
+Bristol City
 Bristol City
 BRI
-2
+Eppleton CW
+YouTube
+Tickets
+Matchweek 2
+12–13 September 2026
+Sat 12 Sep
+Bristol City
+Bristol City
+BRI
+17:15
 Newcastle United
+Newcastle
 NEW
-1
+Ashton Gate
+YouTube
+Tickets
+Sun 13 Sep
+Burnley
+Burnley
+BUR
+14:00
+Sunderland
+Sunderland
+SUN
+Turf Moor
+YouTube
+Tickets
+Sun 13 Sep
+Nottingham Forest
+Forest
+NFO
+14:00
+Watford
+Watford
+WAT
+The City Ground
+YouTube
+Tickets
+Sun 13 Sep
+Southampton
+Southampton
+SOU
+14:00
+Ipswich Town
+Ipswich
+IPS
+Silverlake Stadium, Eastleigh
+YouTube
+Tickets
+Sun 13 Sep
+Wolverhampton Wanderers
+Wolves
+WOL
+14:00
+Sheffield United
+Sheffield Utd
+SHU
+SEAH Stadium
+YouTube
+Tickets
+Sun 13 Sep
+Leicester City
+Leicester
+LEI
+15:00
+Durham
+Durham
+DUR
+King Power Stadium
+YouTube
+Tickets
+Matchweek 3
+18–20 September 2026
+Fri 18 Sep
+Wolverhampton Wanderers
+Wolves
+WOL
+19:30
+Burnley
+Burnley
+BUR
+SEAH Stadium
+YouTube
+Tickets
+Sun 20 Sep
+Durham
+Durham
+DUR
+12:00
+Nottingham Forest
+Forest
+NFO
+Maiden Castle
+YouTube
+Tickets
+Sun 20 Sep
+Newcastle United
+Newcastle
+NEW
+14:00
+Sheffield United
+Sheffield Utd
+SHU
+Gateshead International Stadium
+YouTube
+Tickets
+Sun 20 Sep
+Sunderland
+Sunderland
+SUN
+14:00
+Southampton
+Southampton
+SOU
+Stadium of Light
+YouTube
+Tickets
+Sun 20 Sep
+Watford
+Watford
+WAT
+14:00
+Bristol City
+Bristol City
+BRI
+Vicarage Road
+YouTube
+Tickets
+Sun 20 Sep
+Leicester City
+Leicester
+LEI
+15:00
+Ipswich Town
+Ipswich
+IPS
+King Power Stadium
+YouTube
+Tickets
+Matchweek 4
+26–27 September 2026
+Sat 26 Sep
+Burnley
+Burnley
+BUR
+12:00
+Bristol City
+Bristol City
+BRI
+Turf Moor
+YouTube
+Tickets
+Sun 27 Sep
+Ipswich Town
+Ipswich
+IPS
+14:00
+Wolverhampton Wanderers
+Wolves
+WOL
+JobServe Community Stadium
+YouTube
+Tickets
+Sun 27 Sep
+Newcastle United
+Newcastle
+NEW
+14:00
+Leicester City
+Leicester
+LEI
+Gateshead International Stadium
+YouTube
+Tickets
+Sun 27 Sep
+Sheffield United
+Sheffield Utd
+SHU
+14:00
+Durham
+Durham
+DUR
+Bramall Lane
+YouTube
+Tickets
+Sun 27 Sep
+Southampton
+Southampton
+SOU
+14:00
+Nottingham Forest
+Forest
+NFO
+St Marys Stadium
+YouTube
+Tickets
+Sun 27 Sep
+Watford
+Watford
+WAT
+14:00
+Sunderland
+Sunderland
+SUN
+Vicarage Road
+YouTube
+Tickets
+Matchweek 5
+Sun 4 October 2026
+Sun 4 Oct
+Durham
+Durham
+DUR
+12:00
+Newcastle United
+Newcastle
+NEW
+Maiden Castle
+YouTube
+Tickets
+Sun 4 Oct
+Bristol City
+Bristol City
+BRI
+14:00
+Southampton
+Southampton
+SOU
+Ashton Gate
+YouTube
+Tickets
+Sun 4 Oct
+Nottingham Forest
+Forest
+NFO
+14:00
+Burnley
+Burnley
+BUR
+The City Ground
+YouTube
+Tickets
+Sun 4 Oct
+Sheffield United
+Sheffield Utd
+SHU
+14:00
+Ipswich Town
+Ipswich
+IPS
+Bramall Lane
+YouTube
+Tickets
+Sun 4 Oct
+Sunderland
+Sunderland
+SUN
+14:00
+Leicester City
+Leicester
+LEI
+Eppleton CW
+YouTube
+Tickets
+Sun 4 Oct
+Wolverhampton Wanderers
+Wolves
+WOL
+14:00
+Watford
+Watford
+WAT
+SEAH Stadium
+YouTube
+Tickets
+Matchweek 6
+Sun 25 October 2026
+Sun 25 Oct
+Watford
+Watford
+WAT
+12:00
+Durham
+Durham
+DUR
+Vicarage Road
+YouTube
+Tickets
+Sun 25 Oct
+Bristol City
+Bristol City
+BRI
+14:00
+Wolverhampton Wanderers
+Wolves
+WOL
+Ashton Gate
+YouTube
+Tickets
+Sun 25 Oct
+Burnley
+Burnley
+BUR
+14:00
+Sheffield United
+Sheffield Utd
+SHU
+Turf Moor
+YouTube
+Tickets
+Sun 25 Oct
+Ipswich Town
+Ipswich
+IPS
+14:00
+Sunderland
+Sunderland
+SUN
+JobServe Community Stadium
+YouTube
+Tickets
+Sun 25 Oct
+Nottingham Forest
+Forest
+NFO
+14:00
+Newcastle United
+Newcastle
+NEW
+The City Ground
+YouTube
+Tickets
+Sun 25 Oct
+Leicester City
+Leicester
+LEI
+15:00
+Southampton
+Southampton
+SOU
+King Power Stadium
+YouTube
+Tickets
+Matchweek 7
+Sun 8 November 2026
+Sun 8 Nov
+Durham
+Durham
+DUR
+12:00
+Sunderland
+Sunderland
+SUN
+Maiden Castle
+YouTube
+Tickets
+Sun 8 Nov
+Ipswich Town
+Ipswich
+IPS
+14:00
+Bristol City
+Bristol City
+BRI
+JobServe Community Stadium
+YouTube
+Tickets
+Sun 8 Nov
+Newcastle United
+Newcastle
+NEW
+14:00
+Burnley
+Burnley
+BUR
+St James Park
+YouTube
+Tickets
+Sun 8 Nov
+Southampton
+Southampton
+SOU
+14:00
+Sheffield United
+Sheffield Utd
+SHU
+St Marys Stadium
+YouTube
+Tickets
+Sun 8 Nov
+Wolverhampton Wanderers
+Wolves
+WOL
+14:00
+Nottingham Forest
+Forest
+NFO
+SEAH Stadium
+YouTube
+Tickets
+Sun 8 Nov
+Leicester City
+Leicester
+LEI
+15:00
+Watford
+Watford
+WAT
+King Power Stadium
+YouTube
+Tickets
+Matchweek 8
+14–15 November 2026
+Sat 14 Nov
+Sheffield United
+Sheffield Utd
+SHU
+18:00
+Bristol City
+Bristol City
+BRI
+Bramall Lane
+YouTube
+Tickets
+Sun 15 Nov
+Burnley
+Burnley
+BUR
+14:00
+Southampton
+Southampton
+SOU
+Turf Moor
+YouTube
+Tickets
+Sun 15 Nov
+Nottingham Forest
+Forest
+NFO
+14:00
+Leicester City
+Leicester
+LEI
+The City Ground
+YouTube
+Tickets
+Sun 15 Nov
+Sunderland
+Sunderland
+SUN
+14:00
+Newcastle United
+Newcastle
+NEW
+Stadium of Light
+YouTube
+Tickets
+Sun 15 Nov
+Watford
+Watford
+WAT
+14:00
+Ipswich Town
+Ipswich
+IPS
+Vicarage Road
+YouTube
+Tickets
+Sun 15 Nov
+Wolverhampton Wanderers
+Wolves
+WOL
+14:00
+Durham
+Durham
+DUR
+SEAH Stadium
+YouTube
+Tickets
+Matchweek 9
+20–21 December 2026
+Sun 20 Dec
+Durham
+Durham
+DUR
+12:00
+Ipswich Town
+Ipswich
+IPS
+Maiden Castle
+YouTube
+Tickets
+Sun 20 Dec
+Newcastle United
+Newcastle
+NEW
+14:00
+Watford
+Watford
+WAT
+Gateshead International Stadium
+YouTube
+Tickets
+Sun 20 Dec
+Sheffield United
+Sheffield Utd
+SHU
+14:00
+Sunderland
+Sunderland
+SUN
+Bramall Lane
+YouTube
+Tickets
+Sun 20 Dec
+Southampton
+Southampton
+SOU
+14:00
+Wolverhampton Wanderers
+Wolves
+WOL
+Silverlake Stadium, Eastleigh
+YouTube
+Tickets
+Sun 20 Dec
+Leicester City
+Leicester
+LEI
+15:00
+Burnley
+Burnley
+BUR
+King Power Stadium
+YouTube
+Tickets
+Mon 21 Dec
+Bristol City
+Bristol City
+BRI
+17:00
+Nottingham Forest
+Forest
+NFO
+Ashton Gate
+YouTube
+Tickets
+Matchweek 10
+Sun 10 January 2027
+Sun 10 Jan
+Bristol City
+Bristol City
+BRI
+14:00
+Leicester City
+Leicester
+LEI
+Ashton Gate
+YouTube
+Tickets
+Sun 10 Jan
+Burnley
+Burnley
+BUR
+14:00
+Durham
+Durham
+DUR
+Turf Moor
+YouTube
+Tickets
+Sun 10 Jan
+Ipswich Town
+Ipswich
+IPS
+14:00
+Newcastle United
+Newcastle
+NEW
+JobServe Community Stadium
+YouTube
+Tickets
+Sun 10 Jan
+Nottingham Forest
+Forest
+NFO
+14:00
+Sheffield United
+Sheffield Utd
+SHU
+The City Ground
+YouTube
+Tickets
+Sun 10 Jan
+Sunderland
+Sunderland
+SUN
+14:00
+Wolverhampton Wanderers
+Wolves
+WOL
+Eppleton CW
+YouTube
+Tickets
+Sun 10 Jan
+Watford
+Watford
+WAT
+14:00
+Southampton
+Southampton
+SOU
+Vicarage Road
+YouTube
+Tickets
+Matchweek 11
+22–24 January 2027
+Fri 22 Jan
+Burnley
+Burnley
+BUR
+19:00
+Ipswich Town
+Ipswich
+IPS
+Turf Moor
+YouTube
+Tickets
+Sat 23 Jan
+Sheffield United
+Sheffield Utd
+SHU
+18:00
+Watford
+Watford
+WAT
+Bramall Lane
+YouTube
+Tickets
+Sun 24 Jan
+Durham
+Durham
+DUR
+12:00
+Bristol City
+Bristol City
+BRI
+Maiden Castle
+YouTube
+Tickets
+Sun 24 Jan
+Newcastle United
+Newcastle
+NEW
+14:00
+Southampton
+Southampton
+SOU
+St James Park
+YouTube
+Tickets
+Sun 24 Jan
+Nottingham Forest
+Forest
+NFO
+14:00
+Sunderland
+Sunderland
+SUN
+The City Ground
+YouTube
+Tickets
+Sun 24 Jan
+Wolverhampton Wanderers
+Wolves
+WOL
+14:00
+Leicester City
+Leicester
+LEI
+SEAH Stadium
+YouTube
+Tickets
+Matchweek 12
+Wed 27 January 2027
+Wed 27 Jan
+Durham
+Durham
+DUR
+19:00
+Sheffield United
+Sheffield Utd
+SHU
+Maiden Castle
+YouTube
+Tickets
+Wed 27 Jan
+Sunderland
+Sunderland
+SUN
+19:00
+Burnley
+Burnley
+BUR
+Eppleton CW
+YouTube
+Tickets
+Wed 27 Jan
+Ipswich Town
+Ipswich
+IPS
+19:30
+Watford
+Watford
+WAT
+JobServe Community Stadium
+YouTube
+Tickets
+Wed 27 Jan
+Leicester City
+Leicester
+LEI
+19:30
+Nottingham Forest
+Forest
+NFO
+King Power Stadium
+YouTube
+Tickets
+Wed 27 Jan
+Southampton
+Southampton
+SOU
+19:30
+Bristol City
+Bristol City
+BRI
+Silverlake Stadium, Eastleigh
+YouTube
+Tickets
+Wed 27 Jan
+Wolverhampton Wanderers
+Wolves
+WOL
+19:30
+Newcastle United
+Newcastle
+NEW
+SEAH Stadium
+YouTube
+Tickets
+Matchweek 13
+Sun 31 January 2027
+Sun 31 Jan
+Bristol City
+Bristol City
+BRI
+14:00
+Sheffield United
+Sheffield Utd
+SHU
+Ashton Gate
+YouTube
+Tickets
+Sun 31 Jan
+Nottingham Forest
+Forest
+NFO
+14:00
+Ipswich Town
+Ipswich
+IPS
+The City Ground
+YouTube
+Tickets
+Sun 31 Jan
+Southampton
+Southampton
+SOU
+14:00
+Burnley
+Burnley
+BUR
+St Marys Stadium
+YouTube
+Tickets
+Sun 31 Jan
+Sunderland
+Sunderland
+SUN
+14:00
+Durham
+Durham
+DUR
+Eppleton CW
+YouTube
+Tickets
+Sun 31 Jan
+Watford
+Watford
+WAT
+14:00
+Wolverhampton Wanderers
+Wolves
+WOL
+Vicarage Road
+YouTube
+Tickets
+Sun 31 Jan
+Leicester City
+Leicester
+LEI
+15:00
+Newcastle United
+Newcastle
+NEW
+King Power Stadium
+YouTube
+Tickets
+Matchweek 14
+Sun 7 February 2027
+Sun 7 Feb
+Ipswich Town
+Ipswich
+IPS
+13:00
+Durham
+Durham
+DUR
+JobServe Community Stadium
+YouTube
+Tickets
+Sun 7 Feb
+Bristol City
+Bristol City
+BRI
+14:00
+Watford
+Watford
+WAT
+Ashton Gate
+YouTube
+Tickets
+Sun 7 Feb
+Burnley
+Burnley
+BUR
+14:00
+Leicester City
+Leicester
+LEI
+Turf Moor
+YouTube
+Tickets
+Sun 7 Feb
+Newcastle United
+Newcastle
+NEW
+14:00
+Nottingham Forest
+Forest
+NFO
+St James Park
+YouTube
+Tickets
+Sun 7 Feb
+Sheffield United
+Sheffield Utd
+SHU
+14:00
+Southampton
+Southampton
+SOU
+Bramall Lane
+YouTube
+Tickets
+Sun 7 Feb
+Wolverhampton Wanderers
+Wolves
+WOL
+14:00
+Sunderland
+Sunderland
+SUN
+SEAH Stadium
+YouTube
+Tickets
+Matchweek 15
+12–14 February 2027
+Fri 12 Feb
+Watford
+Watford
+WAT
+19:30
+Leicester City
+Leicester
+LEI
+Vicarage Road
+YouTube
+Tickets
+Sat 13 Feb
+Sheffield United
+Sheffield Utd
+SHU
+18:00
+Burnley
+Burnley
+BUR
+Bramall Lane
+YouTube
+Tickets
+Sun 14 Feb
+Durham
+Durham
+DUR
+12:00
+Wolverhampton Wanderers
+Wolves
+WOL
+Maiden Castle
+YouTube
+Tickets
+Sun 14 Feb
+Nottingham Forest
+Forest
+NFO
+14:00
+Bristol City
+Bristol City
+BRI
+The City Ground
+YouTube
+Tickets
+Sun 14 Feb
+Southampton
+Southampton
+SOU
+14:00
+Newcastle United
+Newcastle
+NEW
+Silverlake Stadium, Eastleigh
+YouTube
+Tickets
+Sun 14 Feb
+Sunderland
+Sunderland
+SUN
+14:00
+Ipswich Town
+Ipswich
+IPS
+Eppleton CW
+YouTube
+Tickets
+Matchweek 16
+Sun 14 March 2027
+Sun 14 Mar
+Bristol City
+Bristol City
+BRI
+14:00
+Sunderland
+Sunderland
+SUN
+Ashton Gate
+YouTube
+Tickets
+Sun 14 Mar
+Burnley
+Burnley
+BUR
+14:00
+Watford
+Watford
+WAT
+Turf Moor
+YouTube
+Tickets
+Sun 14 Mar
+Ipswich Town
+Ipswich
+IPS
+14:00
+Sheffield United
+Sheffield Utd
+SHU
+JobServe Community Stadium
+YouTube
+Tickets
+Sun 14 Mar
+Newcastle United
+Newcastle
+NEW
+14:00
+Durham
+Durham
+DUR
+St James Park
+YouTube
+Tickets
+Sun 14 Mar
+Nottingham Forest
+Forest
+NFO
+14:00
+Southampton
+Southampton
+SOU
+The City Ground
+YouTube
+Tickets
+Sun 14 Mar
+Leicester City
+Leicester
+LEI
+15:00
+Wolverhampton Wanderers
+Wolves
+WOL
+King Power Stadium
+YouTube
+Tickets
+Matchweek 17
+20–21 March 2027
+Sat 20 Mar
+Sheffield United
+Sheffield Utd
+SHU
+18:00
+Newcastle United
+Newcastle
+NEW
+Bramall Lane
+YouTube
+Tickets
+Sun 21 Mar
+Durham
+Durham
+DUR
+12:00
+Leicester City
+Leicester
+LEI
+Maiden Castle
+YouTube
+Tickets
+Sun 21 Mar
+Ipswich Town
+Ipswich
+IPS
+14:00
+Burnley
+Burnley
+BUR
+JobServe Community Stadium
+YouTube
+Tickets
+Sun 21 Mar
+Southampton
+Southampton
+SOU
+14:00
+Watford
+Watford
+WAT
+Silverlake Stadium, Eastleigh
+YouTube
+Tickets
+Sun 21 Mar
+Sunderland
+Sunderland
+SUN
+14:00
+Nottingham Forest
+Forest
+NFO
+Stadium of Light
+YouTube
+Tickets
+Sun 21 Mar
+Wolverhampton Wanderers
+Wolves
+WOL
+14:00
+Bristol City
+Bristol City
+BRI
+SEAH Stadium
+YouTube
+Tickets
+Matchweek 18
+26–28 March 2027
+Fri 26 Mar
+Watford
+Watford
+WAT
+19:30
+Nottingham Forest
+Forest
+NFO
+Vicarage Road
+YouTube
+Tickets
+Sat 27 Mar
+Burnley
+Burnley
+BUR
+14:00
+Wolverhampton Wanderers
+Wolves
+WOL
+Turf Moor
+YouTube
+Tickets
+Sun 28 Mar
+Southampton
+Southampton
+SOU
+12:00
+Durham
+Durham
+DUR
+Silverlake Stadium, Eastleigh
+YouTube
+Tickets
+Sun 28 Mar
+Bristol City
+Bristol City
+BRI
+14:00
+Ipswich Town
+Ipswich
+IPS
+Ashton Gate
+YouTube
+Tickets
+Sun 28 Mar
+Newcastle United
+Newcastle
+NEW
+14:00
+Sunderland
+Sunderland
+SUN
+St James Park
+YouTube
+Tickets
+Sun 28 Mar
+Leicester City
+Leicester
+LEI
+15:00
+Sheffield United
+Sheffield Utd
+SHU
+King Power Stadium
+YouTube
+Tickets
+Matchweek 19
+Sun 4 April 2027
+Sun 4 Apr
+Bristol City
+Bristol City
+BRI
+14:00
+Burnley
+Burnley
+BUR
+Ashton Gate
+YouTube
+Tickets
+Sun 4 Apr
+Ipswich Town
+Ipswich
+IPS
+14:00
+Leicester City
+Leicester
+LEI
+JobServe Community Stadium
+YouTube
+Tickets
+Sun 4 Apr
+Nottingham Forest
+Forest
+NFO
+14:00
+Durham
+Durham
+DUR
+The City Ground
+YouTube
+Tickets
+Sun 4 Apr
+Sunderland
+Sunderland
+SUN
+14:00
+Sheffield United
+Sheffield Utd
+SHU
+Stadium of Light
+YouTube
+Tickets
+Sun 4 Apr
+Watford
+Watford
+WAT
+14:00
+Newcastle United
+Newcastle
+NEW
+Vicarage Road
+YouTube
+Tickets
+Sun 4 Apr
+Wolverhampton Wanderers
+Wolves
+WOL
+14:00
+Southampton
+Southampton
+SOU
+SEAH Stadium
+YouTube
+Tickets
+Matchweek 20
+10–11 April 2027
+Sat 10 Apr
+Sheffield United
+Sheffield Utd
+SHU
+18:00
+Wolverhampton Wanderers
+Wolves
+WOL
+Bramall Lane
+YouTube
+Tickets
+Sun 11 Apr
+Durham
+Durham
+DUR
+12:00
+Watford
+Watford
+WAT
+Maiden Castle
+YouTube
+Tickets
+Sun 11 Apr
+Burnley
+Burnley
+BUR
+14:00
+Nottingham Forest
+Forest
+NFO
+Turf Moor
+YouTube
+Tickets
+Sun 11 Apr
+Newcastle United
+Newcastle
+NEW
+14:00
+Ipswich Town
+Ipswich
+IPS
+Gateshead International Stadium
+YouTube
+Tickets
+Sun 11 Apr
+Southampton
+Southampton
+SOU
+14:00
+Sunderland
+Sunderland
+SUN
+Silverlake Stadium, Eastleigh
+YouTube
+Tickets
+Sun 11 Apr
+Leicester City
+Leicester
+LEI
+15:00
+Bristol City
+Bristol City
+BRI
+King Power Stadium
+YouTube
+Tickets
+Matchweek 21
+1–2 May 2027
+Sat 1 May
+Watford
+Watford
+WAT
+12:00
+Sheffield United
+Sheffield Utd
+SHU
+Vicarage Road
+YouTube
+Tickets
+Sat 1 May
+Bristol City
+Bristol City
+BRI
+17:30
+Durham
+Durham
+DUR
+Ashton Gate
+YouTube
+Tickets
+Sun 2 May
+Burnley
+Burnley
+BUR
+14:00
+Newcastle United
+Newcastle
+NEW
+Turf Moor
+YouTube
+Tickets
+Sun 2 May
+Ipswich Town
+Ipswich
+IPS
+14:00
+Southampton
+Southampton
+SOU
+JobServe Community Stadium
+YouTube
+Tickets
+Sun 2 May
+Nottingham Forest
+Forest
+NFO
+14:00
+Wolverhampton Wanderers
+Wolves
+WOL
+The City Ground
+YouTube
+Tickets
+Sun 2 May
+Leicester City
+Leicester
+LEI
+15:00
+Sunderland
+Sunderland
+SUN
+King Power Stadium
+YouTube
+Tickets
+Matchweek 22
+Date to be confirmed
+Durham
+Durham
+DUR
+TBC
+Burnley
+Burnley
+BUR
+Maiden Castle
+YouTube
+Newcastle United
+Newcastle
+NEW
+TBC
+Bristol City
+Bristol City
+BRI
+St James Park
+YouTube
+Sheffield United
+Sheffield Utd
+SHU
+TBC
+Nottingham Forest
+Forest
+NFO
+Bramall Lane
+YouTube
+Southampton
+Southampton
+SOU
+TBC
+Leicester City
+Leicester
+LEI
+Silverlake Stadium, Eastleigh
+YouTube
+Sunderland
+Sunderland
+SUN
+TBC
+Watford
+Watford
+WAT
+Stadium of Light
+YouTube
+Wolverhampton Wanderers
+Wolves
+WOL
+TBC
+Ipswich Town
+Ipswich
+IPS
+SEAH Stadium
 YouTube
 Clubs
 Players

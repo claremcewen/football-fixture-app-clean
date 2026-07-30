@@ -10,11 +10,18 @@ def test_parses_populated_fixture_list():
     assert len(df) == 2
 
     first = df.iloc[0]
-    assert first["home_team"] == "West Ham United"
-    assert first["away_team"] == "Manchester City"
-    assert first["kickoff_uk"] == "2026-09-12 12:00"
-    assert first["venue"] == "Chigwell Construction Stadium"
+    assert first["home_team"] == "London City Lionesses"
+    assert first["away_team"] == "Manchester United"
+    assert first["kickoff_uk"] == "2026-09-04 19:00"
+    assert first["venue"] == "CopperJax Community Stadium"
     assert "Sky Sports" in first["watch_platforms"]
+
+    second = df.iloc[1]
+    assert second["home_team"] == "Chelsea"
+    assert second["away_team"] == "Aston Villa"
+    assert second["kickoff_uk"] == "2026-09-05 12:30"
+    assert second["venue"] == "Stamford Bridge"
+    assert "BBC One" in second["watch_platforms"]
 
 
 def test_live_snapshot_parses_without_crashing():
