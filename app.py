@@ -662,24 +662,12 @@ def main():
     remaining_competitions = sorted(set(known_competitions) - set(ordered_competitions))
     competitions = [ALL_THIS_WEEK] + ordered_competitions + remaining_competitions + [ALL_FULL_LIST]
 
-    # competition_group -> tier (e.g. "Tier 3"), read from the data itself
-    # (already computed by registry.py) rather than duplicated here, so the
-    # dropdown labels can't drift out of sync with the actual classification.
-    competition_tier_lookup = (
-        df.dropna(subset=["tier"])
-        .drop_duplicates("competition_group")
-        .set_index("competition_group")["tier"]
-        .to_dict()
-    )
-
     def format_competition_option(value: str) -> str:
         if value in (ALL_THIS_WEEK, ALL_FULL_LIST):
             return value
-        tier = competition_tier_lookup.get(value)
-        if not tier:
-            return value
-        prefix = f"FAWNL {tier}" if value in FAWNL_DIVISION_GROUPS else tier
-        return f"{prefix} — {value}"
+        if value in FAWNL_DIVISION_GROUPS:
+            return f"FAWNL — {value}"
+        return value
     platforms = ["All"] + sorted(
         {
             p.strip()
