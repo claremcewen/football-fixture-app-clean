@@ -1,11 +1,13 @@
 {
   "WSL": {
-    "ok": true,
-    "rows": 175
+    "ok": false,
+    "rows": 175,
+    "note": "scraper returned 0 rows; fell back to previous data"
   },
   "WSL2": {
-    "ok": true,
-    "rows": 126
+    "ok": false,
+    "rows": 126,
+    "note": "scraper returned 0 rows; fell back to previous data"
   },
   "England Women": {
     "ok": true,
@@ -25,7 +27,7 @@
   },
   "WAFCON": {
     "ok": true,
-    "rows": 26
+    "rows": 24
   },
   "SWPL 1": {
     "ok": true,
