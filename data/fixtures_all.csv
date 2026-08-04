@@ -1,6 +1,4 @@
 competition,sport,competition_group,region,tier,home_team,away_team,kickoff_uk,venue,watch_platforms,watch_notes,official_source
-WAFCON 2026 - Group A,Football,WAFCON,Africa,,Senegal,Morocco,2026-08-03 21:00,"Moulay El Hassan Stadium, Rabat",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
-WAFCON 2026 - Group A,Football,WAFCON,Africa,,Kenya,Algeria,2026-08-03 21:00,"Rabat Olympic Stadium, Rabat",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
 WAFCON 2026 - Group B,Football,WAFCON,Africa,,Burkina Faso,South Africa,2026-08-04 21:00,"Moulay Rachid Stadium, Casablanca",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
 WAFCON 2026 - Group B,Football,WAFCON,Africa,,Tanzania,Ivory Coast,2026-08-04 21:00,"Larbi Zaouli Stadium, Casablanca",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
 WAFCON 2026 - Group C,Football,WAFCON,Africa,,Egypt,Nigeria,2026-08-05 21:00,"Rabat Olympic Stadium, Rabat",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
@@ -8,12 +6,12 @@ WAFCON 2026 - Group C,Football,WAFCON,Africa,,Malawi,Zambia,2026-08-05 21:00,"Al
 NWSL,Football,NWSL,USA,,Denver Summit,North Carolina Courage,2026-08-06 03:00,Empower Field at Mile High,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 WAFCON 2026 - Group D,Football,WAFCON,Africa,,Mali,Ghana,2026-08-06 21:00,"Moulay Rachid Stadium, Casablanca",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
 WAFCON 2026 - Group D,Football,WAFCON,Africa,,Cape Verde,Cameroon,2026-08-06 21:00,"Larbi Zaouli Stadium, Casablanca",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
+NWSL,Football,NWSL,USA,,Orlando Pride,Racing Louisville,2026-08-08 00:00,Inter&Co Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Gotham FC,San Diego Wave,2026-08-08 01:00,Sports Illustrated Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-WAFCON 2026 - Quarter-finals,Football,WAFCON,Africa,,Winner Group B,Runner-up Group A,2026-08-08 18:00,"Moulay Rachid Stadium, Casablanca",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
+WAFCON 2026 - Quarter-finals,Football,WAFCON,Africa,,Winner Group B,Algeria,2026-08-08 18:00,"Moulay Rachid Stadium, Casablanca",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
 NWSL,Football,NWSL,USA,,Denver Summit,Utah Royals,2026-08-08 21:00,Empower Field at Mile High,"TNT Sports 4, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
-WAFCON 2026 - Quarter-finals,Football,WAFCON,Africa,,Winner Group A,Runner-up Group B,2026-08-08 21:00,"Moulay El Hassan Stadium, Rabat",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
+WAFCON 2026 - Quarter-finals,Football,WAFCON,Africa,,Morocco,Runner-up Group B,2026-08-08 21:00,"Moulay El Hassan Stadium, Rabat",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
 NWSL,Football,NWSL,USA,,Washington Spirit,North Carolina Courage,2026-08-08 23:30,Audi Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-NWSL,Football,NWSL,USA,,Orlando Pride,Racing Louisville,2026-08-09 00:00,Inter&Co Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Houston Dash,Kansas City Current,2026-08-09 01:45,Shell Energy Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 WAFCON 2026 - Quarter-finals,Football,WAFCON,Africa,,Cameroon,Runner-up Group C,2026-08-09 18:00,"Larbi Zaouli Stadium, Casablanca",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
 NWSL,Football,NWSL,USA,,Boston Legacy,Portland Thorns,2026-08-09 21:00,Gillette Stadium,"TNT Sports 4, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
@@ -77,9 +75,9 @@ NWSL,Football,NWSL,USA,,North Carolina Courage,Houston Dash,2026-08-17 00:00,Fir
 NWSL,Football,NWSL,USA,,Angel City,Washington Spirit,2026-08-17 02:00,BMO Stadium,"TNT Sports 3, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Racing Louisville,Seattle Reign,2026-08-19 23:30,Lynn Family Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Houston Dash,Chicago Stars,2026-08-20 01:00,Shell Energy Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-NWSL,Football,NWSL,USA,,San Diego Wave,Utah Royals,2026-08-20 03:00,Snapdragon Stadium,"TNT Sports 2, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
-NWSL,Football,NWSL,USA,,Kansas City Current,Seattle Reign,2026-08-20 23:30,CPKC Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-NWSL,Football,NWSL,USA,,North Carolina Courage,Boston Legacy,2026-08-21 00:30,First Horizon Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
+NWSL,Football,NWSL,USA,,San Diego Wave,Utah Royals,2026-08-22 03:00,Snapdragon Stadium,"TNT Sports 2, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
+NWSL,Football,NWSL,USA,,Kansas City Current,Seattle Reign,2026-08-22 23:30,CPKC Stadium,TNT Sports 2,,https://www.live-footballontv.com/live-womens-football-on-tv.html
+NWSL,Football,NWSL,USA,,North Carolina Courage,Boston Legacy,2026-08-23 00:30,First Horizon Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Portland Thorns,Denver Summit,2026-08-23 01:45,Providence Park,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Derby County,Rugby Borough,2026-08-23 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Queens Park Rangers,2026-08-23 14:00,-,,,https://wnl.thefa.com/fixtures
@@ -170,7 +168,7 @@ The FA WNL Cup,Football,FAWNL Cup,England,,Boldmere St Michaels,Sutton Coldfield
 The FA WNL Cup,Football,FAWNL Cup,England,,Lewes,Saltdean United,2026-08-27 19:45,-,,,https://wnl.thefa.com/fixtures
 The FA WNL Cup,Football,FAWNL Cup,England,,Sheffield FC,Sheffield United U21,2026-08-27 19:45,-,,,https://wnl.thefa.com/fixtures
 The FA WNL Cup,Football,FAWNL Cup,England,,Moneyfields,AFC Bournemouth,2026-08-27 19:45,-,,,https://wnl.thefa.com/fixtures
-NWSL,Football,NWSL,USA,,Gotham FC,Portland Thorns,2026-08-29 01:00,Sports Illustrated Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
+NWSL,Football,NWSL,USA,,Gotham FC,Portland Thorns,2026-08-29 01:00,Sports Illustrated Stadium,TNT Sports 3,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,San Diego Wave,Racing Louisville,2026-08-29 03:00,Snapdragon Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Kansas City Current,North Carolina Courage,2026-08-29 23:30,CPKC Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Orlando Pride,Utah Royals,2026-08-30 00:00,Inter&Co Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
