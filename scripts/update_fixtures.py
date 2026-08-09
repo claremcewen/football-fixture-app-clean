@@ -39,6 +39,24 @@ COLUMNS = [
     "official_source",
 ]
 
+# A same-day drop this steep basically never happens for a legitimate
+# reason - real fixture counts decline gradually as matches are played, not
+# in cliffs. Wired up after wslfootball.com was twice observed serving a
+# genuinely partial fixture list (10 rows instead of ~175) without ever
+# returning zero, which the plain zero-rows check below doesn't catch.
+# Only applied once the previous count is large enough that a drop this
+# steep is meaningful - guards against noise on already-small competitions
+# (e.g. England Women's 2 fixtures) where any change looks "drastic".
+SUSPICIOUS_DROP_RATIO = 0.5
+SUSPICIOUS_DROP_MIN_PREVIOUS = 15
+
+
+def is_suspicious_drop(row_count: int, previous_count: int) -> bool:
+    return (
+        previous_count >= SUSPICIOUS_DROP_MIN_PREVIOUS
+        and row_count < previous_count * SUSPICIOUS_DROP_RATIO
+    )
+
 FAWNL_DIVISIONS = [
     "Northern Premier Division",
     "Southern Premier Division",
@@ -147,6 +165,8 @@ def main() -> None:
             df = clean_frame(classify_frame(func()))
             row_count = len(df)
 
+            suspicious_drop = is_suspicious_drop(row_count, len(fallback))
+
             if row_count == 0 and not fallback.empty:
                 print(
                     f"[WARN] {label}: scraper returned 0 rows, "
@@ -157,6 +177,22 @@ def main() -> None:
                     "ok": False,
                     "rows": len(fallback),
                     "note": "scraper returned 0 rows; fell back to previous data",
+                }
+            elif suspicious_drop:
+                print(
+                    f"[WARN] {label}: scraper returned {row_count} rows, a sharp drop "
+                    f"from {len(fallback)} previous - keeping previous fixture(s) "
+                    "(probable partial/broken source page, not a real decline)"
+                )
+                frames.append(clean_frame(fallback))
+                status[label] = {
+                    "ok": False,
+                    "rows": len(fallback),
+                    "note": (
+                        f"scraper returned {row_count} rows, a >{int(SUSPICIOUS_DROP_RATIO * 100)}% "
+                        f"drop from {len(fallback)} previous; treated as a probable partial/broken "
+                        "scrape and kept previous data"
+                    ),
                 }
             else:
                 frames.append(df)
