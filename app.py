@@ -6,6 +6,7 @@ from pathlib import Path
 
 import pandas as pd
 import streamlit as st
+import streamlit.components.v1 as components
 
 APP_DIR = Path(__file__).parent
 DATA_FILE = APP_DIR / "data" / "fixtures_all.csv"
@@ -145,6 +146,7 @@ BRAND_MID_BLUE = "#0597B2"
 BRAND_CREAM = "#FAF2E9"
 BRAND_SITE_URL = "https://shecankickit.com"
 BRAND_SITE_LABEL = "shecankickit.com"
+SUBSTACK_EMBED_URL = "https://theaccidentalcoach.substack.com/embed"
 
 APP_CSS = f"""
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -267,6 +269,28 @@ h1, h2, h3, .wfg-brand-title {{
     font-weight: 600;
     color: {BRAND_MID_BLUE};
     text-decoration: none;
+}}
+.st-key-locked_gate {{
+    border: 1px solid {BRAND_MID_BLUE}40;
+    border-radius: 12px;
+    padding: 1.25rem 1.1rem;
+    margin: 1rem 0;
+    background: #FFFFFF;
+    text-align: center;
+}}
+.st-key-locked_gate iframe {{
+    border-radius: 8px;
+}}
+.wfg-subscribe-heading {{
+    font-family: 'Anton', sans-serif;
+    font-size: 17px;
+    color: {BRAND_DARK_BLUE};
+    margin: 0 0 4px;
+}}
+.wfg-subscribe-body {{
+    font-size: 13px;
+    color: #5F5E5A;
+    margin: 0 0 12px;
 }}
 /* Keep specific rows side by side even on narrow (mobile) screens, where
    Streamlit's default column behaviour forces every column to nearly full
@@ -622,13 +646,70 @@ def apply_date_lookup() -> None:
     st.session_state["selected_date_state"] = st.session_state["date_input_main"]
 
 
+def get_access_code() -> str | None:
+    return st.secrets.get("ACCESS_CODE")
+
+
+def is_unlocked() -> bool:
+    """Free-to-use, gated behind a Substack subscription rather than open
+    to anyone - a code shared with subscribers (via the Substack welcome
+    email) unlocks it, either by following a link with ?access=CODE or by
+    typing the code in directly. Not meant to be airtight (a code can be
+    shared) - just enough friction that "subscribe first" is the intended
+    path, per the user's explicit ask."""
+    if st.session_state.get("_unlocked"):
+        return True
+
+    access_code = get_access_code()
+    if not access_code:
+        # No code configured (e.g. local dev without a secrets.toml) -
+        # don't lock everyone out over a missing config, just skip the gate.
+        return True
+
+    if st.query_params.get("access") == access_code:
+        st.session_state["_unlocked"] = True
+        return True
+
+    return False
+
+
+def render_locked_screen() -> None:
+    with st.container(key="locked_gate"):
+        st.html(
+            """
+            <p class="wfg-subscribe-heading">This tracker is free for subscribers</p>
+            <p class="wfg-subscribe-body">Subscribe to "She Can Kick It" below to get your
+            access code by email, sent straight away.</p>
+            """
+        )
+        components.iframe(SUBSTACK_EMBED_URL, height=150, scrolling=False)
+
+        st.html('<p class="wfg-subscribe-body">Already got a code?</p>')
+        code_input = st.text_input(
+            "Access code", key="access_code_input", label_visibility="collapsed"
+        )
+        if st.button("Unlock", key="unlock_button"):
+            entered = code_input.strip()
+            if entered and entered == get_access_code():
+                # Baking the code into the URL (not just session_state) means
+                # this link keeps working on future visits without typing
+                # the code again - same as clicking a link that already has
+                # it, per the user's "one-time only" requirement.
+                st.session_state["_unlocked"] = True
+                st.query_params["access"] = entered
+                st.rerun()
+            else:
+                st.error(
+                    "That code doesn't look right - subscribe above to get one."
+                )
+
+
 def main():
     # st.html (not st.markdown) - st.markdown runs content through Streamlit's
     # markdown-to-HTML converter even with unsafe_allow_html=True, which was
     # silently mangling/truncating this long CSS block partway through.
     # st.html() injects raw HTML/CSS with no markdown pre-processing.
     st.html(APP_CSS)
-    df = load_data()
 
     # Logo and caption side by side on a dark blue band (".st-key-header_band"
     # in APP_CSS) - kept in one row even on a narrow phone screen via the
@@ -650,6 +731,12 @@ def main():
 
         with header_text_col:
             st.caption("Women's football fixtures - and where to watch them.")
+
+    if not is_unlocked():
+        render_locked_screen()
+        st.stop()
+
+    df = load_data()
 
     if df.empty:
         st.warning(
