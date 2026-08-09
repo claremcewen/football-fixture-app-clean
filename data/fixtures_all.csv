@@ -1,20 +1,14 @@
 competition,sport,competition_group,region,tier,home_team,away_team,kickoff_uk,venue,watch_platforms,watch_notes,official_source
-NWSL,Football,NWSL,USA,,Orlando Pride,Racing Louisville,2026-08-08 00:00,Inter&Co Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-NWSL,Football,NWSL,USA,,Gotham FC,San Diego Wave,2026-08-08 01:00,Sports Illustrated Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-WAFCON 2026 - Quarter-finals,Football,WAFCON,Africa,,Ivory Coast,Algeria,2026-08-08 18:00,"Moulay Rachid Stadium, Casablanca",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
-NWSL,Football,NWSL,USA,,Denver Summit,Utah Royals,2026-08-08 21:00,Empower Field at Mile High,"TNT Sports 4, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
-WAFCON 2026 - Quarter-finals,Football,WAFCON,Africa,,Morocco,South Africa,2026-08-08 21:00,"Moulay El Hassan Stadium, Rabat",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
-NWSL,Football,NWSL,USA,,Washington Spirit,North Carolina Courage,2026-08-08 23:30,Audi Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Houston Dash,Kansas City Current,2026-08-09 01:45,Shell Energy Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 WAFCON 2026 - Quarter-finals,Football,WAFCON,Africa,,Cameroon,Nigeria,2026-08-09 18:00,"Larbi Zaouli Stadium, Casablanca",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
 NWSL,Football,NWSL,USA,,Boston Legacy,Portland Thorns,2026-08-09 21:00,Gillette Stadium,"TNT Sports 4, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
 WAFCON 2026 - Quarter-finals,Football,WAFCON,Africa,,Malawi,Ghana,2026-08-09 21:00,"Al Medina Stadium, Rabat",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
 NWSL,Football,NWSL,USA,,Chicago Stars,Bay FC,2026-08-10 00:00,Northwestern Medicine Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Seattle Reign,Angel City,2026-08-10 02:00,Lumen Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-WAFCON 2026 - Semi-finals,Football,WAFCON,Africa,,Winner QF1,Winner QF4,2026-08-12 18:00,"Moulay El Hassan Stadium, Rabat",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
-WAFCON 2026 - Semi-finals,Football,WAFCON,Africa,,Winner QF2,Winner QF3,2026-08-12 21:00,"Rabat Olympic Stadium, Rabat",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
-WAFCON 2026 - Play-in matches,Football,WAFCON,Africa,,Loser QF2,Loser QF3,2026-08-13 18:00,"Larbi Zaouli Stadium, Casablanca",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
-WAFCON 2026 - Play-in matches,Football,WAFCON,Africa,,Loser QF1,Loser QF4,2026-08-13 21:00,"Moulay Rachid Stadium, Casablanca",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
+WAFCON 2026 - Semi-finals,Football,WAFCON,Africa,,Morocco,Winner QF4,2026-08-12 18:00,"Moulay El Hassan Stadium, Rabat",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
+WAFCON 2026 - Semi-finals,Football,WAFCON,Africa,,Algeria,Winner QF3,2026-08-12 21:00,"Rabat Olympic Stadium, Rabat",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
+WAFCON 2026 - Play-in matches,Football,WAFCON,Africa,,Ivory Coast,Loser QF3,2026-08-13 18:00,"Larbi Zaouli Stadium, Casablanca",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
+WAFCON 2026 - Play-in matches,Football,WAFCON,Africa,,South Africa,Loser QF4,2026-08-13 21:00,"Moulay Rachid Stadium, Casablanca",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
 NWSL,Football,NWSL,USA,,Gotham FC,Kansas City Current,2026-08-15 01:00,Sports Illustrated Stadium,"TNT Sports 3, TNT Sports 4, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,San Diego Wave,Denver Summit,2026-08-15 03:00,Snapdragon Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Seattle Reign,Chicago Stars,2026-08-15 03:00,Lumen Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
