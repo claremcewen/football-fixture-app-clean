@@ -38,6 +38,7 @@ COMPETITION_DEFAULT_VIEW: dict[str, str] = {
     "Division 1 South West": "next_round",
     "FAWNL Cup": "next_round",
     "SWPL 1": "next_round",
+    "Subway Players Cup": "next_round",
 }
 DEFAULT_VIEW_FALLBACK = "next_round"
 
@@ -114,6 +115,7 @@ COMPETITION_COLOR: dict[str, str] = {
     "FAWNL Cup": "#4C9A2A",
     "WAFCON": "#0E7C7B",
     "SWPL 1": "#1D6E9E",
+    "Subway Players Cup": "#4A8B3B",
 }
 DEFAULT_COMPETITION_COLOR = "#5F5E5A"
 

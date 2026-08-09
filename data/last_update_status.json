@@ -2,12 +2,12 @@
   "WSL": {
     "ok": false,
     "rows": 175,
-    "note": "scraper returned 0 rows; fell back to previous data"
+    "note": "site served only 10 partial rows (legacy template); manually restored previous full-season data"
   },
   "WSL2": {
     "ok": false,
     "rows": 126,
-    "note": "scraper returned 0 rows; fell back to previous data"
+    "note": "site served only 10 partial rows (legacy template); manually restored previous full-season data"
   },
   "England Women": {
     "ok": true,
@@ -19,7 +19,7 @@
   },
   "NWSL": {
     "ok": true,
-    "rows": 97
+    "rows": 96
   },
   "FAWNL": {
     "ok": true,
@@ -32,5 +32,9 @@
   "SWPL 1": {
     "ok": true,
     "rows": 90
+  },
+  "Subway Players Cup": {
+    "ok": true,
+    "rows": 10
   }
 }
