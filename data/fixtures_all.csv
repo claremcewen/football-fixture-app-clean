@@ -1,10 +1,4 @@
 competition,sport,competition_group,region,tier,home_team,away_team,kickoff_uk,venue,watch_platforms,watch_notes,official_source
-NWSL,Football,NWSL,USA,,Gotham FC,Kansas City Current,2026-08-15 01:00,Sports Illustrated Stadium,"TNT Sports 3, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
-NWSL,Football,NWSL,USA,,San Diego Wave,Denver Summit,2026-08-15 03:00,Snapdragon Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-NWSL,Football,NWSL,USA,,Seattle Reign,Chicago Stars,2026-08-15 03:00,Lumen Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-NWSL,Football,NWSL,USA,,Utah Royals,Bay FC,2026-08-15 03:00,America First Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-WAFCON 2026 - Third place,Football,WAFCON,Africa,,Morocco,Algeria,2026-08-15 18:00,"Rabat Olympic Stadium, Rabat",CAF TV (YouTube),,https://en.wikipedia.org/wiki/2026_Women%27s_Africa_Cup_of_Nations
-NWSL,Football,NWSL,USA,,Racing Louisville,Boston Legacy,2026-08-15 23:30,Lynn Family Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Portland Thorns,Orlando Pride,2026-08-16 01:45,Providence Park,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 SWPL 1,Football,SWPL 1,Scotland,,Spartans,Partick Thistle,2026-08-16 13:00,The Vanloq Community Stadium,,,https://swpl.uk/match-centre/swpl/
 SWPL 1,Football,SWPL 1,Scotland,,Montrose,Rangers,2026-08-16 13:00,Links Park,,,https://swpl.uk/match-centre/swpl/
@@ -419,7 +413,7 @@ The FA WNL Cup,Football,FAWNL Cup,England,,Norwich City,Stevenage,2026-09-27 14:
 The FA WNL Cup,Football,FAWNL Cup,England,,Peterborough United,Leicester City U21,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
 The FA WNL Cup,Football,FAWNL Cup,England,,Stoke City,Manchester City U21,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
 The FA WNL Cup,Football,FAWNL Cup,England,,West Bromwich Albion,Sporting Khalsa,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
-The FA WNL Cup,Football,FAWNL Cup,England,,Middlesbrough,Durham Cestria,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
+The FA WNL Cup,Football,FAWNL Cup,England,,Middlesbrough,Chester Le Street Town,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
 The FA WNL Cup,Football,FAWNL Cup,England,,AFC Bournemouth,Southampton U21,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
 The FA WNL Cup,Football,FAWNL Cup,England,,Fulham,Ascot United,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
 The FA WNL Cup,Football,FAWNL Cup,England,,Oxford United,Arsenal U21,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
@@ -428,8 +422,8 @@ The FA WNL Cup,Football,FAWNL Cup,England,,Plymouth Argyle,Torquay United,2026-0
 The FA WNL Cup,Football,FAWNL Cup,England,,Swindon Town,Wycombe Wanderers,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
 The FA WNL Cup,Football,FAWNL Cup,England,,Blackburn Rovers,Wythenshawe,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
 The FA WNL Cup,Football,FAWNL Cup,England,,Bradford City,Leeds United,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
-The FA WNL Cup,Football,FAWNL Cup,England,,Chester Le Street Town,Sunderland U21,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
 The FA WNL Cup,Football,FAWNL Cup,England,,Chorley,AFC Fylde,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
+The FA WNL Cup,Football,FAWNL Cup,England,,Durham Cestria,Sunderland U21,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
 The FA WNL Cup,Football,FAWNL Cup,England,,Thornaby,York City,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
 The FA WNL Cup,Football,FAWNL Cup,England,,Barnsley Women,Manchester United U21,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
 The FA WNL Cup,Football,FAWNL Cup,England,,Kidderminster Harriers,Cheltenham Town,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
