@@ -19,19 +19,20 @@
   },
   "NWSL": {
     "ok": true,
-    "rows": 88
+    "rows": 87
   },
   "FAWNL": {
     "ok": true,
-    "rows": 924
+    "rows": 888
   },
   "WAFCON": {
-    "ok": true,
-    "rows": 1
+    "ok": false,
+    "rows": 1,
+    "note": "scraper returned 0 rows; fell back to previous data"
   },
   "SWPL 1": {
     "ok": true,
-    "rows": 90
+    "rows": 85
   },
   "Subway Players Cup": {
     "ok": true,
