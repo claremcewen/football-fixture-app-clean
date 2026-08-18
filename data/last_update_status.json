@@ -19,16 +19,15 @@
   },
   "NWSL": {
     "ok": true,
-    "rows": 87
+    "rows": 85
   },
   "FAWNL": {
     "ok": true,
     "rows": 888
   },
   "WAFCON": {
-    "ok": false,
-    "rows": 1,
-    "note": "scraper returned 0 rows; fell back to previous data"
+    "ok": true,
+    "rows": 0
   },
   "SWPL 1": {
     "ok": true,

@@ -1,6 +1,4 @@
 competition,sport,competition_group,region,tier,home_team,away_team,kickoff_uk,venue,watch_platforms,watch_notes,official_source
-NWSL,Football,NWSL,USA,,North Carolina Courage,Houston Dash,2026-08-17 00:00,First Horizon Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-NWSL,Football,NWSL,USA,,Angel City,Washington Spirit,2026-08-17 02:00,BMO Stadium,"TNT Sports 3, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Racing Louisville,Seattle Reign,2026-08-19 23:30,Lynn Family Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Houston Dash,Chicago Stars,2026-08-20 01:00,Shell Energy Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,San Diego Wave,Utah Royals,2026-08-22 03:00,Snapdragon Stadium,"TNT Sports 2, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
@@ -211,13 +209,13 @@ SWPL 1,Football,SWPL 1,Scotland,,Hibernian,Glasgow City,2026-09-06 14:00,Meadowb
 Barclays WSL,Football,WSL,England,Tier 1,Manchester City,Birmingham City,2026-09-06 14:30,Joie Stadium,Sky Sports+,,https://www.wslfootball.com/fixtures/wsl
 The FA WNL Cup,Football,FAWNL Cup,England,,Actonians,Ascot United,2026-09-06 15:00,-,,,https://wnl.thefa.com/fixtures
 The FA WNL Cup,Football,FAWNL Cup,England,,Rugby Borough,Peterborough United,2026-09-06 15:00,-,,,https://wnl.thefa.com/fixtures
-NWSL,Football,NWSL,USA,,Denver Summit,Gotham FC,2026-09-06 19:00,Empower Field at Mile High,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
+NWSL,Football,NWSL,USA,,Denver Summit,Gotham FC,2026-09-06 19:00,Empower Field at Mile High,"TNT Sports 3, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Chicago Stars,North Carolina Courage,2026-09-06 21:00,Northwestern Medicine Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-NWSL,Football,NWSL,USA,,Portland Thorns,Washington Spirit,2026-09-06 21:00,Providence Park,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
+NWSL,Football,NWSL,USA,,Portland Thorns,Washington Spirit,2026-09-06 21:00,Providence Park,"TNT Sports 3, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Orlando Pride,Houston Dash,2026-09-07 00:00,Inter&Co Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Seattle Reign,San Diego Wave,2026-09-07 02:00,Lumen Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Racing Louisville,Gotham FC,2026-09-11 23:30,Lynn Family Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-NWSL,Football,NWSL,USA,,Kansas City Current,Orlando Pride,2026-09-12 01:00,CPKC Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
+NWSL,Football,NWSL,USA,,Kansas City Current,Orlando Pride,2026-09-12 01:00,CPKC Stadium,"TNT Sports 3, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Seattle Reign,Bay FC,2026-09-12 01:30,Lumen Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Angel City,Denver Summit,2026-09-12 03:00,BMO Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 Barclays WSL,Football,WSL,England,Tier 1,West Ham United,London City Lionesses,2026-09-12 12:45,Chigwell Construction Stadium,Sky Sports+,,https://www.wslfootball.com/fixtures/wsl
@@ -242,12 +240,11 @@ Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Plym
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Norwich City,Boldmere St Michaels,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,Dartford,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Swindon Town,Fulham,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Peterborough United,Loughborough Lightning,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Stoke City,Hull City,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Cambridge United,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,AFC Bournemouth,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Stoke City,Hull City,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Dulwich Hamlet,Billericay Town,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Middlesbrough,Rugby Borough,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Dulwich Hamlet,Billericay Town,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Bradford City,Thornaby,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Moneyfields,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Chester Le Street Town,Chorley,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
@@ -260,7 +257,6 @@ Division 1 North,Football,Division 1 North,England,Tier 4,Norton & Stockton Anci
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Wycombe Wanderers,Bristol Rovers,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Halifax,Blackburn Rovers,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Bournemouth Sports,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Kidderminster Harriers,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Notts County,Barnsley Women,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Wythenshawe,Sporting Khalsa,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Lye Town,Worcester City Women,2026-09-13 14:00,-,,,https://wnl.thefa.com/fixtures
@@ -269,6 +265,8 @@ Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sutton Coldfield
 Barclays WSL,Football,WSL,England,Tier 1,Arsenal,Crystal Palace,2026-09-13 14:45,Emirates Stadium,BBC Two,,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL2,Football,WSL2,England,Tier 2,Leicester City,Durham,2026-09-13 15:00,King Power Stadium,YouTube,,https://www.wslfootball.com/fixtures/wsl2
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,Oxford United,2026-09-13 15:00,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Kidderminster Harriers,2026-09-13 15:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Peterborough United,Loughborough Lightning,2026-09-13 15:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Stevenage,2026-09-13 15:00,-,,,https://wnl.thefa.com/fixtures
 NWSL,Football,NWSL,USA,,Washington Spirit,Boston Legacy,2026-09-13 18:00,Audi Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 Barclays WSL,Football,WSL,England,Tier 1,Aston Villa,Manchester City,2026-09-13 18:30,Villa Park,Sky Sports,,https://www.wslfootball.com/fixtures/wsl
@@ -292,22 +290,22 @@ Barclays WSL2,Football,WSL2,England,Tier 2,Watford,Bristol City,2026-09-20 14:00
 Barclays WSL2,Football,WSL2,England,Tier 2,Sunderland,Southampton,2026-09-20 14:00,Stadium of Light,YouTube,,https://www.wslfootball.com/fixtures/wsl2
 Barclays WSL2,Football,WSL2,England,Tier 2,Newcastle United,Sheffield United,2026-09-20 14:00,Gateshead International Stadium,YouTube,,https://www.wslfootball.com/fixtures/wsl2
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Bridgwater United,Abingdon United,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Wimbledon,Fulham,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Huddersfield Town,Hull City,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Cambridge United,Milton Keynes Dons,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Bristol Rovers,Moneyfields,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Exeter City,AFC Bournemouth,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Liverpool Feds,Middlesbrough,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,Luton Town,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Ascot United,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,Plymouth Argyle,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Norwich City,Stoke City,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Billericay Town,Saltdean United,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Marine Academy Plymouth,Bournemouth Sports,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,Swindon Town,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Peterborough United,Derby County,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Queens Park Rangers,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Torquay United,Maidenhead United,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,Cheltenham Town,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,West Bromwich Albion,Rugby Borough,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Dulwich Hamlet,London Bees,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Wycombe Wanderers,Gwalia United,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Real Bedford,Portsmouth,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Boldmere St Michaels,Loughborough Lightning,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,AFC Fylde,Chester Le Street Town,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Barnsley Women,Sutton Coldfield Town,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Bradford City,Leeds United,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
@@ -319,12 +317,12 @@ Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sheffield FC,Not
 Division 1 North,Football,Division 1 North,England,Tier 4,York City,Thornaby,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sporting Khalsa,Kidderminster Harriers,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Stockport County,Chorley,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Huddersfield Town,Hull City,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Liverpool Feds,Middlesbrough,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Norwich City,Stoke City,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Peterborough United,Derby County,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,West Bromwich Albion,Rugby Borough,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
-Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Boldmere St Michaels,Loughborough Lightning,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Wimbledon,Fulham,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Exeter City,AFC Bournemouth,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,Plymouth Argyle,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,Swindon Town,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,Cheltenham Town,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Real Bedford,Portsmouth,2026-09-20 14:00,-,,,https://wnl.thefa.com/fixtures
 SWPL 1,Football,SWPL 1,Scotland,,Rangers,Aberdeen,2026-09-20 14:00,Broadwood Stadium,,,https://swpl.uk/match-centre/swpl/
 SWPL 1,Football,SWPL 1,Scotland,,Celtic,Motherwell,2026-09-20 14:00,Kirkintilloch Community Sports Complex,,,https://swpl.uk/match-centre/swpl/
 SWPL 1,Football,SWPL 1,Scotland,,Glasgow City,Partick Thistle,2026-09-20 14:00,Petershill Park,,,https://swpl.uk/match-centre/swpl/
@@ -434,18 +432,18 @@ Barclays WSL2,Football,WSL2,England,Tier 2,Nottingham Forest,Burnley,2026-10-04 
 Barclays WSL2,Football,WSL2,England,Tier 2,Wolverhampton Wanderers,Watford,2026-10-04 14:00,SEAH Stadium,YouTube,,https://www.wslfootball.com/fixtures/wsl2
 Barclays WSL2,Football,WSL2,England,Tier 2,Bristol City,Southampton,2026-10-04 14:00,Ashton Gate,YouTube,,https://www.wslfootball.com/fixtures/wsl2
 Barclays WSL2,Football,WSL2,England,Tier 2,Sunderland,Leicester City,2026-10-04 14:00,Eppleton CW,YouTube,,https://www.wslfootball.com/fixtures/wsl2
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Bournemouth,Oxford United,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Derby County,West Bromwich Albion,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Cheltenham Town,Hashtag United,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Bournemouth,Oxford United,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Hull City,Boldmere St Michaels,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Fulham,Exeter City,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Cheltenham Town,Hashtag United,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Stoke City,Huddersfield Town,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Portsmouth,Lewes,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Fulham,Exeter City,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Middlesbrough,Peterborough United,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Plymouth Argyle,Real Bedford,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Portsmouth,Lewes,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Loughborough Lightning,Norwich City,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Swindon Town,AFC Wimbledon,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Plymouth Argyle,Real Bedford,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Rugby Borough,Liverpool Feds,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Swindon Town,AFC Wimbledon,2026-10-04 14:00,-,,,https://wnl.thefa.com/fixtures
 SWPL 1,Football,SWPL 1,Scotland,,Partick Thistle,Rangers,2026-10-04 14:00,Petershill Park,,,https://swpl.uk/match-centre/swpl/
 SWPL 1,Football,SWPL 1,Scotland,,Celtic,Spartans,2026-10-04 14:00,Kirkintilloch Community Sports Complex,,,https://swpl.uk/match-centre/swpl/
 SWPL 1,Football,SWPL 1,Scotland,,Hibernian,Hearts,2026-10-04 14:00,Meadowbank Stadium,,,https://swpl.uk/match-centre/swpl/
@@ -457,20 +455,20 @@ NWSL,Football,NWSL,USA,,Chicago Stars,Denver Summit,2026-10-04 21:00,Northwester
 NWSL,Football,NWSL,USA,,Houston Dash,Washington Spirit,2026-10-05 00:00,Shell Energy Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 England Women - FIFA 2027 World Cup European Qualifier play-off,Football,England Women,England,,Greece,England,2026-10-09 12:00,TBC,,Kick-off time to be confirmed,https://www.englandfootball.com/england/womens-senior-team/fixtures-results
 Division 1 South East,Football,Division 1 South East,England,Tier 4,London Bees,Billericay Town,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Bournemouth,Fulham,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Derby County,Hull City,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Bournemouth,Fulham,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Actonians,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Cheltenham Town,Plymouth Argyle,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Liverpool Feds,Stoke City,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Cheltenham Town,Plymouth Argyle,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Milton Keynes Dons,Dulwich Hamlet,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Exeter City,AFC Wimbledon,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Peterborough United,Huddersfield Town,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Exeter City,AFC Wimbledon,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,Stevenage,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,Swindon Town,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,West Bromwich Albion,Loughborough Lightning,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,Swindon Town,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Saltdean United,Cambridge United,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,Real Bedford,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Middlesbrough,Norwich City,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,Real Bedford,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,Chatham Town,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Rugby Borough,Boldmere St Michaels,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Abingdon United,Bristol Rovers,2026-10-11 14:00,-,,,https://wnl.thefa.com/fixtures
