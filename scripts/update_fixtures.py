@@ -11,6 +11,7 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 from scripts.registry import classify
+from scripts.scrapers.england_u20_women import scrape_england_u20_women
 from scripts.scrapers.fawnl import scrape_fawnl
 from scripts.scrapers.internationals import scrape_england_women
 from scripts.scrapers.nwsl import scrape_nwsl
@@ -75,6 +76,7 @@ TASKS = [
     ("WSL", scrape_wsl, ["WSL"]),
     ("WSL2", scrape_wsl2, ["WSL2"]),
     ("England Women", scrape_england_women, ["England Women"]),
+    ("England Women U20", scrape_england_u20_women, ["England Women U20"]),
     ("UWCL", scrape_uwcl, ["UWCL"]),
     ("NWSL", scrape_nwsl, ["NWSL"]),
     ("FAWNL", scrape_fawnl, FAWNL_DIVISIONS),

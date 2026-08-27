@@ -10,6 +10,9 @@ from __future__ import annotations
 COMPETITION_REGISTRY: list[tuple[str, str, str, str, str | None]] = [
     ("Barclays WSL2", "Football", "WSL2", "England", "Tier 2"),
     ("Barclays WSL", "Football", "WSL", "England", "Tier 1"),
+    # More specific "England Women U20" prefix must come before the plain
+    # "England Women" one below, which would otherwise match it first.
+    ("England Women U20", "Football", "England Women U20", "England", None),
     ("England Women", "Football", "England Women", "England", None),
     ("UEFA Women's Champions League", "Football", "UWCL", "Europe", None),
     ("NWSL", "Football", "NWSL", "USA", None),

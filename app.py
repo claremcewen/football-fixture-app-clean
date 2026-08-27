@@ -26,6 +26,7 @@ st.set_page_config(
 #         leagues don't all play on the same weekdays every week.
 COMPETITION_DEFAULT_VIEW: dict[str, str] = {
     "England Women": "all",
+    "England Women U20": "all",
     "UWCL": "all",
     "WAFCON": "all",
     "WSL": "next_round",
@@ -83,7 +84,7 @@ ALL_FULL_LIST = "All Fixtures"
 # playing a different opponent each fixture, not a fixed set of clubs.
 # Excluded from Club filtering entirely, and from the Club list even when
 # ALL_FULL_LIST pulls teams from every competition at once.
-NATIONAL_TEAM_COMPETITIONS: set[str] = {"England Women", "WAFCON"}
+NATIONAL_TEAM_COMPETITIONS: set[str] = {"England Women", "England Women U20", "WAFCON"}
 
 # The FA Women's National League (tiers 3-4) - shown in the Competition
 # dropdown as "FAWNL Tier 3/4" rather than bare "Tier 3/4", since the tier
@@ -105,6 +106,7 @@ COMPETITION_COLOR: dict[str, str] = {
     "WSL": "#0F6E56",
     "WSL2": "#185FA5",
     "England Women": "#2E8B57",
+    "England Women U20": "#3E9E8C",
     "UWCL": "#2C7DA0",
     "NWSL": "#1B998B",
     "Northern Premier Division": "#3B6D11",
