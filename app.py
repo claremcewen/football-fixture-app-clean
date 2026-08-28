@@ -964,143 +964,147 @@ def main():
             st.session_state["_pending_reset"] = True
             st.rerun()
 
-    # Filters collapsed by default - Competition/Club/Free-to-air/Watch
-    # platform/date lookup all live here so fixtures are visible right away
-    # on a phone without scrolling past a wall of controls first; still one
-    # tap away when actually needed.
-    with st.expander("Filters"):
-        # Competition is a small hierarchy, not one flat list - FAWNL and
-        # Internationals reveal a second (FAWNL: a third) picker once
-        # chosen; everything else is selectable directly, no extra step.
-        # Boxed to half width (matching the rows below it) rather than
-        # stretching the full expander - on a wide desktop screen a
-        # full-width selectbox put its dropdown arrow uncomfortably far
-        # from the label text.
-        comp_col, _ = st.columns(2)
+    # Competition and Club promoted to always-visible top-level controls
+    # (alongside Today/This weekend/Next 7 Days above) - with the new
+    # Competition hierarchy and the unlocked Club filter, both have become
+    # primary navigation for a wider audience, not secondary refinement
+    # worth hiding behind a click. Free-to-air/Watch platform/date lookup
+    # stay in the collapsed "Filters" section below - genuinely secondary,
+    # rarely-touched controls.
 
-        with comp_col:
-            top = st.selectbox(
-                "Competition",
-                competition_top_options,
-                key="competition_top_main",
-                on_change=apply_competition_change,
+    # Competition is a small hierarchy, not one flat list - FAWNL and
+    # Internationals reveal a second (FAWNL: a third) picker once chosen;
+    # everything else is selectable directly, no extra step. Boxed to half
+    # width rather than stretching full-width - on a wide desktop screen a
+    # full-width selectbox put its dropdown arrow uncomfortably far from
+    # the label text.
+    comp_col, _ = st.columns(2)
+
+    with comp_col:
+        top = st.selectbox(
+            "Competition",
+            competition_top_options,
+            key="competition_top_main",
+            on_change=apply_competition_change,
+        )
+
+    if top == FAWNL_GROUP:
+        tier_col, division_col = st.columns(2)
+
+        with tier_col:
+            tier = st.selectbox(
+                "Tier",
+                list(FAWNL_TIERS.keys()),
+                key="competition_tier_main",
+                on_change=apply_tier_change,
             )
 
-        if top == FAWNL_GROUP:
-            tier_col, division_col = st.columns(2)
+        # "All of Tier N" (see FAWNL_TIERS) sits alongside the specific
+        # divisions as a valid stopping point, not just a fallback.
+        division_options = [f"{ALL_OF_TIER_PREFIX}{tier}"] + FAWNL_TIERS[tier]
+        if st.session_state["competition_division_main"] not in division_options:
+            st.session_state["competition_division_main"] = division_options[0]
 
-            with tier_col:
-                tier = st.selectbox(
-                    "Tier",
-                    list(FAWNL_TIERS.keys()),
-                    key="competition_tier_main",
-                    on_change=apply_tier_change,
-                )
-
-            # "All of Tier N" (see FAWNL_TIERS) sits alongside the specific
-            # divisions as a valid stopping point, not just a fallback.
-            division_options = [f"{ALL_OF_TIER_PREFIX}{tier}"] + FAWNL_TIERS[tier]
-            if st.session_state["competition_division_main"] not in division_options:
-                st.session_state["competition_division_main"] = division_options[0]
-
-            with division_col:
-                st.selectbox(
-                    "Division",
-                    division_options,
-                    key="competition_division_main",
-                    on_change=apply_competition_change,
-                )
-        elif top == INTERNATIONALS_GROUP:
-            # Guards against a stale pick from a team whose fixtures have
-            # since dropped out of the data entirely (e.g. an off-season
-            # senior team with no youth fixtures scheduled either way).
-            if st.session_state["competition_intl_main"] not in present_international_competitions:
-                st.session_state["competition_intl_main"] = present_international_competitions[0]
-
+        with division_col:
             st.selectbox(
-                "Team",
-                present_international_competitions,
-                key="competition_intl_main",
+                "Division",
+                division_options,
+                key="competition_division_main",
                 on_change=apply_competition_change,
             )
+    elif top == INTERNATIONALS_GROUP:
+        # Guards against a stale pick from a team whose fixtures have since
+        # dropped out of the data entirely (e.g. an off-season senior team
+        # with no youth fixtures scheduled either way).
+        if st.session_state["competition_intl_main"] not in present_international_competitions:
+            st.session_state["competition_intl_main"] = present_international_competitions[0]
 
-        # filter_value/comp_label were already resolved above (for the
-        # status line) from the same session-state these widgets just
-        # displayed/confirmed - safe to reuse rather than re-resolving.
-        is_national_team_competition = (
-            isinstance(filter_value, str) and filter_value in NATIONAL_TEAM_COMPETITIONS
+        st.selectbox(
+            "Team",
+            present_international_competitions,
+            key="competition_intl_main",
+            on_change=apply_competition_change,
         )
 
+    # filter_value/comp_label were already resolved above (for the status
+    # line) from the same session-state these widgets just displayed/
+    # confirmed - safe to reuse rather than re-resolving.
+    is_national_team_competition = (
+        isinstance(filter_value, str) and filter_value in NATIONAL_TEAM_COMPETITIONS
+    )
+
+    if is_national_team_competition:
+        competition_scope = df.iloc[0:0]
+    elif filter_value in (ALL_THIS_WEEK, ALL_FULL_LIST):
+        # Every club at once, regardless of which competition (if any) is
+        # narrowed - national teams excluded, since "England"/"Greece" etc
+        # aren't a fixed set of clubs to filter by. Club is never locked
+        # behind picking a competition first, so a club can be searched
+        # for across every competition at once.
+        competition_scope = df[~df["competition_group"].isin(NATIONAL_TEAM_COMPETITIONS)]
+    elif isinstance(filter_value, list):
+        competition_scope = df[df["competition_group"].isin(filter_value)]
+    else:
+        competition_scope = df[df["competition_group"] == filter_value]
+
+    clubs = ["All"] + sorted(
+        pd.unique(
+            pd.concat([competition_scope["home_team"], competition_scope["away_team"]])
+        ).tolist()
+    )
+    if st.session_state["club_main"] not in clubs:
+        st.session_state["club_main"] = "All"
+
+    club_col, _ = st.columns(2)
+
+    with club_col:
         if is_national_team_competition:
-            competition_scope = df.iloc[0:0]
-        elif filter_value in (ALL_THIS_WEEK, ALL_FULL_LIST):
-            # Every club at once, regardless of which competition (if any)
-            # is narrowed - national teams excluded, since "England"/
-            # "Greece" etc aren't a fixed set of clubs to filter by. Club
-            # is never locked behind picking a competition first, so a
-            # club can be searched for across every competition at once.
-            competition_scope = df[~df["competition_group"].isin(NATIONAL_TEAM_COMPETITIONS)]
-        elif isinstance(filter_value, list):
-            competition_scope = df[df["competition_group"].isin(filter_value)]
+            club_label = "Club"
+            club_help = "Not applicable for international fixtures."
+        elif comp_label == "all":
+            club_label = "Club (all leagues)"
+            club_help = None
         else:
-            competition_scope = df[df["competition_group"] == filter_value]
+            club_label = f"Club ({comp_label})"
+            club_help = None
 
-        clubs = ["All"] + sorted(
-            pd.unique(
-                pd.concat([competition_scope["home_team"], competition_scope["away_team"]])
-            ).tolist()
+        club = st.selectbox(
+            club_label,
+            clubs,
+            key="club_main",
+            disabled=is_national_team_competition,
+            help=club_help,
+            on_change=apply_club_change,
         )
-        if st.session_state["club_main"] not in clubs:
-            st.session_state["club_main"] = "All"
 
-        club_col, free_col = st.columns(2)
+    # Filters collapsed by default - Free-to-air/Watch platform/date lookup
+    # are secondary/rare enough to stay tucked away, one tap away when
+    # actually needed, rather than adding more permanent screen weight.
+    with st.expander("Filters"):
+        f1, f2 = st.columns(2)
 
-        with club_col:
-            if is_national_team_competition:
-                club_label = "Club"
-                club_help = "Not applicable for international fixtures."
-            elif comp_label == "all":
-                club_label = "Club (all leagues)"
-                club_help = None
-            else:
-                club_label = f"Club ({comp_label})"
-                club_help = None
-
-            club = st.selectbox(
-                club_label,
-                clubs,
-                key="club_main",
-                disabled=is_national_team_competition,
-                help=club_help,
-                on_change=apply_club_change,
-            )
-
-        with free_col:
+        with f1:
             free_only = st.toggle(
                 "Free-to-air only (UK)",
                 key="free_only_filter",
                 help="BBC, ITV, Channel 4 or YouTube",
             )
 
-        st.markdown("**More filters**")
-        f1, f2 = st.columns(2)
-
-        with f1:
+        with f2:
             platform = st.selectbox("Watch platform", platforms, key="platform_main")
 
-        with f2:
-            min_date = min(unique_dates)
-            max_date = max(unique_dates)
-            default_lookup_date = min(max(today_date, min_date), max_date)
+        min_date = min(unique_dates)
+        max_date = max(unique_dates)
+        default_lookup_date = min(max(today_date, min_date), max_date)
 
-            st.date_input(
-                "Look up a specific date",
-                value=default_lookup_date,
-                min_value=min_date,
-                max_value=max_date,
-                key="date_input_main",
-                on_change=apply_date_lookup,
-            )
+        st.date_input(
+            "Look up a specific date",
+            value=default_lookup_date,
+            min_value=min_date,
+            max_value=max_date,
+            key="date_input_main",
+            on_change=apply_date_lookup,
+        )
 
     st.divider()
 
