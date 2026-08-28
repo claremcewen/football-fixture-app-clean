@@ -199,6 +199,14 @@ h1, h2, h3, .wfg-brand-title {{
 .st-key-header_band [data-testid="stCaptionContainer"] {{
     color: {BRAND_CREAM} !important;
 }}
+/* Streamlit dims every st.caption() to 60% opacity by default - against
+   this theme's white background that washed the brand dark blue out
+   enough to read as "lost" (the "All times shown..." and dropdown-help
+   captions specifically). Raised, not removed, so captions stay visually
+   secondary to headings/body text without disappearing. */
+[data-testid="stCaptionContainer"] {{
+    opacity: 0.85 !important;
+}}
 .wfg-section-heading {{
     font-family: 'Anton', sans-serif;
     font-size: 15px;
