@@ -695,6 +695,16 @@ def apply_tier_change() -> None:
     apply_competition_change()
 
 
+def apply_club_change() -> None:
+    """Picking a specific club means "show me everything for this club" -
+    otherwise whatever narrow date view happened to be active (e.g. the
+    default "This weekend" landing state) would hide most of that club's
+    upcoming fixtures. Leaves the date view alone when clearing back to
+    "All" so that doesn't also yank the user back to a different view."""
+    if st.session_state["club_main"] != "All":
+        st.session_state["view_mode_state"] = "all"
+
+
 def apply_date_lookup() -> None:
     """Fires only on a genuine user pick in the 'look up a specific date'
     widget (Streamlit's on_change), not on the widget's own first-render
@@ -954,12 +964,19 @@ def main():
         # Competition is a small hierarchy, not one flat list - FAWNL and
         # Internationals reveal a second (FAWNL: a third) picker once
         # chosen; everything else is selectable directly, no extra step.
-        top = st.selectbox(
-            "Competition",
-            competition_top_options,
-            key="competition_top_main",
-            on_change=apply_competition_change,
-        )
+        # Boxed to half width (matching the rows below it) rather than
+        # stretching the full expander - on a wide desktop screen a
+        # full-width selectbox put its dropdown arrow uncomfortably far
+        # from the label text.
+        comp_col, _ = st.columns(2)
+
+        with comp_col:
+            top = st.selectbox(
+                "Competition",
+                competition_top_options,
+                key="competition_top_main",
+                on_change=apply_competition_change,
+            )
 
         if top == FAWNL_GROUP:
             tier_col, division_col = st.columns(2)
@@ -1047,6 +1064,7 @@ def main():
                 key="club_main",
                 disabled=is_national_team_competition,
                 help=club_help,
+                on_change=apply_club_change,
             )
 
         with free_col:
