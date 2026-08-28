@@ -207,6 +207,15 @@ h1, h2, h3, .wfg-brand-title {{
 [data-testid="stCaptionContainer"] {{
     opacity: 0.85 !important;
 }}
+/* Competition/Club are the two primary controls now (promoted out of the
+   collapsed Filters section) - bolded so they read as a clear step apart
+   from the caption just above them and the more secondary field labels
+   (Watch platform, Free-to-air) elsewhere on the page, now that the
+   caption's own opacity fix brought it closer to the same visual weight. */
+.st-key-competition_top_main label p,
+.st-key-club_main label p {{
+    font-weight: 700 !important;
+}}
 .wfg-section-heading {{
     font-family: 'Anton', sans-serif;
     font-size: 15px;
@@ -990,19 +999,18 @@ def main():
 
     # Competition is a small hierarchy, not one flat list - FAWNL and
     # Internationals reveal a second (FAWNL: a third) picker once chosen;
-    # everything else is selectable directly, no extra step. Boxed to half
-    # width rather than stretching full-width - on a wide desktop screen a
-    # full-width selectbox put its dropdown arrow uncomfortably far from
-    # the label text.
-    comp_col, _ = st.columns(2)
-
-    with comp_col:
-        top = st.selectbox(
-            "Competition",
-            competition_top_options,
-            key="competition_top_main",
-            on_change=apply_competition_change,
-        )
+    # everything else is selectable directly, no extra step. Fixed width
+    # (not "stretch") rather than filling the container - a full- or
+    # half-width selectbox put its dropdown arrow uncomfortably far from
+    # the label text; sized to comfortably fit the longest option
+    # ("FAWNL - Northern Premier Division"-length labels).
+    top = st.selectbox(
+        "Competition",
+        competition_top_options,
+        key="competition_top_main",
+        on_change=apply_competition_change,
+        width=320,
+    )
 
     if top == FAWNL_GROUP:
         tier_col, division_col = st.columns(2)
@@ -1071,27 +1079,28 @@ def main():
     if st.session_state["club_main"] not in clubs:
         st.session_state["club_main"] = "All"
 
-    club_col, _ = st.columns(2)
+    if is_national_team_competition:
+        club_label = "Club"
+        club_help = "Not applicable for international fixtures."
+    elif comp_label == "all":
+        club_label = "Club (all leagues)"
+        club_help = None
+    else:
+        club_label = f"Club ({comp_label})"
+        club_help = None
 
-    with club_col:
-        if is_national_team_competition:
-            club_label = "Club"
-            club_help = "Not applicable for international fixtures."
-        elif comp_label == "all":
-            club_label = "Club (all leagues)"
-            club_help = None
-        else:
-            club_label = f"Club ({comp_label})"
-            club_help = None
-
-        club = st.selectbox(
-            club_label,
-            clubs,
-            key="club_main",
-            disabled=is_national_team_competition,
-            help=club_help,
-            on_change=apply_club_change,
-        )
+    # Fixed width, matching Competition above - team names are short, so
+    # this comfortably fits the selected value without the same excess
+    # gap to the dropdown arrow a stretched/half-width box had.
+    club = st.selectbox(
+        club_label,
+        clubs,
+        key="club_main",
+        disabled=is_national_team_competition,
+        help=club_help,
+        on_change=apply_club_change,
+        width=320,
+    )
 
     # Filters collapsed by default - Free-to-air/Watch platform/date lookup
     # are secondary/rare enough to stay tucked away, one tap away when
