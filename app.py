@@ -287,6 +287,13 @@ h1, h2, h3, .wfg-brand-title {{
 .st-key-locked_gate iframe {{
     border-radius: 8px;
 }}
+/* The Filters expander's default border reads as invisible against this
+   theme's white secondaryBackgroundColor - without it, the collapsed
+   control looks "free floating" rather than a contained box. */
+.st-key-filters_box {{
+    border: 1px solid {BRAND_MID_BLUE}40;
+    border-radius: 12px;
+}}
 .wfg-subscribe-heading {{
     font-family: 'Anton', sans-serif;
     font-size: 17px;
@@ -1080,31 +1087,36 @@ def main():
     # Filters collapsed by default - Free-to-air/Watch platform/date lookup
     # are secondary/rare enough to stay tucked away, one tap away when
     # actually needed, rather than adding more permanent screen weight.
-    with st.expander("Filters"):
-        f1, f2 = st.columns(2)
+    # Wrapped in a keyed container (not just key= on the expander itself -
+    # that doesn't produce a targetable .st-key- class on this Streamlit
+    # version) so a CSS border can give it a contained "box" look instead
+    # of floating free against the page's white background.
+    with st.container(key="filters_box"):
+        with st.expander("Filters"):
+            f1, f2 = st.columns(2)
 
-        with f1:
-            free_only = st.toggle(
-                "Free-to-air only (UK)",
-                key="free_only_filter",
-                help="BBC, ITV, Channel 4 or YouTube",
+            with f1:
+                free_only = st.toggle(
+                    "Free-to-air only (UK)",
+                    key="free_only_filter",
+                    help="BBC, ITV, Channel 4 or YouTube",
+                )
+
+            with f2:
+                platform = st.selectbox("Watch platform", platforms, key="platform_main")
+
+            min_date = min(unique_dates)
+            max_date = max(unique_dates)
+            default_lookup_date = min(max(today_date, min_date), max_date)
+
+            st.date_input(
+                "Look up a specific date",
+                value=default_lookup_date,
+                min_value=min_date,
+                max_value=max_date,
+                key="date_input_main",
+                on_change=apply_date_lookup,
             )
-
-        with f2:
-            platform = st.selectbox("Watch platform", platforms, key="platform_main")
-
-        min_date = min(unique_dates)
-        max_date = max(unique_dates)
-        default_lookup_date = min(max(today_date, min_date), max_date)
-
-        st.date_input(
-            "Look up a specific date",
-            value=default_lookup_date,
-            min_value=min_date,
-            max_value=max_date,
-            key="date_input_main",
-            on_change=apply_date_lookup,
-        )
 
     st.divider()
 
