@@ -978,6 +978,7 @@ def main():
     # worth hiding behind a click. Free-to-air/Watch platform/date lookup
     # stay in the collapsed "Filters" section below - genuinely secondary,
     # rarely-touched controls.
+    st.caption("Select individual competitions and clubs with the dropdowns.")
 
     # Competition is a small hierarchy, not one flat list - FAWNL and
     # Internationals reveal a second (FAWNL: a third) picker once chosen;
