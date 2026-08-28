@@ -28,7 +28,6 @@ COMPETITION_DEFAULT_VIEW: dict[str, str] = {
     "England Women": "all",
     "England Women U20": "all",
     "UWCL": "all",
-    "WAFCON": "all",
     "WSL": "next_round",
     "WSL2": "next_round",
     "NWSL": "next_round",
@@ -83,21 +82,9 @@ ALL_FULL_LIST = "All Fixtures"
 # Competitions where "Club" doesn't make sense - a single national team
 # playing a different opponent each fixture, not a fixed set of clubs.
 # Excluded from Club filtering entirely, and from the Club list even when
-# ALL_FULL_LIST pulls teams from every competition at once.
-NATIONAL_TEAM_COMPETITIONS: set[str] = {"England Women", "England Women U20", "WAFCON"}
-
-# The FA Women's National League (tiers 3-4) - shown in the Competition
-# dropdown as "FAWNL Tier 3/4" rather than bare "Tier 3/4", since the tier
-# number alone means nothing to anyone who isn't already familiar with the
-# English women's pyramid.
-FAWNL_DIVISION_GROUPS: set[str] = {
-    "Northern Premier Division",
-    "Southern Premier Division",
-    "Division 1 North",
-    "Division 1 Midlands",
-    "Division 1 South East",
-    "Division 1 South West",
-}
+# a broad (not narrowed-to-one-competition) scope pulls teams from every
+# competition at once.
+NATIONAL_TEAM_COMPETITIONS: set[str] = {"England Women", "England Women U20"}
 
 # Small color-coded dot per competition on each match card, purely for
 # visual grouping - an original palette, not official league/team colors
@@ -116,30 +103,47 @@ COMPETITION_COLOR: dict[str, str] = {
     "Division 1 South East": "#085041",
     "Division 1 South West": "#265C7A",
     "FAWNL Cup": "#4C9A2A",
-    "WAFCON": "#0E7C7B",
     "SWPL 1": "#1D6E9E",
     "Subway Players Cup": "#4A8B3B",
 }
 DEFAULT_COMPETITION_COLOR = "#5F5E5A"
 
-# Competition dropdown order - grouped by English pyramid tier rather than
-# alphabetical, so e.g. the four Division 1 regions sit together instead of
-# being scattered by name. Anything not listed here falls back to
-# alphabetical, appended after these.
-COMPETITION_DISPLAY_ORDER = [
+# Competition picker is a small hierarchy, not one flat list - FAWNL_GROUP
+# and INTERNATIONALS_GROUP are containers that reveal a second (FAWNL: a
+# third) picker instead of being directly selectable. Every other entry
+# here is a real competition_group value, selectable immediately.
+FAWNL_GROUP = "FAWNL"
+INTERNATIONALS_GROUP = "Internationals"
+
+TOP_LEVEL_COMPETITIONS = [
     "WSL",
     "WSL2",
-    "Northern Premier Division",
-    "Southern Premier Division",
-    "Division 1 North",
-    "Division 1 Midlands",
-    "Division 1 South East",
-    "Division 1 South West",
+    FAWNL_GROUP,
     "FAWNL Cup",
-    "England Women",
-    "UWCL",
+    "Subway Players Cup",
+    "SWPL 1",
     "NWSL",
+    "UWCL",
+    INTERNATIONALS_GROUP,
 ]
+
+# FAWNL: tier picked first, then a division within that tier (or "All of
+# Tier N" to see the whole tier combined - previously parked as a future
+# enhancement, now a natural fit for this picker).
+FAWNL_TIERS: dict[str, list[str]] = {
+    "Tier 3": ["Northern Premier Division", "Southern Premier Division"],
+    "Tier 4": [
+        "Division 1 North",
+        "Division 1 Midlands",
+        "Division 1 South East",
+        "Division 1 South West",
+    ],
+}
+ALL_OF_TIER_PREFIX = "All of "
+
+# Internationals: flat list of national-team competitions - extend this as
+# more get added (Scotland/Wales/Ireland etc are on the wishlist).
+INTERNATIONAL_COMPETITIONS: list[str] = ["England Women", "England Women U20"]
 
 # She Can Kick It brand identity.
 BRAND_GREEN = "#7ED957"
@@ -428,7 +432,7 @@ def load_data() -> pd.DataFrame:
 
 def filter_data(
     df: pd.DataFrame,
-    competition: str,
+    competition: str | list[str],
     platform: str,
     club: str,
     free_only: bool,
@@ -449,7 +453,10 @@ def filter_data(
         pass
 
     if competition not in (ALL_THIS_WEEK, ALL_FULL_LIST):
-        filtered = filtered[filtered["competition_group"] == competition]
+        # A list means an "All of Tier N" aggregate scope (several
+        # competition_group values at once) rather than a single one.
+        groups = competition if isinstance(competition, list) else [competition]
+        filtered = filtered[filtered["competition_group"].isin(groups)]
 
     if platform != "All":
         filtered = filtered[
@@ -560,10 +567,36 @@ def render_section_heading(text: str) -> None:
     st.markdown(f'<p class="wfg-section-heading">{html.escape(text)}</p>', unsafe_allow_html=True)
 
 
-def competition_display(competition: str) -> str:
-    if competition in (ALL_THIS_WEEK, ALL_FULL_LIST):
-        return "all"
-    return competition
+def resolve_competition_selection() -> tuple:
+    """Reads the (possibly multi-level) Competition picker's current
+    session-state values and returns (filter_value, display_label):
+    - filter_value: what to filter fixtures by - the ALL_THIS_WEEK/
+      ALL_FULL_LIST sentinel, a single competition_group string, or a
+      list of competition_group strings (the "All of Tier N" case).
+    - display_label: a short human-readable label for the status line
+      and Club dropdown ("WSL", "FAWNL - Tier 3", "England Women", "all").
+    Session-state keys for levels below the current top-level pick may
+    not exist yet on a fresh session - .get() with the same defaults
+    used at init time keeps this safe to call before that init block runs.
+    """
+    top = st.session_state.get("competition_top_main", ALL_THIS_WEEK)
+
+    if top in (ALL_THIS_WEEK, ALL_FULL_LIST):
+        return top, "all"
+
+    if top == FAWNL_GROUP:
+        tier = st.session_state.get("competition_tier_main", "Tier 3")
+        all_of_tier_label = f"{ALL_OF_TIER_PREFIX}{tier}"
+        division = st.session_state.get("competition_division_main", all_of_tier_label)
+        if division == all_of_tier_label:
+            return FAWNL_TIERS[tier], f"FAWNL - {tier}"
+        return division, f"FAWNL - {division}"
+
+    if top == INTERNATIONALS_GROUP:
+        team = st.session_state.get("competition_intl_main", INTERNATIONAL_COMPETITIONS[0])
+        return team, team
+
+    return top, top
 
 
 def next_round_window(df: pd.DataFrame, competition: str, today) -> tuple:
@@ -608,35 +641,58 @@ def this_weekend_range(today) -> tuple:
     return max(friday, today), monday
 
 
-def apply_competition_default_view() -> None:
-    """Reset the date view (and the now-stale club filter) whenever the
-    Competition dropdown changes, since a fixed 'next 7 days' makes sense
-    for a weekly league but would often show nothing for a sparse
-    international one, and the Club list is scoped per competition."""
-    competition = st.session_state["competition_main"]
+def apply_competition_change() -> None:
+    """Reset the date view (and the now-stale club filter) whenever any
+    level of the Competition picker changes, since a fixed 'next 7 days'
+    makes sense for a weekly league but would often show nothing for a
+    sparse international one, and the Club list is scoped per competition.
+    Runs as the on_change callback for every level (top/tier/division/
+    team), so it always sees the just-updated session-state values."""
     st.session_state["club_main"] = "All"
     today = pd.Timestamp.today().date()
 
-    if competition == ALL_THIS_WEEK:
+    top = st.session_state["competition_top_main"]
+
+    if top == ALL_THIS_WEEK:
         st.session_state["view_mode_state"] = "range"
         st.session_state["range_start_state"] = today
         st.session_state["range_end_state"] = today + pd.Timedelta(days=6)
         return
 
-    if competition == ALL_FULL_LIST:
+    if top == ALL_FULL_LIST:
         st.session_state["view_mode_state"] = "all"
         return
 
-    mode = COMPETITION_DEFAULT_VIEW.get(competition, DEFAULT_VIEW_FALLBACK)
+    filter_value, _ = resolve_competition_selection()
+
+    if isinstance(filter_value, list):
+        # An "All of Tier N" aggregate spans several divisions at once -
+        # too sparse/uneven across them for "next round" clustering to
+        # mean much, so just show everything upcoming instead.
+        st.session_state["view_mode_state"] = "all"
+        return
+
+    mode = COMPETITION_DEFAULT_VIEW.get(filter_value, DEFAULT_VIEW_FALLBACK)
 
     if mode == "all":
         st.session_state["view_mode_state"] = "all"
         return
 
-    start, end = next_round_window(load_data(), competition, today)
+    start, end = next_round_window(load_data(), filter_value, today)
     st.session_state["view_mode_state"] = "range"
     st.session_state["range_start_state"] = start
     st.session_state["range_end_state"] = end
+
+
+def apply_tier_change() -> None:
+    """The FAWNL division picker's valid options depend on which tier is
+    selected - reset it to that tier's "All of Tier N" default first (a
+    stale division from a previously-selected tier would otherwise not be
+    a valid option and Streamlit would raise), then apply the same
+    date-view reset as any other Competition change."""
+    tier = st.session_state["competition_tier_main"]
+    st.session_state["competition_division_main"] = f"{ALL_OF_TIER_PREFIX}{tier}"
+    apply_competition_change()
 
 
 def apply_date_lookup() -> None:
@@ -750,17 +806,21 @@ def main():
 
     unique_dates = sorted(df["date"].unique())
 
-    known_competitions = df["competition_group"].dropna().unique().tolist()
-    ordered_competitions = [c for c in COMPETITION_DISPLAY_ORDER if c in known_competitions]
-    remaining_competitions = sorted(set(known_competitions) - set(ordered_competitions))
-    competitions = [ALL_THIS_WEEK] + ordered_competitions + remaining_competitions + [ALL_FULL_LIST]
+    known_competitions = set(df["competition_group"].dropna().unique().tolist())
 
-    def format_competition_option(value: str) -> str:
-        if value in (ALL_THIS_WEEK, ALL_FULL_LIST):
-            return value
-        if value in FAWNL_DIVISION_GROUPS:
-            return f"FAWNL — {value}"
-        return value
+    def top_level_has_data(item: str) -> bool:
+        if item == FAWNL_GROUP:
+            return any(d in known_competitions for divs in FAWNL_TIERS.values() for d in divs)
+        if item == INTERNATIONALS_GROUP:
+            return any(c in known_competitions for c in INTERNATIONAL_COMPETITIONS)
+        return item in known_competitions
+
+    present_top_level = [item for item in TOP_LEVEL_COMPETITIONS if top_level_has_data(item)]
+    competition_top_options = [ALL_THIS_WEEK] + present_top_level + [ALL_FULL_LIST]
+    present_international_competitions = [
+        c for c in INTERNATIONAL_COMPETITIONS if c in known_competitions
+    ]
+
     platforms = ["All"] + sorted(
         {
             p.strip()
@@ -778,8 +838,14 @@ def main():
         st.session_state["range_start_state"] = today_date
     if "range_end_state" not in st.session_state:
         st.session_state["range_end_state"] = today_date + pd.Timedelta(days=6)
-    if "competition_main" not in st.session_state:
-        st.session_state["competition_main"] = ALL_THIS_WEEK
+    if "competition_top_main" not in st.session_state:
+        st.session_state["competition_top_main"] = ALL_THIS_WEEK
+    if "competition_tier_main" not in st.session_state:
+        st.session_state["competition_tier_main"] = "Tier 3"
+    if "competition_division_main" not in st.session_state:
+        st.session_state["competition_division_main"] = f"{ALL_OF_TIER_PREFIX}Tier 3"
+    if "competition_intl_main" not in st.session_state and INTERNATIONAL_COMPETITIONS:
+        st.session_state["competition_intl_main"] = INTERNATIONAL_COMPETITIONS[0]
     if "platform_main" not in st.session_state:
         st.session_state["platform_main"] = "All"
     if "club_main" not in st.session_state:
@@ -796,7 +862,7 @@ def main():
     # so clearing filters doesn't also throw away whatever date/view (e.g.
     # "This weekend") you were looking at.
     if st.session_state.pop("_pending_reset", False):
-        st.session_state["competition_main"] = ALL_THIS_WEEK
+        st.session_state["competition_top_main"] = ALL_THIS_WEEK
         st.session_state["platform_main"] = "All"
         st.session_state["club_main"] = "All"
         st.session_state["free_only_filter"] = False
@@ -804,12 +870,15 @@ def main():
     # Read current state up front so the status banner can sit above the
     # controls that drive it (Streamlit reruns top-to-bottom on every
     # interaction, so this reflects whatever was last selected/clicked).
-    competition = st.session_state["competition_main"]
+    # resolve_competition_selection() reads session-state directly, so this
+    # is safe to call before the Competition picker's own widgets render
+    # further down - it reflects whatever the user last picked, same as
+    # reading a plain session-state key did before this was a hierarchy.
+    filter_value, comp_label = resolve_competition_selection()
     view_mode = st.session_state["view_mode_state"]
     selected_date = st.session_state["selected_date_state"]
     range_start = st.session_state["range_start_state"]
     range_end = st.session_state["range_end_state"]
-    comp_label = competition_display(competition)
 
     status_col, action_col = st.columns([3, 1])
 
@@ -832,15 +901,15 @@ def main():
         # ALL_THIS_WEEK competition view - ALL_FULL_LIST in the dropdown
         # covers that case directly, so this button would otherwise
         # duplicate it.
-        if view_mode != "all" and competition != ALL_THIS_WEEK:
+        if view_mode != "all" and filter_value != ALL_THIS_WEEK:
             if st.button("Show all upcoming", key="show_all_upcoming"):
                 st.session_state["view_mode_state"] = "all"
                 st.rerun()
 
     # All kickoff times are UK local time (BST/GMT) - worth stating plainly
-    # now that non-UK-sourced competitions (WAFCON, hosted in Morocco) are
-    # in the mix, since their source publishes times in the host country's
-    # own local time before conversion.
+    # since some sources publish times in a different host country's own
+    # local time before conversion (e.g. WAFCON's Morocco kickoff times,
+    # when that competition is active again).
     st.caption("All times shown in UK time (BST/GMT).")
 
     # Quick actions - Today/This weekend/Next 7 Days/Reset are kept in their
@@ -882,30 +951,74 @@ def main():
     # on a phone without scrolling past a wall of controls first; still one
     # tap away when actually needed.
     with st.expander("Filters"):
-        # Primary controls: competition drives its own sensible default view,
-        # club is scoped to whichever competition is currently selected.
-        c1, c2, c3 = st.columns([1.4, 1.4, 1])
+        # Competition is a small hierarchy, not one flat list - FAWNL and
+        # Internationals reveal a second (FAWNL: a third) picker once
+        # chosen; everything else is selectable directly, no extra step.
+        top = st.selectbox(
+            "Competition",
+            competition_top_options,
+            key="competition_top_main",
+            on_change=apply_competition_change,
+        )
 
-        with c1:
-            competition = st.selectbox(
-                "Competition",
-                competitions,
-                key="competition_main",
-                on_change=apply_competition_default_view,
-                format_func=format_competition_option,
+        if top == FAWNL_GROUP:
+            tier_col, division_col = st.columns(2)
+
+            with tier_col:
+                tier = st.selectbox(
+                    "Tier",
+                    list(FAWNL_TIERS.keys()),
+                    key="competition_tier_main",
+                    on_change=apply_tier_change,
+                )
+
+            # "All of Tier N" (see FAWNL_TIERS) sits alongside the specific
+            # divisions as a valid stopping point, not just a fallback.
+            division_options = [f"{ALL_OF_TIER_PREFIX}{tier}"] + FAWNL_TIERS[tier]
+            if st.session_state["competition_division_main"] not in division_options:
+                st.session_state["competition_division_main"] = division_options[0]
+
+            with division_col:
+                st.selectbox(
+                    "Division",
+                    division_options,
+                    key="competition_division_main",
+                    on_change=apply_competition_change,
+                )
+        elif top == INTERNATIONALS_GROUP:
+            # Guards against a stale pick from a team whose fixtures have
+            # since dropped out of the data entirely (e.g. an off-season
+            # senior team with no youth fixtures scheduled either way).
+            if st.session_state["competition_intl_main"] not in present_international_competitions:
+                st.session_state["competition_intl_main"] = present_international_competitions[0]
+
+            st.selectbox(
+                "Team",
+                present_international_competitions,
+                key="competition_intl_main",
+                on_change=apply_competition_change,
             )
 
-        is_national_team_competition = competition in NATIONAL_TEAM_COMPETITIONS
-        club_disabled = competition == ALL_THIS_WEEK or is_national_team_competition
+        # filter_value/comp_label were already resolved above (for the
+        # status line) from the same session-state these widgets just
+        # displayed/confirmed - safe to reuse rather than re-resolving.
+        is_national_team_competition = (
+            isinstance(filter_value, str) and filter_value in NATIONAL_TEAM_COMPETITIONS
+        )
 
-        if club_disabled:
+        if is_national_team_competition:
             competition_scope = df.iloc[0:0]
-        elif competition == ALL_FULL_LIST:
-            # Every club competition at once - national teams excluded, since
-            # "England"/"Greece" etc aren't a fixed set of clubs to filter by.
+        elif filter_value in (ALL_THIS_WEEK, ALL_FULL_LIST):
+            # Every club at once, regardless of which competition (if any)
+            # is narrowed - national teams excluded, since "England"/
+            # "Greece" etc aren't a fixed set of clubs to filter by. Club
+            # is never locked behind picking a competition first, so a
+            # club can be searched for across every competition at once.
             competition_scope = df[~df["competition_group"].isin(NATIONAL_TEAM_COMPETITIONS)]
+        elif isinstance(filter_value, list):
+            competition_scope = df[df["competition_group"].isin(filter_value)]
         else:
-            competition_scope = df[df["competition_group"] == competition]
+            competition_scope = df[df["competition_group"] == filter_value]
 
         clubs = ["All"] + sorted(
             pd.unique(
@@ -915,29 +1028,28 @@ def main():
         if st.session_state["club_main"] not in clubs:
             st.session_state["club_main"] = "All"
 
-        with c2:
+        club_col, free_col = st.columns(2)
+
+        with club_col:
             if is_national_team_competition:
                 club_label = "Club"
                 club_help = "Not applicable for international fixtures."
-            elif competition == ALL_THIS_WEEK:
-                club_label = "Club"
-                club_help = "Pick a competition first to filter by club."
-            elif competition == ALL_FULL_LIST:
+            elif comp_label == "all":
                 club_label = "Club (all leagues)"
                 club_help = None
             else:
-                club_label = f"Club ({competition})"
+                club_label = f"Club ({comp_label})"
                 club_help = None
 
             club = st.selectbox(
                 club_label,
                 clubs,
                 key="club_main",
-                disabled=club_disabled,
+                disabled=is_national_team_competition,
                 help=club_help,
             )
 
-        with c3:
+        with free_col:
             free_only = st.toggle(
                 "Free-to-air only (UK)",
                 key="free_only_filter",
@@ -968,7 +1080,7 @@ def main():
 
     filtered = filter_data(
         df,
-        competition,
+        filter_value,
         platform,
         club,
         free_only,
@@ -983,7 +1095,7 @@ def main():
 
         next_7_days = filter_data(
             df,
-            competition,
+            filter_value,
             platform,
             club,
             free_only,
