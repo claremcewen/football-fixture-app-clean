@@ -390,7 +390,7 @@ def get_last_updated_text() -> str:
     return "Unknown"
 
 
-@st.cache_data
+@st.cache_data(ttl="1h")
 def load_data() -> pd.DataFrame:
     if not DATA_FILE.exists():
         return pd.DataFrame(
@@ -418,6 +418,14 @@ def load_data() -> pd.DataFrame:
     df["kickoff"] = pd.to_datetime(df["kickoff_uk"], errors="coerce")
     df = df.dropna(subset=["kickoff"]).copy()
     df["date"] = df["kickoff"].dt.date
+
+    # The daily pipeline (scripts/update_fixtures.py) also drops past
+    # fixtures, but only as of whenever its once-a-day scheduled run
+    # happens - a match can still be sitting in the CSV, now in the past,
+    # for however long it's been since that last ran. Re-filtering here
+    # (re-evaluated hourly via the cache ttl above) closes that gap
+    # regardless of the pipeline's own timing.
+    df = df[df["date"] >= pd.Timestamp.today().date()]
     df["time"] = df["kickoff"].dt.strftime("%H:%M")
     df["display_date"] = (
         df["kickoff"].dt.strftime("%A")
