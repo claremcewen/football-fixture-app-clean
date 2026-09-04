@@ -27,14 +27,18 @@
   },
   "FAWNL": {
     "ok": true,
-    "rows": 776
+    "rows": 777
   },
   "SWPL 1": {
     "ok": true,
-    "rows": 75
+    "rows": 74
   },
   "Subway Players Cup": {
     "ok": true,
     "rows": 10
+  },
+  "Adran Premier": {
+    "ok": true,
+    "rows": 56
   }
 }

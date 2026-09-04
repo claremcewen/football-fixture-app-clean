@@ -11,6 +11,7 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 from scripts.registry import classify
+from scripts.scrapers.adran_premier import scrape_adran_premier
 from scripts.scrapers.england_u20_women import scrape_england_u20_women
 from scripts.scrapers.fawnl import scrape_fawnl
 from scripts.scrapers.internationals import scrape_england_women
@@ -84,6 +85,7 @@ TASKS = [
     # quick resume, not a from-scratch source investigation.
     ("SWPL 1", scrape_swpl, ["SWPL 1"]),
     ("Subway Players Cup", scrape_players_cup, ["Subway Players Cup"]),
+    ("Adran Premier", scrape_adran_premier, ["Adran Premier"]),
 ]
 
 

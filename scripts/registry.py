@@ -37,6 +37,8 @@ COMPETITION_REGISTRY: list[tuple[str, str, str, str, str | None]] = [
     # WSL's League Cup, rebranded for 2026/27 - cross-divisional (WSL and
     # WSL2 clubs both enter), so no single tier applies.
     ("Subway Players Cup", "Football", "Subway Players Cup", "England", None),
+    # Wales' top flight - tier is England-pyramid-only, so None here too.
+    ("Adran Premier", "Football", "Adran Premier", "Wales", None),
 ]
 
 

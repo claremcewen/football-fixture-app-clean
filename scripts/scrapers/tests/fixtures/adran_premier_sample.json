@@ -1,0 +1,35 @@
+{
+  "found": 3,
+  "hits": [
+    {
+      "document": {
+        "comet_id": 108451350,
+        "competition": "Genero Adran Premier 26/27",
+        "date": 1788699600000,
+        "theme": "Adran Premier",
+        "title": "Barry Town Utd Women vs. Briton Ferry Llansawel Women | Adran Premier - Phase One 26/27",
+        "url": "https://faw.cymru/adran-leagues/match/barry-town-utd-women-vs-briton-ferry-llansawel-women-adran-premier-phase-one-26-27/"
+      }
+    },
+    {
+      "document": {
+        "comet_id": 108451352,
+        "competition": "Genero Adran Premier 26/27",
+        "date": 1788699600000,
+        "theme": "Adran Premier",
+        "title": "Wrexham AFC Women vs. Aberystwyth Town Women’s FC | Adran Premier - Phase One 26/27",
+        "url": "https://faw.cymru/adran-leagues/match/wrexham-afc-women-vs-aberystwyth-town-womens-fc-adran-premier-phase-one-26-27/"
+      }
+    },
+    {
+      "document": {
+        "comet_id": 108451351,
+        "competition": "Genero Adran Premier 26/27",
+        "date": 1788699600000,
+        "theme": "Adran Premier",
+        "title": "Cardiff Met WFC vs. The New Saints FC Women | Adran Premier - Phase One 26/27",
+        "url": "https://faw.cymru/adran-leagues/match/cardiff-met-wfc-vs-the-new-saints-fc-women-adran-premier-phase-one-26-27/"
+      }
+    }
+  ]
+}

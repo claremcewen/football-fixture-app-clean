@@ -40,6 +40,7 @@ COMPETITION_DEFAULT_VIEW: dict[str, str] = {
     "FAWNL Cup": "next_round",
     "SWPL 1": "next_round",
     "Subway Players Cup": "next_round",
+    "Adran Premier": "next_round",
 }
 DEFAULT_VIEW_FALLBACK = "next_round"
 
@@ -105,6 +106,7 @@ COMPETITION_COLOR: dict[str, str] = {
     "FAWNL Cup": "#4C9A2A",
     "SWPL 1": "#1D6E9E",
     "Subway Players Cup": "#4A8B3B",
+    "Adran Premier": "#146356",
 }
 DEFAULT_COMPETITION_COLOR = "#5F5E5A"
 
@@ -122,6 +124,7 @@ TOP_LEVEL_COMPETITIONS = [
     "FAWNL Cup",
     "Subway Players Cup",
     "SWPL 1",
+    "Adran Premier",
     "NWSL",
     "UWCL",
     INTERNATIONALS_GROUP,
