@@ -87,6 +87,26 @@ ALL_FULL_LIST = "All Fixtures"
 # competition at once.
 NATIONAL_TEAM_COMPETITIONS: set[str] = {"England Women", "England Women U20"}
 
+# These sources have no broadcaster field at all - the scraper never even
+# attempts to capture one, since the source site doesn't publish it. "TBC"
+# implies an announcement is still coming, which is misleading here; these
+# get a distinct "No broadcast info" label instead. Everywhere else, a
+# blank watch_platforms is a genuine per-match "not yet announced" ("TBC"
+# stays accurate for WSL/WSL2/NWSL/UWCL/Subway Players Cup/WAFCON, and now
+# England Women/U20 too - both cross-reference live-footballontv.com's
+# international listing for a real broadcaster by date, same as the others).
+NO_BROADCAST_SOURCE_COMPETITIONS: set[str] = {
+    "Northern Premier Division",
+    "Southern Premier Division",
+    "Division 1 North",
+    "Division 1 Midlands",
+    "Division 1 South East",
+    "Division 1 South West",
+    "FAWNL Cup",
+    "SWPL 1",
+    "Adran Premier",
+}
+
 # Small color-coded dot per competition on each match card, purely for
 # visual grouping - an original palette, not official league/team colors
 # or logos, to stay clear of any branding/trademark concerns.
@@ -527,11 +547,12 @@ def match_card(row: pd.Series) -> None:
     pretty_kickoff = f"{kickoff.strftime('%a')} {kickoff.day} {kickoff.strftime('%b')} · {kickoff.strftime('%H:%M')}"
 
     watch_platforms = row.get("watch_platforms", "")
-    watch_text = (
-        str(watch_platforms)
-        if pd.notna(watch_platforms) and str(watch_platforms).strip()
-        else "TBC"
-    )
+    if pd.notna(watch_platforms) and str(watch_platforms).strip():
+        watch_text = str(watch_platforms)
+    elif row.get("competition_group") in NO_BROADCAST_SOURCE_COMPETITIONS:
+        watch_text = "No broadcast info"
+    else:
+        watch_text = "TBC"
     venue = row.get("venue", "-")
     venue = str(venue) if pd.notna(venue) and str(venue).strip() else "-"
 

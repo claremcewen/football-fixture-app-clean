@@ -5,6 +5,7 @@ from datetime import date
 
 from .common import (
     build_df,
+    build_watch_platform_lookup,
     fetch_lines,
     parse_bst_gmt_time,
     parse_england_date,
@@ -13,6 +14,12 @@ from .common import (
 U20_URL = "https://www.englandfootball.com/england/youth/Womens-U20"
 COMPETITION_LABEL = "England Women U20"
 WORLD_CUP_LABEL = "FIFA U20 Women's World Cup"
+
+# englandfootball.com itself doesn't publish a broadcaster - cross-referenced
+# by date against live-footballontv.com's international listing instead
+# (same source WSL/WSL2/NWSL already use for their own broadcaster info).
+WATCH_PLATFORM_SOURCE_URL = "https://www.live-footballontv.com/live-international-football-on-tv.html"
+WATCH_PLATFORM_TEAM_NAME = "England Women U20"
 
 # Unlike the senior team's page, month headers here sometimes carry a comma
 # ("August, 2026") and sometimes don't ("September 2026") - no consistent
@@ -35,7 +42,8 @@ MAX_CONTEXT_LOOKBACK = 4
 
 def scrape_england_u20_women():
     lines = fetch_lines(U20_URL)
-    return parse_england_u20_lines(lines)
+    watch_lookup = build_watch_platform_lookup(WATCH_PLATFORM_SOURCE_URL, WATCH_PLATFORM_TEAM_NAME)
+    return parse_england_u20_lines(lines, watch_lookup)
 
 
 def _collect_competition_context(lines: list[str], date_index: int) -> list[str]:
@@ -56,7 +64,8 @@ def _collect_competition_context(lines: list[str], date_index: int) -> list[str]
     return context
 
 
-def parse_england_u20_lines(lines):
+def parse_england_u20_lines(lines, watch_lookup: dict | None = None):
+    watch_lookup = watch_lookup or {}
     rows = []
     current_year = None
     today = date.today()
@@ -112,7 +121,7 @@ def parse_england_u20_lines(lines):
                     "away_team": away_team,
                     "kickoff_uk": f"{parsed_date.isoformat()} {kickoff_time}",
                     "venue": venue,
-                    "watch_platforms": "",
+                    "watch_platforms": watch_lookup.get(parsed_date, ""),
                     "watch_notes": "",
                     "official_source": U20_URL,
                 }

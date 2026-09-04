@@ -8,6 +8,7 @@ import pandas as pd
 from .common import (
     ENGLAND_TIME_RE,
     build_df,
+    build_watch_platform_lookup,
     fetch_lines,
     parse_england_date,
     parse_bst_gmt_time,
@@ -17,13 +18,21 @@ ENGLAND_URL = "https://www.englandfootball.com/england/womens-senior-team/fixtur
 COMPETITION_LABEL = "England Women"
 MONTH_YEAR_RE = re.compile(r"^(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})$")
 
+# englandfootball.com itself doesn't publish a broadcaster - cross-referenced
+# by date against live-footballontv.com's international listing instead
+# (same source WSL/WSL2/NWSL already use for their own broadcaster info).
+WATCH_PLATFORM_SOURCE_URL = "https://www.live-footballontv.com/live-international-football-on-tv.html"
+WATCH_PLATFORM_TEAM_NAME = "England Women"
+
 
 def scrape_england_women() -> "pd.DataFrame":
     lines = fetch_lines(ENGLAND_URL)
-    return parse_england_lines(lines)
+    watch_lookup = build_watch_platform_lookup(WATCH_PLATFORM_SOURCE_URL, WATCH_PLATFORM_TEAM_NAME)
+    return parse_england_lines(lines, watch_lookup)
 
 
-def parse_england_lines(lines) -> "pd.DataFrame":
+def parse_england_lines(lines, watch_lookup: dict | None = None) -> "pd.DataFrame":
+    watch_lookup = watch_lookup or {}
     rows = []
 
     current_year = None
@@ -90,7 +99,7 @@ def parse_england_lines(lines) -> "pd.DataFrame":
                     "away_team": away_team,
                     "kickoff_uk": kickoff_uk,
                     "venue": venue,
-                    "watch_platforms": "",
+                    "watch_platforms": watch_lookup.get(parsed_date, ""),
                     "watch_notes": watch_notes,
                     "official_source": ENGLAND_URL,
                 }

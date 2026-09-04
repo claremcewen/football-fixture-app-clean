@@ -106,6 +106,104 @@ def to_uk_iso(date_obj, time_text: str) -> str:
     return f"{date_obj.isoformat()} {parse_us_time(time_text)}"
 
 
+LIVE_FOOTBALL_ON_TV_DATE_RE = re.compile(
+    r"^(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\s+"
+    r"(\d{1,2})(?:st|nd|rd|th)\s+([A-Za-z]+)\s+(\d{4})$",
+    re.IGNORECASE,
+)
+
+# Footer/nav content immediately follows the last fixture in the list, with
+# no time/date line of its own to signal "stop collecting broadcaster
+# lines" - same problem NWSL's own scraper guards against.
+LIVE_FOOTBALL_ON_TV_STOP_MARKERS = {
+    "View Our Women's Football TV Schedule by Team",
+    "Back to Top",
+    "Live Football On TV",
+    "View All Matches",
+    "View by Competition",
+    "View by Team",
+    "View by Channel",
+    "About",
+    "About Us",
+    "My Guide",
+    "Privacy Policy",
+    "Privacy Options",
+    "Contact Us",
+    "Twitter",
+    "Site Map",
+}
+
+
+def _parse_live_football_on_tv_date(line: str):
+    m = LIVE_FOOTBALL_ON_TV_DATE_RE.match(line.strip())
+    if not m:
+        return None
+    day, month_name, year = m.groups()
+    return datetime(int(year), MONTH_NAME_TO_NUMBER[month_name.title()], int(day)).date()
+
+
+def build_watch_platform_lookup(url: str, team_name: str) -> dict:
+    """Scan a live-footballontv.com-style listing page for every match
+    involving team_name (matched exactly against one side of a "Home v
+    Away" line) and return a {date: watch_platforms string} lookup.
+
+    Built for sources (e.g. englandfootball.com) that don't publish
+    broadcaster info themselves - matched by date alone rather than by
+    team name text, since England only plays one match a day and team
+    names are formatted differently between sites ("England" vs "England
+    Women" vs "England Women U20"). A kickoff time of "TBC" is treated the
+    same as a real HH:MM time for the purpose of finding where one match's
+    entry ends and the next begins - international broadcaster
+    announcements often land before the kickoff time itself is confirmed.
+    """
+    lines = fetch_lines(url)
+    return parse_watch_platform_lookup_lines(lines, team_name)
+
+
+def parse_watch_platform_lookup_lines(lines, team_name: str) -> dict:
+    lookup: dict = {}
+
+    current_date = None
+    i = 0
+    while i < len(lines):
+        line = lines[i].strip()
+
+        parsed_date = _parse_live_football_on_tv_date(line)
+        if parsed_date:
+            current_date = parsed_date
+            i += 1
+            continue
+
+        if " v " in line and current_date:
+            home, _, away = line.partition(" v ")
+            if home.strip() == team_name or away.strip() == team_name:
+                # Skip the competition-tag line right after the match line,
+                # then collect broadcaster lines until the next time/TBC/
+                # date/stop-marker entry.
+                j = i + 2
+                platforms = []
+                while j < len(lines):
+                    next_line = lines[j].strip()
+                    if (
+                        re.match(r"^\d{1,2}:\d{2}$", next_line)
+                        or next_line == "TBC"
+                        or _parse_live_football_on_tv_date(next_line)
+                        or next_line in LIVE_FOOTBALL_ON_TV_STOP_MARKERS
+                    ):
+                        break
+                    if next_line:
+                        platforms.append(next_line)
+                    j += 1
+                if platforms:
+                    lookup[current_date] = ", ".join(platforms)
+                i = j
+                continue
+
+        i += 1
+
+    return lookup
+
+
 # wslfootball.com has been observed flipping between two completely
 # different page templates for the same fixtures (twice within a week) -
 # scrapers for that site try both parsers below on the same fetched lines
