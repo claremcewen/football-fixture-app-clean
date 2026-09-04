@@ -153,6 +153,7 @@ BRAND_CREAM = "#FAF2E9"
 BRAND_SITE_URL = "https://shecankickit.com"
 BRAND_SITE_LABEL = "shecankickit.com"
 SUBSTACK_EMBED_URL = "https://theaccidentalcoach.substack.com/embed"
+FEEDBACK_SURVEY_URL = "https://forms.gle/N6vM4be3zcBvf1UU6"
 
 APP_CSS = f"""
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1224,7 +1225,9 @@ def main():
 
     st.markdown(
         f'<div class="wfg-footer"><a href="{BRAND_SITE_URL}" target="_blank">'
-        f"{BRAND_SITE_LABEL}</a></div>",
+        f"{BRAND_SITE_LABEL}</a>"
+        f' &nbsp;&middot;&nbsp; <a href="{FEEDBACK_SURVEY_URL}" target="_blank">'
+        "Got feedback? Tell us here</a></div>",
         unsafe_allow_html=True,
     )
 
