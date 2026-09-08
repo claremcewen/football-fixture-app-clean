@@ -1,17 +1,18 @@
 {
   "WSL": {
     "ok": false,
-    "rows": 173,
-    "note": "scraper returned 10 rows, a >50% drop from 173 previous; treated as a probable partial/broken scrape and kept previous data"
+    "rows": 168,
+    "note": "scraper returned 10 rows, a >50% drop from 168 previous; treated as a probable partial/broken scrape and kept previous data"
   },
   "WSL2": {
     "ok": false,
-    "rows": 125,
-    "note": "scraper returned 10 rows, a >50% drop from 125 previous; treated as a probable partial/broken scrape and kept previous data"
+    "rows": 120,
+    "note": "scraper returned 10 rows, a >50% drop from 120 previous; treated as a probable partial/broken scrape and kept previous data"
   },
   "England Women": {
-    "ok": true,
-    "rows": 2
+    "ok": false,
+    "rows": 2,
+    "note": "scraper returned 0 rows; fell back to previous data"
   },
   "England Women U20": {
     "ok": true,
@@ -19,7 +20,7 @@
   },
   "UWCL": {
     "ok": true,
-    "rows": 18
+    "rows": 54
   },
   "NWSL": {
     "ok": true,
@@ -27,7 +28,7 @@
   },
   "FAWNL": {
     "ok": true,
-    "rows": 735
+    "rows": 734
   },
   "SWPL 1": {
     "ok": true,
