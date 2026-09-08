@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import re
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 
-from .common import build_df, fetch_lines
+from bs4 import BeautifulSoup
+
+from .common import build_df, build_results_df, fetch_html, fetch_lines, to_uk_iso_from_tz
 
 UWCL_URL = "https://www.live-footballontv.com/womens-champions-league-on-tv.html"
 COMPETITION = "UEFA Women's Champions League"
@@ -127,3 +129,89 @@ def parse_uwcl_lines(lines):
         i += 1
 
     return build_df(rows)
+
+
+# uefa.com itself (the obvious source for results) is unreachable from this
+# project's environments - every fetch attempt just times out, no HTTP
+# response at all, not even an error page. Wikipedia's season articles use a
+# standard "footballbox" template (the same one wafcon.py already parses)
+# with a clean score field per match, so results come from there instead.
+# Bumped once a year to that season's article titles - the qualifying
+# rounds happen first (July/Aug), then the league phase (Sept-Dec); the
+# knockout stage gets its own article too, added here once it exists.
+RESULTS_SOURCE_URLS = [
+    "https://en.wikipedia.org/wiki/2026-27_UEFA_Women%27s_Champions_League_qualifying_rounds",
+    "https://en.wikipedia.org/wiki/2026-27_UEFA_Women%27s_Champions_League_league_phase",
+]
+RESULTS_COMPETITION = "UEFA Women's Champions League"
+
+# Wikipedia explicitly documents that unparenthesised kickoff times on these
+# pages are "as listed by UEFA" - UEFA's own broadcast convention, which is
+# Central European (Summer) Time, not each match's own host-country local
+# time (that's what the parenthetical, when present, is for - not needed
+# here since the CET/CEST value converts to UK time correctly on its own).
+UEFA_LISTED_TZ = "Europe/Paris"
+
+# How far back to look for played matches - the daily update_results.py run
+# merges each day's response into the growing results archive, so this only
+# needs to comfortably span the gap between runs, not the whole season.
+RESULTS_WINDOW_DAYS = 21
+
+SCORE_RE = re.compile(r"(\d+)\s*[–-]\s*(\d+)")
+RESULT_TIME_RE = re.compile(r"^(\d{1,2}:\d{2})")
+
+
+def scrape_uwcl_results():
+    rows = []
+    for url in RESULTS_SOURCE_URLS:
+        html = fetch_html(url)
+        rows.extend(_parse_uwcl_results_html(html, url))
+    return build_results_df(rows)
+
+
+def _parse_uwcl_results_html(html: str, source_url: str) -> list[dict]:
+    soup = BeautifulSoup(html, "html.parser")
+    cutoff = date.today() - timedelta(days=RESULTS_WINDOW_DAYS)
+    rows = []
+
+    for box in soup.find_all("div", class_="footballbox"):
+        home = box.select_one("th.fhome span[itemprop=name]")
+        away = box.select_one("th.faway span[itemprop=name]")
+        score_el = box.select_one("th.fscore")
+        date_el = box.select_one(".fdate .bday")
+        time_el = box.select_one(".ftime")
+
+        if not (home and away and score_el and date_el and time_el):
+            continue
+
+        score_match = SCORE_RE.search(score_el.get_text(" ", strip=True))
+        if not score_match:
+            continue  # not yet played ("v"), or a walkover/no-score entry
+
+        try:
+            match_date = datetime.strptime(date_el.get_text(strip=True), "%Y-%m-%d").date()
+        except ValueError:
+            continue
+        if match_date < cutoff or match_date > date.today():
+            continue
+
+        time_match = RESULT_TIME_RE.match(time_el.get_text(strip=True))
+        if not time_match:
+            continue
+
+        venue_el = box.select_one(".fright [itemprop=location] [itemprop=name]")
+
+        rows.append(
+            {
+                "competition": RESULTS_COMPETITION,
+                "home_team": home.get_text(" ", strip=True),
+                "away_team": away.get_text(" ", strip=True),
+                "kickoff_uk": to_uk_iso_from_tz(match_date, time_match.group(1), UEFA_LISTED_TZ),
+                "venue": venue_el.get_text(" ", strip=True) if venue_el else "-",
+                "home_score": int(score_match.group(1)),
+                "away_score": int(score_match.group(2)),
+                "official_source": source_url,
+            }
+        )
+
+    return rows

@@ -3,10 +3,15 @@ from __future__ import annotations
 import re
 from datetime import date
 
-from .common import build_df, fetch_lines
+from .common import build_df, fetch_html, fetch_lines, parse_wikipedia_results_grid
 
 NWSL_URL = "https://www.live-footballontv.com/live-womens-football-on-tv.html"
 COMPETITION = "NWSL"
+
+# live-footballontv.com (used for fixtures above) is a broadcast listing,
+# never scores. See wsl.py's WSL_RESULTS_URL comment for the general
+# approach - same Wikipedia-grid-plus-our-own-fixture-dates fix here.
+NWSL_RESULTS_URL = "https://en.wikipedia.org/wiki/2026_NWSL_season"
 
 DATE_RE = re.compile(
     r"^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\s+(\d{1,2})(?:st|nd|rd|th)\s+([A-Za-z]+)\s+(\d{4})$",
@@ -143,3 +148,29 @@ def parse_nwsl_lines(lines):
         continue
 
     return build_df(rows)
+
+
+# Wikipedia's grid uses each club's full "... FC" name; live-footballontv.com
+# (and this file's own NWSL_TEAM_VENUES above) drops "FC" for every club
+# except the two where it's the only thing distinguishing the name from a
+# bare place name ("Bay", "Gotham") - checked all 16 directly against
+# NWSL_TEAM_VENUES's keys rather than guessing a general stripping rule.
+NWSL_WIKIPEDIA_NAME_MAP = {
+    "Boston Legacy FC": "Boston Legacy",
+    "Chicago Stars FC": "Chicago Stars",
+    "Denver Summit FC": "Denver Summit",
+    "Angel City FC": "Angel City",
+    "Racing Louisville FC": "Racing Louisville",
+    "Portland Thorns FC": "Portland Thorns",
+    "San Diego Wave FC": "San Diego Wave",
+    "Seattle Reign FC": "Seattle Reign",
+}
+
+
+def scrape_nwsl_grid_scores() -> list[dict]:
+    html = fetch_html(NWSL_RESULTS_URL)
+    rows = parse_wikipedia_results_grid(html)
+    for row in rows:
+        row["home_team"] = NWSL_WIKIPEDIA_NAME_MAP.get(row["home_team"], row["home_team"])
+        row["away_team"] = NWSL_WIKIPEDIA_NAME_MAP.get(row["away_team"], row["away_team"])
+    return rows

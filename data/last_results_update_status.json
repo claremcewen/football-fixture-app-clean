@@ -1,0 +1,41 @@
+{
+  "SWPL 1": {
+    "ok": true,
+    "rows": 20
+  },
+  "FAWNL": {
+    "ok": true,
+    "rows": 149
+  },
+  "Adran Premier": {
+    "ok": true,
+    "rows": 4
+  },
+  "England Women": {
+    "ok": true,
+    "rows": 25
+  },
+  "England Women U20": {
+    "ok": true,
+    "rows": 12
+  },
+  "UWCL": {
+    "ok": true,
+    "rows": 18
+  },
+  "WSL": {
+    "ok": true,
+    "rows": 7,
+    "note": "0 score(s) skipped, no known date yet"
+  },
+  "WSL2": {
+    "ok": true,
+    "rows": 6,
+    "note": "0 score(s) skipped, no known date yet"
+  },
+  "NWSL": {
+    "ok": true,
+    "rows": 81,
+    "note": "101 score(s) skipped, no known date yet"
+  }
+}

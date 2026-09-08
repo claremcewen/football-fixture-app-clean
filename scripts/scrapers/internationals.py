@@ -8,6 +8,7 @@ import pandas as pd
 from .common import (
     ENGLAND_TIME_RE,
     build_df,
+    build_results_df,
     build_watch_platform_lookup,
     fetch_lines,
     parse_england_date,
@@ -110,3 +111,74 @@ def parse_england_lines(lines, watch_lookup: dict | None = None) -> "pd.DataFram
         i += 1
 
     return build_df(rows)
+
+
+def scrape_england_women_results() -> "pd.DataFrame":
+    lines = fetch_lines(ENGLAND_URL)
+    return parse_england_results_lines(lines)
+
+
+def parse_england_results_lines(lines) -> "pd.DataFrame":
+    """Parses the site's month-by-month results archive, a different block
+    on the same page from the upcoming-fixtures list above it: each entry
+    is [competition, round/stage, venue, date, "|", time, "Results", team1,
+    score1, team2, score2, ...] with the two teams always listed home-first
+    (matching the order the site itself displays them in)."""
+    rows = []
+    current_year = None
+
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+
+        month_match = MONTH_YEAR_RE.match(line)
+        if month_match:
+            current_year = int(month_match.group(2))
+            i += 1
+            continue
+
+        if current_year is None:
+            i += 1
+            continue
+
+        parsed_date = parse_england_date(line, current_year)
+        if (
+            parsed_date
+            and i + 7 < len(lines)
+            and lines[i + 1] == "|"
+            and parse_bst_gmt_time(lines[i + 2])
+            and lines[i + 3] == "Results"
+        ):
+            kickoff_time = parse_bst_gmt_time(lines[i + 2])
+            home_team = lines[i + 4]
+            home_score_text = lines[i + 5]
+            away_team = lines[i + 6]
+            away_score_text = lines[i + 7]
+
+            if not (home_score_text.isdigit() and away_score_text.isdigit()):
+                i += 1
+                continue
+
+            competition_name = lines[i - 3] if i - 3 >= 0 else COMPETITION_LABEL
+            if MONTH_YEAR_RE.match(competition_name or ""):
+                competition_name = COMPETITION_LABEL
+            venue = lines[i - 1] if i - 1 >= 0 else "-"
+
+            rows.append(
+                {
+                    "competition": f"{COMPETITION_LABEL} - {competition_name}",
+                    "home_team": home_team,
+                    "away_team": away_team,
+                    "kickoff_uk": f"{parsed_date.isoformat()} {kickoff_time}",
+                    "venue": venue,
+                    "home_score": int(home_score_text),
+                    "away_score": int(away_score_text),
+                    "official_source": ENGLAND_URL,
+                }
+            )
+            i += 8
+            continue
+
+        i += 1
+
+    return build_results_df(rows)

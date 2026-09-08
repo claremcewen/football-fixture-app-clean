@@ -8,7 +8,7 @@ from zoneinfo import ZoneInfo
 import pandas as pd
 import requests
 
-from .common import build_df
+from .common import build_df, build_results_df
 
 # The FAW's own sites (faw.cymru) index every fixture across every one of
 # their leagues into a public Typesense search collection - found via the
@@ -28,6 +28,23 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; WomensFootballWatchGuide/1.0)",
     "X-TYPESENSE-API-KEY": API_KEY,
 }
+
+# The Typesense search index (used for fixtures above) has no score fields
+# at all - final scores live on a separate API, keyed by this same search
+# result's comet_id, run by a different vendor (analyticom) behind the
+# scenes for the FAW's live match-centre widget. Not documented/versioned,
+# same trade-off as the other API-backed sources here.
+RESULTS_URL = "https://api-faw.analyticom.de/api/live/match/{comet_id}"
+RESULTS_API_KEY = "ME8w7FdYVJQQJZJp7QwaDy8MRdrspAVqDcrxBeJ3"
+RESULTS_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (compatible; WomensFootballWatchGuide/1.0)",
+    "API_KEY": RESULTS_API_KEY,
+}
+
+# How far back to look for played matches - the daily update_results.py run
+# merges each day's response into the growing results archive, so this only
+# needs to comfortably span the gap between runs, not the whole season.
+RESULTS_WINDOW_DAYS = 21
 
 # Search results carry only a combined "Home vs. Away | Competition" title,
 # not separate team fields - and team names carry a gendered suffix to
@@ -102,3 +119,74 @@ def parse_adran_premier_matches(payload: dict) -> pd.DataFrame:
         )
 
     return build_df(rows)
+
+
+def scrape_adran_premier_results() -> pd.DataFrame:
+    now_ms = int(time.time() * 1000)
+    window_start_ms = now_ms - RESULTS_WINDOW_DAYS * 24 * 60 * 60 * 1000
+    params = {
+        "q": "*",
+        "query_by": "title",
+        "filter_by": f'theme:="{THEME}" && date:>={window_start_ms} && date:<={now_ms}',
+        "sort_by": "date:desc",
+        "per_page": 250,
+    }
+    response = requests.get(SEARCH_URL, headers=HEADERS, params=params, timeout=30)
+    response.raise_for_status()
+    comet_ids = _extract_comet_ids(response.json())
+
+    rows = []
+    for comet_id in comet_ids:
+        match = _fetch_match_result(comet_id)
+        if match:
+            rows.append(match)
+
+    return build_results_df(rows)
+
+
+def _extract_comet_ids(payload: dict) -> list[int]:
+    comet_ids = []
+    for hit in payload.get("hits", []):
+        doc = hit.get("document", {})
+        comet_id = doc.get("comet_id")
+        if comet_id is not None:
+            comet_ids.append(comet_id)
+    return comet_ids
+
+
+def _fetch_match_result(comet_id: int) -> dict | None:
+    url = RESULTS_URL.format(comet_id=comet_id)
+    response = requests.get(url, headers=RESULTS_HEADERS, timeout=30)
+    response.raise_for_status()
+    return parse_adran_premier_result(response.json())
+
+
+def parse_adran_premier_result(match: dict) -> dict | None:
+    if match.get("liveStatus") != "PLAYED":
+        return None
+
+    home_result = match.get("homeTeamResult", {})
+    away_result = match.get("awayTeamResult", {})
+    epoch_ms = match.get("dateTimeUTC")
+    home_team = match.get("homeTeam", {}).get("name")
+    away_team = match.get("awayTeam", {}).get("name")
+
+    if (
+        epoch_ms is None
+        or not home_team
+        or not away_team
+        or "current" not in home_result
+        or "current" not in away_result
+    ):
+        return None
+
+    return {
+        "competition": COMPETITION,
+        "home_team": _clean_team_name(home_team),
+        "away_team": _clean_team_name(away_team),
+        "kickoff_uk": _to_uk_local(epoch_ms),
+        "venue": match.get("facility", {}).get("name", "-"),
+        "home_score": home_result["current"],
+        "away_score": away_result["current"],
+        "official_source": FIXTURES_PAGE_URL,
+    }

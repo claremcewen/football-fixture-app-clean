@@ -6,7 +6,7 @@ from pathlib import Path
 import pandas as pd
 import requests
 
-from .common import build_df
+from .common import build_df, build_results_df
 
 API_URL = "https://api.wnl.thefa.com/matches"
 TENANT_ID = "wnl"
@@ -49,6 +49,11 @@ VENUES_FILE = Path(__file__).resolve().parents[2] / "data" / "fawnl_venues.csv"
 # How far ahead to request fixtures for - comfortably covers a full season
 # (mid-August through early May) regardless of which day this runs.
 FIXTURE_WINDOW_DAYS = 300
+
+# How far back to request results for - the daily update_results.py run
+# merges each day's response into the growing results archive, so this only
+# needs to comfortably span the gap between runs, not the whole season.
+RESULTS_WINDOW_DAYS = 21
 
 
 def load_venue_lookup() -> dict[str, str]:
@@ -108,3 +113,51 @@ def parse_fawnl_matches(data: dict) -> pd.DataFrame:
         )
 
     return build_df(rows)
+
+
+def scrape_fawnl_results() -> pd.DataFrame:
+    today = date.today()
+    params = {
+        "limit": 1000,
+        "period": "Custom",
+        "startDate": (today - timedelta(days=RESULTS_WINDOW_DAYS)).isoformat(),
+        "endDate": today.isoformat(),
+        "sort": "desc",
+        "status": "result",
+        "competition": ",".join(ALL_COMPETITION_IDS.values()),
+    }
+    response = requests.get(API_URL, headers=HEADERS, params=params, timeout=30)
+    response.raise_for_status()
+    return parse_fawnl_results(response.json())
+
+
+def parse_fawnl_results(data: dict) -> pd.DataFrame:
+    rows = []
+
+    for match in data.get("items", []):
+        if match.get("status") != "FullTime":
+            continue
+
+        score = match.get("score", {}).get("current", {})
+        if "home" not in score or "away" not in score:
+            continue
+
+        match_date = match.get("date")
+        match_time = match.get("time")
+        if not match_date or not match_time:
+            continue
+
+        rows.append(
+            {
+                "competition": match["competition"]["name"],
+                "home_team": match["homeTeam"]["fullName"],
+                "away_team": match["awayTeam"]["fullName"],
+                "kickoff_uk": f"{match_date} {match_time}",
+                "venue": match.get("venue") or "-",
+                "home_score": score["home"],
+                "away_score": score["away"],
+                "official_source": FIXTURES_PAGE_URL,
+            }
+        )
+
+    return build_results_df(rows)

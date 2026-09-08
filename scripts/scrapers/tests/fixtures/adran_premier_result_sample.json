@@ -1,0 +1,9 @@
+{
+  "homeTeam": {"name": "Swansea City Women FC"},
+  "awayTeam": {"name": "Cardiff City Women FC"},
+  "homeTeamResult": {"current": 3},
+  "awayTeamResult": {"current": 1},
+  "liveStatus": "PLAYED",
+  "dateTimeUTC": 1788711300000,
+  "facility": {"name": "Garden Village Park"}
+}

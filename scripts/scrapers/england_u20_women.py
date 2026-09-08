@@ -5,6 +5,7 @@ from datetime import date
 
 from .common import (
     build_df,
+    build_results_df,
     build_watch_platform_lookup,
     fetch_lines,
     parse_bst_gmt_time,
@@ -132,3 +133,72 @@ def parse_england_u20_lines(lines, watch_lookup: dict | None = None):
         i += 1
 
     return build_df(rows)
+
+
+def scrape_england_u20_women_results():
+    lines = fetch_lines(U20_URL)
+    return parse_england_u20_results_lines(lines)
+
+
+def parse_england_u20_results_lines(lines):
+    """Parses the same month-by-month results archive as the senior team's
+    page (englandfootball.com shares the template), with the U20 page's own
+    World Cup/Friendly labelling reused from the fixtures parser above."""
+    rows = []
+    current_year = None
+
+    i = 0
+    while i < len(lines):
+        line = lines[i].strip()
+
+        month_match = MONTH_YEAR_RE.match(line)
+        if month_match:
+            current_year = int(month_match.group(2))
+            i += 1
+            continue
+
+        if current_year is None:
+            i += 1
+            continue
+
+        parsed_date = parse_england_date(line, current_year)
+        if (
+            parsed_date
+            and i + 7 < len(lines)
+            and lines[i + 1].strip() == "|"
+            and parse_bst_gmt_time(lines[i + 2].strip())
+            and lines[i + 3].strip() == "Results"
+        ):
+            kickoff_time = parse_bst_gmt_time(lines[i + 2].strip())
+            home_team = lines[i + 4].strip()
+            home_score_text = lines[i + 5].strip()
+            away_team = lines[i + 6].strip()
+            away_score_text = lines[i + 7].strip()
+
+            if not (home_score_text.isdigit() and away_score_text.isdigit()):
+                i += 1
+                continue
+
+            context = _collect_competition_context(lines, i)
+            is_world_cup = any("world cup" in c.lower() for c in context)
+            competition_name = WORLD_CUP_LABEL if is_world_cup else "Friendly"
+            venue = context[-1] if len(context) >= 3 else "-"
+
+            rows.append(
+                {
+                    "competition": f"{COMPETITION_LABEL} - {competition_name}",
+                    "home_team": home_team,
+                    "away_team": away_team,
+                    "kickoff_uk": f"{parsed_date.isoformat()} {kickoff_time}",
+                    "venue": venue,
+                    "home_score": int(home_score_text),
+                    "away_score": int(away_score_text),
+                    "official_source": U20_URL,
+                }
+            )
+            i += 8
+            continue
+
+        i += 1
+
+    return build_results_df(rows)

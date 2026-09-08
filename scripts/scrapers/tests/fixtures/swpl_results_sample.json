@@ -1,0 +1,10 @@
+{
+  "data": [
+    {
+      "data": "{\"matchInfo\":{\"localDate\":\"2026-08-16\",\"localTime\":\"16:10:00\",\"contestant\":[{\"position\":\"home\",\"name\":\"Glasgow City\"},{\"position\":\"away\",\"name\":\"Celtic\"}],\"venue\":{\"shortName\":\"Petershill Park\"}},\"liveData\":{\"matchDetails\":{\"matchStatus\":\"Played\",\"scores\":{\"ft\":{\"home\":1,\"away\":2}}}}}"
+    },
+    {
+      "data": "{\"matchInfo\":{\"localDate\":\"2027-02-21\",\"localTime\":\"14:00:00\",\"contestant\":[{\"position\":\"home\",\"name\":\"Spartans\"},{\"position\":\"away\",\"name\":\"Rangers\"}],\"venue\":{\"shortName\":\"The Vanloq Community Stadium\"}},\"liveData\":{\"matchDetails\":{\"matchStatus\":\"Fixture\"}}}"
+    }
+  ]
+}

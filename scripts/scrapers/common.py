@@ -10,8 +10,16 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
+# Wikipedia's bot policy rejects generic/contactless User-Agents outright
+# (a bare "compatible; ..." string 403s every request, discovered while
+# wiring up a Wikipedia-sourced scraper) - this one identifies the project
+# and gives a real contact, satisfying that policy, and every other source
+# here has been fine with a descriptive UA too.
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; WomensFootballWatchGuide/1.0)"
+    "User-Agent": (
+        "WomensFootballWatchGuide/1.0 "
+        "(https://she-can-kick-it-fixtures.streamlit.app; contact: claremcewen@gmail.com)"
+    )
 }
 
 MONTH_NAME_TO_NUMBER = {
@@ -401,6 +409,89 @@ def build_df(rows: Iterable[dict]) -> pd.DataFrame:
     if df.empty:
         return pd.DataFrame(columns=columns)
     return df
+
+
+# Same shape as build_df's fixture rows, but for played matches: swaps the
+# broadcast-related columns (watch_platforms/watch_notes) for a final score,
+# since neither applies once a match is over.
+RESULTS_COLUMNS = [
+    "competition",
+    "sport",
+    "competition_group",
+    "region",
+    "tier",
+    "home_team",
+    "away_team",
+    "kickoff_uk",
+    "venue",
+    "home_score",
+    "away_score",
+    "official_source",
+]
+
+
+def build_results_df(rows: Iterable[dict]) -> pd.DataFrame:
+    df = pd.DataFrame(list(rows), columns=RESULTS_COLUMNS)
+    if df.empty:
+        return pd.DataFrame(columns=RESULTS_COLUMNS)
+    return df
+
+
+GRID_SCORE_RE = re.compile(r"^(\d+)\s*[–-]\s*(\d+)")
+
+
+def parse_wikipedia_results_grid(html: str) -> list[dict]:
+    """Parses a Wikipedia football season article's "Home \\ Away" results
+    grid (a square matrix, one row and one matching column per team) into
+    score-only rows: {home_team, away_team, home_score, away_score}.
+
+    Deliberately doesn't return a kickoff date - once a match is played,
+    the grid's cell holds its score instead of its originally-scheduled
+    date (which the cell shows for not-yet-played fixtures), so there's no
+    date left to read on this page at all for a played match. Pair this
+    with a source that already knows the date - this project's own daily
+    fixture scrape, captured into a persistent archive before it ages out
+    of the forward-only fixtures file - to recover it.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    rows_out: list[dict] = []
+
+    for table in soup.find_all("table", class_="wikitable"):
+        trs = table.find_all("tr")
+        if not trs:
+            continue
+
+        header_cells = trs[0].find_all(["th", "td"])
+        if not header_cells or "\\" not in header_cells[0].get_text():
+            continue  # not the results grid - some other table on the page
+
+        team_names = [tr.find(["th", "td"]).get_text(strip=True) for tr in trs[1:] if tr.find(["th", "td"])]
+
+        for row_idx, tr in enumerate(trs[1:]):
+            cells = tr.find_all(["th", "td"])
+            if not cells:
+                continue
+            home_team = cells[0].get_text(strip=True)
+
+            for col_idx, cell in enumerate(cells[1:]):
+                if col_idx >= len(team_names):
+                    continue
+                score_match = GRID_SCORE_RE.match(cell.get_text(" ", strip=True))
+                if not score_match:
+                    continue  # blank (self), or still just a future date
+
+                rows_out.append(
+                    {
+                        "home_team": home_team,
+                        "away_team": team_names[col_idx],
+                        "home_score": int(score_match.group(1)),
+                        "away_score": int(score_match.group(2)),
+                    }
+                )
+
+        break  # only one results grid per page
+
+    return rows_out
 
 
 def parse_england_date(date_text: str, current_year: int):

@@ -5,7 +5,7 @@ import json
 import pandas as pd
 import requests
 
-from .common import build_df
+from .common import build_df, build_results_df
 
 API_URL = "https://swpl.uk/wp-json/swpl/v2/match-list"
 FIXTURES_PAGE_URL = "https://swpl.uk/match-centre/swpl/"
@@ -66,3 +66,56 @@ def parse_swpl_matches(payload: dict) -> pd.DataFrame:
         )
 
     return build_df(rows)
+
+
+def scrape_swpl_results() -> pd.DataFrame:
+    # Same endpoint/params as fixtures - the response already includes
+    # played matches, each carrying a liveData.matchDetails block the
+    # fixtures parser above simply ignores.
+    params = {"tmcl": TOURNAMENT_CALENDAR_ID, "comp": COMPETITION_ID, "type": "fixture"}
+    response = requests.get(API_URL, headers=HEADERS, params=params, timeout=30)
+    response.raise_for_status()
+    return parse_swpl_results(response.json())
+
+
+def parse_swpl_results(payload: dict) -> pd.DataFrame:
+    rows = []
+
+    for row in payload.get("data", []):
+        parsed = json.loads(row["data"])
+        match_info = parsed.get("matchInfo", {})
+        live_data = parsed.get("liveData", {})
+        match_details = live_data.get("matchDetails", {})
+
+        if match_details.get("matchStatus") != "Played":
+            continue
+
+        contestants = match_info.get("contestant", [])
+        home = next((c for c in contestants if c.get("position") == "home"), None)
+        away = next((c for c in contestants if c.get("position") == "away"), None)
+
+        match_date = match_info.get("localDate")
+        match_time = match_info.get("localTime")
+        scores = match_details.get("scores", {}).get("ft", {})
+
+        if not (home and away and match_date and match_time):
+            continue
+        if "home" not in scores or "away" not in scores:
+            continue
+
+        venue = match_info.get("venue", {}).get("shortName", "-")
+
+        rows.append(
+            {
+                "competition": COMPETITION,
+                "home_team": home["name"],
+                "away_team": away["name"],
+                "kickoff_uk": f"{match_date} {match_time[:5]}",
+                "venue": venue,
+                "home_score": scores["home"],
+                "away_score": scores["away"],
+                "official_source": FIXTURES_PAGE_URL,
+            }
+        )
+
+    return build_results_df(rows)

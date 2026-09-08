@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "homeTeam": {"fullName": "Rugby Borough"},
+      "awayTeam": {"fullName": "Norwich City"},
+      "competition": {"name": "Northern Premier Division"},
+      "date": "2026-08-30",
+      "time": "15:00",
+      "venue": "Nationwide Windows Arena",
+      "status": "FullTime",
+      "score": {"current": {"home": 1, "away": 0}}
+    },
+    {
+      "homeTeam": {"fullName": "Stevenage"},
+      "awayTeam": {"fullName": "Cambridge United"},
+      "competition": {"name": "The FA WNL Cup"},
+      "date": "2026-09-06",
+      "time": "15:00",
+      "venue": "Herts County Ground",
+      "status": "FullTime",
+      "score": {"current": {"home": 5, "away": 0}}
+    },
+    {
+      "homeTeam": {"fullName": "Postponed FC"},
+      "awayTeam": {"fullName": "Waiting United"},
+      "competition": {"name": "Division 1 South West"},
+      "date": "2026-09-06",
+      "time": "14:00",
+      "venue": "-",
+      "status": "Postponed",
+      "score": {"current": {}}
+    }
+  ]
+}

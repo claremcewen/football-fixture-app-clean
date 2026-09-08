@@ -25,6 +25,19 @@ from scripts.scrapers.wsl2 import scrape_wsl2
 OUTPUT_FILE = ROOT_DIR / "data" / "fixtures_all.csv"
 STATUS_FILE = ROOT_DIR / "data" / "last_update_status.json"
 
+# WSL/WSL2/NWSL results come from a Wikipedia results grid that only ever
+# shows a score, never a date, once a match is played (see
+# scripts/scrapers/common.py's parse_wikipedia_results_grid). This archive
+# is this project's own memory of what date each of those fixtures was
+# originally scheduled for - captured here, from the ordinary daily
+# fixtures scrape, before the match happens and its date info would
+# otherwise be lost. update_results.py reads it back to pair a Wikipedia
+# score with its real kickoff date.
+FIXTURE_DATE_ARCHIVE_FILE = ROOT_DIR / "data" / "fixture_dates_archive.csv"
+FIXTURE_DATE_ARCHIVE_GROUPS = {"WSL", "WSL2", "NWSL"}
+FIXTURE_DATE_ARCHIVE_COLUMNS = ["competition_group", "home_team", "away_team", "kickoff_uk"]
+FIXTURE_DATE_ARCHIVE_KEY = ["competition_group", "home_team", "away_team"]
+
 COLUMNS = [
     "competition",
     "sport",
@@ -155,6 +168,25 @@ def finalize(frames: list[pd.DataFrame]) -> pd.DataFrame:
     return combined[COLUMNS].reset_index(drop=True)
 
 
+def update_fixture_date_archive(combined: pd.DataFrame) -> None:
+    relevant = combined[combined["competition_group"].isin(FIXTURE_DATE_ARCHIVE_GROUPS)]
+    if relevant.empty and not FIXTURE_DATE_ARCHIVE_FILE.exists():
+        return
+
+    relevant = relevant[FIXTURE_DATE_ARCHIVE_COLUMNS]
+    existing = (
+        pd.read_csv(FIXTURE_DATE_ARCHIVE_FILE)
+        if FIXTURE_DATE_ARCHIVE_FILE.exists()
+        else pd.DataFrame(columns=FIXTURE_DATE_ARCHIVE_COLUMNS)
+    )
+
+    merged = pd.concat([existing, relevant], ignore_index=True)
+    merged = merged.drop_duplicates(subset=FIXTURE_DATE_ARCHIVE_KEY, keep="last")
+
+    FIXTURE_DATE_ARCHIVE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    merged.to_csv(FIXTURE_DATE_ARCHIVE_FILE, index=False)
+
+
 def main() -> None:
     print("Updating fixtures...")
 
@@ -214,6 +246,8 @@ def main() -> None:
             }
 
     combined = finalize(frames)
+    update_fixture_date_archive(combined)
+
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     combined.to_csv(OUTPUT_FILE, index=False)
 
