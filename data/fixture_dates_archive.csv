@@ -144,12 +144,12 @@ WSL,Arsenal,Manchester United,2026-09-19 17:30
 NWSL,Orlando Pride,Portland Thorns,2026-09-19 21:00
 NWSL,Denver Summit,Seattle Reign,2026-09-20 01:45
 WSL2,Durham,Nottingham Forest,2026-09-20 12:00
-WSL2,Watford,Bristol City,2026-09-20 14:00
-WSL2,Newcastle United,Sheffield United,2026-09-20 14:00
-WSL2,Sunderland,Southampton,2026-09-20 14:00
 WSL,Brighton & Hove Albion,Aston Villa,2026-09-20 14:00
 WSL,Crystal Palace,Tottenham Hotspur,2026-09-20 14:00
 WSL,West Ham United,Everton,2026-09-20 14:00
+WSL2,Watford,Bristol City,2026-09-20 14:00
+WSL2,Newcastle United,Sheffield United,2026-09-20 14:00
+WSL2,Sunderland,Southampton,2026-09-20 14:00
 WSL2,Leicester City,Ipswich Town,2026-09-20 15:00
 NWSL,Boston Legacy,Houston Dash,2026-09-20 19:00
 NWSL,Chicago Stars,Washington Spirit,2026-09-20 22:00
@@ -165,14 +165,14 @@ NWSL,Kansas City Current,Denver Summit,2026-09-26 17:30
 NWSL,Washington Spirit,Angel City,2026-09-26 23:30
 NWSL,Portland Thorns,Houston Dash,2026-09-27 01:45
 WSL,Manchester United,West Ham United,2026-09-27 13:00
+WSL,Birmingham City,Crystal Palace,2026-09-27 14:00
+WSL,Tottenham Hotspur,Aston Villa,2026-09-27 14:00
+WSL,Liverpool,Everton,2026-09-27 14:00
 WSL2,Sheffield United,Durham,2026-09-27 14:00
 WSL2,Watford,Sunderland,2026-09-27 14:00
 WSL2,Ipswich Town,Wolverhampton Wanderers,2026-09-27 14:00
 WSL2,Newcastle United,Leicester City,2026-09-27 14:00
 WSL2,Southampton,Nottingham Forest,2026-09-27 14:00
-WSL,Birmingham City,Crystal Palace,2026-09-27 14:00
-WSL,Tottenham Hotspur,Aston Villa,2026-09-27 14:00
-WSL,Liverpool,Everton,2026-09-27 14:00
 WSL,Chelsea,Arsenal,2026-09-27 16:30
 NWSL,Bay FC,Orlando Pride,2026-09-27 22:00
 NWSL,Utah Royals,North Carolina,2026-09-28 00:00
@@ -186,12 +186,12 @@ WSL2,Durham,Newcastle United,2026-10-04 12:00
 WSL,Manchester United,Liverpool,2026-10-04 13:00
 WSL,Aston Villa,Crystal Palace,2026-10-04 14:00
 WSL,Everton,Birmingham City,2026-10-04 14:00
-WSL2,Nottingham Forest,Burnley,2026-10-04 14:00
 WSL,West Ham United,Chelsea,2026-10-04 14:00
+WSL,Brighton & Hove Albion,Charlton Athletic,2026-10-04 14:00
+WSL2,Nottingham Forest,Burnley,2026-10-04 14:00
 WSL2,Wolverhampton Wanderers,Watford,2026-10-04 14:00
 WSL2,Sunderland,Leicester City,2026-10-04 14:00
 WSL2,Bristol City,Southampton,2026-10-04 14:00
-WSL,Brighton & Hove Albion,Charlton Athletic,2026-10-04 14:00
 WSL2,Sheffield United,Ipswich Town,2026-10-04 14:00
 WSL,Manchester City,Arsenal,2026-10-04 14:30
 NWSL,Gotham FC,Angel City,2026-10-04 17:00
@@ -223,9 +223,9 @@ WSL,Crystal Palace,Chelsea,2026-10-25 14:00
 WSL,Everton,Aston Villa,2026-10-25 14:00
 WSL,Tottenham Hotspur,Arsenal,2026-10-25 14:00
 WSL,Birmingham City,Charlton Athletic,2026-10-25 14:00
-WSL2,Nottingham Forest,Newcastle United,2026-10-25 14:00
 WSL,Brighton & Hove Albion,West Ham United,2026-10-25 14:00
 WSL,Liverpool,London City Lionesses,2026-10-25 14:00
+WSL2,Nottingham Forest,Newcastle United,2026-10-25 14:00
 WSL2,Burnley,Sheffield United,2026-10-25 14:00
 WSL2,Ipswich Town,Sunderland,2026-10-25 14:00
 WSL2,Bristol City,Wolverhampton Wanderers,2026-10-25 14:00
@@ -240,39 +240,39 @@ WSL,Birmingham City,Tottenham Hotspur,2026-11-01 14:00
 WSL,Brighton & Hove Albion,Crystal Palace,2026-11-01 14:00
 WSL,West Ham United,Liverpool,2026-11-01 14:00
 WSL,London City Lionesses,Manchester City,2026-11-01 14:00
-NWSL,Washington Spirit,Chicago Stars,2026-11-01 22:00
-NWSL,Seattle Reign,Orlando Pride,2026-11-01 22:00
-NWSL,Houston Dash,Portland Thorns,2026-11-01 22:00
-NWSL,Racing Louisville,Kansas City Current,2026-11-01 22:00
-NWSL,North Carolina Courage,Denver Summit,2026-11-01 22:00
 NWSL,Angel City,Boston Legacy,2026-11-01 22:00
-NWSL,Gotham FC,Utah Royals,2026-11-01 22:00
 NWSL,Bay FC,San Diego Wave,2026-11-01 22:00
+NWSL,Gotham FC,Utah Royals,2026-11-01 22:00
+NWSL,Houston Dash,Portland Thorns,2026-11-01 22:00
+NWSL,North Carolina Courage,Denver Summit,2026-11-01 22:00
+NWSL,Racing Louisville,Kansas City Current,2026-11-01 22:00
+NWSL,Seattle Reign,Orlando Pride,2026-11-01 22:00
+NWSL,Washington Spirit,Chicago Stars,2026-11-01 22:00
 WSL,Liverpool,Arsenal,2026-11-07 12:00
 WSL,London City Lionesses,Birmingham City,2026-11-07 12:00
 WSL,Aston Villa,Manchester United,2026-11-07 12:30
 WSL,Manchester City,West Ham United,2026-11-07 12:30
 WSL,Chelsea,Everton,2026-11-07 12:30
 WSL2,Durham,Sunderland,2026-11-08 12:00
+WSL,Crystal Palace,Charlton Athletic,2026-11-08 14:00
+WSL,Tottenham Hotspur,Brighton & Hove Albion,2026-11-08 14:00
 WSL2,Ipswich Town,Bristol City,2026-11-08 14:00
 WSL2,Wolverhampton Wanderers,Nottingham Forest,2026-11-08 14:00
 WSL2,Newcastle United,Burnley,2026-11-08 14:00
 WSL2,Southampton,Sheffield United,2026-11-08 14:00
-WSL,Crystal Palace,Charlton Athletic,2026-11-08 14:00
-WSL,Tottenham Hotspur,Brighton & Hove Albion,2026-11-08 14:00
 WSL2,Leicester City,Watford,2026-11-08 15:00
 WSL,Chelsea,Manchester City,2026-11-14 14:00
 WSL,Arsenal,London City Lionesses,2026-11-14 17:30
 WSL2,Sheffield United,Bristol City,2026-11-14 18:00
 WSL,Manchester United,Crystal Palace,2026-11-15 13:00
+WSL,West Ham United,Charlton Athletic,2026-11-15 14:00
+WSL,Brighton & Hove Albion,Liverpool,2026-11-15 14:00
+WSL,Tottenham Hotspur,Everton,2026-11-15 14:00
 WSL2,Burnley,Southampton,2026-11-15 14:00
 WSL2,Nottingham Forest,Leicester City,2026-11-15 14:00
 WSL2,Watford,Ipswich Town,2026-11-15 14:00
 WSL2,Wolverhampton Wanderers,Durham,2026-11-15 14:00
 WSL2,Sunderland,Newcastle United,2026-11-15 14:00
-WSL,West Ham United,Charlton Athletic,2026-11-15 14:00
-WSL,Brighton & Hove Albion,Liverpool,2026-11-15 14:00
-WSL,Tottenham Hotspur,Everton,2026-11-15 14:00
 WSL,Aston Villa,Birmingham City,2026-11-15 14:30
 WSL,Arsenal,West Ham United,2026-11-22 12:30
 WSL,Manchester City,Tottenham Hotspur,2026-11-22 14:00
@@ -292,13 +292,13 @@ WSL,Brighton & Hove Albion,Chelsea,2026-12-19 12:30
 WSL2,Durham,Ipswich Town,2026-12-20 12:00
 WSL,Charlton Athletic,Arsenal,2026-12-20 12:30
 WSL,Manchester United,Tottenham Hotspur,2026-12-20 13:00
-WSL2,Sheffield United,Sunderland,2026-12-20 14:00
-WSL2,Southampton,Wolverhampton Wanderers,2026-12-20 14:00
-WSL2,Newcastle United,Watford,2026-12-20 14:00
 WSL,Liverpool,Crystal Palace,2026-12-20 14:00
 WSL,West Ham United,Birmingham City,2026-12-20 14:00
 WSL,Manchester City,Everton,2026-12-20 14:00
 WSL,Aston Villa,London City Lionesses,2026-12-20 14:00
+WSL2,Sheffield United,Sunderland,2026-12-20 14:00
+WSL2,Southampton,Wolverhampton Wanderers,2026-12-20 14:00
+WSL2,Newcastle United,Watford,2026-12-20 14:00
 WSL2,Leicester City,Burnley,2026-12-20 15:00
 WSL2,Bristol City,Nottingham Forest,2026-12-21 17:00
 WSL,Arsenal,Brighton & Hove Albion,2027-01-10 12:30
@@ -344,21 +344,16 @@ WSL,Arsenal,Manchester City,2027-01-30 17:30
 WSL,Manchester United,London City Lionesses,2027-01-31 13:00
 WSL,Everton,West Ham United,2027-01-31 14:00
 WSL,Tottenham Hotspur,Chelsea,2027-01-31 14:00
+WSL,Liverpool,Brighton & Hove Albion,2027-01-31 14:00
+WSL,Charlton Athletic,Crystal Palace,2027-01-31 14:00
+WSL,Birmingham City,Aston Villa,2027-01-31 14:00
 WSL2,Bristol City,Sheffield United,2027-01-31 14:00
 WSL2,Nottingham Forest,Ipswich Town,2027-01-31 14:00
 WSL2,Watford,Wolverhampton Wanderers,2027-01-31 14:00
 WSL2,Southampton,Burnley,2027-01-31 14:00
 WSL2,Sunderland,Durham,2027-01-31 14:00
-WSL,Liverpool,Brighton & Hove Albion,2027-01-31 14:00
-WSL,Charlton Athletic,Crystal Palace,2027-01-31 14:00
-WSL,Birmingham City,Aston Villa,2027-01-31 14:00
 WSL2,Leicester City,Newcastle United,2027-01-31 15:00
 WSL2,Ipswich Town,Durham,2027-02-07 13:00
-WSL2,Newcastle United,Nottingham Forest,2027-02-07 14:00
-WSL2,Sheffield United,Southampton,2027-02-07 14:00
-WSL2,Wolverhampton Wanderers,Sunderland,2027-02-07 14:00
-WSL2,Bristol City,Watford,2027-02-07 14:00
-WSL2,Burnley,Leicester City,2027-02-07 14:00
 WSL,Birmingham City,Arsenal,2027-02-07 14:00
 WSL,Tottenham Hotspur,Manchester United,2027-02-07 14:00
 WSL,Aston Villa,Charlton Athletic,2027-02-07 14:00
@@ -366,30 +361,35 @@ WSL,West Ham United,Manchester City,2027-02-07 14:00
 WSL,Chelsea,Liverpool,2027-02-07 14:00
 WSL,Crystal Palace,London City Lionesses,2027-02-07 14:00
 WSL,Brighton & Hove Albion,Everton,2027-02-07 14:00
+WSL2,Newcastle United,Nottingham Forest,2027-02-07 14:00
+WSL2,Sheffield United,Southampton,2027-02-07 14:00
+WSL2,Wolverhampton Wanderers,Sunderland,2027-02-07 14:00
+WSL2,Bristol City,Watford,2027-02-07 14:00
+WSL2,Burnley,Leicester City,2027-02-07 14:00
 WSL2,Watford,Leicester City,2027-02-12 19:30
 WSL2,Sheffield United,Burnley,2027-02-13 18:00
 WSL2,Durham,Wolverhampton Wanderers,2027-02-14 12:00
-WSL2,Southampton,Newcastle United,2027-02-14 14:00
-WSL2,Nottingham Forest,Bristol City,2027-02-14 14:00
 WSL,London City Lionesses,Chelsea,2027-02-14 14:00
 WSL,Charlton Athletic,West Ham United,2027-02-14 14:00
 WSL,Everton,Tottenham Hotspur,2027-02-14 14:00
 WSL,Crystal Palace,Arsenal,2027-02-14 14:00
-WSL2,Sunderland,Ipswich Town,2027-02-14 14:00
 WSL,Liverpool,Birmingham City,2027-02-14 14:00
 WSL,Aston Villa,Brighton & Hove Albion,2027-02-14 14:00
+WSL2,Southampton,Newcastle United,2027-02-14 14:00
+WSL2,Nottingham Forest,Bristol City,2027-02-14 14:00
+WSL2,Sunderland,Ipswich Town,2027-02-14 14:00
 WSL,Manchester City,Manchester United,2027-02-14 14:30
 WSL,Birmingham City,Chelsea,2027-03-13 12:30
 WSL,Arsenal,Tottenham Hotspur,2027-03-13 17:30
 WSL,Manchester United,Charlton Athletic,2027-03-14 13:00
-WSL2,Ipswich Town,Sheffield United,2027-03-14 14:00
-WSL2,Newcastle United,Durham,2027-03-14 14:00
-WSL2,Burnley,Watford,2027-03-14 14:00
-WSL2,Nottingham Forest,Southampton,2027-03-14 14:00
 WSL,Manchester City,Aston Villa,2027-03-14 14:00
 WSL,London City Lionesses,Liverpool,2027-03-14 14:00
 WSL,Everton,Crystal Palace,2027-03-14 14:00
 WSL,West Ham United,Brighton & Hove Albion,2027-03-14 14:00
+WSL2,Ipswich Town,Sheffield United,2027-03-14 14:00
+WSL2,Newcastle United,Durham,2027-03-14 14:00
+WSL2,Burnley,Watford,2027-03-14 14:00
+WSL2,Nottingham Forest,Southampton,2027-03-14 14:00
 WSL2,Bristol City,Sunderland,2027-03-14 14:00
 WSL2,Leicester City,Wolverhampton Wanderers,2027-03-14 15:00
 WSL,Liverpool,Manchester United,2027-03-17 19:00
@@ -418,19 +418,19 @@ WSL,Arsenal,Chelsea,2027-03-28 14:00
 WSL2,Newcastle United,Sunderland,2027-03-28 14:00
 WSL2,Bristol City,Ipswich Town,2027-03-28 14:00
 WSL2,Leicester City,Sheffield United,2027-03-28 15:00
-WSL2,Wolverhampton Wanderers,Southampton,2027-04-04 14:00
 WSL,Tottenham Hotspur,Crystal Palace,2027-04-04 14:00
 WSL,London City Lionesses,Charlton Athletic,2027-04-04 14:00
 WSL,Liverpool,Aston Villa,2027-04-04 14:00
 WSL,Birmingham City,West Ham United,2027-04-04 14:00
 WSL,Brighton & Hove Albion,Manchester City,2027-04-04 14:00
+WSL,Chelsea,Manchester United,2027-04-04 14:00
+WSL,Arsenal,Everton,2027-04-04 14:00
+WSL2,Wolverhampton Wanderers,Southampton,2027-04-04 14:00
 WSL2,Ipswich Town,Leicester City,2027-04-04 14:00
 WSL2,Sunderland,Sheffield United,2027-04-04 14:00
 WSL2,Nottingham Forest,Durham,2027-04-04 14:00
 WSL2,Watford,Newcastle United,2027-04-04 14:00
 WSL2,Bristol City,Burnley,2027-04-04 14:00
-WSL,Chelsea,Manchester United,2027-04-04 14:00
-WSL,Arsenal,Everton,2027-04-04 14:00
 WSL2,Sheffield United,Wolverhampton Wanderers,2027-04-10 18:00
 WSL2,Durham,Watford,2027-04-11 12:00
 WSL2,Burnley,Nottingham Forest,2027-04-11 14:00
@@ -441,13 +441,13 @@ WSL,Everton,Manchester City,2027-04-30 19:00
 WSL2,Watford,Sheffield United,2027-05-01 12:00
 WSL2,Bristol City,Durham,2027-05-01 17:30
 WSL,Manchester United,Birmingham City,2027-05-02 13:00
-WSL2,Ipswich Town,Southampton,2027-05-02 14:00
-WSL2,Nottingham Forest,Wolverhampton Wanderers,2027-05-02 14:00
-WSL2,Burnley,Newcastle United,2027-05-02 14:00
 WSL,West Ham United,Arsenal,2027-05-02 14:00
 WSL,London City Lionesses,Tottenham Hotspur,2027-05-02 14:00
 WSL,Crystal Palace,Brighton & Hove Albion,2027-05-02 14:00
 WSL,Liverpool,Charlton Athletic,2027-05-02 14:00
+WSL2,Ipswich Town,Southampton,2027-05-02 14:00
+WSL2,Nottingham Forest,Wolverhampton Wanderers,2027-05-02 14:00
+WSL2,Burnley,Newcastle United,2027-05-02 14:00
 WSL2,Leicester City,Sunderland,2027-05-02 15:00
 WSL,Aston Villa,Chelsea,2027-05-02 18:00
 WSL,Manchester United,Arsenal,2027-05-09 13:00
