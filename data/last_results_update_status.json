@@ -17,7 +17,7 @@
   },
   "England Women U20": {
     "ok": true,
-    "rows": 13
+    "rows": 14
   },
   "UWCL": {
     "ok": true,
@@ -35,7 +35,7 @@
   },
   "NWSL": {
     "ok": true,
-    "rows": 81,
+    "rows": 84,
     "note": "101 score(s) skipped, no known date yet"
   }
 }
