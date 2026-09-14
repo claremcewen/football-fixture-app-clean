@@ -9,7 +9,7 @@
   },
   "Adran Premier": {
     "ok": true,
-    "rows": 4
+    "rows": 8
   },
   "England Women": {
     "ok": true,
@@ -25,17 +25,17 @@
   },
   "WSL": {
     "ok": true,
-    "rows": 8,
+    "rows": 14,
     "note": "0 score(s) skipped, no known date yet"
   },
   "WSL2": {
     "ok": true,
-    "rows": 7,
+    "rows": 12,
     "note": "0 score(s) skipped, no known date yet"
   },
   "NWSL": {
     "ok": true,
-    "rows": 87,
+    "rows": 89,
     "note": "101 score(s) skipped, no known date yet"
   }
 }
