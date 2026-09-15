@@ -1,13 +1,13 @@
 {
   "WSL": {
     "ok": false,
-    "rows": 167,
-    "note": "scraper returned 10 rows, a >50% drop from 167 previous; treated as a probable partial/broken scrape and kept previous data"
+    "rows": 161,
+    "note": "scraper returned 10 rows, a >50% drop from 161 previous; treated as a probable partial/broken scrape and kept previous data"
   },
   "WSL2": {
     "ok": false,
-    "rows": 119,
-    "note": "scraper returned 10 rows, a >50% drop from 119 previous; treated as a probable partial/broken scrape and kept previous data"
+    "rows": 114,
+    "note": "scraper returned 10 rows, a >50% drop from 114 previous; treated as a probable partial/broken scrape and kept previous data"
   },
   "England Women": {
     "ok": false,
@@ -28,7 +28,7 @@
   },
   "FAWNL": {
     "ok": true,
-    "rows": 698
+    "rows": 700
   },
   "SWPL 1": {
     "ok": true,
