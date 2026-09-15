@@ -47,6 +47,17 @@ def scrape_england_u20_women():
     return parse_england_u20_lines(lines, watch_lookup)
 
 
+def _world_cup_label(context: list[str]) -> str:
+    """During the group stage the site just repeats "... World Cup" twice
+    in a match's context lines (no round given); from the knockout stage
+    onward the second line becomes a genuine round name instead ("Round of
+    16", "Quarter-Final", ...) - appended when it's not itself just another
+    "World Cup" repeat, so group-stage matches keep the plain label."""
+    if len(context) >= 2 and "world cup" not in context[1].lower():
+        return f"{WORLD_CUP_LABEL} - {context[1]}"
+    return WORLD_CUP_LABEL
+
+
 def _collect_competition_context(lines: list[str], date_index: int) -> list[str]:
     context = []
     j = date_index - 1
@@ -112,7 +123,7 @@ def parse_england_u20_lines(lines, watch_lookup: dict | None = None):
 
             context = _collect_competition_context(lines, i)
             is_world_cup = any("world cup" in c.lower() for c in context)
-            competition_name = WORLD_CUP_LABEL if is_world_cup else "Friendly"
+            competition_name = _world_cup_label(context) if is_world_cup else "Friendly"
             venue = context[-1] if len(context) >= 3 else "-"
 
             rows.append(
@@ -181,7 +192,7 @@ def parse_england_u20_results_lines(lines):
 
             context = _collect_competition_context(lines, i)
             is_world_cup = any("world cup" in c.lower() for c in context)
-            competition_name = WORLD_CUP_LABEL if is_world_cup else "Friendly"
+            competition_name = _world_cup_label(context) if is_world_cup else "Friendly"
             venue = context[-1] if len(context) >= 3 else "-"
 
             rows.append(
