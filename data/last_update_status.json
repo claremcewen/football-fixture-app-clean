@@ -15,8 +15,9 @@
     "note": "scraper returned 0 rows; fell back to previous data"
   },
   "England Women U20": {
-    "ok": true,
-    "rows": 1
+    "ok": false,
+    "rows": 1,
+    "note": "scraper returned 0 rows; fell back to previous data"
   },
   "UWCL": {
     "ok": true,
@@ -24,11 +25,11 @@
   },
   "NWSL": {
     "ok": true,
-    "rows": 50
+    "rows": 47
   },
   "FAWNL": {
     "ok": true,
-    "rows": 699
+    "rows": 697
   },
   "SWPL 1": {
     "ok": true,

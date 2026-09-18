@@ -1,10 +1,4 @@
 competition,sport,competition_group,region,tier,home_team,away_team,kickoff_uk,venue,watch_platforms,watch_notes,official_source
-NWSL,Football,NWSL,USA,,Denver Summit,Bay FC,2026-09-17 02:30,Empower Field at Mile High,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-NWSL,Football,NWSL,USA,,Angel City,Seattle Reign,2026-09-17 03:00,BMO Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-England Women U20 - FIFA U20 Women's World Cup - Round of 16,Football,England Women U20,England,,England,Nigeria,2026-09-17 14:00,Stadion Miejski,DAZN,,https://www.englandfootball.com/england/youth/Womens-U20
-The FA WNL Cup,Football,FAWNL Cup,England,,Leafield Athletic,Aston Villa U21,2026-09-17 19:45,-,,,https://wnl.thefa.com/fixtures
-The FA WNL Cup,Football,FAWNL Cup,England,,Loughborough Lightning,Chesterfield,2026-09-17 19:45,-,,,https://wnl.thefa.com/fixtures
-NWSL,Football,NWSL,USA,,North Carolina Courage,Gotham FC,2026-09-17 23:30,First Horizon Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 Barclays WSL,Football,WSL,England,Tier 1,Manchester City,Liverpool,2026-09-18 19:00,Joie Stadium,Sky Sports,,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL2,Football,WSL2,England,Tier 2,Wolverhampton Wanderers,Burnley,2026-09-18 19:30,SEAH Stadium,YouTube,,https://www.wslfootball.com/fixtures/wsl2
 SWPL 1,Football,SWPL 1,Scotland,,Celtic,Motherwell,2026-09-18 19:30,Kirkintilloch Community Sports Complex,,,https://swpl.uk/match-centre/swpl/
@@ -101,6 +95,8 @@ NWSL,Football,NWSL,USA,,Washington Spirit,Angel City,2026-09-26 23:30,Audi Field
 NWSL,Football,NWSL,USA,,Portland Thorns,Houston Dash,2026-09-27 01:45,Providence Park,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 SWPL 1,Football,SWPL 1,Scotland,,Rangers,Celtic,2026-09-27 12:00,Broadwood Stadium,,,https://swpl.uk/match-centre/swpl/
 Barclays WSL,Football,WSL,England,Tier 1,Manchester United,West Ham United,2026-09-27 13:00,Progress With Unity Stadium,Sky Sports+,,https://www.wslfootball.com/fixtures/wsl
+SWPL 1,Football,SWPL 1,Scotland,,Partick Thistle,Montrose,2026-09-27 13:00,WrightKerr Stadium at Firhill,,,https://swpl.uk/match-centre/swpl/
+SWPL 1,Football,SWPL 1,Scotland,,Aberdeen,Hibernian,2026-09-27 13:00,Balmoral Stadium,,,https://swpl.uk/match-centre/swpl/
 Barclays WSL,Football,WSL,England,Tier 1,Birmingham City,Crystal Palace,2026-09-27 14:00,St. Andrew's @ Knightshead Park,Sky Sports+,,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL,Football,WSL,England,Tier 1,Tottenham Hotspur,Aston Villa,2026-09-27 14:00,Brisbane Road,Sky Sports+,,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL,Football,WSL,England,Tier 1,Liverpool,Everton,2026-09-27 14:00,Anfield,Sky Sports,,https://www.wslfootball.com/fixtures/wsl
@@ -152,14 +148,12 @@ The FA WNL Cup,Football,FAWNL Cup,England,,Worcester City Women,Gwalia United,20
 The FA WNL Cup,Football,FAWNL Cup,England,,Billericay Town,Chatham Town,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
 The FA WNL Cup,Football,FAWNL Cup,England,,Dulwich Hamlet,Crystal Palace U21,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
 The FA WNL Cup,Football,FAWNL Cup,England,,Dartford,AFC Wimbledon,2026-09-27 14:00,-,,,https://wnl.thefa.com/fixtures
-SWPL 1,Football,SWPL 1,Scotland,,Partick Thistle,Montrose,2026-09-27 14:00,Petershill Park,,,https://swpl.uk/match-centre/swpl/
-SWPL 1,Football,SWPL 1,Scotland,,Motherwell,Spartans,2026-09-27 14:00,The Bumblebee Stadium,,,https://swpl.uk/match-centre/swpl/
-SWPL 1,Football,SWPL 1,Scotland,,Aberdeen,Hibernian,2026-09-27 14:00,Balmoral Stadium,,,https://swpl.uk/match-centre/swpl/
 Adran Premier,Football,Adran Premier,Wales,,Barry Town Utd,Cardiff City,2026-09-27 14:00,-,,,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 Adran Premier,Football,Adran Premier,Wales,,Briton Ferry Llansawel,Wrexham,2026-09-27 14:00,-,,,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 Adran Premier,Football,Adran Premier,Wales,,Cardiff Met,Aberystwyth Town,2026-09-27 14:00,-,,,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 Adran Premier,Football,Adran Premier,Wales,,The New Saints,Swansea City,2026-09-27 14:00,-,,,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 The FA WNL Cup,Football,FAWNL Cup,England,,Chesterfield,Sheffield FC,2026-09-27 15:00,-,,,https://wnl.thefa.com/fixtures
+SWPL 1,Football,SWPL 1,Scotland,,Motherwell,Spartans,2026-09-27 16:00,The Bumblebee Stadium,,,https://swpl.uk/match-centre/swpl/
 SWPL 1,Football,SWPL 1,Scotland,,Hearts,Glasgow City,2026-09-27 16:10,The Vanloq Community Stadium,,,https://swpl.uk/match-centre/swpl/
 Barclays WSL,Football,WSL,England,Tier 1,Chelsea,Arsenal,2026-09-27 16:30,Stamford Bridge,Sky Sports,,https://www.wslfootball.com/fixtures/wsl
 NWSL,Football,NWSL,USA,,Bay FC,Orlando Pride,2026-09-27 22:00,PayPal Park,"TNT Sports 1, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
