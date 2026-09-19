@@ -15,9 +15,8 @@
     "note": "scraper returned 0 rows; fell back to previous data"
   },
   "England Women U20": {
-    "ok": false,
-    "rows": 1,
-    "note": "scraper returned 0 rows; fell back to previous data"
+    "ok": true,
+    "rows": 0
   },
   "UWCL": {
     "ok": true,
@@ -25,7 +24,7 @@
   },
   "NWSL": {
     "ok": true,
-    "rows": 47
+    "rows": 46
   },
   "FAWNL": {
     "ok": true,
@@ -33,7 +32,7 @@
   },
   "SWPL 1": {
     "ok": true,
-    "rows": 69
+    "rows": 68
   },
   "Subway Players Cup": {
     "ok": true,

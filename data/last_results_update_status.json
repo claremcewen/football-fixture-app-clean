@@ -1,7 +1,7 @@
 {
   "SWPL 1": {
     "ok": true,
-    "rows": 20
+    "rows": 21
   },
   "FAWNL": {
     "ok": true,
@@ -25,17 +25,17 @@
   },
   "WSL": {
     "ok": true,
-    "rows": 14,
+    "rows": 15,
     "note": "0 score(s) skipped, no known date yet"
   },
   "WSL2": {
     "ok": true,
-    "rows": 12,
+    "rows": 13,
     "note": "0 score(s) skipped, no known date yet"
   },
   "NWSL": {
     "ok": true,
-    "rows": 91,
+    "rows": 92,
     "note": "101 score(s) skipped, no known date yet"
   }
 }
