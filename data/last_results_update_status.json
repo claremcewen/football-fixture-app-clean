@@ -1,15 +1,15 @@
 {
   "SWPL 1": {
     "ok": true,
-    "rows": 21
+    "rows": 25
   },
   "FAWNL": {
     "ok": true,
-    "rows": 118
+    "rows": 119
   },
   "Adran Premier": {
     "ok": true,
-    "rows": 8
+    "rows": 12
   },
   "England Women": {
     "ok": true,
@@ -25,17 +25,17 @@
   },
   "WSL": {
     "ok": true,
-    "rows": 18,
+    "rows": 21,
     "note": "0 score(s) skipped, no known date yet"
   },
   "WSL2": {
     "ok": true,
-    "rows": 13,
+    "rows": 18,
     "note": "0 score(s) skipped, no known date yet"
   },
   "NWSL": {
     "ok": true,
-    "rows": 95,
+    "rows": 99,
     "note": "101 score(s) skipped, no known date yet"
   }
 }

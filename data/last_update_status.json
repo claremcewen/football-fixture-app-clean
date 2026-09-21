@@ -1,8 +1,8 @@
 {
   "WSL": {
     "ok": false,
-    "rows": 160,
-    "note": "scraper returned 10 rows, a >50% drop from 160 previous; treated as a probable partial/broken scrape and kept previous data"
+    "rows": 157,
+    "note": "scraper returned 10 rows, a >50% drop from 157 previous; treated as a probable partial/broken scrape and kept previous data"
   },
   "WSL2": {
     "ok": false,
@@ -24,15 +24,15 @@
   },
   "NWSL": {
     "ok": true,
-    "rows": 44
+    "rows": 42
   },
   "FAWNL": {
     "ok": true,
-    "rows": 697
+    "rows": 661
   },
   "SWPL 1": {
     "ok": true,
-    "rows": 68
+    "rows": 64
   },
   "Subway Players Cup": {
     "ok": true,
@@ -40,6 +40,6 @@
   },
   "Adran Premier": {
     "ok": true,
-    "rows": 48
+    "rows": 44
   }
 }
