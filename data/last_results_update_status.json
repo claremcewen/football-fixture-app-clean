@@ -25,13 +25,15 @@
   },
   "WSL": {
     "ok": true,
-    "rows": 21,
-    "note": "0 score(s) skipped, no known date yet"
+    "rows": 21
   },
   "WSL2": {
     "ok": true,
-    "rows": 18,
-    "note": "0 score(s) skipped, no known date yet"
+    "rows": 18
+  },
+  "Subway Players Cup": {
+    "ok": true,
+    "rows": 8
   },
   "NWSL": {
     "ok": true,

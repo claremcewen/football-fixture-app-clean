@@ -1,8 +1,13 @@
 """Local daily fixture digest, opened automatically at PC logon.
 
 Writes today's fixtures (grouped by league) to a text file on the Desktop
-and opens it. On Mondays, also appends a round-up of the weekend just gone
-(WSL / WSL2 / FAWNL / knockout cups / England internationals).
+and opens it. Every day also appends a results round-up: yesterday's
+results, or the full weekend (Sat+Sun) on Mondays since that's one natural
+block - covers WSL / WSL2 / FAWNL / knockout cups / UWCL / England
+internationals. Originally Monday-only, generalised after Wednesday's UWCL
+and Subway Players Cup results turned out to never be shown otherwise -
+those play midweek, so a weekend-only round-up silently skipped them
+every single week.
 """
 from __future__ import annotations
 
@@ -51,8 +56,8 @@ NO_BROADCAST_SOURCE_COMPETITIONS: set[str] = {
     "Adran Premier",
 }
 
-# What counts as "the weekend's action" for the Monday round-up.
-WEEKEND_ROUNDUP_GROUPS: set[str] = {
+# What counts as "recent action" for the daily results round-up.
+RESULTS_ROUNDUP_GROUPS: set[str] = {
     "WSL",
     "WSL2",
     "Northern Premier Division",
@@ -65,6 +70,7 @@ WEEKEND_ROUNDUP_GROUPS: set[str] = {
     "Subway Players Cup",
     "England Women",
     "England Women U20",
+    "UWCL",
 }
 
 
@@ -150,26 +156,33 @@ def build_digest(fixtures_df: pd.DataFrame, results_df: pd.DataFrame, today: dat
     todays = fixtures_df[fixtures_df["date"] == today] if not fixtures_df.empty else fixtures_df
     sections.append(format_grouped(todays))
 
-    if today.weekday() == 0:  # Monday
+    if today.weekday() == 0:  # Monday - the weekend is one natural block
         saturday = today - datetime.timedelta(days=2)
         sunday = today - datetime.timedelta(days=1)
-        weekend = (
-            results_df[
-                results_df["date"].isin([saturday, sunday])
-                & results_df["competition_group"].isin(WEEKEND_ROUNDUP_GROUPS)
-            ]
-            if not results_df.empty
-            else results_df
-        )
-        sections += [
-            "",
-            "=" * 40,
-            "",
-            f"WEEKEND ROUND-UP - {saturday.strftime('%a %d %b')} & {sunday.strftime('%a %d %b')}",
-            "(WSL / WSL2 / FAWNL / knockout cups / England internationals)",
-            "",
-            format_results_grouped(weekend),
+        covered_dates = [saturday, sunday]
+        heading = f"WEEKEND ROUND-UP - {saturday.strftime('%a %d %b')} & {sunday.strftime('%a %d %b')}"
+    else:
+        yesterday = today - datetime.timedelta(days=1)
+        covered_dates = [yesterday]
+        heading = f"RESULTS ROUND-UP - {yesterday.strftime('%A %d %b')}"
+
+    recent = (
+        results_df[
+            results_df["date"].isin(covered_dates)
+            & results_df["competition_group"].isin(RESULTS_ROUNDUP_GROUPS)
         ]
+        if not results_df.empty
+        else results_df
+    )
+    sections += [
+        "",
+        "=" * 40,
+        "",
+        heading,
+        "(WSL / WSL2 / FAWNL / knockout cups / UWCL / England internationals)",
+        "",
+        format_results_grouped(recent),
+    ]
 
     return "\n".join(sections)
 

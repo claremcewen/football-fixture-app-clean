@@ -2,7 +2,17 @@ name: Update fixtures
 
 on:
   schedule:
+    # Four times a day, not once - WSL/WSL2/NWSL results come from a
+    # Wikipedia grid that volunteer editors update whenever they get to it,
+    # not instantly after a match. A single early-morning run can catch a
+    # weekend's results before Wikipedia's been updated at all, leaving the
+    # Monday round-up incomplete until the next day's run finally sees it.
+    # More frequent runs mean whatever this repo's own data is missing gets
+    # caught the same day, as soon as Wikipedia catches up, not 24h later.
     - cron: "15 5 * * *"
+    - cron: "15 11 * * *"
+    - cron: "15 17 * * *"
+    - cron: "15 21 * * *"
   workflow_dispatch:
 
 env:

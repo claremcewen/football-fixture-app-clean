@@ -17,10 +17,11 @@ from scripts.scrapers.england_u20_women import scrape_england_u20_women_results
 from scripts.scrapers.fawnl import scrape_fawnl_results
 from scripts.scrapers.internationals import scrape_england_women_results
 from scripts.scrapers.nwsl import COMPETITION as NWSL_COMPETITION, NWSL_RESULTS_URL, scrape_nwsl_grid_scores
+from scripts.scrapers.players_cup import scrape_players_cup_results
 from scripts.scrapers.swpl import scrape_swpl_results
 from scripts.scrapers.uwcl import scrape_uwcl_results
-from scripts.scrapers.wsl import COMPETITION as WSL_COMPETITION, WSL_RESULTS_URL, scrape_wsl_grid_scores
-from scripts.scrapers.wsl2 import COMPETITION as WSL2_COMPETITION, WSL2_RESULTS_URL, scrape_wsl2_grid_scores
+from scripts.scrapers.wsl import scrape_wsl_results
+from scripts.scrapers.wsl2 import scrape_wsl2_results
 from scripts.update_fixtures import FIXTURE_DATE_ARCHIVE_FILE
 
 OUTPUT_FILE = ROOT_DIR / "data" / "results_all.csv"
@@ -51,11 +52,11 @@ KEY_COLUMNS = ["competition_group", "home_team", "away_team", "kickoff_uk"]
 # folding that window into the permanent archive already on disk, not to
 # replace it.
 #
-# Subway Players Cup still needs a headless browser (its scores only render
-# client-side) or a reverse-engineered private API, AND it has no Wikipedia
-# results coverage either (checked - the "FA Women's League Cup" article is
-# a history/finals page, no per-season match log) - a deliberately separate
-# follow-up, not attempted here.
+# WSL, WSL2 and Subway Players Cup results all come from the same embedded
+# JSON payload their fixtures already do (see scripts/scrapers/common.py's
+# fetch_wslfootball_matches) - self-contained, no separate date lookup
+# needed, so these sit in the regular TASKS list like every non-Wikipedia
+# source below.
 TASKS = [
     ("SWPL 1", scrape_swpl_results, ["SWPL 1"]),
     ("FAWNL", scrape_fawnl_results, [
@@ -71,18 +72,22 @@ TASKS = [
     ("England Women", scrape_england_women_results, ["England Women"]),
     ("England Women U20", scrape_england_u20_women_results, ["England Women U20"]),
     ("UWCL", scrape_uwcl_results, ["UWCL"]),
+    ("WSL", scrape_wsl_results, ["WSL"]),
+    ("WSL2", scrape_wsl2_results, ["WSL2"]),
+    ("Subway Players Cup", scrape_players_cup_results, ["Subway Players Cup"]),
 ]
 
-# WSL, WSL2 and NWSL results come from a Wikipedia results grid that only
-# has a score, never a date, once a match is played - see
+# NWSL results still come from a Wikipedia results grid that only has a
+# score, never a date, once a match is played - see
 # scripts/scrapers/common.py's parse_wikipedia_results_grid docstring. Each
 # entry here is (label, grid-scores scraper, competition display name,
 # competition_group, source url) - resolved against FIXTURE_DATE_ARCHIVE_FILE
 # (this project's own record of when each fixture was originally scheduled,
 # captured daily before update_fixtures.py's forward-only file loses it).
+# WSL/WSL2 used to need this same treatment too, until their own site
+# turned out to embed complete results directly (see TASKS above) -
+# NWSL's own site has no equivalent, so it's still on the Wikipedia route.
 GRID_TASKS = [
-    ("WSL", scrape_wsl_grid_scores, WSL_COMPETITION, "WSL", WSL_RESULTS_URL),
-    ("WSL2", scrape_wsl2_grid_scores, WSL2_COMPETITION, "WSL2", WSL2_RESULTS_URL),
     ("NWSL", scrape_nwsl_grid_scores, NWSL_COMPETITION, "NWSL", NWSL_RESULTS_URL),
 ]
 

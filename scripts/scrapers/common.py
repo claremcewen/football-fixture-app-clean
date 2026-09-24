@@ -1,6 +1,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 from datetime import datetime
 from typing import Iterable
@@ -37,8 +38,6 @@ MONTH_NAME_TO_NUMBER = {
     "December": 12,
 }
 
-DAY_HEADER_RE = re.compile(r"^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([A-Za-z]+) (\d{1,2}), (\d{4})$")
-TIME_RE = re.compile(r"^\d{1,2}:\d{2}\s?[AP]M$", re.I)
 ENGLAND_DATE_RE = re.compile(r"^(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+(\d{1,2})(?:ST|ND|RD|TH)\s+([A-Za-z]{3})$", re.I)
 ENGLAND_TIME_RE = re.compile(r"^\d{1,2}:\d{2}\s+(BST|GMT)$", re.I)
 LINK_REF_RE = re.compile(r"^https?://", re.I)
@@ -92,26 +91,6 @@ def to_uk_iso_from_tz(date_obj, time_text: str, source_tz: str) -> str:
     )
     uk_dt = local_dt.astimezone(ZoneInfo("Europe/London"))
     return uk_dt.strftime("%Y-%m-%d %H:%M")
-
-
-def month_number(name: str) -> int:
-    return MONTH_NAME_TO_NUMBER[name]
-
-
-def parse_day_header(line: str):
-    m = DAY_HEADER_RE.match(line)
-    if not m:
-        return None
-    _, month_name, day, year = m.groups()
-    return datetime(int(year), month_number(month_name), int(day)).date()
-
-
-def parse_us_time(time_text: str) -> str:
-    return datetime.strptime(time_text.upper().replace(" ", ""), "%I:%M%p").strftime("%H:%M")
-
-
-def to_uk_iso(date_obj, time_text: str) -> str:
-    return f"{date_obj.isoformat()} {parse_us_time(time_text)}"
 
 
 LIVE_FOOTBALL_ON_TV_DATE_RE = re.compile(
@@ -212,182 +191,155 @@ def parse_watch_platform_lookup_lines(lines, team_name: str) -> dict:
     return lookup
 
 
-# wslfootball.com has been observed flipping between two completely
-# different page templates for the same fixtures (twice within a week) -
-# scrapers for that site try both parsers below on the same fetched lines
-# and use whichever one actually finds matches, rather than assuming
-# either template is stable.
-
-WSL_STOP_MARKERS = {
-    "© 2025 Women's Super League Football Ltd. All rights reserved.",
-    "Back to top",
-    "Privacy Settings & Cookie Management",
-}
-
-WSL_SHORT_DAY_HEADER_RE = re.compile(r"^(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+(\d{1,2})\s+([A-Za-z]{3})$")
-WSL_TIME_24H_RE = re.compile(r"^\d{1,2}:\d{2}$")
-WSL_TRAILING_YEAR_RE = re.compile(r"(\d{4})\s*$")
-
-# Optional filler line in the legacy template, between the away team's code
-# and "Tickets" - present for some matches, absent for others.
-WSL_FILLER_LINES = {"Stay nearby", "Stay Nearby"}
+# wslfootball.com's visible fixture/results text is client-rendered and has
+# flipped between incompatible templates before (a real, previously-hit
+# reliability problem) - but the *full* match data for the whole season
+# (every round, fixtures and finished results together, with score,
+# broadcaster and venue) ships as plain JSON in the page's initial server
+# response, embedded inside Next.js's streaming payload
+# (`self.__next_f.push(...)` script calls). A naive text-scrape of the
+# rendered page never saw this - it's not in the visible text, just script
+# content - but it's genuinely more complete and reliable once extracted,
+# and immune to the site's visible-template flips since it never depended
+# on that layout at all.
+WSLFOOTBALL_CHUNK_RE = re.compile(r"self\.__next_f\.push\(\[1,(\".*?\")\]\)", re.DOTALL)
+WSLFOOTBALL_MATCH_ID_RE = re.compile(r'"matchId":"wpll::Football_Match::([a-f0-9]+)"')
 
 
-def _parse_wsl_short_day(line: str, year: int):
-    m = WSL_SHORT_DAY_HEADER_RE.match(line.strip())
-    if not m:
-        return None
-    _, day, month_abbrev = m.groups()
-    month_num = datetime.strptime(month_abbrev.title(), "%b").month
-    return datetime(year, month_num, int(day)).date()
+def _extract_json_object(text: str, start_idx: int) -> str | None:
+    """Given the index of a JSON object's opening '{', returns the full
+    balanced object as a string - a plain non-greedy regex can't do this
+    correctly since nested objects (team info, editorial data) have their
+    own braces; this tracks string state so quoted braces don't throw off
+    the depth count."""
+    depth = 0
+    in_string = False
+    escape = False
+    for i in range(start_idx, len(text)):
+        ch = text[i]
+        if in_string:
+            if escape:
+                escape = False
+            elif ch == "\\":
+                escape = True
+            elif ch == '"':
+                in_string = False
+        else:
+            if ch == '"':
+                in_string = True
+            elif ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0:
+                    return text[start_idx : i + 1]
+    return None
 
 
-def parse_wslfootball_new_format(lines: list[str], competition: str, source_url: str) -> pd.DataFrame:
-    """The redesigned wslfootball.com template: 24-hour times, each team's
-    name repeated 3x (full/short/code), and short per-match date headers
-    (e.g. "Fri 4 Sep") with the year only on the enclosing "Matchweek N"
-    block's own date-range line."""
-    rows = []
-    current_year = datetime.today().year
-    i = 0
+def fetch_wslfootball_matches(url: str) -> list[dict]:
+    """Fetches a wslfootball.com fixtures page and returns every match
+    object embedded in it (the whole season, fixtures and results both) as
+    raw dicts - see the module comment above for why this beats scraping
+    the rendered page's visible text."""
+    html = fetch_html(url)
 
-    while i < len(lines):
-        line = lines[i].strip()
+    chunks = WSLFOOTBALL_CHUNK_RE.findall(html)
+    full_text = "".join(json.loads(chunk) for chunk in chunks)
 
-        if line in WSL_STOP_MARKERS:
-            break
-
-        if line.startswith("Matchweek"):
-            if i + 1 < len(lines):
-                m = WSL_TRAILING_YEAR_RE.search(lines[i + 1].strip())
-                if m:
-                    current_year = int(m.group(1))
-            i += 1
+    matches = []
+    seen_ids = set()
+    for match in WSLFOOTBALL_MATCH_ID_RE.finditer(full_text):
+        match_id = match.group(1)
+        if match_id in seen_ids:
             continue
 
-        match_date = _parse_wsl_short_day(line, current_year)
-        if (
-            match_date
-            and i + 7 < len(lines)
-            and WSL_TIME_24H_RE.match(lines[i + 4].strip())
-        ):
-            home_team = lines[i + 1].strip()
-            time_text = lines[i + 4].strip()
-            away_team = lines[i + 5].strip()
-
-            j = i + 8
-            gap_lines = []
-            while j < len(lines) and lines[j].strip() != "Tickets":
-                gap_lines.append(lines[j].strip())
-                j += 1
-                if len(gap_lines) > 5:
+        # Walk backward from the matchId key to the '{' that opens its
+        # enclosing match object, tracking brace depth so an earlier nested
+        # object (e.g. from the previous match) isn't mistaken for the start.
+        depth = 0
+        start = match.start()
+        while start > 0:
+            if full_text[start] == "}":
+                depth += 1
+            elif full_text[start] == "{":
+                if depth == 0:
                     break
+                depth -= 1
+            start -= 1
 
-            venue = gap_lines[0] if gap_lines else "-"
-            watch_platforms = gap_lines[1:]
-
-            rows.append(
-                {
-                    "competition": competition,
-                    "home_team": home_team,
-                    "away_team": away_team,
-                    "kickoff_uk": f"{match_date.isoformat()} {time_text}",
-                    "venue": venue,
-                    "watch_platforms": ", ".join(watch_platforms),
-                    "watch_notes": "",
-                    "official_source": source_url,
-                }
-            )
-
-            i = j + 1
+        obj_text = _extract_json_object(full_text, start)
+        if not obj_text:
             continue
+        try:
+            obj = json.loads(obj_text)
+        except json.JSONDecodeError:
+            continue
+        if "home" in obj and "away" in obj:
+            matches.append(obj)
+            seen_ids.add(match_id)
 
-        i += 1
-
-    return build_df(rows)
+    return matches
 
 
-def parse_wslfootball_legacy_format(lines: list[str], competition: str, source_url: str) -> pd.DataFrame:
-    """wslfootball.com's older template: comma-dated day headers, a
-    "sport-match-details-for"/"VS" marker pair, and 12-hour AM/PM times."""
+def _wslfootball_broadcaster(match: dict) -> str:
+    broadcasters = match.get("editorial", {}).get("broadcasters", {}) or {}
+    # "Name|https://url" - only the name is ever shown elsewhere in this app.
+    return broadcasters.get("broadcasterNational1", "").split("|", 1)[0].strip()
+
+
+def _wslfootball_kickoff_uk(match: dict) -> str | None:
+    # matchDateLocal is already UK local time (localTimeUtcOffset confirms
+    # it), unlike matchDateUtc - no separate timezone conversion needed.
+    local = match.get("matchDateLocal")
+    return local[:16].replace("T", " ") if local else None
+
+
+def wslfootball_fixtures_df(matches: list[dict], competition: str, source_url: str) -> pd.DataFrame:
     rows = []
-    current_date = None
-    i = 0
-
-    while i < len(lines):
-        line = lines[i].strip()
-
-        if line in WSL_STOP_MARKERS:
-            break
-
-        parsed_date = parse_day_header(line)
-        if parsed_date:
-            current_date = parsed_date
-            i += 1
+    for m in matches:
+        if m.get("status") == "FINISHED":
             continue
-
-        if (
-            current_date
-            and line == "sport-match-details-for"
-            and i + 9 < len(lines)
-            and lines[i + 2].strip() == "VS"
-            and TIME_RE.match(lines[i + 4].strip())
-        ):
-            home_team = lines[i + 1].strip()
-            away_team = lines[i + 3].strip()
-            time_text = lines[i + 4].strip()
-            venue = lines[i + 5].strip()
-
-            j = i + 10
-            watch_platforms = []
-            while j < len(lines) and lines[j].strip() in WSL_FILLER_LINES:
-                j += 1
-
-            if j < len(lines) and lines[j].strip() == "Tickets":
-                j += 1
-                # The broadcaster, if confirmed, is a single line right
-                # after "Tickets" - anything else there (next match's date
-                # header, or the page footer nav once this is the last
-                # match on the page) is NOT part of this match, so only
-                # ever look at this one line, never loop further.
-                if (
-                    j < len(lines)
-                    and lines[j].strip()
-                    and not parse_day_header(lines[j].strip())
-                    and lines[j].strip() not in WSL_STOP_MARKERS
-                    and lines[j].strip() != "sport-match-details-for"
-                ):
-                    watch_platforms.append(lines[j].strip())
-                    j += 1
-
-            rows.append(
-                {
-                    "competition": competition,
-                    "home_team": home_team,
-                    "away_team": away_team,
-                    "kickoff_uk": to_uk_iso(current_date, time_text),
-                    "venue": venue,
-                    "watch_platforms": ", ".join(watch_platforms),
-                    "watch_notes": "",
-                    "official_source": source_url,
-                }
-            )
-
-            i = j
+        kickoff_uk = _wslfootball_kickoff_uk(m)
+        if not kickoff_uk:
             continue
-
-        i += 1
-
+        rows.append(
+            {
+                "competition": competition,
+                "home_team": m["home"]["officialName"],
+                "away_team": m["away"]["officialName"],
+                "kickoff_uk": kickoff_uk,
+                "venue": m.get("stadiumName") or "-",
+                "watch_platforms": _wslfootball_broadcaster(m),
+                "watch_notes": "",
+                "official_source": source_url,
+            }
+        )
     return build_df(rows)
 
 
-def parse_wslfootball(lines: list[str], competition: str, source_url: str) -> pd.DataFrame:
-    """Try both known wslfootball.com templates and return whichever finds
-    matches - the site has flipped between them without warning before."""
-    df = parse_wslfootball_new_format(lines, competition, source_url)
-    if not df.empty:
-        return df
-    return parse_wslfootball_legacy_format(lines, competition, source_url)
+def wslfootball_results_df(matches: list[dict], competition: str, source_url: str) -> pd.DataFrame:
+    rows = []
+    for m in matches:
+        if m.get("status") != "FINISHED":
+            continue
+        home_score = m.get("homeScorePush")
+        away_score = m.get("awayScorePush")
+        kickoff_uk = _wslfootball_kickoff_uk(m)
+        if home_score is None or away_score is None or not kickoff_uk:
+            continue
+        rows.append(
+            {
+                "competition": competition,
+                "home_team": m["home"]["officialName"],
+                "away_team": m["away"]["officialName"],
+                "kickoff_uk": kickoff_uk,
+                "venue": m.get("stadiumName") or "-",
+                "home_score": home_score,
+                "away_score": away_score,
+                "official_source": source_url,
+            }
+        )
+    return build_results_df(rows)
 
 
 def build_df(rows: Iterable[dict]) -> pd.DataFrame:

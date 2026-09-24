@@ -25,16 +25,18 @@ from scripts.scrapers.wsl2 import scrape_wsl2
 OUTPUT_FILE = ROOT_DIR / "data" / "fixtures_all.csv"
 STATUS_FILE = ROOT_DIR / "data" / "last_update_status.json"
 
-# WSL/WSL2/NWSL results come from a Wikipedia results grid that only ever
-# shows a score, never a date, once a match is played (see
+# NWSL results come from a Wikipedia results grid that only ever shows a
+# score, never a date, once a match is played (see
 # scripts/scrapers/common.py's parse_wikipedia_results_grid). This archive
-# is this project's own memory of what date each of those fixtures was
+# is this project's own memory of what date each NWSL fixture was
 # originally scheduled for - captured here, from the ordinary daily
 # fixtures scrape, before the match happens and its date info would
 # otherwise be lost. update_results.py reads it back to pair a Wikipedia
-# score with its real kickoff date.
+# score with its real kickoff date. WSL/WSL2 used to need this too, until
+# their own site turned out to embed complete results directly - no longer
+# routed through here.
 FIXTURE_DATE_ARCHIVE_FILE = ROOT_DIR / "data" / "fixture_dates_archive.csv"
-FIXTURE_DATE_ARCHIVE_GROUPS = {"WSL", "WSL2", "NWSL"}
+FIXTURE_DATE_ARCHIVE_GROUPS = {"NWSL"}
 FIXTURE_DATE_ARCHIVE_COLUMNS = ["competition_group", "home_team", "away_team", "kickoff_uk"]
 FIXTURE_DATE_ARCHIVE_KEY = ["competition_group", "home_team", "away_team"]
 
