@@ -446,8 +446,8 @@ Barclays WSL2,Football,WSL2,England,Tier 2,Sunderland,Southampton,2026-09-20 14:
 Barclays WSL2,Football,WSL2,England,Tier 2,Watford,Bristol City,2026-09-20 14:00,-,1,5,https://en.wikipedia.org/wiki/2026%E2%80%9327_Women%27s_Super_League_2
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,Swindon Town,2026-09-20 14:30,"Redbridge Football Club, THE TECHSOC.COM STADIUM",4,2,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Queens Park Rangers,2026-09-20 14:30,The Bauvill Stadium,0,3,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,Plymouth Argyle,2026-09-20 15:00,The MGroup Stadium,5,0,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Dartford,2026-09-20 15:00,Bedfont Sports Club,1,1,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,Plymouth Argyle,2026-09-20 15:00,The MGroup Stadium,5,0,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Lye Town,2026-09-20 15:00,Debdale Sports Park,0,2,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,Luton Town,2026-09-20 15:00,Herts County Ground,0,1,https://wnl.thefa.com/fixtures
 Adran Premier,Football,Adran Premier,Wales,,Swansea City,Cardiff Met,2026-09-20 15:00,Garden Village Park,3,1,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
@@ -462,3 +462,8 @@ UEFA Women's Champions League,Football,UWCL,Europe,,Inter Milan,BK Häcken,2026-
 UEFA Women's Champions League,Football,UWCL,Europe,,Arsenal,HB Køge,2026-09-22 17:45,-,1,0,https://en.wikipedia.org/wiki/2026-27_UEFA_Women%27s_Champions_League_league_phase
 UEFA Women's Champions League,Football,UWCL,Europe,,Real Madrid,Paris Saint-Germain,2026-09-22 20:00,-,1,1,https://en.wikipedia.org/wiki/2026-27_UEFA_Women%27s_Champions_League_league_phase
 UEFA Women's Champions League,Football,UWCL,Europe,,Juventus,Benfica,2026-09-22 20:00,-,1,2,https://en.wikipedia.org/wiki/2026-27_UEFA_Women%27s_Champions_League_league_phase
+UEFA Women's Champions League,Football,UWCL,Europe,,OH Leuven,Roma,2026-09-23 17:45,-,0,0,https://en.wikipedia.org/wiki/2026-27_UEFA_Women%27s_Champions_League_league_phase
+UEFA Women's Champions League,Football,UWCL,Europe,,Servette Chênois,OL Lyonnes,2026-09-23 17:45,-,0,8,https://en.wikipedia.org/wiki/2026-27_UEFA_Women%27s_Champions_League_league_phase
+The FA WNL Cup,Football,FAWNL Cup,England,,AFC Wimbledon,Dulwich Hamlet,2026-09-23 19:45,Tooting and Mitcham United FC,3,1,https://wnl.thefa.com/fixtures
+UEFA Women's Champions League,Football,UWCL,Europe,,Barcelona,Paris FC,2026-09-23 20:00,-,5,2,https://en.wikipedia.org/wiki/2026-27_UEFA_Women%27s_Champions_League_league_phase
+UEFA Women's Champions League,Football,UWCL,Europe,,Chelsea,Austria Wien,2026-09-23 20:00,-,1,0,https://en.wikipedia.org/wiki/2026-27_UEFA_Women%27s_Champions_League_league_phase
