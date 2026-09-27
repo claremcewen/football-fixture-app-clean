@@ -1,11 +1,11 @@
 {
   "WSL": {
     "ok": true,
-    "rows": 152
+    "rows": 148
   },
   "WSL2": {
     "ok": true,
-    "rows": 107
+    "rows": 102
   },
   "England Women": {
     "ok": false,
@@ -26,7 +26,7 @@
   },
   "FAWNL": {
     "ok": true,
-    "rows": 658
+    "rows": 627
   },
   "SWPL 1": {
     "ok": true,
@@ -38,6 +38,6 @@
   },
   "Adran Premier": {
     "ok": true,
-    "rows": 44
+    "rows": 40
   }
 }
