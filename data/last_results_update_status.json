@@ -25,7 +25,7 @@
   },
   "WSL": {
     "ok": true,
-    "rows": 28
+    "rows": 29
   },
   "WSL2": {
     "ok": true,
@@ -37,7 +37,7 @@
   },
   "NWSL": {
     "ok": true,
-    "rows": 106,
+    "rows": 108,
     "note": "102 score(s) skipped, no known date yet"
   }
 }
