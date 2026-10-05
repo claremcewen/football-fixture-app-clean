@@ -1,5 +1,4 @@
 competition,sport,competition_group,region,tier,home_team,away_team,kickoff_uk,venue,watch_platforms,watch_notes,official_source
-NWSL,Football,NWSL,USA,,Houston Dash,Washington Spirit,2026-10-05 00:00,Shell Energy Stadium,"TNT Sports 3, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
 FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Kazakhstan,Republic of Ireland,2026-10-09 12:00,Astana Arena,,,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
 FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Finland,Serbia,2026-10-09 16:30,Tammelan Stadion,,,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
 FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Kosovo,Austria,2026-10-09 17:00,Fadil Vokrri Stadium,,,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
@@ -67,7 +66,7 @@ FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Italy,Belaru
 FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Sweden,Lithuania,2026-10-13 18:00,Nationalarenan,,,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
 FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Switzerland,Israel,2026-10-13 18:30,Stade de Tourbillon,,,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
 FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Wales,Albania,2026-10-13 19:15,Parc y Scarlets,"BBC One Wales, BBC iPlayer, BBC Sport Website",,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
-FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Scotland,Czech Republic,2026-10-13 19:15,St. Mirren Park,"BBC TBC, BBC iPlayer, BBC Sport Website",,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
+FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Scotland,Czech Republic,2026-10-13 19:15,St. Mirren Park,"BBC Scotland, BBC iPlayer, BBC Sport Website",,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
 FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Portugal,Northern Ireland,2026-10-13 19:15,Estádio Municipal de Portimão,"BBC iPlayer, BBC Sport Website",,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
 England Women - FIFA 2027 World Cup European Qualifier play-off - Round One - Second Leg,Football,England Women,England,,England,Greece,2026-10-13 19:30,King Power Stadium,"ITV4, ITVX",,https://www.englandfootball.com/england/womens-senior-team/fixtures-results
 FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Republic of Ireland,Kazakhstan,2026-10-13 19:30,Páirc Uí Chaoimh,,,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
@@ -178,8 +177,8 @@ Adran Premier,Football,Adran Premier,Wales,,The New Saints,Aberystwyth Town,2026
 Barclays WSL2,Football,WSL2,England,Tier 2,Leicester City,Southampton,2026-10-25 15:00,King Power Stadium,YouTube,,https://www.wslfootball.com/fixtures/wsl2
 Barclays WSL,Football,WSL,England,Tier 1,Manchester United,Manchester City,2026-10-25 18:00,Progress with Unity Stadium,Sky Sports Football,,https://www.wslfootball.com/fixtures/wsl
 NWSL,Football,NWSL,USA,,Orlando Pride,Gotham FC,2026-10-25 19:00,Inter&Co Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-NWSL,Football,NWSL,USA,,Kansas City Current,Washington Spirit,2026-10-25 21:00,CPKC Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-NWSL,Football,NWSL,USA,,San Diego Wave,Boston Legacy,2026-10-25 23:00,Snapdragon Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
+NWSL,Football,NWSL,USA,,Kansas City Current,Washington Spirit,2026-10-25 21:00,CPKC Stadium,"TNT Sports 3, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
+NWSL,Football,NWSL,USA,,San Diego Wave,Boston Legacy,2026-10-25 23:00,Snapdragon Stadium,"TNT Sports 1, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Maidenhead United,2026-10-27 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Kidderminster Harriers,Worcester City Women,2026-10-27 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Dulwich Hamlet,2026-10-27 19:45,-,,,https://wnl.thefa.com/fixtures
