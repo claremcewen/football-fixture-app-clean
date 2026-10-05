@@ -6,7 +6,8 @@ results, or the full weekend (Sat+Sun) on Mondays since that's one natural
 block - covers every competition that has results. Originally Monday-only
 and limited to a hardcoded competition list, which silently skipped
 midweek competitions (UWCL, Subway Players Cup) and SWPL 1 / Adran Premier
-/ NWSL entirely.
+/ NWSL entirely. On Fridays it also lists Saturday's and Sunday's fixtures
+(one block each) so "games today" posts can be scheduled ahead.
 """
 from __future__ import annotations
 
@@ -137,6 +138,19 @@ def build_digest(fixtures_df: pd.DataFrame, results_df: pd.DataFrame, today: dat
 
     todays = fixtures_df[fixtures_df["date"] == today] if not fixtures_df.empty else fixtures_df
     sections.append(format_grouped(todays))
+
+    if today.weekday() == 4:  # Friday - weekend fixtures, one block per day, for scheduling ahead
+        for offset in (1, 2):
+            day = today + datetime.timedelta(days=offset)
+            day_fixtures = fixtures_df[fixtures_df["date"] == day] if not fixtures_df.empty else fixtures_df
+            sections += [
+                "",
+                "=" * 40,
+                "",
+                f"{day.strftime('%A %d %B').upper()} FIXTURES",
+                "",
+                format_grouped(day_fixtures),
+            ]
 
     if today.weekday() == 0:  # Monday - the weekend is one natural block
         saturday = today - datetime.timedelta(days=2)
