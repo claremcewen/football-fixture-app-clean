@@ -19,6 +19,7 @@ from scripts.scrapers.nwsl import scrape_nwsl
 from scripts.scrapers.players_cup import scrape_players_cup
 from scripts.scrapers.swpl import scrape_swpl
 from scripts.scrapers.uwcl import scrape_uwcl
+from scripts.scrapers.world_cup_playoffs import scrape_world_cup_playoffs
 from scripts.scrapers.wsl import scrape_wsl
 from scripts.scrapers.wsl2 import scrape_wsl2
 
@@ -93,6 +94,7 @@ TASKS = [
     ("England Women", scrape_england_women, ["England Women"]),
     ("England Women U20", scrape_england_u20_women, ["England Women U20"]),
     ("UWCL", scrape_uwcl, ["UWCL"]),
+    ("WWC Play-Offs", scrape_world_cup_playoffs, ["WWC Play-Offs"]),
     ("NWSL", scrape_nwsl, ["NWSL"]),
     ("FAWNL", scrape_fawnl, FAWNL_DIVISIONS),
     # WAFCON unplugged for now - the 2025 edition is over. scrapers/wafcon.py

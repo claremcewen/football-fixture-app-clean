@@ -36,6 +36,7 @@ COMPETITION_PRIORITY: dict[str, int] = {
     "Division 1 South West": 4,
     "FAWNL Cup": 5,
     "England Women": 6,
+    "WWC Play-Offs": 6,
     "UWCL": 7,
     "NWSL": 8,
 }

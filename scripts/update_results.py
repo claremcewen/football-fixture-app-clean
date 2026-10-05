@@ -20,6 +20,7 @@ from scripts.scrapers.nwsl import COMPETITION as NWSL_COMPETITION, NWSL_RESULTS_
 from scripts.scrapers.players_cup import scrape_players_cup_results
 from scripts.scrapers.swpl import scrape_swpl_results
 from scripts.scrapers.uwcl import scrape_uwcl_results
+from scripts.scrapers.world_cup_playoffs import scrape_world_cup_playoffs_results
 from scripts.scrapers.wsl import scrape_wsl_results
 from scripts.scrapers.wsl2 import scrape_wsl2_results
 from scripts.update_fixtures import FIXTURE_DATE_ARCHIVE_FILE
@@ -72,6 +73,7 @@ TASKS = [
     ("England Women", scrape_england_women_results, ["England Women"]),
     ("England Women U20", scrape_england_u20_women_results, ["England Women U20"]),
     ("UWCL", scrape_uwcl_results, ["UWCL"]),
+    ("WWC Play-Offs", scrape_world_cup_playoffs_results, ["WWC Play-Offs"]),
     ("WSL", scrape_wsl_results, ["WSL"]),
     ("WSL2", scrape_wsl2_results, ["WSL2"]),
     ("Subway Players Cup", scrape_players_cup_results, ["Subway Players Cup"]),

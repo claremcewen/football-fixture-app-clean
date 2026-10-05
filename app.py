@@ -27,6 +27,7 @@ st.set_page_config(
 COMPETITION_DEFAULT_VIEW: dict[str, str] = {
     "England Women": "all",
     "England Women U20": "all",
+    "WWC Play-Offs": "all",
     "UWCL": "all",
     "WSL": "next_round",
     "WSL2": "next_round",
@@ -85,7 +86,7 @@ ALL_FULL_LIST = "All Fixtures"
 # Excluded from Club filtering entirely, and from the Club list even when
 # a broad (not narrowed-to-one-competition) scope pulls teams from every
 # competition at once.
-NATIONAL_TEAM_COMPETITIONS: set[str] = {"England Women", "England Women U20"}
+NATIONAL_TEAM_COMPETITIONS: set[str] = {"England Women", "England Women U20", "WWC Play-Offs"}
 
 # These sources have no broadcaster field at all - the scraper never even
 # attempts to capture one, since the source site doesn't publish it. "TBC"
@@ -115,6 +116,7 @@ COMPETITION_COLOR: dict[str, str] = {
     "WSL2": "#185FA5",
     "England Women": "#2E8B57",
     "England Women U20": "#3E9E8C",
+    "WWC Play-Offs": "#2F8F6B",
     "UWCL": "#2C7DA0",
     "NWSL": "#1B998B",
     "Northern Premier Division": "#3B6D11",
@@ -147,6 +149,7 @@ TOP_LEVEL_COMPETITIONS = [
     "Adran Premier",
     "NWSL",
     "UWCL",
+    "WWC Play-Offs",
     INTERNATIONALS_GROUP,
 ]
 

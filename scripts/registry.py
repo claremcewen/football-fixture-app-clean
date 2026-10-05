@@ -15,6 +15,9 @@ COMPETITION_REGISTRY: list[tuple[str, str, str, str, str | None]] = [
     ("England Women U20", "Football", "England Women U20", "England", None),
     ("England Women", "Football", "England Women", "England", None),
     ("UEFA Women's Champions League", "Football", "UWCL", "Europe", None),
+    # UEFA's play-offs for the 2027 Women's World Cup - national teams, every
+    # tie except England's (those come from the englandfootball.com scraper).
+    ("FIFA Women's World Cup 2027 Play-Off", "Football", "WWC Play-Offs", "Europe", None),
     ("NWSL", "Football", "NWSL", "USA", None),
     ("Northern Premier Division", "Football", "Northern Premier Division", "England", "Tier 3"),
     ("Southern Premier Division", "Football", "Southern Premier Division", "England", "Tier 3"),
