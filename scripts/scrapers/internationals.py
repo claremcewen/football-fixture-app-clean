@@ -8,6 +8,7 @@ import pandas as pd
 from .common import (
     ENGLAND_TIME_RE,
     build_df,
+    build_kickoff_time_lookup,
     build_results_df,
     build_watch_platform_lookup,
     fetch_lines,
@@ -29,11 +30,15 @@ WATCH_PLATFORM_TEAM_NAME = "England Women"
 def scrape_england_women() -> "pd.DataFrame":
     lines = fetch_lines(ENGLAND_URL)
     watch_lookup = build_watch_platform_lookup(WATCH_PLATFORM_SOURCE_URL, WATCH_PLATFORM_TEAM_NAME)
-    return parse_england_lines(lines, watch_lookup)
+    time_lookup = build_kickoff_time_lookup(WATCH_PLATFORM_SOURCE_URL, WATCH_PLATFORM_TEAM_NAME)
+    return parse_england_lines(lines, watch_lookup, time_lookup)
 
 
-def parse_england_lines(lines, watch_lookup: dict | None = None) -> "pd.DataFrame":
+def parse_england_lines(
+    lines, watch_lookup: dict | None = None, time_lookup: dict | None = None
+) -> "pd.DataFrame":
     watch_lookup = watch_lookup or {}
+    time_lookup = time_lookup or {}
     rows = []
 
     current_year = None
@@ -57,15 +62,33 @@ def parse_england_lines(lines, watch_lookup: dict | None = None) -> "pd.DataFram
 
         parsed_date = parse_england_date(line, current_year)
         if parsed_date:
-            status = lines[i + 1] if i + 1 < len(lines) else ""
-            if status != "Fixture":
-                i += 1
-                continue
+            # Two page layouts seen: the newer "date | time Fixture team
+            # team" block (same shape as the results archive, with the
+            # competition/round/venue lines above the date), and the older
+            # compact "date Fixture team team venue time" one.
+            new_layout = (
+                i + 5 < len(lines)
+                and lines[i + 1] == "|"
+                and parse_bst_gmt_time(lines[i + 2])
+                and lines[i + 3] == "Fixture"
+            )
+            if new_layout:
+                first_team = lines[i + 4]
+                second_team = lines[i + 5]
+                venue = lines[i - 1] if i >= 1 else "TBC"
+                time_or_tbc = lines[i + 2]
+                competition_name = " - ".join(lines[i - 3 : i - 1]) if i >= 3 else COMPETITION_LABEL
+            else:
+                status = lines[i + 1] if i + 1 < len(lines) else ""
+                if status != "Fixture":
+                    i += 1
+                    continue
 
-            first_team = lines[i + 2] if i + 2 < len(lines) else ""
-            second_team = lines[i + 3] if i + 3 < len(lines) else ""
-            venue = lines[i + 4] if i + 4 < len(lines) else "TBC"
-            time_or_tbc = lines[i + 5] if i + 5 < len(lines) else "TBC"
+                first_team = lines[i + 2] if i + 2 < len(lines) else ""
+                second_team = lines[i + 3] if i + 3 < len(lines) else ""
+                venue = lines[i + 4] if i + 4 < len(lines) else "TBC"
+                time_or_tbc = lines[i + 5] if i + 5 < len(lines) else "TBC"
+                competition_name = lines[i - 2] if i - 2 >= 0 else COMPETITION_LABEL
 
             # Skip past fixtures/results older than today
             if parsed_date < today:
@@ -81,7 +104,10 @@ def parse_england_lines(lines, watch_lookup: dict | None = None) -> "pd.DataFram
                 home_team = first_team
                 away_team = "England"
 
-            kickoff_time = parse_bst_gmt_time(time_or_tbc)
+            # englandfootball.com often leaves the time as "TBC" after the
+            # broadcaster listing already has it - use that rather than a
+            # placeholder.
+            kickoff_time = parse_bst_gmt_time(time_or_tbc) or time_lookup.get(parsed_date)
             if kickoff_time:
                 kickoff_uk = f"{parsed_date.isoformat()} {kickoff_time}"
                 watch_notes = ""
@@ -89,7 +115,6 @@ def parse_england_lines(lines, watch_lookup: dict | None = None) -> "pd.DataFram
                 kickoff_uk = f"{parsed_date.isoformat()} 12:00"
                 watch_notes = "Kick-off time to be confirmed"
 
-            competition_name = lines[i - 2] if i - 2 >= 0 else COMPETITION_LABEL
             if MONTH_YEAR_RE.match(competition_name or ""):
                 competition_name = COMPETITION_LABEL
 

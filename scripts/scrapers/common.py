@@ -147,6 +147,36 @@ def build_watch_platform_lookup(url: str, team_name: str) -> dict:
     return parse_watch_platform_lookup_lines(lines, team_name)
 
 
+def build_kickoff_time_lookup(url: str, team_name: str) -> dict:
+    """{date: "HH:MM"} (UK time) for every listed match involving team_name
+    whose listing carries a real kick-off time rather than "TBC". Fills in
+    for sources (englandfootball.com) that leave the time unconfirmed while
+    the broadcaster listing already has it. Never fatal: a failed fetch just
+    means no times this run."""
+    try:
+        return parse_kickoff_time_lookup_lines(fetch_lines(url), team_name)
+    except Exception as exc:
+        print(f"[WARN] kick-off time lookup unavailable: {exc}")
+        return {}
+
+
+def parse_kickoff_time_lookup_lines(lines, team_name: str) -> dict:
+    lookup: dict = {}
+    current_date = None
+    for i, raw in enumerate(lines):
+        line = raw.strip()
+        parsed_date = _parse_live_football_on_tv_date(line)
+        if parsed_date:
+            current_date = parsed_date
+            continue
+        if " v " in line and current_date and i > 0:
+            home, _, away = line.partition(" v ")
+            time_line = lines[i - 1].strip()
+            if team_name in (home.strip(), away.strip()) and re.match(r"^\d{1,2}:\d{2}$", time_line):
+                lookup[current_date] = time_line
+    return lookup
+
+
 def parse_watch_platform_lookup_lines(lines, team_name: str) -> dict:
     lookup: dict = {}
 
