@@ -29,7 +29,9 @@ SAMPLE_MATCHES = [
 
 
 def test_scrape_wsl2_uses_the_wsl2_competition_label_and_url():
-    with patch("scripts.scrapers.wsl2.fetch_wslfootball_matches", return_value=SAMPLE_MATCHES) as mocked:
+    with patch("scripts.scrapers.wsl2.fetch_wslfootball_matches", return_value=SAMPLE_MATCHES) as mocked, patch(
+        "scripts.scrapers.wsl2.build_live_football_on_tv_broadcast_lookup", return_value={}
+    ):
         df = scrape_wsl2()
 
     mocked.assert_called_once_with(WSL2_URL)
@@ -39,7 +41,9 @@ def test_scrape_wsl2_uses_the_wsl2_competition_label_and_url():
 
 
 def test_scrape_wsl2_results_uses_the_wsl2_competition_label_and_url():
-    with patch("scripts.scrapers.wsl2.fetch_wslfootball_matches", return_value=SAMPLE_MATCHES) as mocked:
+    with patch("scripts.scrapers.wsl2.fetch_wslfootball_matches", return_value=SAMPLE_MATCHES) as mocked, patch(
+        "scripts.scrapers.wsl2.build_live_football_on_tv_broadcast_lookup", return_value={}
+    ):
         df = scrape_wsl2_results()
 
     mocked.assert_called_once_with(WSL2_URL)

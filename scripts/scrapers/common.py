@@ -282,9 +282,82 @@ def fetch_wslfootball_matches(url: str) -> list[dict]:
 
 
 def _wslfootball_broadcaster(match: dict) -> str:
-    broadcasters = match.get("editorial", {}).get("broadcasters", {}) or {}
+    broadcasters = (match.get("editorial") or {}).get("broadcasters") or {}
     # "Name|https://url" - only the name is ever shown elsewhere in this app.
     return broadcasters.get("broadcasterNational1", "").split("|", 1)[0].strip()
+
+
+LIVE_FOOTBALL_ON_TV_WOMENS_URL = "https://www.live-footballontv.com/live-womens-football-on-tv.html"
+LIVE_FOOTBALL_ON_TV_TIME_RE = re.compile(r"^\d{1,2}:\d{2}$")
+
+
+def _normalise_team_for_matching(name: str) -> str:
+    # live-footballontv writes "Arsenal Women" where wslfootball.com has
+    # "Arsenal" - strip the suffix (and any "FC") so the two line up.
+    name = re.sub(r"\s+Women$", "", name.strip(), flags=re.IGNORECASE)
+    name = re.sub(r"\s+FC$", "", name, flags=re.IGNORECASE)
+    return name.lower()
+
+
+def parse_live_football_on_tv_broadcasts(lines: list[str], competition_tag: str) -> dict:
+    """{(date, home, away): "Channel, Channel"} for every listed match whose
+    competition tag equals competition_tag exactly (so "Women's Super League"
+    doesn't also pick up "Women's Super League 2"). The listing only carries
+    matches that actually have a broadcaster."""
+    lookup: dict = {}
+    current_date = None
+    i = 0
+    while i < len(lines):
+        line = lines[i].strip()
+
+        parsed_date = _parse_live_football_on_tv_date(line)
+        if parsed_date:
+            current_date = parsed_date
+            i += 1
+            continue
+
+        if current_date and LIVE_FOOTBALL_ON_TV_TIME_RE.match(line) and i + 2 < len(lines):
+            match_line = lines[i + 1].strip()
+            tag = lines[i + 2].strip()
+            j = i + 3
+            platforms = []
+            while j < len(lines):
+                next_line = lines[j].strip()
+                if (
+                    LIVE_FOOTBALL_ON_TV_TIME_RE.match(next_line)
+                    or next_line == "TBC"
+                    or _parse_live_football_on_tv_date(next_line)
+                    or next_line in LIVE_FOOTBALL_ON_TV_STOP_MARKERS
+                ):
+                    break
+                if next_line:
+                    platforms.append(next_line)
+                j += 1
+
+            if " v " in match_line and tag == competition_tag and platforms:
+                home, _, away = match_line.partition(" v ")
+                key = (current_date, _normalise_team_for_matching(home), _normalise_team_for_matching(away))
+                lookup[key] = ", ".join(platforms)
+            i = j
+            continue
+
+        i += 1
+
+    return lookup
+
+
+def build_live_football_on_tv_broadcast_lookup(competition_tag: str) -> dict:
+    """Fallback broadcaster source for wslfootball.com matches - its own data
+    leaves many broadcasters blank right up to kick-off, while this listing
+    names the channel weeks ahead. Never fatal: a failed fetch just means no
+    fallback this run."""
+    try:
+        return parse_live_football_on_tv_broadcasts(
+            fetch_lines(LIVE_FOOTBALL_ON_TV_WOMENS_URL), competition_tag
+        )
+    except Exception as exc:
+        print(f"[WARN] live-footballontv broadcaster fallback unavailable: {exc}")
+        return {}
 
 
 def _wslfootball_kickoff_uk(match: dict) -> str | None:
@@ -294,7 +367,13 @@ def _wslfootball_kickoff_uk(match: dict) -> str | None:
     return local[:16].replace("T", " ") if local else None
 
 
-def wslfootball_fixtures_df(matches: list[dict], competition: str, source_url: str) -> pd.DataFrame:
+def wslfootball_fixtures_df(
+    matches: list[dict],
+    competition: str,
+    source_url: str,
+    broadcast_fallback: dict | None = None,
+) -> pd.DataFrame:
+    broadcast_fallback = broadcast_fallback or {}
     rows = []
     for m in matches:
         if m.get("status") == "FINISHED":
@@ -302,14 +381,21 @@ def wslfootball_fixtures_df(matches: list[dict], competition: str, source_url: s
         kickoff_uk = _wslfootball_kickoff_uk(m)
         if not kickoff_uk:
             continue
+        home = m["home"]["officialName"]
+        away = m["away"]["officialName"]
+        fallback_key = (
+            datetime.strptime(kickoff_uk[:10], "%Y-%m-%d").date(),
+            _normalise_team_for_matching(home),
+            _normalise_team_for_matching(away),
+        )
         rows.append(
             {
                 "competition": competition,
-                "home_team": m["home"]["officialName"],
-                "away_team": m["away"]["officialName"],
+                "home_team": home,
+                "away_team": away,
                 "kickoff_uk": kickoff_uk,
                 "venue": m.get("stadiumName") or "-",
-                "watch_platforms": _wslfootball_broadcaster(m),
+                "watch_platforms": _wslfootball_broadcaster(m) or broadcast_fallback.get(fallback_key, ""),
                 "watch_notes": "",
                 "official_source": source_url,
             }
