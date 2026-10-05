@@ -3,11 +3,10 @@
 Writes today's fixtures (grouped by league) to a text file on the Desktop
 and opens it. Every day also appends a results round-up: yesterday's
 results, or the full weekend (Sat+Sun) on Mondays since that's one natural
-block - covers WSL / WSL2 / FAWNL / knockout cups / UWCL / England
-internationals. Originally Monday-only, generalised after Wednesday's UWCL
-and Subway Players Cup results turned out to never be shown otherwise -
-those play midweek, so a weekend-only round-up silently skipped them
-every single week.
+block - covers every competition that has results. Originally Monday-only
+and limited to a hardcoded competition list, which silently skipped
+midweek competitions (UWCL, Subway Players Cup) and SWPL 1 / Adran Premier
+/ NWSL entirely.
 """
 from __future__ import annotations
 
@@ -54,23 +53,6 @@ NO_BROADCAST_SOURCE_COMPETITIONS: set[str] = {
     "FAWNL Cup",
     "SWPL 1",
     "Adran Premier",
-}
-
-# What counts as "recent action" for the daily results round-up.
-RESULTS_ROUNDUP_GROUPS: set[str] = {
-    "WSL",
-    "WSL2",
-    "Northern Premier Division",
-    "Southern Premier Division",
-    "Division 1 North",
-    "Division 1 Midlands",
-    "Division 1 South East",
-    "Division 1 South West",
-    "FAWNL Cup",
-    "Subway Players Cup",
-    "England Women",
-    "England Women U20",
-    "UWCL",
 }
 
 
@@ -166,20 +148,12 @@ def build_digest(fixtures_df: pd.DataFrame, results_df: pd.DataFrame, today: dat
         covered_dates = [yesterday]
         heading = f"RESULTS ROUND-UP - {yesterday.strftime('%A %d %b')}"
 
-    recent = (
-        results_df[
-            results_df["date"].isin(covered_dates)
-            & results_df["competition_group"].isin(RESULTS_ROUNDUP_GROUPS)
-        ]
-        if not results_df.empty
-        else results_df
-    )
+    recent = results_df[results_df["date"].isin(covered_dates)] if not results_df.empty else results_df
     sections += [
         "",
         "=" * 40,
         "",
         heading,
-        "(WSL / WSL2 / FAWNL / knockout cups / UWCL / England internationals)",
         "",
         format_results_grouped(recent),
     ]
