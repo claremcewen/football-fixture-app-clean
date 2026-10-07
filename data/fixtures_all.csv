@@ -273,14 +273,13 @@ NWSL,Football,NWSL,USA,,North Carolina Courage,Denver Summit,2026-11-01 22:00,Fi
 NWSL,Football,NWSL,USA,,Racing Louisville,Kansas City Current,2026-11-01 22:00,Lynn Family Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Seattle Reign,Orlando Pride,2026-11-01 22:00,Lumen Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Washington Spirit,Chicago Stars,2026-11-01 22:00,Audi Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-Barclays WSL,Football,WSL,England,Tier 1,Liverpool,Arsenal,2026-11-07 12:00,Anfield,,,https://www.wslfootball.com/fixtures/wsl
-Barclays WSL,Football,WSL,England,Tier 1,London City Lionesses,Birmingham City,2026-11-07 12:00,Copperjax Community Stadium,,,https://www.wslfootball.com/fixtures/wsl
-Barclays WSL,Football,WSL,England,Tier 1,Manchester City,West Ham United,2026-11-07 12:30,Joie Stadium,,,https://www.wslfootball.com/fixtures/wsl
-Barclays WSL,Football,WSL,England,Tier 1,Chelsea,Everton,2026-11-07 12:30,Stamford Bridge,,,https://www.wslfootball.com/fixtures/wsl
-Barclays WSL,Football,WSL,England,Tier 1,Aston Villa,Manchester United,2026-11-07 12:30,Villa Park,,,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Manchester City,West Ham United,2026-11-07 12:45,Joie Stadium,Sky Sports TBC,,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Chelsea,Everton,2026-11-07 12:45,Stamford Bridge,Sky Sports TBC,,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Aston Villa,Manchester United,2026-11-08 12:00,Villa Park,"Sky Sports TBC, WSL YouTube",,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Liverpool,Arsenal,2026-11-08 12:00,Anfield,Sky Sports TBC,,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL2,Football,WSL2,England,Tier 2,Durham,Sunderland,2026-11-08 12:00,Maiden Castle Sports Park,YouTube,,https://www.wslfootball.com/fixtures/wsl2
-Barclays WSL,Football,WSL,England,Tier 1,Tottenham Hotspur,Brighton & Hove Albion,2026-11-08 14:00,BetWright Stadium,,,https://www.wslfootball.com/fixtures/wsl
-Barclays WSL,Football,WSL,England,Tier 1,Crystal Palace,Charlton Athletic,2026-11-08 14:00,Borough Sports Ground,,,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Tottenham Hotspur,Brighton & Hove Albion,2026-11-08 14:00,BetWright Stadium,"Sky Sports TBC, WSL YouTube",,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Crystal Palace,Charlton Athletic,2026-11-08 14:00,Borough Sports Ground,"Sky Sports TBC, WSL YouTube",,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL2,Football,WSL2,England,Tier 2,Wolverhampton,Nottingham Forest,2026-11-08 14:00,SEAH Stadium,YouTube,,https://www.wslfootball.com/fixtures/wsl2
 Barclays WSL2,Football,WSL2,England,Tier 2,Southampton,Sheffield United,2026-11-08 14:00,St. Mary's Stadium,YouTube,,https://www.wslfootball.com/fixtures/wsl2
 Barclays WSL2,Football,WSL2,England,Tier 2,Newcastle United,Burnley,2026-11-08 14:00,St. James' Park,YouTube,,https://www.wslfootball.com/fixtures/wsl2
@@ -324,6 +323,7 @@ SWPL 1,Football,SWPL 1,Scotland,,Spartans,Glasgow City,2026-11-08 14:00,The Vanl
 SWPL 1,Football,SWPL 1,Scotland,,Motherwell,Celtic,2026-11-08 14:00,The Bumblebee Stadium,,,https://swpl.uk/match-centre/swpl/
 SWPL 1,Football,SWPL 1,Scotland,,Montrose,Partick Thistle,2026-11-08 14:00,Links Park,,,https://swpl.uk/match-centre/swpl/
 SWPL 1,Football,SWPL 1,Scotland,,Hibernian,Aberdeen,2026-11-08 14:00,Meadowbank Stadium,,,https://swpl.uk/match-centre/swpl/
+Barclays WSL,Football,WSL,England,Tier 1,London City Lionesses,Birmingham City,2026-11-08 14:30,Copperjax Community Stadium,"BBC iPlayer, Sky Sports TBC, BBC Sport Website",,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL2,Football,WSL2,England,Tier 2,Leicester City,Watford,2026-11-08 15:00,King Power Stadium,YouTube,,https://www.wslfootball.com/fixtures/wsl2
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Sporting Khalsa,2026-11-08 15:00,-,,,https://wnl.thefa.com/fixtures
 SWPL 1,Football,SWPL 1,Scotland,,Rangers,Hearts,2026-11-08 16:10,Broadwood Stadium,,,https://swpl.uk/match-centre/swpl/
@@ -342,16 +342,15 @@ Subway Players Cup,Football,Subway Players Cup,England,,Charlton Athletic,Ipswic
 Subway Players Cup,Football,Subway Players Cup,England,,Brighton & Hove Albion,Watford,2026-11-11 19:45,Broadfield Stadium,,,https://www.wslfootball.com/fixtures/league-cup
 UEFA Women's Champions League - Women's Champions League League Phase,Football,UWCL,Europe,,Benfica Women,Austria Wien Women,2026-11-11 20:00,-,Disney+,,https://www.live-footballontv.com/womens-champions-league-on-tv.html
 UEFA Women's Champions League - Women's Champions League League Phase,Football,UWCL,Europe,,Juventus Women,Lyon Women,2026-11-11 20:00,-,Disney+,,https://www.live-footballontv.com/womens-champions-league-on-tv.html
-Barclays WSL,Football,WSL,England,Tier 1,Chelsea,Manchester City,2026-11-14 14:00,Stamford Bridge,,,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Manchester United,Crystal Palace,2026-11-14 12:45,Progress with Unity Stadium,Sky Sports TBC,,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Chelsea,Manchester City,2026-11-14 13:30,Stamford Bridge,"BBC One, BBC iPlayer, BBC Sport Website",,https://www.wslfootball.com/fixtures/wsl
 SWPL 1,Football,SWPL 1,Scotland,,Hearts,Hibernian,2026-11-14 14:10,The Vanloq Community Stadium,,,https://swpl.uk/match-centre/swpl/
-Barclays WSL,Football,WSL,England,Tier 1,Arsenal,London City Lionesses,2026-11-14 17:30,Emirates Stadium,,,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Tottenham Hotspur,Everton,2026-11-14 15:00,BetWright Stadium,Sky Sports TBC,,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Brighton & Hove Albion,Liverpool,2026-11-14 17:15,American Express Stadium,"Sky Sports TBC, WSL YouTube",,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL2,Football,WSL2,England,Tier 2,Sheffield United,Bristol City,2026-11-14 18:00,Bramall Lane,YouTube,,https://www.wslfootball.com/fixtures/wsl2
 SWPL 1,Football,SWPL 1,Scotland,,Celtic,Rangers,2026-11-15 12:00,Kirkintilloch Community Sports Complex,,,https://swpl.uk/match-centre/swpl/
-Barclays WSL,Football,WSL,England,Tier 1,Manchester United,Crystal Palace,2026-11-15 13:00,Progress with Unity Stadium,,,https://www.wslfootball.com/fixtures/wsl
 SWPL 1,Football,SWPL 1,Scotland,,Glasgow City,Montrose,2026-11-15 13:00,Petershill Park,,,https://swpl.uk/match-centre/swpl/
-Barclays WSL,Football,WSL,England,Tier 1,West Ham United,Charlton Athletic,2026-11-15 14:00,Victoria Road Stadium,,,https://www.wslfootball.com/fixtures/wsl
-Barclays WSL,Football,WSL,England,Tier 1,Tottenham Hotspur,Everton,2026-11-15 14:00,BetWright Stadium,,,https://www.wslfootball.com/fixtures/wsl
-Barclays WSL,Football,WSL,England,Tier 1,Brighton & Hove Albion,Liverpool,2026-11-15 14:00,American Express Stadium,,,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,West Ham United,Charlton Athletic,2026-11-15 14:00,Victoria Road Stadium,"Sky Sports TBC, WSL YouTube",,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL2,Football,WSL2,England,Tier 2,Wolverhampton,Durham,2026-11-15 14:00,SEAH Stadium,YouTube,,https://www.wslfootball.com/fixtures/wsl2
 Barclays WSL2,Football,WSL2,England,Tier 2,Watford,Ipswich Town,2026-11-15 14:00,Vicarage Road,YouTube,,https://www.wslfootball.com/fixtures/wsl2
 Barclays WSL2,Football,WSL2,England,Tier 2,Sunderland,Newcastle United,2026-11-15 14:00,Stadium of Light,YouTube,,https://www.wslfootball.com/fixtures/wsl2
@@ -359,7 +358,8 @@ Barclays WSL2,Football,WSL2,England,Tier 2,Nottingham Forest,Leicester City,2026
 Barclays WSL2,Football,WSL2,England,Tier 2,Burnley,Southampton,2026-11-15 14:00,Turf Moor,YouTube,,https://www.wslfootball.com/fixtures/wsl2
 SWPL 1,Football,SWPL 1,Scotland,,Partick Thistle,Spartans,2026-11-15 14:00,Petershill Park,,,https://swpl.uk/match-centre/swpl/
 SWPL 1,Football,SWPL 1,Scotland,,Aberdeen,Motherwell,2026-11-15 14:00,Balmoral Stadium,,,https://swpl.uk/match-centre/swpl/
-Barclays WSL,Football,WSL,England,Tier 1,Aston Villa,Birmingham City,2026-11-15 14:30,Villa Park,,,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Aston Villa,Birmingham City,2026-11-15 14:30,Villa Park,Sky Sports TBC,,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Arsenal,London City Lionesses,2026-11-15 16:30,Emirates Stadium,Sky Sports TBC,,https://www.wslfootball.com/fixtures/wsl
 UEFA Women's Champions League - Women's Champions League League Phase,Football,UWCL,Europe,,Hacken Women,Manchester City Women,2026-11-18 17:45,-,Disney+,,https://www.live-footballontv.com/womens-champions-league-on-tv.html
 UEFA Women's Champions League - Women's Champions League League Phase,Football,UWCL,Europe,,Real Madrid Women,Inter Milan Women,2026-11-18 17:45,-,Disney+,,https://www.live-footballontv.com/womens-champions-league-on-tv.html
 Subway Players Cup,Football,Subway Players Cup,England,,West Ham United,Wolverhampton,2026-11-18 19:00,Victoria Road Stadium,,,https://www.wslfootball.com/fixtures/league-cup
@@ -374,13 +374,12 @@ UEFA Women's Champions League - Women's Champions League League Phase,Football,U
 UEFA Women's Champions League - Women's Champions League League Phase,Football,UWCL,Europe,,Arsenal Women,Lyon Women,2026-11-19 20:00,-,Disney+,,https://www.live-footballontv.com/womens-champions-league-on-tv.html
 UEFA Women's Champions League - Women's Champions League League Phase,Football,UWCL,Europe,,Barcelona Women,Servette Women,2026-11-19 20:00,-,Disney+,,https://www.live-footballontv.com/womens-champions-league-on-tv.html
 UEFA Women's Champions League - Women's Champions League League Phase,Football,UWCL,Europe,,Benfica Women,Roma Women,2026-11-19 20:00,-,Disney+,,https://www.live-footballontv.com/womens-champions-league-on-tv.html
-Barclays WSL,Football,WSL,England,Tier 1,Arsenal,West Ham United,2026-11-22 12:30,Emirates Stadium,,,https://www.wslfootball.com/fixtures/wsl
-Barclays WSL,Football,WSL,England,Tier 1,Manchester City,Tottenham Hotspur,2026-11-22 14:00,Joie Stadium,,,https://www.wslfootball.com/fixtures/wsl
-Barclays WSL,Football,WSL,England,Tier 1,Liverpool,Chelsea,2026-11-22 14:00,St Helens Stadium,,,https://www.wslfootball.com/fixtures/wsl
-Barclays WSL,Football,WSL,England,Tier 1,London City Lionesses,Crystal Palace,2026-11-22 14:00,Copperjax Community Stadium,,,https://www.wslfootball.com/fixtures/wsl
-Barclays WSL,Football,WSL,England,Tier 1,Everton,Brighton & Hove Albion,2026-11-22 14:00,Goodison Park,,,https://www.wslfootball.com/fixtures/wsl
-Barclays WSL,Football,WSL,England,Tier 1,Charlton Athletic,Aston Villa,2026-11-22 14:00,The Valley,,,https://www.wslfootball.com/fixtures/wsl
-Barclays WSL,Football,WSL,England,Tier 1,Birmingham City,Manchester United,2026-11-22 14:00,St. Andrew's @ Knighthead Park,,,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Liverpool,Chelsea,2026-11-21 12:45,St Helens Stadium,Sky Sports TBC,,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,London City Lionesses,Crystal Palace,2026-11-21 17:15,Copperjax Community Stadium,Sky Sports TBC,,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Manchester City,Tottenham Hotspur,2026-11-22 12:00,Joie Stadium,Sky Sports TBC,,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Birmingham City,Manchester United,2026-11-22 12:00,St. Andrew's @ Knighthead Park,Sky Sports TBC,,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Everton,Brighton & Hove Albion,2026-11-22 14:00,Goodison Park,"Sky Sports TBC, WSL YouTube",,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Charlton Athletic,Aston Villa,2026-11-22 14:00,The Valley,"Sky Sports TBC, WSL YouTube",,https://www.wslfootball.com/fixtures/wsl
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Billericay Town,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Bristol Rovers,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Kidderminster Harriers,Lye Town,2026-11-22 14:00,-,,,https://wnl.thefa.com/fixtures
@@ -423,6 +422,7 @@ Adran Premier,Football,Adran Premier,Wales,,Briton Ferry Llansawel,Barry Town Ut
 Adran Premier,Football,Adran Premier,Wales,,Cardiff Met,Cardiff City,2026-11-22 14:00,-,,,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 Adran Premier,Football,Adran Premier,Wales,,The New Saints,Wrexham,2026-11-22 14:00,-,,,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 Adran Premier,Football,Adran Premier,Wales,,Swansea City,Aberystwyth Town,2026-11-22 14:00,-,,,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
+Barclays WSL,Football,WSL,England,Tier 1,Arsenal,West Ham United,2026-11-22 14:30,Emirates Stadium,"BBC Two, BBC iPlayer, BBC Sport Website",,https://www.wslfootball.com/fixtures/wsl
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Cambridge United,2026-11-22 15:00,-,,,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,Real Bedford,2026-11-22 15:00,-,,,https://wnl.thefa.com/fixtures
 Subway Players Cup,Football,Subway Players Cup,England,,Leicester City,Wolverhampton,2026-11-22 15:00,Meadow Lane,,,https://www.wslfootball.com/fixtures/league-cup
