@@ -8,8 +8,9 @@
     "rows": 96
   },
   "England Women": {
-    "ok": true,
-    "rows": 1
+    "ok": false,
+    "rows": 1,
+    "note": "scraper returned 0 rows; fell back to previous data"
   },
   "England Women U20": {
     "ok": true,
@@ -20,8 +21,9 @@
     "rows": 36
   },
   "WWC Play-Offs": {
-    "ok": true,
-    "rows": 9
+    "ok": false,
+    "rows": 9,
+    "note": "scraper returned 0 rows; fell back to previous data"
   },
   "NWSL": {
     "ok": true,
