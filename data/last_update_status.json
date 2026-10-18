@@ -1,7 +1,7 @@
 {
   "WSL": {
     "ok": true,
-    "rows": 139
+    "rows": 137
   },
   "WSL2": {
     "ok": true,
@@ -41,6 +41,6 @@
   },
   "Adran Premier": {
     "ok": true,
-    "rows": 32
+    "rows": 28
   }
 }
