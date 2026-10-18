@@ -1,7 +1,7 @@
 {
   "WSL": {
     "ok": true,
-    "rows": 137
+    "rows": 133
   },
   "WSL2": {
     "ok": true,
@@ -25,11 +25,11 @@
   },
   "NWSL": {
     "ok": true,
-    "rows": 19
+    "rows": 17
   },
   "FAWNL": {
     "ok": true,
-    "rows": 582
+    "rows": 551
   },
   "SWPL 1": {
     "ok": true,
@@ -37,7 +37,7 @@
   },
   "Subway Players Cup": {
     "ok": true,
-    "rows": 53
+    "rows": 48
   },
   "Adran Premier": {
     "ok": true,
