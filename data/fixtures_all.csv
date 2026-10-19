@@ -1,5 +1,4 @@
 competition,sport,competition_group,region,tier,home_team,away_team,kickoff_uk,venue,watch_platforms,watch_notes,official_source
-NWSL,Football,NWSL,USA,,Chicago Stars,Seattle Reign,2026-10-19 00:00,Northwestern Medicine Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 Subway Players Cup,Football,Subway Players Cup,England,,West Ham United,London City Lionesses,2026-10-21 19:00,Victoria Road Stadium,,,https://www.wslfootball.com/fixtures/league-cup
 Subway Players Cup,Football,Subway Players Cup,England,,Southampton,Crystal Palace,2026-10-21 19:00,Silverlake Stadium,,,https://www.wslfootball.com/fixtures/league-cup
 Subway Players Cup,Football,Subway Players Cup,England,,Liverpool,Manchester United,2026-10-21 19:00,St Helens Stadium,YouTube,,https://www.wslfootball.com/fixtures/league-cup
@@ -14,7 +13,7 @@ SWPL 1,Football,SWPL 1,Scotland,,Spartans,Hibernian,2026-10-21 19:45,The Vanloq 
 SWPL 1,Football,SWPL 1,Scotland,,Motherwell,Partick Thistle,2026-10-21 19:45,The Bumblebee Stadium,,,https://swpl.uk/match-centre/swpl/
 NWSL,Football,NWSL,USA,,Chicago Stars,Houston Dash,2026-10-24 01:00,Northwestern Medicine Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Utah Royals,Seattle Reign,2026-10-24 02:30,America First Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
-NWSL,Football,NWSL,USA,,Portland Thorns,North Carolina Courage,2026-10-24 03:00,Providence Park,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
+NWSL,Football,NWSL,USA,,Portland Thorns,North Carolina Courage,2026-10-24 03:00,Providence Park,"TNT Sports 3, HBO Max, NWSL+",,https://www.live-footballontv.com/live-womens-football-on-tv.html
 Barclays WSL,Football,WSL,England,Tier 1,Tottenham Hotspur,Arsenal,2026-10-24 12:45,Tottenham Hotspur Stadium,BBC,,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL,Football,WSL,England,Tier 1,Brighton & Hove Albion,West Ham United,2026-10-24 17:15,American Express Stadium,Sky Sports,,https://www.wslfootball.com/fixtures/wsl
 NWSL,Football,NWSL,USA,,Denver Summit,Racing Louisville,2026-10-24 23:30,Empower Field at Mile High,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
@@ -319,13 +318,14 @@ Adran Premier,Football,Adran Premier,Wales,,Briton Ferry Llansawel,The New Saint
 Adran Premier,Football,Adran Premier,Wales,,Cardiff City,Aberystwyth Town,2026-11-29 14:00,-,,,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 Adran Premier,Football,Adran Premier,Wales,,Wrexham,Swansea City,2026-11-29 14:00,-,,,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Leafield Athletic,Sporting Khalsa,2026-11-29 15:00,-,,,https://wnl.thefa.com/fixtures
+England Women - FIFA 2027 World Cup European Qualifier play-off,Football,England Women,England,,Ukraine,England,2026-12-01 12:00,TBC,,Kick-off time to be confirmed,https://www.englandfootball.com/england/womens-senior-team/fixtures-results
 FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Poland,Republic of Ireland,2026-12-01 17:00,Gdańsk Stadium,,,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
 FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Finland,Italy,2026-12-01 17:30,Bolt Arena,,,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
 FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Wales,Norway,2026-12-01 19:15,Cardiff City Stadium,,,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
-England Women - FIFA 2027 World Cup European Qualifier play-off,Football,England Women,England,,England,Ukraine,2026-12-05 12:00,TBC,ITV TBC,Kick-off time to be confirmed,https://www.englandfootball.com/england/womens-senior-team/fixtures-results
 FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Sweden,Scotland,2026-12-05 15:00,3Arena,,,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
 FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Republic of Ireland,Poland,2026-12-05 17:00,Aviva Stadium,,,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
 FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Netherlands,Slovenia,2026-12-05 17:00,Stadion Galgenwaard,,,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
+England Women - FIFA 2027 World Cup European Qualifier play-off - Round Two - Second Leg,Football,England Women,England,,England,Ukraine,2026-12-05 17:30,Wembley Stadium,ITV TBC,,https://www.englandfootball.com/england/womens-senior-team/fixtures-results
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Wimbledon,Portsmouth,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Abingdon United,Moneyfields,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Northampton Town,Wythenshawe,2026-12-06 14:00,-,,,https://wnl.thefa.com/fixtures
