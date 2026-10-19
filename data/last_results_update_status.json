@@ -5,7 +5,7 @@
   },
   "FAWNL": {
     "ok": true,
-    "rows": 123
+    "rows": 85
   },
   "Adran Premier": {
     "ok": true,
@@ -41,7 +41,7 @@
   },
   "NWSL": {
     "ok": true,
-    "rows": 119,
+    "rows": 122,
     "note": "102 score(s) skipped, no known date yet"
   }
 }

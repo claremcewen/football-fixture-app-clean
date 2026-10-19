@@ -1,14 +1,4 @@
 competition,sport,competition_group,region,tier,home_team,away_team,kickoff_uk,venue,watch_platforms,watch_notes,official_source
-SWPL 1,Football,SWPL 1,Scotland,,Aberdeen,Celtic,2026-10-18 13:00,Balmoral Stadium,,,https://swpl.uk/match-centre/swpl/
-SWPL 1,Football,SWPL 1,Scotland,,Glasgow City,Motherwell,2026-10-18 13:00,Petershill Park,,,https://swpl.uk/match-centre/swpl/
-SWPL 1,Football,SWPL 1,Scotland,,Spartans,Montrose,2026-10-18 13:00,The Vanloq Community Stadium,,,https://swpl.uk/match-centre/swpl/
-Division 1 North,Football,Division 1 North,England,Tier 4,AFC Fylde,Leeds United,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bristol Rovers,Keynsham Town,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 North,Football,Division 1 North,England,Tier 4,Norton & Stockton Ancients,Stockport County,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Maidenhead United,Gwalia United,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Portsmouth,Cheltenham Town,2026-10-18 14:00,-,,,https://wnl.thefa.com/fixtures
-SWPL 1,Football,SWPL 1,Scotland,,Rangers,Hibernian,2026-10-18 14:00,Broadwood Stadium,,,https://swpl.uk/match-centre/swpl/
-SWPL 1,Football,SWPL 1,Scotland,,Hearts,Partick Thistle,2026-10-18 16:10,The Vanloq Community Stadium,,,https://swpl.uk/match-centre/swpl/
 NWSL,Football,NWSL,USA,,Chicago Stars,Seattle Reign,2026-10-19 00:00,Northwestern Medicine Field,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 Subway Players Cup,Football,Subway Players Cup,England,,West Ham United,London City Lionesses,2026-10-21 19:00,Victoria Road Stadium,,,https://www.wslfootball.com/fixtures/league-cup
 Subway Players Cup,Football,Subway Players Cup,England,,Southampton,Crystal Palace,2026-10-21 19:00,Silverlake Stadium,,,https://www.wslfootball.com/fixtures/league-cup
@@ -52,10 +42,10 @@ Barclays WSL,Football,WSL,England,Tier 1,Manchester United,Manchester City,2026-
 NWSL,Football,NWSL,USA,,Orlando Pride,Gotham FC,2026-10-25 19:00,Inter&Co Stadium,NWSL+,,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,Kansas City Current,Washington Spirit,2026-10-25 21:00,CPKC Stadium,"TNT Sports 3, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
 NWSL,Football,NWSL,USA,,San Diego Wave,Boston Legacy,2026-10-25 23:00,Snapdragon Stadium,"TNT Sports 1, HBO Max",,https://www.live-footballontv.com/live-womens-football-on-tv.html
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Maidenhead United,2026-10-27 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Dulwich Hamlet,2026-10-27 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Kidderminster Harriers,Worcester City Women,2026-10-27 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Maidenhead United,2026-10-27 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Notts County,Sutton Coldfield Town,2026-10-27 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Dulwich Hamlet,2026-10-27 19:45,-,,,https://wnl.thefa.com/fixtures
 UEFA Women's Champions League - Women's Champions League League Phase,Football,UWCL,Europe,,Bayern Munich Women,Real Madrid Women,2026-10-28 17:45,-,Disney+,,https://www.live-footballontv.com/womens-champions-league-on-tv.html
 UEFA Women's Champions League - Women's Champions League League Phase,Football,UWCL,Europe,,Chelsea Women,Roma Women,2026-10-28 17:45,-,Disney+,,https://www.live-footballontv.com/womens-champions-league-on-tv.html
 UEFA Women's Champions League - Women's Champions League League Phase,Football,UWCL,Europe,,Servette Women,OH Leuven Women,2026-10-28 17:45,-,Disney+,,https://www.live-footballontv.com/womens-champions-league-on-tv.html
@@ -66,41 +56,41 @@ Subway Players Cup,Football,Subway Players Cup,England,,Manchester United,Burnle
 Subway Players Cup,Football,Subway Players Cup,England,,Wolverhampton,Brighton & Hove Albion,2026-10-28 19:30,SEAH Stadium,,,https://www.wslfootball.com/fixtures/league-cup
 Subway Players Cup,Football,Subway Players Cup,England,,Charlton Athletic,West Ham United,2026-10-28 19:30,The Valley,,,https://www.wslfootball.com/fixtures/league-cup
 Subway Players Cup,Football,Subway Players Cup,England,,Aston Villa,Birmingham City,2026-10-28 19:30,Keys Park,YouTube,,https://www.wslfootball.com/fixtures/league-cup
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Moneyfields,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Milton Keynes Dons,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Northampton Town,Leafield Athletic,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,London Bees,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sporting Khalsa,Lye Town,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Billericay Town,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Bradford City,Halifax,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,Saltdean United,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Northampton Town,Leafield Athletic,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Milton Keynes Dons,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Leeds United,York City,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Bournemouth,Portsmouth,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sporting Khalsa,Lye Town,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Queens Park Rangers,London Bees,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Stockport County,Blackburn Rovers,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Exeter City,Plymouth Argyle,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Chatham Town,Billericay Town,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Derby County,Stoke City,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,Real Bedford,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Dartford,Saltdean United,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Liverpool Feds,Huddersfield Town,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,AFC Wimbledon,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bournemouth Sports,Moneyfields,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Peterborough United,Norwich City,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,Fulham,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Bournemouth,Portsmouth,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,West Bromwich Albion,Boldmere St Michaels,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Exeter City,Plymouth Argyle,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Middlesbrough,Hull City,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Oxford United,Real Bedford,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Rugby Borough,Loughborough Lightning,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,AFC Wimbledon,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,Fulham,2026-10-28 19:45,-,,,https://wnl.thefa.com/fixtures
 UEFA Women's Champions League - Women's Champions League League Phase,Football,UWCL,Europe,,Arsenal Women,Benfica Women,2026-10-28 20:00,-,Disney+,,https://www.live-footballontv.com/womens-champions-league-on-tv.html
 UEFA Women's Champions League - Women's Champions League League Phase,Football,UWCL,Europe,,Lyon Women,Inter Milan Women,2026-10-28 20:00,-,Disney+,,https://www.live-footballontv.com/womens-champions-league-on-tv.html
 UEFA Women's Champions League - Women's Champions League League Phase,Football,UWCL,Europe,,Austria Wien Women,Juventus Women,2026-10-29 17:45,-,Disney+,,https://www.live-footballontv.com/womens-champions-league-on-tv.html
 UEFA Women's Champions League - Women's Champions League League Phase,Football,UWCL,Europe,,Paris FC Women,Hacken Women,2026-10-29 17:45,-,Disney+,,https://www.live-footballontv.com/womens-champions-league-on-tv.html
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Bristol Rovers,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
-Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Cheltenham Town,Swindon Town,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Bridgwater United,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Wythenshawe,Barnsley Women,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Torquay United,Marine Academy Plymouth,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Cheltenham Town,Swindon Town,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sheffield FC,Chesterfield,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Wycombe Wanderers,Abingdon United,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Chester Le Street Town,Durham Cestria,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
-Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,Cambridge United,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Gwalia United,Bristol Rovers,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Thornaby,Norton & Stockton Ancients,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Keynsham Town,Bridgwater United,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Stevenage,Cambridge United,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Torquay United,Marine Academy Plymouth,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Wycombe Wanderers,Abingdon United,2026-10-29 19:45,-,,,https://wnl.thefa.com/fixtures
 UEFA Women's Champions League - Women's Champions League League Phase,Football,UWCL,Europe,,HB Koge Women,Barcelona Women,2026-10-29 20:00,-,Disney+,,https://www.live-footballontv.com/womens-champions-league-on-tv.html
 UEFA Women's Champions League - Women's Champions League League Phase,Football,UWCL,Europe,,Manchester City Women,PSG Women,2026-10-29 20:00,-,BBC Two,,https://www.live-footballontv.com/womens-champions-league-on-tv.html
 Division 1 North,Football,Division 1 North,England,Tier 4,Chorley,AFC Fylde,2026-10-29 20:00,-,,,https://wnl.thefa.com/fixtures
