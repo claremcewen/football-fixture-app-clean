@@ -4,8 +4,9 @@
     "rows": 45
   },
   "FAWNL": {
-    "ok": true,
-    "rows": 85
+    "ok": false,
+    "rows": 0,
+    "note": "scraper raised: HTTPSConnectionPool(host='api.wnl.thefa.com', port=443): Read timed out. (read timeout=30)"
   },
   "Adran Premier": {
     "ok": true,
