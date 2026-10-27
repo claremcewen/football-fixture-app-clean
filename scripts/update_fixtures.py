@@ -19,6 +19,7 @@ from scripts.scrapers.nwsl import scrape_nwsl
 from scripts.scrapers.players_cup import scrape_players_cup
 from scripts.scrapers.swpl import scrape_swpl
 from scripts.scrapers.uwcl import scrape_uwcl
+from scripts.scrapers.womens_fa_cup import scrape_womens_fa_cup
 from scripts.scrapers.world_cup_playoffs import scrape_world_cup_playoffs
 from scripts.scrapers.wsl import scrape_wsl
 from scripts.scrapers.wsl2 import scrape_wsl2
@@ -102,6 +103,7 @@ TASKS = [
     # quick resume, not a from-scratch source investigation.
     ("SWPL 1", scrape_swpl, ["SWPL 1"]),
     ("Subway Players Cup", scrape_players_cup, ["Subway Players Cup"]),
+    ("Women's FA Cup", scrape_womens_fa_cup, ["Women's FA Cup"]),
     ("Adran Premier", scrape_adran_premier, ["Adran Premier"]),
 ]
 

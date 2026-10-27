@@ -42,6 +42,8 @@ COMPETITION_REGISTRY: list[tuple[str, str, str, str, str | None]] = [
     ("Subway Players Cup", "Football", "Subway Players Cup", "England", None),
     # Wales' top flight - tier is England-pyramid-only, so None here too.
     ("Adran Premier", "Football", "Adran Premier", "Wales", None),
+    # The Adobe Women's FA Cup - open to every tier, so no single tier applies.
+    ("Adobe Women's FA Cup", "Football", "Women's FA Cup", "England", None),
 ]
 
 

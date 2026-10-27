@@ -35,6 +35,7 @@ COMPETITION_PRIORITY: dict[str, int] = {
     "Division 1 South East": 4,
     "Division 1 South West": 4,
     "FAWNL Cup": 5,
+    "Women's FA Cup": 5,
     "England Women": 6,
     "WWC Play-Offs": 6,
     "UWCL": 7,
@@ -53,6 +54,7 @@ NO_BROADCAST_SOURCE_COMPETITIONS: set[str] = {
     "Division 1 South East",
     "Division 1 South West",
     "FAWNL Cup",
+    "Women's FA Cup",
     "SWPL 1",
     "Adran Premier",
 }

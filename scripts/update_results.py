@@ -20,6 +20,7 @@ from scripts.scrapers.nwsl import COMPETITION as NWSL_COMPETITION, NWSL_RESULTS_
 from scripts.scrapers.players_cup import scrape_players_cup_results
 from scripts.scrapers.swpl import scrape_swpl_results
 from scripts.scrapers.uwcl import scrape_uwcl_results
+from scripts.scrapers.womens_fa_cup import scrape_womens_fa_cup_results
 from scripts.scrapers.world_cup_playoffs import scrape_world_cup_playoffs_results
 from scripts.scrapers.wsl import scrape_wsl_results
 from scripts.scrapers.wsl2 import scrape_wsl2_results
@@ -77,6 +78,7 @@ TASKS = [
     ("WSL", scrape_wsl_results, ["WSL"]),
     ("WSL2", scrape_wsl2_results, ["WSL2"]),
     ("Subway Players Cup", scrape_players_cup_results, ["Subway Players Cup"]),
+    ("Women's FA Cup", scrape_womens_fa_cup_results, ["Women's FA Cup"]),
 ]
 
 # NWSL results still come from a Wikipedia results grid that only has a
