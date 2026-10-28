@@ -50,6 +50,10 @@ jobs:
         run: |
           python scripts/update_results.py
 
+      - name: Publish phone-readable digest
+        run: |
+          python scripts/daily_digest.py --publish
+
       - name: Report scraper failures
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -88,7 +92,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data/fixtures_all.csv data/last_update_status.json data/results_all.csv data/last_results_update_status.json data/fixture_dates_archive.csv
+          git add data/fixtures_all.csv data/last_update_status.json data/results_all.csv data/last_results_update_status.json data/fixture_dates_archive.csv data/digest.txt data/weekend.txt
 
           if git diff --cached --quiet; then
             echo "No fixture/result changes to commit."

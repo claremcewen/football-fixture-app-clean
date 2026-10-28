@@ -8,13 +8,22 @@ and limited to a hardcoded competition list, which silently skipped
 midweek competitions (UWCL, Subway Players Cup) and SWPL 1 / Adran Premier
 / NWSL entirely. On Fridays it also lists Saturday's and Sunday's fixtures
 (one block each) so "games today" posts can be scheduled ahead.
+
+Run with no arguments it writes the daily digest to the Desktop and opens it.
+`--weekend` writes just the coming weekend's fixtures (Saturday and Sunday,
+one block each) to the Desktop. `--publish` writes data/digest.txt and
+data/weekend.txt inside the repo instead (nothing opened) - the scheduled
+GitHub Action runs that, so both are readable on a phone from the repo's raw
+file links without needing the laptop.
 """
 from __future__ import annotations
 
+import argparse
 import datetime
 import os
 import sys
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import pandas as pd
 
@@ -22,6 +31,10 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_FILE = REPO_ROOT / "data" / "fixtures_all.csv"
 RESULTS_FILE = REPO_ROOT / "data" / "results_all.csv"
 OUTPUT_FILE = Path.home() / "Desktop" / "Todays_Fixtures.txt"
+WEEKEND_OUTPUT_FILE = Path.home() / "Desktop" / "Weekend_Fixtures.txt"
+PUBLISHED_DIGEST_FILE = REPO_ROOT / "data" / "digest.txt"
+PUBLISHED_WEEKEND_FILE = REPO_ROOT / "data" / "weekend.txt"
+LONDON = ZoneInfo("Europe/London")
 
 # Mirrors app.py's COMPETITION_PRIORITY - keeps the same-day league order
 # consistent between the app and this digest.
@@ -136,6 +149,36 @@ def format_results_grouped(df: pd.DataFrame) -> str:
     return "\n".join(lines).rstrip()
 
 
+def _day_blocks(fixtures_df: pd.DataFrame, days: list[datetime.date]) -> list[str]:
+    sections: list[str] = []
+    for day in days:
+        day_fixtures = fixtures_df[fixtures_df["date"] == day] if not fixtures_df.empty else fixtures_df
+        sections += [
+            "",
+            "=" * 40,
+            "",
+            f"{day.strftime('%A %d %B').upper()} FIXTURES",
+            "",
+            format_grouped(day_fixtures),
+        ]
+    return sections
+
+
+def coming_saturday(today: datetime.date) -> datetime.date:
+    """The Saturday of the weekend being planned: the coming one Mon-Fri, or
+    this weekend's if today already is Saturday/Sunday."""
+    if today.weekday() == 6:
+        return today - datetime.timedelta(days=1)
+    return today + datetime.timedelta(days=(5 - today.weekday()) % 7)
+
+
+def build_weekend_fixtures(fixtures_df: pd.DataFrame, today: datetime.date) -> str:
+    saturday = coming_saturday(today)
+    sunday = saturday + datetime.timedelta(days=1)
+    title = f"WEEKEND FIXTURES - {saturday.strftime('%d %b')} & {sunday.strftime('%d %b %Y')}"
+    return "\n".join([title] + _day_blocks(fixtures_df, [saturday, sunday]))
+
+
 def build_digest(fixtures_df: pd.DataFrame, results_df: pd.DataFrame, today: datetime.date) -> str:
     sections: list[str] = [f"TODAY'S FIXTURES - {today.strftime('%A %d %B %Y')}", ""]
 
@@ -143,17 +186,7 @@ def build_digest(fixtures_df: pd.DataFrame, results_df: pd.DataFrame, today: dat
     sections.append(format_grouped(todays))
 
     if today.weekday() == 4:  # Friday - weekend fixtures, one block per day, for scheduling ahead
-        for offset in (1, 2):
-            day = today + datetime.timedelta(days=offset)
-            day_fixtures = fixtures_df[fixtures_df["date"] == day] if not fixtures_df.empty else fixtures_df
-            sections += [
-                "",
-                "=" * 40,
-                "",
-                f"{day.strftime('%A %d %B').upper()} FIXTURES",
-                "",
-                format_grouped(day_fixtures),
-            ]
+        sections += _day_blocks(fixtures_df, [today + datetime.timedelta(days=1), today + datetime.timedelta(days=2)])
 
     if today.weekday() == 0:  # Monday - the weekend is one natural block
         saturday = today - datetime.timedelta(days=2)
@@ -178,17 +211,33 @@ def build_digest(fixtures_df: pd.DataFrame, results_df: pd.DataFrame, today: dat
     return "\n".join(sections)
 
 
-def main() -> None:
+def _write_and_open(path: Path, text: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8")
+    if sys.platform == "win32":
+        os.startfile(path)  # noqa: S606 - opens the text file, intentional
+
+
+def main(argv: list[str] | None = None) -> None:
+    parser = argparse.ArgumentParser()
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--weekend", action="store_true", help="coming weekend's fixtures only")
+    mode.add_argument("--publish", action="store_true", help="write the phone-readable files into data/")
+    args = parser.parse_args(argv)
+
     fixtures_df = load_fixtures()
     results_df = load_results()
-    today = datetime.date.today()
-    digest = build_digest(fixtures_df, results_df, today)
+    now = datetime.datetime.now(LONDON)
+    today = now.date()
 
-    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_FILE.write_text(digest, encoding="utf-8")
-
-    if sys.platform == "win32":
-        os.startfile(OUTPUT_FILE)  # noqa: S606 - opens the text file, intentional
+    if args.weekend:
+        _write_and_open(WEEKEND_OUTPUT_FILE, build_weekend_fixtures(fixtures_df, today))
+    elif args.publish:
+        stamp = f"Updated {now.strftime('%a %d %b %H:%M')} UK time\n\n"
+        PUBLISHED_DIGEST_FILE.write_text(stamp + build_digest(fixtures_df, results_df, today), encoding="utf-8")
+        PUBLISHED_WEEKEND_FILE.write_text(stamp + build_weekend_fixtures(fixtures_df, today), encoding="utf-8")
+    else:
+        _write_and_open(OUTPUT_FILE, build_digest(fixtures_df, results_df, today))
 
 
 if __name__ == "__main__":
