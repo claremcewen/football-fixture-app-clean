@@ -56,22 +56,6 @@ COMPETITION_PRIORITY: dict[str, int] = {
 }
 DEFAULT_PRIORITY_FALLBACK = 99
 
-# Mirrors app.py's NO_BROADCAST_SOURCE_COMPETITIONS - these sources have no
-# broadcaster field at all, so a blank watch_platforms means "No broadcast
-# info" here rather than "TBC" (which implies an announcement is coming).
-NO_BROADCAST_SOURCE_COMPETITIONS: set[str] = {
-    "Northern Premier Division",
-    "Southern Premier Division",
-    "Division 1 North",
-    "Division 1 Midlands",
-    "Division 1 South East",
-    "Division 1 South West",
-    "FAWNL Cup",
-    "Women's FA Cup",
-    "SWPL 1",
-    "Adran Premier",
-}
-
 
 def load_fixtures() -> pd.DataFrame:
     if not DATA_FILE.exists():
@@ -98,12 +82,12 @@ def load_results() -> pd.DataFrame:
 
 
 def watch_text_for(row: pd.Series) -> str:
+    """The confirmed broadcaster, or "" - "TBC" / "No broadcast info" are left
+    off the digest entirely since they only ever got deleted by hand."""
     watch_platforms = row.get("watch_platforms", "")
     if pd.notna(watch_platforms) and str(watch_platforms).strip():
         return str(watch_platforms)
-    if row.get("competition_group") in NO_BROADCAST_SOURCE_COMPETITIONS:
-        return "No broadcast info"
-    return "TBC"
+    return ""
 
 
 def format_grouped(df: pd.DataFrame) -> str:
@@ -120,10 +104,9 @@ def format_grouped(df: pd.DataFrame) -> str:
     for group, rows in df.groupby("competition_group", sort=False):
         lines.append(group)
         for _, row in rows.iterrows():
-            lines.append(
-                f"{row['home_team']} vs {row['away_team']} - "
-                f"{row['kickoff'].strftime('%H:%M')} - {watch_text_for(row)}"
-            )
+            line = f"{row['home_team']} vs {row['away_team']} - {row['kickoff'].strftime('%H:%M')}"
+            watch = watch_text_for(row)
+            lines.append(f"{line} - {watch}" if watch else line)
         lines.append("")
     return "\n".join(lines).rstrip()
 
