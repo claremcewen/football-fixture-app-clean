@@ -16,20 +16,22 @@
     "rows": 0
   },
   "UWCL": {
-    "ok": true,
-    "rows": 36
+    "ok": false,
+    "rows": 36,
+    "note": "scraper returned 0 rows; fell back to previous data"
   },
   "WWC Play-Offs": {
     "ok": true,
     "rows": 10
   },
   "NWSL": {
-    "ok": true,
-    "rows": 8
+    "ok": false,
+    "rows": 8,
+    "note": "scraper returned 0 rows; fell back to previous data"
   },
   "FAWNL": {
     "ok": true,
-    "rows": 541
+    "rows": 521
   },
   "SWPL 1": {
     "ok": true,
@@ -37,7 +39,7 @@
   },
   "Subway Players Cup": {
     "ok": true,
-    "rows": 35
+    "rows": 34
   },
   "Women's FA Cup": {
     "ok": true,
