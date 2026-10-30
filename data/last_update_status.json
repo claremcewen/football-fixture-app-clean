@@ -36,12 +36,13 @@
     "rows": 44
   },
   "Subway Players Cup": {
-    "ok": true,
-    "rows": 34
+    "ok": false,
+    "rows": 34,
+    "note": "scraper returned 0 rows; fell back to previous data"
   },
   "Women's FA Cup": {
     "ok": true,
-    "rows": 13
+    "rows": 14
   },
   "Adran Premier": {
     "ok": true,
