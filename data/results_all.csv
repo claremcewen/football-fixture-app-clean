@@ -628,6 +628,10 @@ FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Czech Republ
 FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Hungary,Netherlands,2026-10-09 19:00,Pancho Aréna,0,8,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
 FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Northern Ireland,Portugal,2026-10-09 19:00,Inver Park,0,4,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
 FIFA Women's World Cup 2027 Play-Off,Football,WWC Play-Offs,Europe,,Belgium,Poland,2026-10-09 19:15,Den Dreef,1,0,https://en.wikipedia.org/wiki/2027_FIFA_Women%27s_World_Cup_qualification_%E2%80%93_UEFA_play-offs
+Adran Premier,Football,Adran Premier,Wales,,Aberystwyth Town,Cardiff City,2026-10-11 14:00,Park Avenue,0,10,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
+Adran Premier,Football,Adran Premier,Wales,,Cardiff Met,Barry Town Utd,2026-10-11 14:00,Cyncoed Stadium,2,2,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
+Adran Premier,Football,Adran Premier,Wales,,The New Saints,Briton Ferry Llansawel,2026-10-11 14:00,Park Hall,3,1,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
+Adran Premier,Football,Adran Premier,Wales,,Swansea City,Wrexham,2026-10-11 14:00,Garden Village Park,1,8,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Moneyfields,Bridgwater United,2026-10-11 14:00,The John Jenkins Stadium,2,4,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Lewes,Real Bedford,2026-10-11 14:00,The Dripping Pan,5,2,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Middlesbrough,Norwich City,2026-10-11 14:00,Stockton Town FC,1,1,https://wnl.thefa.com/fixtures
@@ -661,10 +665,6 @@ Division 1 North,Football,Division 1 North,England,Tier 4,Chester Le Street Town
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Luton Town,Actonians,2026-10-11 14:00,Barton Rovers FC,0,1,https://wnl.thefa.com/fixtures
 Division 1 North,Football,Division 1 North,England,Tier 4,Blackburn Rovers,AFC Fylde,2026-10-11 14:00,Darwen FC,0,2,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,London Bees,Billericay Town,2026-10-11 14:00,London Bees Stadium,8,1,https://wnl.thefa.com/fixtures
-Adran Premier,Football,Adran Premier,Wales,,Aberystwyth Town,Cardiff City,2026-10-11 14:00,Park Avenue,0,10,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
-Adran Premier,Football,Adran Premier,Wales,,Cardiff Met,Barry Town Utd,2026-10-11 14:00,Cyncoed Stadium,2,2,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
-Adran Premier,Football,Adran Premier,Wales,,The New Saints,Briton Ferry Llansawel,2026-10-11 14:00,Park Hall,3,1,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
-Adran Premier,Football,Adran Premier,Wales,,Swansea City,Wrexham,2026-10-11 14:00,Garden Village Park,1,8,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Leafield Athletic,Barnsley Women,2026-10-11 15:00,Castle Vale Stadium,1,0,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Hashtag United,Portsmouth,2026-10-11 15:00,"Redbridge Football Club, THE TECHSOC.COM STADIUM",0,0,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Rugby Borough,Boldmere St Michaels,2026-10-11 15:00,Nationwide Windows Arena,5,1,https://wnl.thefa.com/fixtures
@@ -882,3 +882,36 @@ UEFA Women's Champions League,Football,UWCL,Europe,,Manchester City,Paris Saint-
 UEFA Women's Champions League,Football,UWCL,Europe,,HB Køge,Barcelona,2026-10-29 20:00,-,0,8,https://en.wikipedia.org/wiki/2026-27_UEFA_Women%27s_Champions_League_league_phase
 Barclays WSL,Football,WSL,England,Tier 1,Everton,Manchester United,2026-10-31 12:45,Goodison Park,0,0,https://www.wslfootball.com/fixtures/wsl
 Subway Players Cup,Football,Subway Players Cup,England,,Watford,Ipswich Town,2026-10-31 15:00,The Hive Stadium,1,4,https://www.wslfootball.com/fixtures/league-cup
+Barclays WSL,Football,WSL,England,Tier 1,London City Lionesses,Manchester City,2026-11-01 12:00,Copperjax Community Stadium,1,2,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Arsenal,Aston Villa,2026-11-01 12:00,Emirates Stadium,1,1,https://www.wslfootball.com/fixtures/wsl
+Subway Players Cup,Football,Subway Players Cup,England,,Durham,Newcastle United,2026-11-01 12:00,Wolf Competitions Stadium,1,5,https://www.wslfootball.com/fixtures/league-cup
+The FA WNL Cup,Football,FAWNL Cup,England,,Moneyfields,Actonians,2026-11-01 14:00,The John Jenkins Stadium,2,2,https://wnl.thefa.com/fixtures
+The FA WNL Cup,Football,FAWNL Cup,England,,Chatham Town,Exeter City,2026-11-01 14:00,The Bauvill Stadium,3,3,https://wnl.thefa.com/fixtures
+The FA WNL Cup,Football,FAWNL Cup,England,,Loughborough Lightning,Stoke City,2026-11-01 14:00,Loughborough University Stadium,2,4,https://wnl.thefa.com/fixtures
+The FA WNL Cup,Football,FAWNL Cup,England,,Stockport County,Chesterfield,2026-11-01 14:00,The Ground Up Solutions Stadium,2,0,https://wnl.thefa.com/fixtures
+The FA WNL Cup,Football,FAWNL Cup,England,,Norton & Stockton Ancients,West Bromwich Albion,2026-11-01 14:00,Norton Sports Complex,0,3,https://wnl.thefa.com/fixtures
+The FA WNL Cup,Football,FAWNL Cup,England,,AFC Fylde,Hull City,2026-11-01 14:00,Kellamergh Park,1,1,https://wnl.thefa.com/fixtures
+The FA WNL Cup,Football,FAWNL Cup,England,,Portsmouth,Fulham,2026-11-01 14:00,PMC Stadium,1,1,https://wnl.thefa.com/fixtures
+The FA WNL Cup,Football,FAWNL Cup,England,,Oxford United,Chelsea U21,2026-11-01 14:00,The MGroup Stadium,1,1,https://wnl.thefa.com/fixtures
+The FA WNL Cup,Football,FAWNL Cup,England,,Cheltenham Town,Bristol City U21,2026-11-01 14:00,Bishops Cleeve FC,1,1,https://wnl.thefa.com/fixtures
+The FA WNL Cup,Football,FAWNL Cup,England,,AFC Wimbledon,AFC Bournemouth,2026-11-01 14:00,Tooting and Mitcham United FC,0,1,https://wnl.thefa.com/fixtures
+The FA WNL Cup,Football,FAWNL Cup,England,,Norwich City,Peterborough United,2026-11-01 14:00,The Nest,4,0,https://wnl.thefa.com/fixtures
+Adran Premier,Football,Adran Premier,Wales,,Aberystwyth Town,Cardiff Met,2026-11-01 14:00,Park Avenue,0,1,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
+Adran Premier,Football,Adran Premier,Wales,,Barry Town Utd,The New Saints,2026-11-01 14:00,Jenner Park Stadium,1,1,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
+Adran Premier,Football,Adran Premier,Wales,,Cardiff City,Swansea City,2026-11-01 14:00,Cardiff International Sports Stadium,3,1,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
+Adran Premier,Football,Adran Premier,Wales,,Wrexham,Briton Ferry Llansawel,2026-11-01 14:00,The Rock,4,0,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
+Barclays WSL,Football,WSL,England,Tier 1,West Ham United,Liverpool,2026-11-01 14:00,Victoria Road Stadium,4,1,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Brighton & Hove Albion,Crystal Palace,2026-11-01 14:00,Broadfield Stadium,2,1,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Birmingham City,Tottenham Hotspur,2026-11-01 14:00,St. Andrew's @ Knighthead Park,1,4,https://www.wslfootball.com/fixtures/wsl
+Subway Players Cup,Football,Subway Players Cup,England,,Wolverhampton,Bristol City,2026-11-01 14:00,SEAH Stadium,2,1,https://www.wslfootball.com/fixtures/league-cup
+Subway Players Cup,Football,Subway Players Cup,England,,Southampton,Leicester City,2026-11-01 14:00,Silverlake Stadium,1,1,https://www.wslfootball.com/fixtures/league-cup
+Subway Players Cup,Football,Subway Players Cup,England,,Sunderland,Sheffield United,2026-11-01 14:00,Eppleton Colliery Football Ground,1,0,https://www.wslfootball.com/fixtures/league-cup
+Subway Players Cup,Football,Subway Players Cup,England,,Nottingham Forest,Burnley,2026-11-01 14:00,The City Ground,4,0,https://www.wslfootball.com/fixtures/league-cup
+Adobe Women's FA Cup - First Round Proper,Football,Women's FA Cup,England,,Workington Town,Mancunian Unity,2026-11-01 14:00,-,0,2,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - First Round Proper,Football,Women's FA Cup,England,,Wigan Athletic,Chester-Le-Street Town,2026-11-01 14:00,-,1,4,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - First Round Proper,Football,Women's FA Cup,England,,Huddersfield Town,Middlesbrough,2026-11-01 14:00,-,1,2,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - First Round Proper,Football,Women's FA Cup,England,,South Shields,SJR Worksop,2026-11-01 14:00,-,0,3,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - First Round Proper,Football,Women's FA Cup,England,,Leeds United,Rotherham United,2026-11-01 14:00,-,2,0,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - First Round Proper,Football,Women's FA Cup,England,,Swindon Town,Bridgwater United,2026-11-01 14:00,-,1,1,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Barclays WSL,Football,WSL,England,Tier 1,Charlton Athletic,Chelsea,2026-11-01 14:30,The Valley,0,6,https://www.wslfootball.com/fixtures/wsl
+The FA WNL Cup,Football,FAWNL Cup,England,,Rugby Borough,Boldmere St Michaels,2026-11-01 15:00,Nationwide Windows Arena,3,0,https://wnl.thefa.com/fixtures

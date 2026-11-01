@@ -1,7 +1,7 @@
 {
   "WSL": {
     "ok": true,
-    "rows": 125
+    "rows": 119
   },
   "WSL2": {
     "ok": true,
@@ -21,7 +21,7 @@
   },
   "WWC Play-Offs": {
     "ok": true,
-    "rows": 10
+    "rows": 11
   },
   "NWSL": {
     "ok": true,
@@ -29,7 +29,7 @@
   },
   "FAWNL": {
     "ok": true,
-    "rows": 510
+    "rows": 498
   },
   "SWPL 1": {
     "ok": true,
@@ -37,7 +37,7 @@
   },
   "Subway Players Cup": {
     "ok": true,
-    "rows": 33
+    "rows": 28
   },
   "Women's FA Cup": {
     "ok": true,
@@ -45,6 +45,6 @@
   },
   "Adran Premier": {
     "ok": true,
-    "rows": 24
+    "rows": 20
   }
 }
