@@ -698,6 +698,9 @@ SWPL 1,Football,SWPL 1,Scotland,,Spartans,Montrose,2026-10-18 13:00,The Vanloq C
 SWPL 1,Football,SWPL 1,Scotland,,Glasgow City,Motherwell,2026-10-18 13:00,Petershill Park,3,0,https://swpl.uk/match-centre/swpl/
 SWPL 1,Football,SWPL 1,Scotland,,Aberdeen,Celtic,2026-10-18 13:00,Balmoral Stadium,0,6,https://swpl.uk/match-centre/swpl/
 Subway Players Cup,Football,Subway Players Cup,England,,Sheffield United,Nottingham Forest,2026-10-18 13:00,-,0,0,https://www.wslfootball.com/fixtures/league-cup
+Adran Premier,Football,Adran Premier,Wales,,Aberystwyth Town,Barry Town Utd,2026-10-18 14:00,Park Avenue,2,2,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
+Adran Premier,Football,Adran Premier,Wales,,Cardiff City,The New Saints,2026-10-18 14:00,Cardiff International Sports Stadium,1,0,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
+Adran Premier,Football,Adran Premier,Wales,,Wrexham,Cardiff Met,2026-10-18 14:00,The Rock,7,0,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 SWPL 1,Football,SWPL 1,Scotland,,Rangers,Hibernian,2026-10-18 14:00,Broadwood Stadium,4,2,https://swpl.uk/match-centre/swpl/
 Division 1 North,Football,Division 1 North,England,Tier 4,Halifax,Thornaby,2026-10-18 14:00,Myra Shay,6,0,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Moneyfields,Torquay United,2026-10-18 14:00,The John Jenkins Stadium,3,1,https://wnl.thefa.com/fixtures
@@ -733,9 +736,6 @@ Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Fulh
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Hull City,Peterborough United,2026-10-18 14:00,Versa Sportswear Stadium,0,1,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Wimbledon,Oxford United,2026-10-18 14:00,The Cherry Red Records Stadium,1,2,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Huddersfield Town,Middlesbrough,2026-10-18 14:00,The Fantastic Media Welfare Ground,3,1,https://wnl.thefa.com/fixtures
-Adran Premier,Football,Adran Premier,Wales,,Aberystwyth Town,Barry Town Utd,2026-10-18 14:00,Park Avenue,2,2,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
-Adran Premier,Football,Adran Premier,Wales,,Cardiff City,The New Saints,2026-10-18 14:00,Cardiff International Sports Stadium,1,0,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
-Adran Premier,Football,Adran Premier,Wales,,Wrexham,Cardiff Met,2026-10-18 14:00,The Rock,7,0,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 Barclays WSL,Football,WSL,England,Tier 1,London City Lionesses,Everton,2026-10-18 14:00,Copperjax Community Stadium,2,1,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL,Football,WSL,England,Tier 1,Charlton Athletic,Manchester United,2026-10-18 14:00,The Valley,1,3,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL,Football,WSL,England,Tier 1,Aston Villa,Liverpool,2026-10-18 14:00,Keys Park,2,1,https://www.wslfootball.com/fixtures/wsl
@@ -743,9 +743,9 @@ Subway Players Cup,Football,Subway Players Cup,England,,Wolverhampton,Ipswich To
 Subway Players Cup,Football,Subway Players Cup,England,,Newcastle United,Sunderland,2026-10-18 14:00,Gateshead International Stadium,0,1,https://www.wslfootball.com/fixtures/league-cup
 Subway Players Cup,Football,Subway Players Cup,England,,Burnley,Durham,2026-10-18 14:00,Turf Moor,3,2,https://www.wslfootball.com/fixtures/league-cup
 Barclays WSL,Football,WSL,England,Tier 1,Manchester City,Brighton & Hove Albion,2026-10-18 14:30,Joie Stadium,3,2,https://www.wslfootball.com/fixtures/wsl
+Adran Premier,Football,Adran Premier,Wales,,Swansea City,Briton Ferry Llansawel,2026-10-18 15:00,Swansea.com Stadium,0,3,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Leafield Athletic,Kidderminster Harriers,2026-10-18 15:00,Castle Vale Stadium,4,0,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Chesterfield,Wythenshawe,2026-10-18 15:00,Debdale Sports Park,1,0,https://wnl.thefa.com/fixtures
-Adran Premier,Football,Adran Premier,Wales,,Swansea City,Briton Ferry Llansawel,2026-10-18 15:00,Swansea.com Stadium,0,3,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 Subway Players Cup,Football,Subway Players Cup,England,,Bristol City,Southampton,2026-10-18 15:00,Robins High Performance Centre,1,1,https://www.wslfootball.com/fixtures/league-cup
 SWPL 1,Football,SWPL 1,Scotland,,Hearts,Partick Thistle,2026-10-18 16:10,The Vanloq Community Stadium,6,1,https://swpl.uk/match-centre/swpl/
 NWSL,Football,NWSL,USA,,Houston Dash,Orlando Pride,2026-10-18 18:00,-,1,2,https://en.wikipedia.org/wiki/2026_NWSL_season
@@ -928,3 +928,37 @@ SWPL 1,Football,SWPL 1,Scotland,,Hibernian,Celtic,2026-11-04 19:30,Meadowbank St
 SWPL 1,Football,SWPL 1,Scotland,,Aberdeen,Spartans,2026-11-04 19:45,Balmoral Stadium,1,1,https://swpl.uk/match-centre/swpl/
 Barclays WSL,Football,WSL,England,Tier 1,Manchester City,West Ham United,2026-11-07 12:45,Joie Stadium,5,0,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL,Football,WSL,England,Tier 1,Chelsea,Everton,2026-11-07 12:45,Stamford Bridge,1,1,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Aston Villa,Manchester United,2026-11-08 12:00,Villa Park,0,1,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Liverpool,Arsenal,2026-11-08 12:00,Anfield,1,2,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL2,Football,WSL2,England,Tier 2,Durham,Sunderland,2026-11-08 12:00,Maiden Castle Sports Park,1,4,https://www.wslfootball.com/fixtures/wsl2
+SWPL 1,Football,SWPL 1,Scotland,,Spartans,Glasgow City,2026-11-08 13:00,The Vanloq Community Stadium,1,10,https://swpl.uk/match-centre/swpl/
+SWPL 1,Football,SWPL 1,Scotland,,Montrose,Partick Thistle,2026-11-08 13:00,Links Park,4,1,https://swpl.uk/match-centre/swpl/
+SWPL 1,Football,SWPL 1,Scotland,,Hibernian,Aberdeen,2026-11-08 13:00,Meadowbank Stadium,5,2,https://swpl.uk/match-centre/swpl/
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Worcester City Women,Sheffield FC,2026-11-08 14:00,Sixways Stadium,6,0,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Loughborough Lightning,Derby County,2026-11-08 14:00,Loughborough University Stadium,2,1,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Plymouth Argyle,Hashtag United,2026-11-08 14:00,Home Park Stadium,1,0,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Billericay Town,Stevenage,2026-11-08 14:00,Billericay Town FC,2,4,https://wnl.thefa.com/fixtures
+Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Sutton Coldfield Town,Northampton Town,2026-11-08 14:00,The Domino’s Arena,0,1,https://wnl.thefa.com/fixtures
+Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Norwich City,Liverpool Feds,2026-11-08 14:00,Carrow Road,3,5,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Portsmouth,Oxford United,2026-11-08 14:00,Fratton Park,2,2,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Fulham,Cheltenham Town,2026-11-08 14:00,Fulham FC Training Ground - Arena Pitch,4,0,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Milton Keynes Dons,Dartford,2026-11-08 14:00,Manor Fields,2,1,https://wnl.thefa.com/fixtures
+Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Wimbledon,Lewes,2026-11-08 14:00,The Cherry Red Records Stadium,0,0,https://wnl.thefa.com/fixtures
+Division 1 South East,Football,Division 1 South East,England,Tier 4,Cambridge United,Queens Park Rangers,2026-11-08 14:00,The Grange Road Stadium,1,4,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,York City,Stockport County,2026-11-08 14:00,Selby Town FC,0,4,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Moneyfields,Keynsham Town,2026-11-08 14:00,The John Jenkins Stadium,6,0,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Norton & Stockton Ancients,Chorley,2026-11-08 14:00,Norton Sports Complex,1,2,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Marine Academy Plymouth,Gwalia United,2026-11-08 14:00,Erme Valley,0,1,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Durham Cestria,Leeds United,2026-11-08 14:00,Shildon AFC,0,2,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,Blackburn Rovers,Thornaby,2026-11-08 14:00,Euxton Villa FC,5,1,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Bristol Rovers,Ascot United,2026-11-08 14:00,South West Interiors Stadium,9,0,https://wnl.thefa.com/fixtures
+Division 1 North,Football,Division 1 North,England,Tier 4,AFC Fylde,Bradford City,2026-11-08 14:00,Kellamergh Park,2,1,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Abingdon United,Torquay United,2026-11-08 14:00,Abingdon Untied FC,0,1,https://wnl.thefa.com/fixtures
+Barclays WSL,Football,WSL,England,Tier 1,Tottenham Hotspur,Brighton & Hove Albion,2026-11-08 14:00,BetWright Stadium,2,1,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,Crystal Palace,Charlton Athletic,2026-11-08 14:00,Borough Sports Ground,3,2,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL2,Football,WSL2,England,Tier 2,Wolverhampton,Nottingham Forest,2026-11-08 14:00,SEAH Stadium,1,4,https://www.wslfootball.com/fixtures/wsl2
+Barclays WSL2,Football,WSL2,England,Tier 2,Southampton,Sheffield United,2026-11-08 14:00,St. Mary's Stadium,4,1,https://www.wslfootball.com/fixtures/wsl2
+Barclays WSL2,Football,WSL2,England,Tier 2,Newcastle United,Burnley,2026-11-08 14:00,St. James' Park,3,0,https://www.wslfootball.com/fixtures/wsl2
+Barclays WSL2,Football,WSL2,England,Tier 2,Ipswich Town,Bristol City,2026-11-08 14:00,JobServe Community Stadium,1,2,https://www.wslfootball.com/fixtures/wsl2
+Barclays WSL,Football,WSL,England,Tier 1,London City Lionesses,Birmingham City,2026-11-08 14:30,Copperjax Community Stadium,4,1,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL2,Football,WSL2,England,Tier 2,Leicester City,Watford,2026-11-08 15:00,King Power Stadium,0,1,https://www.wslfootball.com/fixtures/wsl2

@@ -1,15 +1,15 @@
 {
   "SWPL 1": {
     "ok": true,
-    "rows": 48
+    "rows": 51
   },
   "FAWNL": {
     "ok": true,
-    "rows": 83
+    "rows": 103
   },
   "Adran Premier": {
     "ok": true,
-    "rows": 12
+    "rows": 8
   },
   "England Women": {
     "ok": true,
@@ -29,11 +29,11 @@
   },
   "WSL": {
     "ok": true,
-    "rows": 58
+    "rows": 63
   },
   "WSL2": {
     "ok": true,
-    "rows": 36
+    "rows": 42
   },
   "Subway Players Cup": {
     "ok": true,
