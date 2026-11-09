@@ -701,7 +701,6 @@ Subway Players Cup,Football,Subway Players Cup,England,,Sheffield United,Notting
 Adran Premier,Football,Adran Premier,Wales,,Aberystwyth Town,Barry Town Utd,2026-10-18 14:00,Park Avenue,2,2,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 Adran Premier,Football,Adran Premier,Wales,,Cardiff City,The New Saints,2026-10-18 14:00,Cardiff International Sports Stadium,1,0,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 Adran Premier,Football,Adran Premier,Wales,,Wrexham,Cardiff Met,2026-10-18 14:00,The Rock,7,0,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
-SWPL 1,Football,SWPL 1,Scotland,,Rangers,Hibernian,2026-10-18 14:00,Broadwood Stadium,4,2,https://swpl.uk/match-centre/swpl/
 Division 1 North,Football,Division 1 North,England,Tier 4,Halifax,Thornaby,2026-10-18 14:00,Myra Shay,6,0,https://wnl.thefa.com/fixtures
 Division 1 South West,Football,Division 1 South West,England,Tier 4,Moneyfields,Torquay United,2026-10-18 14:00,The John Jenkins Stadium,3,1,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Worcester City Women,Notts County,2026-10-18 14:00,Sixways Stadium,3,4,https://wnl.thefa.com/fixtures
@@ -736,6 +735,7 @@ Southern Premier Division,Football,Southern Premier Division,England,Tier 3,Fulh
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Hull City,Peterborough United,2026-10-18 14:00,Versa Sportswear Stadium,0,1,https://wnl.thefa.com/fixtures
 Southern Premier Division,Football,Southern Premier Division,England,Tier 3,AFC Wimbledon,Oxford United,2026-10-18 14:00,The Cherry Red Records Stadium,1,2,https://wnl.thefa.com/fixtures
 Northern Premier Division,Football,Northern Premier Division,England,Tier 3,Huddersfield Town,Middlesbrough,2026-10-18 14:00,The Fantastic Media Welfare Ground,3,1,https://wnl.thefa.com/fixtures
+SWPL 1,Football,SWPL 1,Scotland,,Rangers,Hibernian,2026-10-18 14:00,Broadwood Stadium,4,2,https://swpl.uk/match-centre/swpl/
 Barclays WSL,Football,WSL,England,Tier 1,London City Lionesses,Everton,2026-10-18 14:00,Copperjax Community Stadium,2,1,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL,Football,WSL,England,Tier 1,Charlton Athletic,Manchester United,2026-10-18 14:00,The Valley,1,3,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL,Football,WSL,England,Tier 1,Aston Villa,Liverpool,2026-10-18 14:00,Keys Park,2,1,https://www.wslfootball.com/fixtures/wsl
@@ -830,9 +830,9 @@ NWSL,Football,NWSL,USA,,Orlando Pride,Gotham FC,2026-10-25 19:00,-,1,2,https://e
 NWSL,Football,NWSL,USA,,Kansas City Current,Washington Spirit,2026-10-25 21:00,-,2,1,https://en.wikipedia.org/wiki/2026_NWSL_season
 NWSL,Football,NWSL,USA,,San Diego Wave,Boston Legacy,2026-10-25 23:00,-,2,2,https://en.wikipedia.org/wiki/2026_NWSL_season
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Notts County,Sutton Coldfield Town,2026-10-27 19:45,Coronation Park,4,3,https://wnl.thefa.com/fixtures
+Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Maidenhead United,2026-10-27 19:45,Ascot United FC,1,5,https://wnl.thefa.com/fixtures
 Division 1 South East,Football,Division 1 South East,England,Tier 4,Actonians,Dulwich Hamlet,2026-10-27 19:45,Bedfont Sports Club,2,1,https://wnl.thefa.com/fixtures
 Division 1 Midlands,Football,Division 1 Midlands,England,Tier 4,Kidderminster Harriers,Worcester City Women,2026-10-27 19:45,Aggborough Stadium,2,2,https://wnl.thefa.com/fixtures
-Division 1 South West,Football,Division 1 South West,England,Tier 4,Ascot United,Maidenhead United,2026-10-27 19:45,Ascot United FC,1,5,https://wnl.thefa.com/fixtures
 UEFA Women's Champions League,Football,UWCL,Europe,,Servette Chênois,OH Leuven,2026-10-28 17:45,-,5,1,https://en.wikipedia.org/wiki/2026-27_UEFA_Women%27s_Champions_League_league_phase
 UEFA Women's Champions League,Football,UWCL,Europe,,Chelsea,Roma,2026-10-28 17:45,-,2,0,https://en.wikipedia.org/wiki/2026-27_UEFA_Women%27s_Champions_League_league_phase
 UEFA Women's Champions League,Football,UWCL,Europe,,Bayern Munich,Real Madrid,2026-10-28 17:45,-,2,2,https://en.wikipedia.org/wiki/2026-27_UEFA_Women%27s_Champions_League_league_phase
