@@ -17,7 +17,7 @@
   },
   "UWCL": {
     "ok": true,
-    "rows": 19
+    "rows": 18
   },
   "WWC Play-Offs": {
     "ok": true,
@@ -30,7 +30,7 @@
   "FAWNL": {
     "ok": false,
     "rows": 474,
-    "note": "scraper raised: 400 Client Error: Bad Request for url: https://api.wnl.thefa.com/matches?limit=1000&period=Custom&startDate=2026-11-12&endDate=2027-09-08&sort=asc&status=fixture&competition=6a1fd7394a65cd341c5db8f1%2C6a1fd7694a65cd341c5db8f2%2C6a1fd78a4a65cd341c5db8f3%2C6a1fd7a94a65cd341c5db8f4%2C6a1fd7c94a65cd341c5db8f5%2C6a1fd7e94a65cd341c5db8f6%2C6a573005020f1fa3730a344b"
+    "note": "scraper raised: 400 Client Error: Bad Request for url: https://api.wnl.thefa.com/matches?limit=1000&period=Custom&startDate=2026-11-13&endDate=2027-09-09&sort=asc&status=fixture&competition=6a1fd7394a65cd341c5db8f1%2C6a1fd7694a65cd341c5db8f2%2C6a1fd78a4a65cd341c5db8f3%2C6a1fd7a94a65cd341c5db8f4%2C6a1fd7c94a65cd341c5db8f5%2C6a1fd7e94a65cd341c5db8f6%2C6a573005020f1fa3730a344b"
   },
   "SWPL 1": {
     "ok": true,
