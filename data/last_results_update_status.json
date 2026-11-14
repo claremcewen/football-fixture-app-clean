@@ -30,20 +30,19 @@
   },
   "WSL": {
     "ok": true,
-    "rows": 66
+    "rows": 67
   },
   "WSL2": {
     "ok": true,
-    "rows": 42
+    "rows": 43
   },
   "Subway Players Cup": {
     "ok": true,
     "rows": 47
   },
   "Women's FA Cup": {
-    "ok": false,
-    "rows": 0,
-    "note": "scraper raised: 504 Server Error: Gateway Time-out for url: https://www.thefa.com/Competitions/Results/FulltimeRoundMatches"
+    "ok": true,
+    "rows": 48
   },
   "NWSL": {
     "ok": true,
