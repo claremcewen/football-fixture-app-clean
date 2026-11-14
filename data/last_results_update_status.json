@@ -1,7 +1,7 @@
 {
   "SWPL 1": {
     "ok": true,
-    "rows": 54
+    "rows": 55
   },
   "FAWNL": {
     "ok": false,
@@ -30,7 +30,7 @@
   },
   "WSL": {
     "ok": true,
-    "rows": 63
+    "rows": 66
   },
   "WSL2": {
     "ok": true,
@@ -41,8 +41,9 @@
     "rows": 47
   },
   "Women's FA Cup": {
-    "ok": true,
-    "rows": 47
+    "ok": false,
+    "rows": 0,
+    "note": "scraper raised: 504 Server Error: Gateway Time-out for url: https://www.thefa.com/Competitions/Results/FulltimeRoundMatches"
   },
   "NWSL": {
     "ok": true,
