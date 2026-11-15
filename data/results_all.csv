@@ -774,11 +774,11 @@ NWSL,Football,NWSL,USA,,Angel City,Bay FC,2026-10-25 01:45,-,2,0,https://en.wiki
 Barclays WSL,Football,WSL,England,Tier 1,Crystal Palace,Chelsea,2026-10-25 12:00,Borough Sports Ground,1,3,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL2,Football,WSL2,England,Tier 2,Watford,Durham,2026-10-25 12:00,Vicarage Road,4,2,https://www.wslfootball.com/fixtures/wsl2
 Adobe Women's FA Cup - First Round Proper,Football,Women's FA Cup,England,,Exeter City,Hashtag United,2026-10-25 12:00,-,2,0,https://www.thefa.com/competitions/the-womens-fa-cup/results
-SWPL 1,Football,SWPL 1,Scotland,,Rangers,Motherwell,2026-10-25 14:00,Broadwood Stadium,4,0,https://swpl.uk/match-centre/swpl/
 Adran Premier,Football,Adran Premier,Wales,,Barry Town Utd,Wrexham,2026-10-25 14:00,Jenner Park Stadium,1,3,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 Adran Premier,Football,Adran Premier,Wales,,Briton Ferry Llansawel,Cardiff City,2026-10-25 14:00,The Renewable Centre Stadium,0,6,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 Adran Premier,Football,Adran Premier,Wales,,Cardiff Met,Swansea City,2026-10-25 14:00,Cyncoed Stadium,0,2,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
 Adran Premier,Football,Adran Premier,Wales,,The New Saints,Aberystwyth Town,2026-10-25 14:00,Park Hall,4,0,https://faw.cymru/adran-leagues/adran-premier/fixtures-and-results/
+SWPL 1,Football,SWPL 1,Scotland,,Rangers,Motherwell,2026-10-25 14:00,Broadwood Stadium,4,0,https://swpl.uk/match-centre/swpl/
 Barclays WSL,Football,WSL,England,Tier 1,Liverpool,London City Lionesses,2026-10-25 14:00,St Helens Stadium,2,2,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL,Football,WSL,England,Tier 1,Everton,Aston Villa,2026-10-25 14:00,Goodison Park,2,3,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL,Football,WSL,England,Tier 1,Birmingham City,Charlton Athletic,2026-10-25 14:00,St. Andrew's @ Knighthead Park,1,0,https://www.wslfootball.com/fixtures/wsl
@@ -998,4 +998,36 @@ Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Dulw
 NWSL,Football,NWSL,USA,,Washington Spirit,Utah Royals,2026-11-14 17:00,-,1,1,https://en.wikipedia.org/wiki/2026_NWSL_season
 Barclays WSL,Football,WSL,England,Tier 1,Brighton & Hove Albion,Liverpool,2026-11-14 17:15,American Express Stadium,0,3,https://www.wslfootball.com/fixtures/wsl
 Barclays WSL2,Football,WSL2,England,Tier 2,Sheffield United,Bristol City,2026-11-14 18:00,Bramall Lane,1,3,https://www.wslfootball.com/fixtures/wsl2
+SWPL 1,Football,SWPL 1,Scotland,,Celtic,Rangers,2026-11-15 12:00,Kirkintilloch Community Sports Complex,2,1,https://swpl.uk/match-centre/swpl/
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Norwich City,AFC Bournemouth,2026-11-15 12:00,-,2,1,https://www.thefa.com/competitions/the-womens-fa-cup/results
+SWPL 1,Football,SWPL 1,Scotland,,Glasgow City,Montrose,2026-11-15 13:00,Petershill Park,6,0,https://swpl.uk/match-centre/swpl/
+SWPL 1,Football,SWPL 1,Scotland,,Aberdeen,Motherwell,2026-11-15 13:00,Balmoral Stadium,1,0,https://swpl.uk/match-centre/swpl/
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Derby County,Bolton Wanderers,2026-11-15 13:00,-,7,0,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Loughborough Lightning,i2i International,2026-11-15 13:00,-,3,2,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Thornaby,Crewe Alexandra,2026-11-15 13:00,-,2,2,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Stoke City,Liverpool Feds,2026-11-15 13:00,-,6,1,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,SJR Worksop,Halifax,2026-11-15 13:00,-,0,11,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Moneyfields,Bristol Rovers,2026-11-15 13:00,-,5,1,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Exeter City,Portsmouth,2026-11-15 13:00,-,2,5,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Marine Academy Plymouth,Brentford,2026-11-15 13:00,-,1,3,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,MK Dons,Chatham Town,2026-11-15 13:00,-,2,2,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Barclays WSL,Football,WSL,England,Tier 1,Aston Villa,Birmingham City,2026-11-15 14:00,Villa Park,1,0,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL,Football,WSL,England,Tier 1,West Ham United,Charlton Athletic,2026-11-15 14:00,Victoria Road Stadium,2,0,https://www.wslfootball.com/fixtures/wsl
+Barclays WSL2,Football,WSL2,England,Tier 2,Wolverhampton,Durham,2026-11-15 14:00,SEAH Stadium,4,2,https://www.wslfootball.com/fixtures/wsl2
+Barclays WSL2,Football,WSL2,England,Tier 2,Watford,Ipswich Town,2026-11-15 14:00,Vicarage Road,1,2,https://www.wslfootball.com/fixtures/wsl2
+Barclays WSL2,Football,WSL2,England,Tier 2,Sunderland,Newcastle United,2026-11-15 14:00,Stadium of Light,0,0,https://www.wslfootball.com/fixtures/wsl2
+Barclays WSL2,Football,WSL2,England,Tier 2,Nottingham Forest,Leicester City,2026-11-15 14:00,The City Ground,1,1,https://www.wslfootball.com/fixtures/wsl2
+Barclays WSL2,Football,WSL2,England,Tier 2,Burnley,Southampton,2026-11-15 14:00,Turf Moor,0,5,https://www.wslfootball.com/fixtures/wsl2
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Leeds United,Norton & Stockton Ancients,2026-11-15 14:00,-,2,0,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Durham Cestria,Middlesbrough,2026-11-15 14:00,-,1,6,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Kidderminster Harriers,Chester-Le-Street Town,2026-11-15 14:00,-,1,5,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Notts County,Mancunian Unity,2026-11-15 14:00,-,1,2,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Boldmere St Michaels,Stockport County,2026-11-15 14:00,-,1,3,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Gwalia United,Oxford United,2026-11-15 14:00,-,0,4,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Real Bedford,Fulham,2026-11-15 14:00,-,2,5,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Keynsham Town,Millwall Lionesses,2026-11-15 14:00,-,3,1,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Maidenhead United,AFC Wimbledon,2026-11-15 14:00,-,0,5,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Bridgwater United,Lewes,2026-11-15 14:00,-,1,2,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Chesterfield,Leafield Athletic,2026-11-15 15:00,-,1,2,https://www.thefa.com/competitions/the-womens-fa-cup/results
+Adobe Women's FA Cup - Second Round Proper,Football,Women's FA Cup,England,,Barking,Cambridge United,2026-11-15 15:00,-,1,4,https://www.thefa.com/competitions/the-womens-fa-cup/results
 NWSL,Football,NWSL,USA,,Gotham FC,Kansas City Current,2026-11-15 20:00,-,2,1,https://en.wikipedia.org/wiki/2026_NWSL_season

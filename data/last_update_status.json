@@ -1,11 +1,11 @@
 {
   "WSL": {
     "ok": true,
-    "rows": 108
+    "rows": 106
   },
   "WSL2": {
     "ok": true,
-    "rows": 83
+    "rows": 78
   },
   "England Women": {
     "ok": true,
@@ -41,8 +41,9 @@
     "rows": 22
   },
   "Women's FA Cup": {
-    "ok": true,
-    "rows": 19
+    "ok": false,
+    "rows": 19,
+    "note": "scraper returned 0 rows; fell back to previous data"
   },
   "Adran Premier": {
     "ok": true,
