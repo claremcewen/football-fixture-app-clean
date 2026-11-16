@@ -16,21 +16,21 @@
     "rows": 0
   },
   "UWCL": {
-    "ok": true,
-    "rows": 18
+    "ok": false,
+    "rows": 18,
+    "note": "scraper returned 0 rows; fell back to previous data"
   },
   "WWC Play-Offs": {
     "ok": true,
     "rows": 13
   },
   "NWSL": {
-    "ok": false,
-    "rows": 1,
-    "note": "scraper returned 0 rows; fell back to previous data"
+    "ok": true,
+    "rows": 0
   },
   "FAWNL": {
     "ok": false,
-    "rows": 473,
+    "rows": 472,
     "note": "scraper raised: 400 Client Error: Bad Request for url: https://api.wnl.thefa.com/matches?limit=1000&period=Custom&startDate=2026-11-16&endDate=2027-09-12&sort=asc&status=fixture&competition=6a1fd7394a65cd341c5db8f1%2C6a1fd7694a65cd341c5db8f2%2C6a1fd78a4a65cd341c5db8f3%2C6a1fd7a94a65cd341c5db8f4%2C6a1fd7c94a65cd341c5db8f5%2C6a1fd7e94a65cd341c5db8f6%2C6a573005020f1fa3730a344b"
   },
   "SWPL 1": {
@@ -42,9 +42,8 @@
     "rows": 22
   },
   "Women's FA Cup": {
-    "ok": false,
-    "rows": 19,
-    "note": "scraper returned 0 rows; fell back to previous data"
+    "ok": true,
+    "rows": 0
   },
   "Adran Premier": {
     "ok": true,
