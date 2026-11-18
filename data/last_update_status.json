@@ -16,8 +16,9 @@
     "rows": 0
   },
   "UWCL": {
-    "ok": true,
-    "rows": 18
+    "ok": false,
+    "rows": 18,
+    "note": "scraper returned 0 rows; fell back to previous data"
   },
   "WWC Play-Offs": {
     "ok": true,
@@ -38,11 +39,11 @@
   },
   "Subway Players Cup": {
     "ok": true,
-    "rows": 22
+    "rows": 17
   },
   "Women's FA Cup": {
     "ok": true,
-    "rows": 19
+    "rows": 18
   },
   "Adran Premier": {
     "ok": true,

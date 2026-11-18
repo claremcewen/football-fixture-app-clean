@@ -1,7 +1,7 @@
 {
   "SWPL 1": {
     "ok": true,
-    "rows": 59
+    "rows": 60
   },
   "FAWNL": {
     "ok": false,
@@ -22,7 +22,7 @@
   },
   "UWCL": {
     "ok": true,
-    "rows": 18
+    "rows": 22
   },
   "WWC Play-Offs": {
     "ok": true,
@@ -38,7 +38,7 @@
   },
   "Subway Players Cup": {
     "ok": true,
-    "rows": 47
+    "rows": 52
   },
   "Women's FA Cup": {
     "ok": true,
