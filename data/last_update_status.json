@@ -1,7 +1,7 @@
 {
   "WSL": {
     "ok": true,
-    "rows": 103
+    "rows": 98
   },
   "WSL2": {
     "ok": true,
@@ -38,14 +38,14 @@
   },
   "Subway Players Cup": {
     "ok": true,
-    "rows": 17
+    "rows": 11
   },
   "Women's FA Cup": {
     "ok": true,
-    "rows": 19
+    "rows": 18
   },
   "Adran Premier": {
     "ok": true,
-    "rows": 20
+    "rows": 16
   }
 }
