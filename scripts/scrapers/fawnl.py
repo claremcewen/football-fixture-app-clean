@@ -69,10 +69,30 @@ def load_venue_lookup() -> dict[str, str]:
     }
 
 
+# The API rejects any request for more than 100 matches ("limit must not be
+# greater than 100" - it used to allow 1000, and both scrapers silently fell
+# back to stale data when it stopped), so results come back a page at a time.
+PAGE_SIZE = 100
+
+
+def _fetch_all_matches(params: dict) -> dict:
+    items: list[dict] = []
+    page = 1
+    while True:
+        response = requests.get(
+            API_URL, headers=HEADERS, params={**params, "limit": PAGE_SIZE, "page": page}, timeout=30
+        )
+        response.raise_for_status()
+        payload = response.json()
+        items.extend(payload.get("items", []))
+        if not payload.get("pagination", {}).get("hasNextPage"):
+            return {"items": items}
+        page += 1
+
+
 def scrape_fawnl() -> pd.DataFrame:
     today = date.today()
     params = {
-        "limit": 1000,
         "period": "Custom",
         "startDate": today.isoformat(),
         "endDate": (today + timedelta(days=FIXTURE_WINDOW_DAYS)).isoformat(),
@@ -80,9 +100,7 @@ def scrape_fawnl() -> pd.DataFrame:
         "status": "fixture",
         "competition": ",".join(ALL_COMPETITION_IDS.values()),
     }
-    response = requests.get(API_URL, headers=HEADERS, params=params, timeout=30)
-    response.raise_for_status()
-    return parse_fawnl_matches(response.json())
+    return parse_fawnl_matches(_fetch_all_matches(params))
 
 
 def parse_fawnl_matches(data: dict) -> pd.DataFrame:
@@ -118,7 +136,6 @@ def parse_fawnl_matches(data: dict) -> pd.DataFrame:
 def scrape_fawnl_results() -> pd.DataFrame:
     today = date.today()
     params = {
-        "limit": 1000,
         "period": "Custom",
         "startDate": (today - timedelta(days=RESULTS_WINDOW_DAYS)).isoformat(),
         "endDate": today.isoformat(),
@@ -126,9 +143,7 @@ def scrape_fawnl_results() -> pd.DataFrame:
         "status": "result",
         "competition": ",".join(ALL_COMPETITION_IDS.values()),
     }
-    response = requests.get(API_URL, headers=HEADERS, params=params, timeout=30)
-    response.raise_for_status()
-    return parse_fawnl_results(response.json())
+    return parse_fawnl_results(_fetch_all_matches(params))
 
 
 def parse_fawnl_results(data: dict) -> pd.DataFrame:
