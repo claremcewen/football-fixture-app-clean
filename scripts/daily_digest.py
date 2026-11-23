@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import datetime
+import json
 import os
 import sys
 from pathlib import Path
@@ -32,6 +33,8 @@ DATA_FILE = REPO_ROOT / "data" / "fixtures_all.csv"
 RESULTS_FILE = REPO_ROOT / "data" / "results_all.csv"
 OUTPUT_FILE = Path.home() / "Desktop" / "Todays_Fixtures.txt"
 WEEKEND_OUTPUT_FILE = Path.home() / "Desktop" / "Weekend_Fixtures.txt"
+FIXTURES_STATUS_FILE = REPO_ROOT / "data" / "last_update_status.json"
+RESULTS_STATUS_FILE = REPO_ROOT / "data" / "last_results_update_status.json"
 PUBLISHED_DIGEST_FILE = REPO_ROOT / "data" / "digest.txt"
 PUBLISHED_WEEKEND_FILE = REPO_ROOT / "data" / "weekend.txt"
 LONDON = ZoneInfo("Europe/London")
@@ -132,6 +135,50 @@ def format_results_grouped(df: pd.DataFrame) -> str:
     return "\n".join(lines).rstrip()
 
 
+def _plain_reason(note: str) -> str:
+    note = note or ""
+    if note.startswith("scraper raised"):
+        return "the update failed"
+    if "0 rows" in note:
+        return "the source returned nothing"
+    if "drop" in note:
+        return "the source returned only partial data"
+    return "the update had a problem"
+
+
+def scraper_warnings() -> list[str]:
+    """One plain-English line per source that failed or came back partial on
+    the last fixtures/results update. Both pipelines quietly fall back to the
+    previous data when a source breaks, so without this a broken scraper can
+    leave the digest silently out of date for weeks (FAWNL did, for two)."""
+    lines: list[str] = []
+    for kind, path in (("fixtures", FIXTURES_STATUS_FILE), ("results", RESULTS_STATUS_FILE)):
+        if not path.exists():
+            continue
+        try:
+            status = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        for source, info in status.items():
+            if isinstance(info, dict) and not info.get("ok", True):
+                lines.append(f"- {source} {kind}: {_plain_reason(info.get('note', ''))}")
+    return lines
+
+
+def with_warnings(text: str, warnings: list[str] | None) -> str:
+    if not warnings:
+        return text
+    header = [
+        "!! DATA WARNING - these sources had a problem on the last update,",
+        "!! so the lists below may be missing or out of date for them:",
+        *warnings,
+        "",
+        "=" * 40,
+        "",
+    ]
+    return "\n".join(header) + text
+
+
 def _day_blocks(fixtures_df: pd.DataFrame, days: list[datetime.date]) -> list[str]:
     sections: list[str] = []
     for day in days:
@@ -213,14 +260,20 @@ def main(argv: list[str] | None = None) -> None:
     now = datetime.datetime.now(LONDON)
     today = now.date()
 
+    warnings = scraper_warnings()
+
     if args.weekend:
-        _write_and_open(WEEKEND_OUTPUT_FILE, build_weekend_fixtures(fixtures_df, today))
+        _write_and_open(WEEKEND_OUTPUT_FILE, with_warnings(build_weekend_fixtures(fixtures_df, today), warnings))
     elif args.publish:
         stamp = f"Updated {now.strftime('%a %d %b %H:%M')} UK time\n\n"
-        PUBLISHED_DIGEST_FILE.write_text(stamp + build_digest(fixtures_df, results_df, today), encoding="utf-8")
-        PUBLISHED_WEEKEND_FILE.write_text(stamp + build_weekend_fixtures(fixtures_df, today), encoding="utf-8")
+        PUBLISHED_DIGEST_FILE.write_text(
+            stamp + with_warnings(build_digest(fixtures_df, results_df, today), warnings), encoding="utf-8"
+        )
+        PUBLISHED_WEEKEND_FILE.write_text(
+            stamp + with_warnings(build_weekend_fixtures(fixtures_df, today), warnings), encoding="utf-8"
+        )
     else:
-        _write_and_open(OUTPUT_FILE, build_digest(fixtures_df, results_df, today))
+        _write_and_open(OUTPUT_FILE, with_warnings(build_digest(fixtures_df, results_df, today), warnings))
 
 
 if __name__ == "__main__":
