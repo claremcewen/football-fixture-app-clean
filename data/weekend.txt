@@ -1,10 +1,5 @@
-Updated Thu 26 Nov 15:10 UK time
+Updated Thu 26 Nov 20:13 UK time
 
-!! DATA WARNING - these sources had a problem on the last update,
-!! so the lists below may be missing or out of date for them:
-- UWCL fixtures: the source returned nothing
-
-========================================
 WEEKEND FIXTURES - 28 Nov & 29 Nov 2026
 
 ========================================
