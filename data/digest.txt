@@ -1,5 +1,10 @@
-Updated Thu 26 Nov 03:36 UK time
+Updated Thu 26 Nov 15:10 UK time
 
+!! DATA WARNING - these sources had a problem on the last update,
+!! so the lists below may be missing or out of date for them:
+- UWCL fixtures: the source returned nothing
+
+========================================
 TODAY'S FIXTURES - Thursday 26 November 2026
 
 No fixtures.
